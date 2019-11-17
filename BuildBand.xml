@@ -1,0 +1,315 @@
+<project name="BuildBand" basedir="." default="justDoIt">
+  <!--Workspace properties-->
+  <property name="project.workspace.file" value="BuildBand.xml.workspace" />
+  <property name="project.redist.file" value="BuildBand.xml.zip" />
+  <import file="${project.workspace.file}" />
+  <property name="jdk.home" value="${java.home}" />
+  <property name="project.dir" value="
+  " />
+  <property name="temp.dir" value="${project.dir}/dist/tmp" />
+  <property name="build.work.dir" value="${temp.dir}/work" />
+  <property name="build.redist.dir" value="${temp.dir}/redist" />
+  <property name="target.dir" value="${project.dir}/dist/build" />
+  <!--Used path variables-->
+  <!--Build targets properties-->
+  <property name="layout.dir.Release.AnyOS" value="${target.dir}/Release/AnyOS" />
+  <property name="package.file.Release.Generic" value="${target.dir}/Release/buildband-1.0-Generic.zip" />
+  <property name="package.file.Release.Windows" value="${target.dir}/Release/buildband-1.0.exe" />
+  <property name="package.file.Release.Mac" value="${target.dir}/Release/buildband-1.0-Mac.zip" />
+  <!--Compute java classes directory for obfuscator-->
+  <condition property="isMac">
+    <os family="mac" />
+  </condition>
+  <condition property="java.classes.dir" value="${jdk.home}/../Classes">
+    <istrue value="${isMac}" />
+  </condition>
+  <condition property="java.classes.dir" value="${jdk.home}">
+    <isfalse value="${isMac}" />
+  </condition>
+  <property name="java.classes.dir" value="${jdk.home}" />
+  <!--Generic compilation settings-->
+  <property name="source.encoding" value="Cp1252" />
+  <property name="compile.debug" value="true" />
+  <patternset id="compiler.resources">
+    <exclude name="**/*.java" />
+    <exclude name="**/*.form" />
+  </patternset>
+  <!--Module compilation in/out-->
+  <path id="module.Band3.source.path">
+    <pathelement path="${project.dir}/src" />
+  </path>
+  <path id="module.Band3.test.path">
+    <pathelement path="${project.dir}/test" />
+  </path>
+  <property name="module.Band3.output.main" value="${build.work.dir}/javac_output/production/Band3" />
+  <property name="module.Band3.output.test" value="${build.work.dir}/javac_output/test/Band3" />
+  <!--Global libraries-->
+  <path id="global.library.swing.app.framework.path">
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/appframework-1.0.3.jar" />
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/swing-worker-1.1.jar" />
+  </path>
+  <path id="global.library.beans.binding.path">
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/beansbinding-1.2.1.jar" />
+  </path>
+  <path id="global.library.jcommon.1.0.16.path">
+    <pathelement path="${project.dir}/lib/jcommon-1.0.16.jar" />
+  </path>
+  <path id="global.library.jfreechart.1.0.13.path">
+    <pathelement path="${project.dir}/lib/jfreechart-1.0.13.jar" />
+  </path>
+  <path id="global.library.jep.2.3.1.path">
+    <pathelement path="${project.dir}/lib/jep-2.4.1.jar" />
+  </path>
+  <path id="global.library.AppleJavaExtensions.path">
+    <pathelement path="${project.dir}/lib/AppleJavaExtensions.jar" />
+  </path>
+  <!--Module classpaths-->
+  <path id="module.Band3.classpath">
+    <pathelement path="${module.Band3.output.main}" />
+    <pathelement path="${module.Band3.output.test}" />
+    <path refid="global.library.swing.app.framework.path" />
+    <path refid="global.library.beans.binding.path" />
+    <path refid="global.library.jcommon.1.0.16.path" />
+    <path refid="global.library.jfreechart.1.0.13.path" />
+    <path refid="global.library.jep.2.3.1.path" />
+    <path refid="global.library.AppleJavaExtensions.path" />
+  </path>
+  <!--Module JDK settings-->
+  <property name="compiler.max.memory" value="512m" />
+  <property name="compiler.arg" value="" />
+  <property name="module.Band3.compiler.arg" value="${compiler.arg}" />
+  <property name="compiled.ready.dir" value="${build.work.dir}/compiled-ready" />
+  <!--Obfuscation properties-->
+  <property name="proguard.output.dir" value="${build.work.dir}/obfuscator_output" />
+  <property name="proguard.map.file" value="${proguard.output.dir}/buildband-1.0.map" />
+  <!--Preparation of ANT extensions-->
+  <target name="prepare.extensions" unless="prepare.extensions.done">
+    <property name="prepare.extensions.done" value="true" />
+    <condition property="is.windows">
+      <os family="windows" />
+    </condition>
+    <unzip dest="${build.redist.dir}" src="${project.redist.file}" />
+    <path id="extensions.classpath">
+      <pathelement path="${build.redist.dir}/tools/bd-ant-extensions.jar" />
+      <pathelement path="${build.redist.dir}/tools/proguard.jar" />
+      <pathelement path="${build.redist.dir}/tools/javac2.jar" />
+      <pathelement path="${build.redist.dir}/tools/forms_rt.jar" />
+      <pathelement path="${build.redist.dir}/tools/jgoodies-forms.jar" />
+      <pathelement path="${build.redist.dir}/tools/asm.jar" />
+      <pathelement path="${build.redist.dir}/tools/asm-commons.jar" />
+      <pathelement path="${build.redist.dir}/tools/jdom.jar" />
+    </path>
+    <taskdef name="innerCall" classname="com.pme.InnerCall">
+      <classpath refid="extensions.classpath" />
+    </taskdef>
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2">
+      <classpath refid="extensions.classpath" />
+    </taskdef>
+    <taskdef name="barsuchok" classname="com.pme.Barsuchok">
+      <classpath refid="extensions.classpath" />
+    </taskdef>
+    <taskdef name="launchergeneratortask" classname="com.pme.LauncherGeneratorTask">
+      <classpath refid="extensions.classpath" />
+    </taskdef>
+  </target>
+  <!--Entry point for the build-->
+  <target name="justDoIt" depends="prepare.extensions">
+    <innerCall target="clean.Release" />
+    <condition property="buildphase-cleanup.disabled">
+      <not>
+        <isset property="clean.Release.disabled" />
+      </not>
+    </condition>
+    <condition property="buildphase-compile.disabled">
+      <not>
+        <isset property="clean.Release.disabled" />
+      </not>
+    </condition>
+  </target>
+  <target name="clear" depends="prepare.extensions">
+    <delete dir="${build.work.dir}" />
+    <delete dir="${target.dir}" />
+  </target>
+  <target name="prepare" depends="prepare.extensions" unless="buildphase-cleanup.disabled">
+    <innerCall target="clear" />
+    <mkdir dir="${build.work.dir}" />
+    <mkdir dir="${target.dir}" />
+    <innerCall target="precompile" />
+  </target>
+  <target name="precompile" />
+  <target name="compile.Band3" depends="prepare.extensions">
+    <mkdir dir="${module.Band3.output.main}" />
+    <mkdir dir="${module.Band3.output.test}" />
+    <echo message="Used JDK: default" />
+    <echo message="Used language level: 1.6" />
+    <javac destdir="${module.Band3.output.main}" encoding="${source.encoding}" fork="yes" memoryMaximumSize="${compiler.max.memory}" source="1.6" target="1.6" debug="${compile.debug}">
+      <src refid="module.Band3.source.path" />
+      <classpath refid="module.Band3.classpath" />
+      <compilerarg line="${module.Band3.compiler.arg}" />
+    </javac>
+    <javac destdir="${module.Band3.output.test}" encoding="${source.encoding}" fork="yes" memoryMaximumSize="${compiler.max.memory}" source="1.6" target="1.6" debug="${compile.debug}">
+      <src refid="module.Band3.test.path" />
+      <classpath refid="module.Band3.classpath" />
+      <compilerarg line="${module.Band3.compiler.arg}" />
+    </javac>
+  </target>
+  <target name="compile" depends="prepare.extensions" unless="buildphase-compile.disabled">
+    <innerCall target="compile.execute" />
+  </target>
+  <target name="compile.execute" depends="compile.Band3,prepare.classes,copy.resources,postcompile" />
+  <target name="postcompile" />
+  <target name="copy.resources">
+    <copy todir="${compiled.ready.dir}/Band3/src">
+      <fileset dir="${project.dir}/src">
+        <patternset refid="compiler.resources" />
+      </fileset>
+    </copy>
+    <copy todir="${compiled.ready.dir}/Band3/test">
+      <fileset dir="${project.dir}/test">
+        <patternset refid="compiler.resources" />
+      </fileset>
+    </copy>
+  </target>
+  <target name="prepare.classes" depends="prepare.extensions">
+    <delete dir="${compiled.ready.dir}" />
+    <mkdir dir="${compiled.ready.dir}" />
+    <mkdir dir="${compiled.ready.dir}/Band3" />
+    <barsuchok>
+      <classes dir="${module.Band3.output.main}" />
+      <classes dir="${module.Band3.output.test}" />
+      <roots destroot="${compiled.ready.dir}/Band3/src" srcroot="${project.dir}/src" />
+      <roots destroot="${compiled.ready.dir}/Band3/test" srcroot="${project.dir}/test" />
+    </barsuchok>
+  </target>
+  <target name="obfuscation.copy" if="buildphase-obfuscate.disabled">
+    <mkdir dir="${proguard.output.dir}" />
+  </target>
+  <target name="obfuscate.impl" unless="buildphase-obfuscate.disabled">
+    <mkdir dir="${proguard.output.dir}" />
+    <mkdir dir="${build.work.dir}/obfuscator_input" />
+    <taskdef classpath="${build.redist.dir}/tools/proguard.jar" resource="proguard/ant/task.properties" />
+  </target>
+  <target name="create.win.launcher" depends="prepare.extensions" unless="buildphase-layout.disabled">
+    <launchergeneratortask FileVersion="1.0" VI_PROP_COMPANY_NAME="BuildbandTeam" VI_PROP_FILE_VERSION="1.0" VI_PROP_LEGAL_COPYRIGHT="Copyright BuildbandTeam (c) 2006" VI_PROP_ORIGINAL_FILE_NAME="buildband.exe" VI_PROP_PRODUCT_NAME="Buildband" VI_PROP_PRODUCT_VERSION="1.0" VmParameters="-Dapple.laf.useScreenMenuBar=true -Dcom.apple.mrj.application.apple.menu.about.name=&quot;Buildband&quot;" WorkDir="jar" iconpath="${build.redist.dir}/templates/launcher.ico" javaversion="1.4+" launcherpath="${build.work.dir}/buildband.exe" startjar="Band.jar" templatepath="${build.redist.dir}/templates/WinLauncher.exe" />
+  </target>
+  <target name="obfuscate">
+    <delete dir="${proguard.output.dir}" />
+    <delete dir="${build.work.dir}/obfuscator_input" />
+    <innerCall target="obfuscate.impl" />
+    <innerCall target="obfuscation.copy" />
+  </target>
+  <target name="clean.Release" depends="prepare.extensions" unless="clean.Release.disabled">
+    <innerCall target="prepare" />
+    <innerCall target="compile" />
+    <innerCall target="obfuscate" />
+    <innerCall target="prepare.folders" />
+    <innerCall target="create.win.launcher" />
+    <innerCall target="layout.Release.AnyOS" />
+    <innerCall target="package.Release.AnyOS" />
+    <innerCall target="summary.Release.AnyOS" />
+  </target>
+  <target name="summary.Release.AnyOS">
+    <echo message="Built target: Release.AnyOS" />
+    <echo message="Target directory: ${target.dir}/Release/AnyOS" />
+    <echo message="Generic zipped application: ${target.dir}/Release/buildband-1.0-Generic.zip" />
+    <echo message="Windows installer: ${target.dir}/Release/buildband-1.0.exe" />
+    <echo message="Mac zipped application: ${target.dir}/Release/buildband-1.0-Mac.zip" />
+  </target>
+  <target name="layout.Release.AnyOS" unless="buildphase-layout.disabled">
+    <delete dir="${target.dir}/Release/AnyOS" />
+    <mkdir dir="${target.dir}/Release/AnyOS" />
+    <mkdir dir="${target.dir}/Release/AnyOS/lib" />
+    <mkdir dir="${target.dir}/Release/AnyOS/jar" />
+    <copy file="${project.dir}/../NetBeansProjects/libs/AppleJavaExtensions.jar" tofile="${target.dir}/Release/AnyOS/lib/AppleJavaExtensions.jar" />
+    <copy file="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/beansbinding-1.2.1.jar" tofile="${target.dir}/Release/AnyOS/lib/beansbinding-1.2.1.jar" />
+    <copy file="${project.dir}/../NetBeansProjects/libs/jcommon-1.0.16.jar" tofile="${target.dir}/Release/AnyOS/lib/jcommon-1.0.16.jar" />
+    <copy file="${project.dir}/../NetBeansProjects/libs/jep-2.4.1.jar" tofile="${target.dir}/Release/AnyOS/lib/jep-2.4.1.jar" />
+    <copy file="${project.dir}/../NetBeansProjects/libs/jfreechart-1.0.13.jar" tofile="${target.dir}/Release/AnyOS/lib/jfreechart-1.0.13.jar" />
+    <copy file="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/appframework-1.0.3.jar" tofile="${target.dir}/Release/AnyOS/lib/appframework-1.0.3.jar" />
+    <copy file="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/swing-worker-1.1.jar" tofile="${target.dir}/Release/AnyOS/lib/swing-worker-1.1.jar" />
+    <jar destfile="${target.dir}/Release/AnyOS/jar/Band.jar">
+      <manifest>
+        <attribute name="Main-Class" value="band.BandApp" />
+      </manifest>
+      <fileset dir="${compiled.ready.dir}/Band3/src" />
+    </jar>
+    <copy file="${build.work.dir}/buildband.exe" tofile="${target.dir}/Release/AnyOS/buildband.exe" />
+  </target>
+  <target name="package.Release.AnyOS" unless="buildphase-package.disabled">
+    <innerCall target="create.generic.package.Release.AnyOS" />
+    <innerCall target="report.nsis.error" />
+    <innerCall target="create.win.installer.Release.AnyOS" />
+    <innerCall target="create.mac.installer.Release.AnyOS" />
+  </target>
+  <target name="create.generic.package.Release.AnyOS">
+    <zip destfile="${target.dir}/Release/buildband-1.0-Generic.zip">
+      <zipfileset dir="${target.dir}/Release/AnyOS" prefix="buildband-1.0">
+        <exclude name="buildband.exe" />
+      </zipfileset>
+    </zip>
+  </target>
+  <target name="create.installer.prepare.template.Release.AnyOS">
+    <replace file="${nsis.template.name}" token="#OUTPUT_DIR#" value="${target.dir}/Release" />
+    <replace file="${nsis.template.name}" token="#BINARIES_LOCATION#" value="${target.dir}/Release/AnyOS" />
+    <replace file="${nsis.template.name}" token="#PACKAGE_NAME#" value="buildband-1.0" />
+    <replace file="${nsis.template.name}" token="#PRODUCT_NAME#" value="Buildband" />
+    <replace file="${nsis.template.name}" token="#VERSION#" value="1.0" />
+    <replace file="${nsis.template.name}" token="#MANUFACTURER#" value="BuildbandTeam" />
+    <replace file="${nsis.template.name}" token="#COPYRIGHT#" value="Copyright BuildbandTeam (c) 2006" />
+    <replace file="${nsis.template.name}" token=";#SetCompressor#" value="" />
+    <replace file="${nsis.template.name}" token=";#HEADER_IMAGE_COMMENT#" value="" />
+    <replace file="${nsis.template.name}" token="#HEADER_IMAGE#" value="${build.redist.dir}\templates\white_pixel.bmp" />
+    <replace file="${nsis.template.name}" token=";#ICON_FOR_INSTALLER_COMMENT#" value="" />
+    <replace file="${nsis.template.name}" token="#ICON_FOR_INSTALLER#" value="${build.redist.dir}\templates\installer.ico" />
+    <replace file="${nsis.template.name}" token=";#ICON_FOR_UNINSTALLER_COMMENT#" value="" />
+    <replace file="${nsis.template.name}" token="#ICON_FOR_UNINSTALLER#" value="${build.redist.dir}\templates\uninstaller.ico" />
+    <replace file="${nsis.template.name}" token="#LAUNCHER_PATH#" value="\buildband.exe" />
+    <replace file="${nsis.template.name}" token="#FILES#" value="File /nonfatal /r &quot;${BINARIES_LOCATION}\jar&quot;&#xA;File /nonfatal /r &quot;${BINARIES_LOCATION}\lib&quot;&#xA;File /nonfatal /r &quot;${BINARIES_LOCATION}\buildband.exe&quot;&#xA;" />
+    <exec dir="${basedir}" executable="${makensis.path}" failonerror="true">
+      <arg line="&quot;${nsis.template.name}&quot;" />
+    </exec>
+  </target>
+  <target name="create.win.installer.Release.AnyOS" if="is.windows">
+    <delete dir="${build.work.dir}/Templates/Release.AnyOS" />
+    <copy file="${build.redist.dir}/templates/installer.nsi" todir="${build.work.dir}/Templates/Release.AnyOS" />
+    <copy file="${build.redist.dir}/templates/Desktop.ini" todir="${build.work.dir}/Templates/Release.AnyOS" />
+    <copy file="${build.redist.dir}/templates/ConfirmDeleteUserData.ini" todir="${build.work.dir}/Templates/Release.AnyOS" />
+    <antcall target="create.installer.prepare.template.Release.AnyOS">
+      <param name="nsis.template.name" value="${build.work.dir}/Templates/Release.AnyOS/installer.nsi" />
+    </antcall>
+  </target>
+  <target name="create.mac.installer.Release.AnyOS">
+    <copy todir="${build.work.dir}/Installers/Release.AnyOS/Buildband.app">
+      <fileset dir="${build.redist.dir}/templates/mac.app" />
+    </copy>
+    <copy file="${build.redist.dir}/templates/launcher.icns" todir="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Resources" />
+    <copy todir="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Resources/Java">
+      <fileset dir="${target.dir}/Release/AnyOS">
+        <exclude name="buildband.exe" />
+      </fileset>
+    </copy>
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#LAUNCHER_NAME#" value="buildband" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#COPYRIGHT#" value="Copyright BuildbandTeam (c) 2006" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#ICNS_FILE#" value="launcher.icns" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#PRODUCT_NAME#" value="Buildband" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#VERSION#" value="1.0" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#JAVA_VERSION#" value="1.4+" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#WORK_DIR#" value="/" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#VM_PARAMETERS#" value="-Dapple.laf.useScreenMenuBar=true -Dcom.apple.mrj.application.apple.menu.about.name=&quot;Buildband&quot;" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#MAINCLASS#" value="band.BandApp" />
+    <replace file="${build.work.dir}/Installers/Release.AnyOS/Buildband.app/Contents/Info.plist" token="#CLASSPATH#" value="$JAVAROOT/jar/Band.jar" />
+    <zip basedir="${build.work.dir}/Installers/Release.AnyOS/" destfile="${target.dir}/Release/buildband-1.0-Mac.zip">
+      <zipfileset file="${build.redist.dir}/templates/maclauncher" filemode="755" fullpath="Buildband.app/Contents/MacOS/buildband" />
+    </zip>
+  </target>
+  <target name="report.nsis.error" unless="is.windows">
+    <echo level="error" message="Generation of Windows installer is supported only if you run this build script under Windows." />
+    <echo level="error" message="The will be fixed in the next BuildDesk release." />
+  </target>
+  <target name="prepare.folders">
+    <mkdir dir="${compiled.ready.dir}/Band3/src" />
+  </target>
+  <target name="summary">
+    <innerCall target="summary.Release.AnyOS" />
+  </target>
+</project>

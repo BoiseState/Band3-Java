@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="file:/C:/Users/mbaker/Documents/NetBeansProjects/Band3/dist/" href="launch.jnlp" spec="1.0+">
+   <information>
+      <title>Band Diagram Program</title>
+      <vendor>Boise State University</vendor>
+      <homepage href="http://coen.boisestate.edu/bknowlton/Research/BandDiagramProgram/"/>
+      <description>Band Diagram Program</description>
+      <description kind="short">Band Diagram Program</description>
+      <offline-allowed/>
+      <shortcut online="false">
+         <desktop/>
+         <menu submenu="Boise State University"/>
+      </shortcut>
+   </information>
+   <update check="background"/>
+   <security>
+      <all-permissions/>
+   </security>
+   <resources>
+      <j2se version="1.6+"/>
+      <jar href="Band3.jar" main="true"/>
+      <jar href="lib/appframework-1.0.3.jar"/>
+      <jar href="lib/swing-worker-1.1.jar"/>
+      <jar href="lib/beansbinding-1.2.1.jar"/>
+      <jar href="lib/jcommon-1.0.16.jar"/>
+      <jar href="lib/jfreechart-1.0.13.jar"/>
+   </resources>
+   <application-desc main-class="band.BandApp">
+   </application-desc>
+</jnlp>

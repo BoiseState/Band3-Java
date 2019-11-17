@@ -1,0 +1,200 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.6" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="BandMovieParameters.title"/>
+    <Property name="name" type="java.lang.String" value="BandMovieParameters" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="jCheckBoxSmartAxisSize" alignment="0" max="32767" attributes="1"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="jButtonOK" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jButtonCancel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabelStopVoltage" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelStartVoltage" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextFieldStopVoltage" max="32767" attributes="1"/>
+                                  <Component id="jTextFieldStartVoltage" alignment="0" pref="92" max="32767" attributes="1"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="1">
+                              <Component id="jLabelNumberOfSteps" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextFieldNumberOfSteps" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="1">
+                              <Component id="jLabelStepSize" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextFieldStepSize" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabelOutputParameters" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelStartVoltage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldStartVoltage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelOutputParameters" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelStopVoltage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldStopVoltage" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelNumberOfSteps" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldNumberOfSteps" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelStepSize" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldStepSize" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="6" max="32767" attributes="0"/>
+              <Component id="jCheckBoxSmartAxisSize" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabelStartVoltage">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelStartVoltage.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelStartVoltage" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldStartVoltage">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jTextFieldStartVoltage.text"/>
+        <Property name="name" type="java.lang.String" value="jTextFieldStartVoltage" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldStartVoltageKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelStopVoltage">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelStopVoltage.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelStopVoltage" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldStopVoltage">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jTextFieldStopVoltage.text"/>
+        <Property name="name" type="java.lang.String" value="jTextFieldStopVoltage" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldStopVoltageKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelNumberOfSteps">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelNumberOfSteps.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelNumberOfSteps" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldNumberOfSteps">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jTextFieldNumberOfSteps.text"/>
+        <Property name="name" type="java.lang.String" value="jTextFieldNumberOfSteps" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldNumberOfStepsKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelStepSize">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelStepSize.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelStepSize" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldStepSize">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" resourceKey="jTextFieldStepSize.text"/>
+        <Property name="name" type="java.lang.String" value="jTextFieldStepSize" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonOK">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="band.BandMovieParameters" id="closeMovieParametersBox" methodName="closeMovieParametersBox"/>
+        </Property>
+        <Property name="text" type="java.lang.String" resourceKey="jButtonOK.text"/>
+        <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonOK.actionCommand"/>
+        <Property name="name" type="java.lang.String" value="jButtonOK" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCancel">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="band.BandMovieParameters" id="cancelMovieParametersBox" methodName="cancelMovieParametersBox"/>
+        </Property>
+        <Property name="text" type="java.lang.String" resourceKey="jButtonCancel.text"/>
+        <Property name="name" type="java.lang.String" value="jButtonCancel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelOutputParameters">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jLabelOutputParameters" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxSmartAxisSize">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jCheckBoxSmartAxisSize.text"/>
+        <Property name="name" type="java.lang.String" value="jCheckBoxSmartAxisSize" noResource="true"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" resourceKey="jCheckBoxSmartAxisSize.AccessibleContext.accessibleDescription"/>
+      </AccessibilityProperties>
+    </Component>
+  </SubComponents>
+</Form>

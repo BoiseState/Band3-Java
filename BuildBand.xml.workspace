@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This is auto-generated workspace property file for ant build, generated with BuildDesk.
+ This file is used as a place for all absolute paths or other settings which may vary
+ depending on a machine, where you perfrom an ant build.
+-->
+<project name="imported" basedir="." default="...">
+  <property name="jdk.home" value="${java.home}" />
+  <!--Path to NSIS  - a Windows installer generator-->
+  <!--NSIS is not included in your project's redist file (.xml.zip) because of its big size.-->
+  <property name="makensis.path" value="C:/Program Files/ProductiveMe/BuildDesk/tools/NSIS/makensis.exe" />
+  <!--Used path variables-->
+  <!--Used JDKs-->
+  <!--Used global libraries-->
+  <path id="global.library.AppleJavaExtensions.path">
+    <pathelement path="${project.dir}/lib/AppleJavaExtensions.jar" />
+  </path>
+  <path id="global.library.beans.binding.path">
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/beansbinding-1.2.1.jar" />
+  </path>
+  <path id="global.library.jcommon.1.0.16.path">
+    <pathelement path="${project.dir}/lib/jcommon-1.0.16.jar" />
+  </path>
+  <path id="global.library.jep.2.3.1.path">
+    <pathelement path="${project.dir}/lib/jep-2.4.1.jar" />
+  </path>
+  <path id="global.library.jfreechart.1.0.13.path">
+    <pathelement path="${project.dir}/lib/jfreechart-1.0.13.jar" />
+  </path>
+  <path id="global.library.swing.app.framework.path">
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/appframework-1.0.3.jar" />
+    <pathelement path="${project.dir}/../../../../Program Files/NetBeans 7.0.1/java/modules/ext/swing-worker-1.1.jar" />
+  </path>
+</project>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Stack>
+<Material type="Metal">
+<WorkFunction>4.45</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>TiN</Name>
+<Notes/>
+<FillColor>#ff0000</FillColor>
+<Thickness>4.0</Thickness>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>3.9</DielectricConstant>
+<BandGap>8.9</BandGap>
+<ElectronAffinity>0.95</ElectronAffinity>
+<Name>SiO2</Name>
+<Notes/>
+<FillColor>#404040</FillColor>
+<Thickness>2.0</Thickness>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>11.7</DielectricConstant>
+<BandGap>1.17-4.73e-4*T^2/(T+651)</BandGap>
+<ElectronAffinity>4.05</ElectronAffinity>
+<IntrinsicCarrierConcentration>3.87E16*T^(3/2)*exp(-7014/T)</IntrinsicCarrierConcentration>
+<DopantConcentration>1.0E18</DopantConcentration>
+<Name>Si</Name>
+<Notes>Default Semiconductor</Notes>
+<FillColor>#00ff00</FillColor>
+<Thickness>50.0</Thickness>
+</Material>
+</Stack>
+

@@ -1,0 +1,286 @@
+<build-desk-project version="0">
+  <bee name="NetBeans" version="5.0" path=".">
+    <model>
+      <settings />
+      <global>
+        <library name="AppleJavaExtensions">
+          <path>C:/Users/et109/Documents/NetBeansProjects/libs/AppleJavaExtensions.jar</path>
+        </library>
+        <library name="CopyLibs">
+          <path>C:/Program Files/NetBeans 7.0.1/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar</path>
+        </library>
+        <library name="JWSAntTasks">
+          <path>C:/Program Files/NetBeans 7.0.1/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar</path>
+        </library>
+        <library name="MySQLDriver">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/mysql-connector-java-5.1.13-bin.jar</path>
+        </library>
+        <library name="PostgreSQLDriver">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/postgresql-8.3-603.jdbc3.jar</path>
+        </library>
+        <library name="absolutelayout">
+          <path>C:/Users/et109/.netbeans/7.0/modules/ext/AbsoluteLayout.jar</path>
+        </library>
+        <library name="beans-binding">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/beansbinding-1.2.1.jar</path>
+        </library>
+        <library name="commons-math-2.2">
+          <path>C:/Users/et109/Downloads/commons-math-2.2/commons-math-2.2/commons-math-2.2.jar</path>
+        </library>
+        <library name="eclipselink">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/eclipselink/eclipselink-2.2.0.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/eclipselink/eclipselink-javax.persistence-2.0.jar</path>
+        </library>
+        <library name="eclipselinkmodelgen">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/eclipselink/eclipselink-jpa-modelgen-2.2.0.jar</path>
+        </library>
+        <library name="ejb3-persistence">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/ejb3-persistence.jar</path>
+        </library>
+        <library name="hibernate-persistence">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/antlr-2.7.6.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/asm.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/asm-attrs.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/cglib-2.1.3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/commons-collections-2.1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/commons-logging-1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/dom4j-1.6.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/ehcache-1.2.3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/jdbc2_0-stdext.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/jta.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-tools.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-annotations.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-commons-annotations.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-entitymanager.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/javassist.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/ejb3-persistence.jar</path>
+        </library>
+        <library name="hibernate-support">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/antlr-2.7.6.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/asm.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/asm-attrs.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/cglib-2.1.3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/commons-collections-2.1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/commons-logging-1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/dom4j-1.6.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/ehcache-1.2.3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/jdbc2_0-stdext.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/jta.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-tools.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-annotations.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-commons-annotations.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/hibernate-entitymanager.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/hibernate/javassist.jar</path>
+        </library>
+        <library name="javac-api">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/javac-api-nb-7.0-b07.jar</path>
+        </library>
+        <library name="jaxb">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/jaxb-impl.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/jaxb-xjc.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/jaxb1-impl.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/activation.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/api/jaxb-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/api/jsr173_api.jar</path>
+        </library>
+        <library name="jaxws21">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/jaxb-impl.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/jaxb-xjc.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/FastInfoset.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/gmbal-api-only.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/http.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/jaxws-rt.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/jaxws-tools.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/management-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/mimepull.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/policy.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/saaj-impl.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/stax-ex.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/streambuffer.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/woodstox.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/api/jaxws-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/api/jsr181-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/api/jsr250-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/jaxws22/api/saaj-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/activation.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/api/jaxb-api.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/jaxb/api/jsr173_api.jar</path>
+        </library>
+        <library name="jcommon-1.0.16">
+          <path>C:/Users/et109/Documents/NetBeansProjects/libs/jcommon-1.0.16.jar</path>
+        </library>
+        <library name="jep-2.3.1">
+          <path>C:/Users/et109/Documents/NetBeansProjects/libs/jep-2.4.1.jar</path>
+        </library>
+        <library name="jfreechart-1.0.13">
+          <path>C:/Users/et109/Documents/NetBeansProjects/libs/jfreechart-1.0.13.jar</path>
+        </library>
+        <library name="junit">
+          <path>C:/Users/et109/.netbeans/7.0/modules/ext/junit-3.8.2.jar</path>
+        </library>
+        <library name="junit_4">
+          <path>C:/Users/et109/.netbeans/7.0/modules/ext/junit-4.8.2.jar</path>
+        </library>
+        <library name="spring-framework">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/commons-logging-1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/cglib-2.2.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring/spring-2.5.6.SEC01.jar</path>
+        </library>
+        <library name="spring-framework300">
+          <path>C:/Program Files/NetBeans 7.0.1/ide/modules/ext/commons-logging-1.1.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/cglib-2.2.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-aop-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-asm-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-aspects-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-beans-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-context-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-context-support-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-core-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-expression-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-instrument-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-jdbc-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-jms-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-orm-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-oxm-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-test-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-tx-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-web-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-webmvc-3.0.2.RELEASE.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/spring-3.0/spring-struts-3.0.2.RELEASE.jar</path>
+        </library>
+        <library name="swing-app-framework">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/appframework-1.0.3.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/swing-worker-1.1.jar</path>
+        </library>
+        <library name="swing-layout">
+          <path>C:/Program Files/NetBeans 7.0.1/platform/modules/ext/swing-layout-1.0.4.jar</path>
+        </library>
+        <library name="toplink">
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/toplink/toplink-essentials.jar</path>
+          <path>C:/Program Files/NetBeans 7.0.1/java/modules/ext/toplink/toplink-essentials-agent.jar</path>
+        </library>
+      </global>
+      <module name="Band3" path="$PROJECT_DIR$" lang-level="1.6">
+        <path>$MODULE_DIR$/src</path>
+        <path isTest="true">$MODULE_DIR$/test</path>
+        <output-path />
+        <dependency path="bee@globalLib=swing-app-framework" />
+        <dependency path="bee@globalLib=beans-binding" />
+        <dependency path="bee@globalLib=jcommon-1.0.16" />
+        <dependency path="bee@globalLib=jfreechart-1.0.13" />
+        <dependency path="bee@globalLib=jep-2.3.1" />
+        <dependency path="bee@globalLib=AppleJavaExtensions" />
+      </module>
+    </model>
+    <excluded-layout>
+      <element path="bee@module=Band3@source=test" />
+    </excluded-layout>
+  </bee>
+  <fly>
+    <layout>
+      <folder name="root">
+        <folder name="lib">
+          <library name="AppleJavaExtensions" container="global" />
+          <library name="beans-binding" container="global" />
+          <library name="jcommon-1.0.16" container="global" />
+          <library name="jep-2.3.1" container="global" />
+          <library name="jfreechart-1.0.13" container="global" />
+          <library name="swing-app-framework" container="global" />
+        </folder>
+        <folder name="jar">
+          <jar name="Band3.jar">
+            <source module="Band3" path="src" />
+            <manifest>
+              <startable>true</startable>
+              <mainClass>band.BandApp</mainClass>
+              <everythingToClassPath>true</everythingToClassPath>
+            </manifest>
+          </jar>
+        </folder>
+      </folder>
+    </layout>
+  </fly>
+  <target-model>
+    <target-defs>
+      <target>
+        <name>Release</name>
+        <buildDistributions>true</buildDistributions>
+        <obfuscate>true</obfuscate>
+        <includeTests>false</includeTests>
+      </target>
+    </target-defs>
+    <deps />
+  </target-model>
+  <beetle>
+    <jars />
+    <config>
+      <keepAllPublic>false</keepAllPublic>
+      <keepAllProtected>false</keepAllProtected>
+      <repackageObfuscated>false</repackageObfuscated>
+      <shrink>false</shrink>
+      <optimize>false</optimize>
+      <keepByExtends />
+      <keepByImplements />
+      <keepByPackage />
+    </config>
+  </beetle>
+  <wasp>
+    <startJar>/jar/Band3.jar</startJar>
+    <launcherName>Band3</launcherName>
+    <workingDir>/</workingDir>
+    <xms />
+    <xmx />
+    <javaVersion>1.4+</javaVersion>
+    <runUnderJdk>false</runUnderJdk>
+    <ea>false</ea>
+    <splash />
+    <splashTime>2000</splashTime>
+    <productName>Band Diagram Program</productName>
+    <manufacturer>Nanoscale Materials and Device Group</manufacturer>
+    <copyright>Copyright Boise State University (c) 2011</copyright>
+    <version>3.1.6</version>
+    <packageFileName>band3.1.6</packageFileName>
+    <eulaPath>/LICENSE.txt</eulaPath>
+    <vmOptions />
+    <mac>
+      <icnsFile>/Band.icns</icnsFile>
+      <dockApplicationName>Band Diagram Program</dockApplicationName>
+      <screenMenuBar>false</screenMenuBar>
+      <brushedMetalLook>false</brushedMetalLook>
+    </mac>
+    <windows>
+      <icoFile>/Band.ico</icoFile>
+      <installerIcoFile />
+      <uninstallerIcoFile />
+      <bundleJre>false</bundleJre>
+      <jrePath />
+      <doCustomCleanup>false</doCustomCleanup>
+      <doCustomPostinstall>false</doCustomPostinstall>
+    </windows>
+    <generic />
+  </wasp>
+  <flow>
+    <buildphase-cleanup />
+    <buildphase-compile />
+    <buildphase-obfuscate />
+    <buildphase-layout />
+    <buildphase-package />
+  </flow>
+  <config>
+    <fork>true</fork>
+    <memoryMaximumSize>512</memoryMaximumSize>
+    <buildFile>../BuildBand.xml</buildFile>
+    <buildOutputDirectory>dist/build</buildOutputDirectory>
+    <buildTempDirectory>dist/tmp</buildTempDirectory>
+    <useJavac2>true</useJavac2>
+    <checkSourceRootsForExistance>true</checkSourceRootsForExistance>
+    <checkIfThereIsFilesInSourceRoot>false</checkIfThereIsFilesInSourceRoot>
+    <installerCompressorSet>true</installerCompressorSet>
+    <honorDepsOnCompile>true</honorDepsOnCompile>
+    <useConfiguredOutputPaths>false</useConfiguredOutputPaths>
+  </config>
+</build-desk-project>

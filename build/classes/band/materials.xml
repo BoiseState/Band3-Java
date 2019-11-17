@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Library>
+<Material type="Dielectric">
+<DielectricConstant>9.0</DielectricConstant>
+<BandGap>8.7</BandGap>
+<ElectronAffinity>1.35</ElectronAffinity>
+<Name>Al2O3</Name>
+<Notes/>
+<FillColor>#0000ff</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>26.0</DielectricConstant>
+<BandGap>5.5</BandGap>
+<ElectronAffinity>3.3</ElectronAffinity>
+<Name>CeO2</Name>
+<Notes/>
+<FillColor>#ff0080</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>14.0</DielectricConstant>
+<BandGap>4.8</BandGap>
+<ElectronAffinity>1.75</ElectronAffinity>
+<Name>Dy2O3</Name>
+<Notes/>
+<FillColor>#408080</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>14.0</DielectricConstant>
+<BandGap>4.8</BandGap>
+<ElectronAffinity>3.26</ElectronAffinity>
+<Name>Dy2O3-2</Name>
+<Notes>Chang, Juan, and Joseph Ya-min Lee, Fabrication and characterization of metal-ferroelectric (PbZr0.53Ti0.47O3)-insulator(Dy2O3)-semiconductor capacitors for nonvolatile memory applications, APPLIED PHYSICS LETTERS 88, 072917 (2006); [Chang, 2007 #639]</Notes>
+<FillColor>#008080</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>4.2</DielectricConstant>
+<BandGap>4.8</BandGap>
+<ElectronAffinity>3.5</ElectronAffinity>
+<Name>Ga2O3</Name>
+<Notes>Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)</Notes>
+<FillColor>#14676b</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>4.8</DielectricConstant>
+<BandGap>5.8</BandGap>
+<ElectronAffinity>3.5</ElectronAffinity>
+<Name>Gd2O3</Name>
+<Notes>Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)</Notes>
+<FillColor>#2d8820</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>23.4</DielectricConstant>
+<BandGap>5.7</BandGap>
+<ElectronAffinity>2.42</ElectronAffinity>
+<Name>Hf0.9Al0.1O</Name>
+<Notes>Tan et al., Hafnium Aluminum Oxide as Charge Storage &amp; Blocking-Oxide Layers in SONOS-Type NVM for High-Speed Operation, IEEE TED V53(4) APRIL 2006
+[12] H. Y. Yu, et al., “Energy gap &amp; band alignment for (HfO2)x(Al2O3)1−x on (100) Si,” APL,
+V81(2), p.376–378, Jul. 2002.
+k=kAl2O3 XAl2O3 + kHfO2 XHfO2
+Eg=EgAl2O3 XAl2O3 + EgHfO2 XHfO2
+eX=eXAl2O3 XAl2O3 + eXHfO2 XHfO2</Notes>
+<FillColor>#cfca0e</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>25.0</DielectricConstant>
+<BandGap>5.7</BandGap>
+<ElectronAffinity>2.65</ElectronAffinity>
+<Name>HfO2</Name>
+<Notes/>
+<FillColor>#808040</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>25.0</DielectricConstant>
+<BandGap>6.0</BandGap>
+<ElectronAffinity>1.85</ElectronAffinity>
+<Name>La2O3</Name>
+<Notes/>
+<FillColor>#ff80c0</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>25.0</DielectricConstant>
+<BandGap>6.0</BandGap>
+<ElectronAffinity>1.75</ElectronAffinity>
+<Name>La2O3-2</Name>
+<Notes>Cheng &amp; Lee, APL v91, 192903 2007</Notes>
+<FillColor>#8080ff</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>22.0</DielectricConstant>
+<BandGap>5.6</BandGap>
+<ElectronAffinity>2.5</ElectronAffinity>
+<Name>LaAlO3</Name>
+<Notes>Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)
+MRS Bulletin Schlom &amp; Haeni March 2002</Notes>
+<FillColor>#872376</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>50.0</DielectricConstant>
+<BandGap>4.35</BandGap>
+<ElectronAffinity>1.7</ElectronAffinity>
+<Name>Nb2O5</Name>
+<Notes/>
+<FillColor>#800080</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>6.25</DielectricConstant>
+<BandGap>3.4</BandGap>
+<ElectronAffinity>3.5</ElectronAffinity>
+<Name>PbTiO3</Name>
+<Notes>Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>500.0</DielectricConstant>
+<BandGap>3.4</BandGap>
+<ElectronAffinity>2.15</ElectronAffinity>
+<Name>PbZr(0.53)Ti(0.47)O3</Name>
+<Notes>Juan, Hu, Chiu, and Joseph Ya-min Lee, The charge trapping effect of metal-ferroelectric „PbZr0.53Ti0.47O3-insulator „HfO2-silicon capacitors, JOURNAL OF APPLIED PHYSICS 98, 044103, 2005; [Juan, 2005 #638]
+
+Chang, Juan, and Joseph Ya-min Lee, Fabrication and characterization of metal-ferroelectric (PbZr0.53Ti0.47O3)-insulator(Dy2O3)-semiconductor capacitors for nonvolatile memory applications, APPLIED PHYSICS LETTERS 88, 072917 (2006); [Chang, 2007 #639]
+</Notes>
+<FillColor>#8080c0</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>7.0</DielectricConstant>
+<BandGap>5.1</BandGap>
+<ElectronAffinity>2.15</ElectronAffinity>
+<Name>Si3N4-1</Name>
+<Notes/>
+<FillColor>#00ff00</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>7.0</DielectricConstant>
+<BandGap>5.1</BandGap>
+<ElectronAffinity>2.05</ElectronAffinity>
+<Name>Si3N4-2</Name>
+<Notes>Tan et al., IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 53, NO. 4, APRIL 2006</Notes>
+<FillColor>#008000</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>7.0</DielectricConstant>
+<BandGap>5.3</BandGap>
+<ElectronAffinity>2.05</ElectronAffinity>
+<Name>Si3N4-3</Name>
+<Notes>Zhang et al., IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 55, NO. 9, SEPTEMBER 2008</Notes>
+<FillColor>#008080</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>3.9</DielectricConstant>
+<BandGap>8.9</BandGap>
+<ElectronAffinity>0.95</ElectronAffinity>
+<Name>SiO2</Name>
+<Notes/>
+<FillColor>#804040</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>90.0</DielectricConstant>
+<BandGap>3.3</BandGap>
+<ElectronAffinity>3.9</ElectronAffinity>
+<Name>SrTiO3</Name>
+<Notes>Eg &amp; Elec Affin = Appl. Phys. Lett. 90, 143507 (2007)
+Dielectric constant = 87
+Dielectric constant = 80-190  (varies w/ Sr composition, CVD process &amp; temp
+ECS 14th CVD &amp; EuroCVD11 p.1109 Yoshida et al.
+Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)</Notes>
+<FillColor>#c0c0c0</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>26.0</DielectricConstant>
+<BandGap>4.5</BandGap>
+<ElectronAffinity>3.75</ElectronAffinity>
+<Name>Ta2O5</Name>
+<Notes/>
+<FillColor>#008040</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>26.0</DielectricConstant>
+<BandGap>4.2</BandGap>
+<ElectronAffinity>3.2</ElectronAffinity>
+<Name>Ta2O5-2</Name>
+<Notes>Cheng &amp; Lee, APL v91, 192903 2007</Notes>
+<FillColor>#8000ff</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>80.0</DielectricConstant>
+<BandGap>3.5</BandGap>
+<ElectronAffinity>2.95</ElectronAffinity>
+<Name>TiO2</Name>
+<Notes/>
+<FillColor>#0000ff</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>15.0</DielectricConstant>
+<BandGap>5.6</BandGap>
+<ElectronAffinity>1.85</ElectronAffinity>
+<Name>Y2O3</Name>
+<Notes/>
+<FillColor>#800040</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>8.75</DielectricConstant>
+<BandGap>3.4</BandGap>
+<ElectronAffinity>4.6</ElectronAffinity>
+<Name>ZnO</Name>
+<Notes>Robertson et al., Band offsets of high K gate oxides on III-V semiconductors, J.App.Phy., 100, 014111 (2006)
+Semiconductor Materials by L. Berger, page 195  k=8.75 and 7.8 along the c axis
+Also Data in Science and Technology, R. Poeschke Ed, 1992</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>8.75</DielectricConstant>
+<BandGap>3.3</BandGap>
+<ElectronAffinity>4.35</ElectronAffinity>
+<Name>ZnO-2</Name>
+<Notes>Cagan et al., J. Phys. D: Appl. Phys. (IOP) 40 (2007) 2430–2434</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Dielectric">
+<DielectricConstant>25.0</DielectricConstant>
+<BandGap>5.8</BandGap>
+<ElectronAffinity>2.75</ElectronAffinity>
+<Name>ZrO2</Name>
+<Notes/>
+<FillColor>#fbb7f5</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.7</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ag</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#fa5666</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.2</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Al</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#808080</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.28</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Al-2</Name>
+<Notes/>
+<FillColor>#00ffff</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.8</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Au</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#ff8040</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.1</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Au-2</Name>
+<Notes/>
+<FillColor>#00ff00</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>2.9</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ca</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.4</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Cr</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#0000a0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.5</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Cu</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#ff8080</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.4</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Fe</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.65</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>HfN</Name>
+<Notes>Tan et al., Hafnium Aluminum Oxide as Charge Storage &amp; Blocking-Oxide Layers in SONOS-Type NVM
+for High-Speed Operation, IEEE TED VOL. 53, NO. 4, APRIL 2006
+Work function=(EcSiO2-EfHfN)+XSiO2 = 3.7+0.95=4.65eV</Notes>
+<FillColor>#ff0000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.5</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Hg</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#c0c0c0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.6</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ir</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#008000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>3.8</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Mn</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#804000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.2</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Mo</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.6</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Mo-2</Name>
+<Notes/>
+<FillColor>#ec0000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.15</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>n+ PolySi</Name>
+<Notes>Ricki's 1st Band Diagram Program</Notes>
+<FillColor>#ff0000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.9</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ni</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#0000a0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.15</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ni-2</Name>
+<Notes/>
+<FillColor>#0080c0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.27</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>p+ PolySi</Name>
+<Notes>Ricki's 1st Band Diagram Program</Notes>
+<FillColor>#ff0000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.0</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Pb</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#808080</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.0</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Pd</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.3</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Pt</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#808080</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.65</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Pt-2</Name>
+<Notes/>
+<FillColor>#8080c0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.3</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Sn</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#808080</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>5.2</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>SrRuO3</Name>
+<Notes>Appl. Phys. Lett. 90, 143507 (2007); Conducting Oxide</Notes>
+<FillColor>#000040</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.7</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>TaN</Name>
+<Notes>Jaydeb Goswami &amp; Allen McTeer (Micron Technology, Inc.), "EOT, Workfunction, and Vfb Roll-off in HfO2/Metal Gate Stacks" in proceedings of the 2009 IEEE WMED. </Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.65</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>TaN-2</Name>
+<Notes>From:
+MRS Olsen et al., TaN workfunctions on HfO2 and HfSiOx 2004</Notes>
+<FillColor>#0000a0</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.4</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>TaSiN</Name>
+<Notes>Jaydeb Goswami &amp; Allen McTeer (Micron Technology, Inc.), "EOT, Workfunction, and Vfb Roll-off in HfO2/Metal Gate Stacks" in proceedings of the 2009 IEEE WMED. </Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.1</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ti</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#008000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.33</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Ti-2</Name>
+<Notes/>
+<FillColor>#ffff00</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.45</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>TiN</Name>
+<Notes/>
+<FillColor>#ff0000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.5</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>W</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#808000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.55</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>W-2</Name>
+<Notes/>
+<FillColor>#ff00ff</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>4.3</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Zn</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#008000</FillColor>
+</Material>
+<Material type="Metal">
+<WorkFunction>3.8</WorkFunction>
+<ExtraCharge>0.0</ExtraCharge>
+<Name>Zr</Name>
+<Notes>Smithell's Metals Handbook, p. 18-4, Table 18.5</Notes>
+<FillColor>#000000</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>8.5</DielectricConstant>
+<BandGap>6.28</BandGap>
+<ElectronAffinity>1.9</ElectronAffinity>
+<IntrinsicCarrierConcentration>9.4E-34</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>AlN</Name>
+<Notes>RPI Professor Schubert</Notes>
+<FillColor>#8000ff</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>13.1</DielectricConstant>
+<BandGap>1.42</BandGap>
+<ElectronAffinity>4.07</ElectronAffinity>
+<IntrinsicCarrierConcentration>9000000</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>GaAs</Name>
+<Notes/>
+<FillColor>#ff8080</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>8.9</DielectricConstant>
+<BandGap>3.425</BandGap>
+<ElectronAffinity>4.1</ElectronAffinity>
+<IntrinsicCarrierConcentration>1.9E-10</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>GaN</Name>
+<Notes>RPI Professor Schubert</Notes>
+<FillColor>#0000ff</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>16.0</DielectricConstant>
+<BandGap>0.67</BandGap>
+<ElectronAffinity>4.0</ElectronAffinity>
+<IntrinsicCarrierConcentration>24000000000000</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>Ge</Name>
+<Notes/>
+<FillColor>#ff8040</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>15.3</DielectricConstant>
+<BandGap>1.97</BandGap>
+<ElectronAffinity>5.8</ElectronAffinity>
+<IntrinsicCarrierConcentration>182</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>InN</Name>
+<Notes>RPI Professor Schubert and http://www.ioffe.rssi.ru/SVA/NSM/Semicond/
+Electron Affinity from Wladek W. Walukiewicz at Lawrence Berkeley National Lab</Notes>
+<FillColor>#000080</FillColor>
+</Material>
+<Material type="Semiconductor">
+<DielectricConstant>11.7</DielectricConstant>
+<BandGap>1.17-4.73e-4*T^2/(T+651)</BandGap>
+<ElectronAffinity>4.05</ElectronAffinity>
+<IntrinsicCarrierConcentration>3.87E16*T^(3/2)*exp(-7014/T)</IntrinsicCarrierConcentration>
+<DopantConcentration>0.0</DopantConcentration>
+<Name>Si</Name>
+<Notes>Temperature dependent band gap and intrinsic carrier concentration taken from Muller and Kamins "Device Electronics for Integrated Circuits" 3rd Ed pg 54</Notes>
+<FillColor>#00ff00</FillColor>
+</Material>
+</Library>

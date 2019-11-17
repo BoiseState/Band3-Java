@@ -1,0 +1,255 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="BandDielectric.title"/>
+    <Property name="name" type="java.lang.String" value="BandDielectric" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane1" pref="572" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="1">
+                                      <Component id="jButtonOK" min="-2" pref="72" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jButtonCancel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabelBandGap" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelName" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextFieldName" min="-2" pref="93" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelDielectricConstant" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextFieldDielectricConstant" min="-2" pref="202" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="1">
+                                      <Component id="jTextFieldBandGap" min="-2" pref="48" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelElectronAffinity" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextFieldElectronAffinity" min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="jLabelNotes" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanelPlotColor" max="32767" attributes="1"/>
+                          <Component id="jButtonPlotColor" alignment="0" max="32767" attributes="1"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelBandGap" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldBandGap" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelElectronAffinity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldElectronAffinity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonPlotColor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanelPlotColor" max="32767" attributes="1"/>
+                  <Component id="jTextFieldName" alignment="0" max="32767" attributes="1"/>
+                  <Component id="jTextFieldDielectricConstant" alignment="0" max="32767" attributes="1"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelDielectricConstant" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabelNotes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="244" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jButtonOK">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="band.BandDielectric" id="jButtonOK_Click" methodName="jButtonOK_Click"/>
+        </Property>
+        <Property name="text" type="java.lang.String" resourceKey="jButtonOK.text"/>
+        <Property name="name" type="java.lang.String" value="jButtonOK" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCancel">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="band.BandDielectric" id="jButtonCancel_Click" methodName="jButtonCancel_Click"/>
+        </Property>
+        <Property name="text" type="java.lang.String" resourceKey="jButtonCancel.text"/>
+        <Property name="name" type="java.lang.String" value="jButtonCancel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelName">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelName.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelName" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldName">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jTextFieldName" noResource="true"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="text" source="Form" sourcePath="${currentRecord.name}" target="jTextFieldName" targetPath="text" updateStrategy="0" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelDielectricConstant">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelDielectricConstant.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelDielectricConstant" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldDielectricConstant">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jTextFieldDielectricConstant" noResource="true"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="text" source="Form" sourcePath="${currentRecord.dielectricConstantExpression}" target="jTextFieldDielectricConstant" targetPath="text" updateStrategy="0" immediately="false">
+          <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBandGap">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelBandGap.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelBandGap" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldBandGap">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jTextFieldBandGap" noResource="true"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="text" source="Form" sourcePath="${currentRecord.bandGap}" target="jTextFieldBandGap" targetPath="text" updateStrategy="0" immediately="false">
+          <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelElectronAffinity">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelElectronAffinity.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelElectronAffinity" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldElectronAffinity">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jTextFieldElectronAffinity" noResource="true"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="text" source="Form" sourcePath="${currentRecord.electronAffinity}" target="jTextFieldElectronAffinity" targetPath="text" updateStrategy="0" immediately="false">
+          <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
+        </BindingProperty>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonPlotColor">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="band.BandDielectric" id="showColorChooser" methodName="showColorChooser"/>
+        </Property>
+        <Property name="text" type="java.lang.String" resourceKey="jButtonPlotColor.text"/>
+        <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonPlotColor.actionCommand"/>
+        <Property name="name" type="java.lang.String" value="jButtonPlotColor" noResource="true"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanelPlotColor">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jPanelPlotColor" noResource="true"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="background" source="Form" sourcePath="${currentRecord.fillColor}" target="jPanelPlotColor" targetPath="background" updateStrategy="0" immediately="false"/>
+      </BindingProperties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="91" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabelNotes">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabelNotes.text"/>
+        <Property name="name" type="java.lang.String" value="jLabelNotes" noResource="true"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jScrollPane1" noResource="true"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextAreaNotes">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="lineWrap" type="boolean" value="true"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="jTextAreaNotes" noResource="true"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="text" source="Form" sourcePath="${currentRecord.notes}" target="jTextAreaNotes" targetPath="text" updateStrategy="0" immediately="false">
+              <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
+            </BindingProperty>
+          </BindingProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

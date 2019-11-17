@@ -1,0 +1,34 @@
+Not Easy - letter key shortcut in listview controls
+X- limit decimal on stack parameters
+X- movie a bit jerky
+X- display location, material, E-field and potential 
+  at bottom of chart when hovering.
+X- add double click support to edit structure
+X- Escape not working for voltage and temp in the main window,
+  should return to previous value.
+X- recreate output tool, duplicate movie fields.
+
+
+Optional
+- 1/2 Metal and Dielectric, 1/2 Semiconductor on chart
+- on zoom, expand last points to end of chart
+
+
+Extra features (not for the public at this time)
+
+- Quantum Mechanical Semiconductor Test
+   - QM Approximation
+
+- Quantum Mechanical Transmission Test Version
+   * Electron Image Charge due to Metals
+   * Electron Image Charge due to Semiconductors
+   * Hole Image Charge due to Metals
+   * Hole Image Charge due to Semiconductors
+   - QM Analysis
+
+- newBand
+   - Electron Image Charge due to Metals
+   - Electron Image Charge due to Semiconductors
+   - Interface Trap Density (FormMaterialSemiconductor)
+
+* - Maybe ready for release

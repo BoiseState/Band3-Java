@@ -1,0 +1,717 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="mainPanel">
+      <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[5000, 5000]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 200]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="mainPanel" noResource="true"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[898, 875]"/>
+        </Property>
+        <Property name="requestFocusEnabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="/// Hacky code to set up a blank charPanel&#xd;&#xa;XYSeriesCollection dummy = new XYSeriesCollection();&#xd;&#xa;dummy.addSeries(new XYSeries(&quot;dummy&quot;));&#xd;&#xa;JFreeChart chart = createFastXYLineChart(&#xd;&#xa;                &quot;&quot;, // chart title&#xd;&#xa;                &quot;&quot;, // x axis label&#xd;&#xa;                &quot;&quot;, // y axis label&#xd;&#xa;                dummy, // data&#xd;&#xa;                PlotOrientation.VERTICAL,&#xd;&#xa;                false, // include legend&#xd;&#xa;                true, // tooltips&#xd;&#xa;                false // urls&#xd;&#xa;                );&#xd;&#xa;cp = new ChartPanel(chart);&#xd;&#xa;cp.setMouseWheelEnabled(true);&#xd;&#xa;cp.setRefreshBuffer(true);&#xd;&#xa;GroupLayout layout = (GroupLayout) mainPanel.getLayout();&#xd;&#xa;layout.replace(jPanelChart, cp);&#xd;&#xa;&#xd;&#xa;// Add listeners for chartPanel&#xd;&#xa;cp.addChartMouseListener(new ChartMouseListener() {&#xd;&#xa;            @Override&#xd;&#xa;            public void chartMouseClicked(ChartMouseEvent e) {&#xd;&#xa;                mouseClicked(e);&#xd;&#xa;            }&#xd;&#xa;            &#xd;&#xa;            @Override&#xd;&#xa;            public void chartMouseMoved(ChartMouseEvent e) {&#xd;&#xa;                mouseMoved(e);&#xd;&#xa;            }&#xd;&#xa;        });&#xd;&#xa;&#xd;&#xa;// Setup Popup Menu&#xd;&#xa;JPopupMenu existingPopup = cp.getPopupMenu();&#xd;&#xa;&#xd;&#xa;        JPopupMenu popup = new JPopupMenu();&#xd;&#xa;&#xd;&#xa;        JMenuItem menuItem = new JMenuItem(actionMap.get(&quot;copyLocationData&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;        &#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;editLayer&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;removeLayer&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        popup.addSeparator();&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;addDielectricBefore&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;addDielectricAfter&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;addMetalBefore&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;addMetalAfter&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        popup.addSeparator();&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;replaceLayer&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        menuItem = new JMenuItem(actionMap.get(&quot;showComposeBox&quot;));&#xd;&#xa;        popup.add(menuItem);&#xd;&#xa;&#xd;&#xa;        popup.addSeparator();&#xd;&#xa;&#xd;&#xa;        JMenu chartOptions = new JMenu(&quot;Chart Options...&quot;);&#xd;&#xa;        popup.add(chartOptions);&#xd;&#xa;        while (existingPopup.getComponentCount() &gt; 0) {&#xd;&#xa;            chartOptions.add(existingPopup.getComponent(0));&#xd;&#xa;        }&#xd;&#xa;&#xd;&#xa;        cp.setPopupMenu(popup);"/>
+      </AuxValues>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jToolBarTop" alignment="0" pref="821" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jToolBarSide" min="-2" pref="125" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jTextFieldRolloverData" min="-2" pref="680" max="-2" attributes="0"/>
+                      <Component id="jPanelChart" alignment="0" pref="680" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jToolBarTop" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jToolBarSide" pref="521" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jPanelChart" pref="550" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jTextFieldRolloverData" min="-2" pref="19" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JToolBar" name="jToolBarTop">
+          <Properties>
+            <Property name="floatable" type="boolean" value="false"/>
+            <Property name="rollover" type="boolean" value="true"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[551, 100]"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jToolBarTop" noResource="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[717, 100]"/>
+            </Property>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabelVoltage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelVoltage.text"/>
+                <Property name="name" type="java.lang.String" value="jLabelVoltage" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldVoltage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldVoltage.text"/>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateTVChart" methodName="updateTVChart"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldVoltageFocusGained"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator5">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator5" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelTemp">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelTemp.text"/>
+                <Property name="name" type="java.lang.String" value="jLabelTemp" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldTemp">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldTemp.text"/>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateTVChart" methodName="updateTVChart"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldTemp" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldTempFocusGained"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator6">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator6" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonPlay">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="animateChart" methodName="animateChart"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jButtonPlay.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="jButtonPlay.toolTipText"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[31, 40]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[31, 40]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jButtonPlay" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[31, 40]"/>
+                </Property>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator8">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator8" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelFlatbandVoltage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelFlatbandVoltage.text"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jLabelFlatbandVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) != null) {&#xa;    jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(60,25));&#xa;    jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(50, 25));&#xa;}"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldFlatbandVoltage">
+              <Properties>
+                <Property name="background" type="java.awt.Color" resourceKey="jTextFieldFlatbandVoltage.background"/>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldFlatbandVoltage.text"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldFlatbandVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator9">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator9" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelEOT">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelEOT.text"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[50, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jLabelEOT" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) != null) {&#xa;    jLabelEOT.setMaximumSize(new java.awt.Dimension(60,25));&#xa;    jLabelEOT.setPreferredSize(new java.awt.Dimension(50, 25));&#xa;}"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldEOT">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldEOT.text"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldEOT" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator10">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator10" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelStackCap">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelStackCap.text"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[70, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jLabelStackCap" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) != null) {&#xa;    jLabelStackCap.setMaximumSize(new java.awt.Dimension(100,25));&#xa;    jLabelStackCap.setPreferredSize(new java.awt.Dimension(90, 25));&#xa;}"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldStackCap">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldStackCap.text"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[80, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[50, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldStackCap" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[70, 25]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="jSeparator11">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator11" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelThresholdVoltage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jLabelThresholdVoltage.text"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jLabelThresholdVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldThresholdVoltage">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" resourceKey="jTextFieldThresholdVoltage.text"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[40, 25]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jTextFieldThresholdVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[60, 25]"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JToolBar" name="jToolBarSide">
+          <Properties>
+            <Property name="floatable" type="boolean" value="false"/>
+            <Property name="orientation" type="int" value="1"/>
+            <Property name="rollover" type="boolean" value="true"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Default Cursor"/>
+            </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[125, 125]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[125, 125]"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jToolBarSide" noResource="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[2, 175]"/>
+            </Property>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanelChart">
+          <Properties>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Crosshair Cursor"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jPanelChart" noResource="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[640, 480]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="/// My great code goes here"/>
+          </AuxValues>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="680" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="550" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Component class="javax.swing.JTextField" name="jTextFieldRolloverData">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jTextFieldRolloverData" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JMenuBar" name="menuBar">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="menuBar" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="jMenuFile.text"/>
+            <Property name="name" type="java.lang.String" value="jMenuFile" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemNew">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="newStructure" methodName="newStructure"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemNew" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemOpen">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="openStructure" methodName="openStructure"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemOpen" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemSave">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="saveStructure" methodName="saveStructure"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemSave" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemClose">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="closeStructure" methodName="closeStructure"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemClose.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemClose" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator1" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemImport">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="importMaterials" methodName="importMaterials"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemImport.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemImport" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator7">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator7" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemSaveAsDefault">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemSaveAsDefault.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemSaveAsDefault" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemExport">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="exportData" methodName="exportData"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemExport" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator2">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator2" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) == null)"/>
+              </AuxValues>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemExit">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="org.jdesktop.application.Application" id="quit" methodName="quit"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemExit" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) == null)"/>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuEdit">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="jMenuEdit.text"/>
+            <Property name="name" type="java.lang.String" value="jMenuEdit" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemUndo">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="undoClick" methodName="undoClick"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemUndo.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemUndo" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemCopyPlot">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="copyPlot" methodName="copyPlot"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemCopyPlot.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemCopyPlot" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuView">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="jMenuView.text"/>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroupView"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jMenuView" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItemChargeDensity">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateChart" methodName="updateChart"/>
+                </Property>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupView"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jRadioButtonMenuItemChargeDensity.text"/>
+                <Property name="name" type="java.lang.String" value="jRadioButtonMenuItemChargeDensity" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItemElectricField">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateChart" methodName="updateChart"/>
+                </Property>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupView"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jRadioButtonMenuItemElectricField.text"/>
+                <Property name="name" type="java.lang.String" value="jRadioButtonMenuItemElectricField" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItemPotential">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateChart" methodName="updateChart"/>
+                </Property>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupView"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jRadioButtonMenuItemPotential.text"/>
+                <Property name="name" type="java.lang.String" value="jRadioButtonMenuItemPotential" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItemEnergy">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="updateChart" methodName="updateChart"/>
+                </Property>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupView"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="jRadioButtonMenuItemEnergy.text"/>
+                <Property name="name" type="java.lang.String" value="jRadioButtonMenuItemEnergy" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator3">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator3" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="jMenuMaterials">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuMaterials.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuMaterials" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItemMetals">
+                  <Properties>
+                    <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                      <action class="band.BandView" id="showMetalsBox" methodName="showMetalsBox"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="jMenuItemMetals" noResource="true"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDielectrics">
+                  <Properties>
+                    <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                      <action class="band.BandView" id="showDielectricsBox" methodName="showDielectricsBox"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="jMenuItemDielectrics" noResource="true"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItemSemiconductors">
+                  <Properties>
+                    <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                      <action class="band.BandView" id="showSemiconductorsBox" methodName="showSemiconductorsBox"/>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="jMenuItemSemiconductors" noResource="true"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemShowStackParameters">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="toggleShowStackParameters" methodName="toggleShowStackParameters"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="jMenuItemShowStackParameters.text"/>
+                <Property name="name" type="java.lang.String" value="jMenuItemShowStackParameters" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator4">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator4" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewWindow">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="showWindowBox" methodName="showWindowBox"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemViewWindow" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemMovieParameters">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="showMovieParametersBox" methodName="showMovieParametersBox"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemMovieParameters" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuStructure">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="jMenuStructure.text"/>
+            <Property name="name" type="java.lang.String" value="jMenuStructure" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemCompose">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="showComposeBox" methodName="showComposeBox"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemCompose" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemExportTool">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="showExportToolBox" methodName="showExportToolBox"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemExportTool" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuHelp">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="jMenuHelp.text"/>
+            <Property name="name" type="java.lang.String" value="jMenuHelp" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAbout">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="band.BandView" id="showAboutBox" methodName="showAboutBox"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="jMenuItemAbout" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="}&#xa;else {&#xa;    new MacOSAboutHandler();&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="if (System.getProperty(&quot;mrj.version&quot;) == null) {"/>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroupView">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="component" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="mainPanel"/>
+    </Property>
+    <Property name="menuBar" type="javax.swing.JMenuBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="menuBar"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,126,0,0,3,13"/>
+  </AuxValues>
+</Form>

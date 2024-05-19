@@ -2061,15 +2061,15 @@ private void jTextFieldTempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIR
     private class MacOSAboutHandler extends Application {
 
         public MacOSAboutHandler() {
-            setAboutHandler(new AboutBoxHandler());
+           // setAboutHandler(new AboutBoxHandler());
         }
 
-        class AboutBoxHandler implements AboutHandler {
-            @Override
-            public void handleAbout(AppEvent.AboutEvent event) {
-                showAboutBox();
-            }
-        }
+//        class AboutBoxHandler implements AboutHandler {
+//            @Override
+//            public void handleAbout(AppEvent.AboutEvent event) {
+//                showAboutBox();
+//            }
+//        }
     }
 
     @Action

@@ -56,7 +56,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.ui.RectangleInsets;
-import com.apple.eawt.*;
+//import com.apple.eawt.*;
 import java.awt.KeyboardFocusManager;
 import java.util.concurrent.TimeUnit;
 import java.util.Stack;
@@ -65,6 +65,10 @@ import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
+import org.jdesktop.application.Application;
+//import java.awt.desktop.AboutHandler;
+//import java.awt.desktop.AppEvent;
+//import java.awt.desktop.AboutEvent;
 
 /**
  * The application's main frame.
@@ -2061,14 +2065,19 @@ private void jTextFieldTempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIR
     private class MacOSAboutHandler extends Application {
 
         public MacOSAboutHandler() {
-            setAboutHandler(new AboutBoxHandler());
+//            setAboutHandler(new AboutBoxHandler());
         }
 
-        class AboutBoxHandler implements AboutHandler {
-            @Override
-            public void handleAbout(AppEvent.AboutEvent event) {
-                showAboutBox();
-            }
+//        class AboutBoxHandler implements AboutHandler {
+//            @Override
+//            public void handleAbout(AppEvent.AboutEvent event) {
+//                showAboutBox();
+//            }
+//        }
+
+        @Override
+        protected void startup() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     }
 

@@ -1,6 +1,6 @@
 package band;
 
-import org.nfunk.jep.JEP; // replaced by org.singularsys.jep - $$$
+import org.nfunk.jep.JEP; 
 
 public class Functions {
   public static double evaluateExpression(String expression, char variable, double variableValue) {

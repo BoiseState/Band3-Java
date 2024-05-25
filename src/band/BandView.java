@@ -56,7 +56,6 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.ui.RectangleInsets;
-//import com.apple.eawt.*;
 import java.awt.KeyboardFocusManager;
 import java.util.concurrent.TimeUnit;
 import java.util.Stack;
@@ -66,9 +65,6 @@ import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
 import org.jdesktop.application.Application;
-//import java.awt.desktop.AboutHandler;
-//import java.awt.desktop.AppEvent;
-//import java.awt.desktop.AboutEvent;
 
 /**
  * The application's main frame.

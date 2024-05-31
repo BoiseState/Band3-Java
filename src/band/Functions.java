@@ -1,6 +1,6 @@
 package band;
 
-import org.nfunk.jep.JEP;
+import org.nfunk.jep.JEP; 
 
 public class Functions {
   public static double evaluateExpression(String expression, char variable, double variableValue) {

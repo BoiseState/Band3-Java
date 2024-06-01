@@ -77,195 +77,195 @@ public class BandDielectric extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandDielectric");
-	jButtonOK = new JButton();
-	jButtonCancel = new JButton();
-	jLabelName = new JLabel();
-	jTextFieldName = new JTextField();
-	jLabelDielectricConstant = new JLabel();
-	jTextFieldDielectricConstant = new JTextField();
-	jLabelBandGap = new JLabel();
-	jTextFieldBandGap = new JTextField();
-	jLabelElectronAffinity = new JLabel();
-	jTextFieldElectronAffinity = new JTextField();
-	jButtonPlotColor = new JButton();
-	jPanelPlotColor = new JPanel();
-	jLabelNotes = new JLabel();
-	jScrollPane1 = new JScrollPane();
-	jTextAreaNotes = new JTextArea();
+        ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandDielectric");
+        jButtonOK = new JButton();
+        jButtonCancel = new JButton();
+        jLabelName = new JLabel();
+        jTextFieldName = new JTextField();
+        jLabelDielectricConstant = new JLabel();
+        jTextFieldDielectricConstant = new JTextField();
+        jLabelBandGap = new JLabel();
+        jTextFieldBandGap = new JTextField();
+        jLabelElectronAffinity = new JLabel();
+        jTextFieldElectronAffinity = new JTextField();
+        jButtonPlotColor = new JButton();
+        jPanelPlotColor = new JPanel();
+        jLabelNotes = new JLabel();
+        jScrollPane1 = new JScrollPane();
+        jTextAreaNotes = new JTextArea();
 
-	//======== this ========
-	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-	setTitle(bundle.getString("BandDielectric.title"));
-	setName("BandDielectric");
-	var contentPane = getContentPane();
+        //======== this ========
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle(bundle.getString("BandDielectric.title"));
+        setName("BandDielectric");
+        var contentPane = getContentPane();
 
-	//---- jButtonOK ----
-	jButtonOK.setText(bundle.getString("jButtonOK.text"));
-	jButtonOK.setName("jButtonOK");
+        //---- jButtonOK ----
+        jButtonOK.setText(bundle.getString("jButtonOK.text"));
+        jButtonOK.setName("jButtonOK");
 
-	//---- jButtonCancel ----
-	jButtonCancel.setText(bundle.getString("jButtonCancel.text"));
-	jButtonCancel.setName("jButtonCancel");
+        //---- jButtonCancel ----
+        jButtonCancel.setText(bundle.getString("jButtonCancel.text"));
+        jButtonCancel.setName("jButtonCancel");
 
-	//---- jLabelName ----
-	jLabelName.setText(bundle.getString("jLabelName.text"));
-	jLabelName.setName("jLabelName");
+        //---- jLabelName ----
+        jLabelName.setText(bundle.getString("jLabelName.text"));
+        jLabelName.setName("jLabelName");
 
-	//---- jTextFieldName ----
-	jTextFieldName.setName("jTextFieldName");
+        //---- jTextFieldName ----
+        jTextFieldName.setName("jTextFieldName");
 
-	//---- jLabelDielectricConstant ----
-	jLabelDielectricConstant.setText(bundle.getString("jLabelDielectricConstant.text"));
-	jLabelDielectricConstant.setName("jLabelDielectricConstant");
+        //---- jLabelDielectricConstant ----
+        jLabelDielectricConstant.setText(bundle.getString("jLabelDielectricConstant.text"));
+        jLabelDielectricConstant.setName("jLabelDielectricConstant");
 
-	//---- jTextFieldDielectricConstant ----
-	jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant");
+        //---- jTextFieldDielectricConstant ----
+        jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant");
 
-	//---- jLabelBandGap ----
-	jLabelBandGap.setText(bundle.getString("jLabelBandGap.text"));
-	jLabelBandGap.setName("jLabelBandGap");
+        //---- jLabelBandGap ----
+        jLabelBandGap.setText(bundle.getString("jLabelBandGap.text"));
+        jLabelBandGap.setName("jLabelBandGap");
 
-	//---- jTextFieldBandGap ----
-	jTextFieldBandGap.setName("jTextFieldBandGap");
+        //---- jTextFieldBandGap ----
+        jTextFieldBandGap.setName("jTextFieldBandGap");
 
-	//---- jLabelElectronAffinity ----
-	jLabelElectronAffinity.setText(bundle.getString("jLabelElectronAffinity.text"));
-	jLabelElectronAffinity.setName("jLabelElectronAffinity");
+        //---- jLabelElectronAffinity ----
+        jLabelElectronAffinity.setText(bundle.getString("jLabelElectronAffinity.text"));
+        jLabelElectronAffinity.setName("jLabelElectronAffinity");
 
-	//---- jTextFieldElectronAffinity ----
-	jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity");
+        //---- jTextFieldElectronAffinity ----
+        jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity");
 
-	//---- jButtonPlotColor ----
-	jButtonPlotColor.setText(bundle.getString("jButtonPlotColor.text"));
-	jButtonPlotColor.setActionCommand(bundle.getString("jButtonPlotColor.actionCommand"));
-	jButtonPlotColor.setName("jButtonPlotColor");
+        //---- jButtonPlotColor ----
+        jButtonPlotColor.setText(bundle.getString("jButtonPlotColor.text"));
+        jButtonPlotColor.setActionCommand(bundle.getString("jButtonPlotColor.actionCommand"));
+        jButtonPlotColor.setName("jButtonPlotColor");
 
-	//======== jPanelPlotColor ========
-	{
-	    jPanelPlotColor.setName("jPanelPlotColor");
+        //======== jPanelPlotColor ========
+        {
+            jPanelPlotColor.setName("jPanelPlotColor");
 
-	    GroupLayout jPanelPlotColorLayout = new GroupLayout(jPanelPlotColor);
-	    jPanelPlotColor.setLayout(jPanelPlotColorLayout);
-	    jPanelPlotColorLayout.setHorizontalGroup(
-		jPanelPlotColorLayout.createParallelGroup()
-		    .addGap(0, 91, Short.MAX_VALUE)
-	    );
-	    jPanelPlotColorLayout.setVerticalGroup(
-		jPanelPlotColorLayout.createParallelGroup()
-		    .addGap(0, 20, Short.MAX_VALUE)
-	    );
-	}
+            GroupLayout jPanelPlotColorLayout = new GroupLayout(jPanelPlotColor);
+            jPanelPlotColor.setLayout(jPanelPlotColorLayout);
+            jPanelPlotColorLayout.setHorizontalGroup(
+                jPanelPlotColorLayout.createParallelGroup()
+                    .addGap(0, 91, Short.MAX_VALUE)
+            );
+            jPanelPlotColorLayout.setVerticalGroup(
+                jPanelPlotColorLayout.createParallelGroup()
+                    .addGap(0, 20, Short.MAX_VALUE)
+            );
+        }
 
-	//---- jLabelNotes ----
-	jLabelNotes.setText(bundle.getString("jLabelNotes.text"));
-	jLabelNotes.setName("jLabelNotes");
+        //---- jLabelNotes ----
+        jLabelNotes.setText(bundle.getString("jLabelNotes.text"));
+        jLabelNotes.setName("jLabelNotes");
 
-	//======== jScrollPane1 ========
-	{
-	    jScrollPane1.setName("jScrollPane1");
+        //======== jScrollPane1 ========
+        {
+            jScrollPane1.setName("jScrollPane1");
 
-	    //---- jTextAreaNotes ----
-	    jTextAreaNotes.setColumns(20);
-	    jTextAreaNotes.setLineWrap(true);
-	    jTextAreaNotes.setRows(5);
-	    jTextAreaNotes.setWrapStyleWord(true);
-	    jTextAreaNotes.setName("jTextAreaNotes");
-	    jScrollPane1.setViewportView(jTextAreaNotes);
-	}
+            //---- jTextAreaNotes ----
+            jTextAreaNotes.setColumns(20);
+            jTextAreaNotes.setLineWrap(true);
+            jTextAreaNotes.setRows(5);
+            jTextAreaNotes.setWrapStyleWord(true);
+            jTextAreaNotes.setName("jTextAreaNotes");
+            jScrollPane1.setViewportView(jTextAreaNotes);
+        }
 
-	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
-	contentPane.setLayout(contentPaneLayout);
-	contentPaneLayout.setHorizontalGroup(
-	    contentPaneLayout.createParallelGroup()
-		.addGroup(contentPaneLayout.createSequentialGroup()
-		    .addContainerGap()
-		    .addGroup(contentPaneLayout.createParallelGroup()
-			.addGroup(contentPaneLayout.createSequentialGroup()
-			    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
-			    .addContainerGap())
-			.addGroup(contentPaneLayout.createSequentialGroup()
-			    .addGroup(contentPaneLayout.createParallelGroup()
-				.addGroup(contentPaneLayout.createSequentialGroup()
-				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-					.addGroup(contentPaneLayout.createSequentialGroup()
-					    .addComponent(jButtonOK, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-					    .addComponent(jButtonCancel)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					    .addComponent(jLabelBandGap))
-					.addGroup(contentPaneLayout.createSequentialGroup()
-					    .addComponent(jLabelName)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-					    .addComponent(jTextFieldName, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-					    .addComponent(jLabelDielectricConstant)))
-				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-					.addComponent(jTextFieldDielectricConstant, GroupLayout.PREFERRED_SIZE, 202, GroupLayout.PREFERRED_SIZE)
-					.addGroup(contentPaneLayout.createSequentialGroup()
-					    .addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-					    .addComponent(jLabelElectronAffinity)
-					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-					    .addComponent(jTextFieldElectronAffinity, 0, 1, Short.MAX_VALUE))))
-				.addComponent(jLabelNotes))
-			    .addGap(6, 6, 6)
-			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-				.addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-				.addComponent(jButtonPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-			    .addGap(19, 19, 19))))
-	);
-	contentPaneLayout.setVerticalGroup(
-	    contentPaneLayout.createParallelGroup()
-		.addGroup(contentPaneLayout.createSequentialGroup()
-		    .addContainerGap()
-		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-			.addComponent(jButtonOK)
-			.addComponent(jLabelBandGap)
-			.addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-			.addComponent(jLabelElectronAffinity)
-			.addComponent(jTextFieldElectronAffinity, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-			.addComponent(jButtonPlotColor)
-			.addComponent(jButtonCancel))
-		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-			.addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-			.addComponent(jTextFieldName)
-			.addComponent(jTextFieldDielectricConstant)
-			.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-			    .addComponent(jLabelName)
-			    .addComponent(jLabelDielectricConstant)))
-		    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-		    .addComponent(jLabelNotes)
-		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-		    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-		    .addContainerGap())
-	);
-	pack();
-	setLocationRelativeTo(getOwner());
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+                            .addContainerGap())
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                            .addComponent(jButtonOK, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButtonCancel)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabelBandGap))
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                            .addComponent(jLabelName)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextFieldName, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabelDielectricConstant)))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextFieldDielectricConstant, GroupLayout.PREFERRED_SIZE, 202, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                            .addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabelElectronAffinity)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextFieldElectronAffinity, 0, 1, Short.MAX_VALUE))))
+                                .addComponent(jLabelNotes))
+                            .addGap(6, 6, 6)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(19, 19, 19))))
+        );
+        contentPaneLayout.setVerticalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonOK)
+                        .addComponent(jLabelBandGap)
+                        .addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelElectronAffinity)
+                        .addComponent(jTextFieldElectronAffinity, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonPlotColor)
+                        .addComponent(jButtonCancel))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldName)
+                        .addComponent(jTextFieldDielectricConstant)
+                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelName)
+                            .addComponent(jLabelDielectricConstant)))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabelNotes)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addContainerGap())
+        );
+        pack();
+        setLocationRelativeTo(getOwner());
 
-	//---- bindings ----
-	bindingGroup = new BindingGroup();
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.name}"),
-	    jTextFieldName, BeanProperty.create("text")));
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.dielectricConstantExpression}"),
-	    jTextFieldDielectricConstant, BeanProperty.create("text")));
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.bandGap}"),
-	    jTextFieldBandGap, BeanProperty.create("text")));
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.electronAffinity}"),
-	    jTextFieldElectronAffinity, BeanProperty.create("text")));
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.fillColor}"),
-	    jPanelPlotColor, BeanProperty.create("background")));
-	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
-	    this, ELProperty.create("${currentRecord.notes}"),
-	    jTextAreaNotes, BeanProperty.create("text")));
-	bindingGroup.bind();
+        //---- bindings ----
+        bindingGroup = new BindingGroup();
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.name}"),
+            jTextFieldName, BeanProperty.create("text")));
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.dielectricConstantExpression}"),
+            jTextFieldDielectricConstant, BeanProperty.create("text")));
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.bandGap}"),
+            jTextFieldBandGap, BeanProperty.create("text")));
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.electronAffinity}"),
+            jTextFieldElectronAffinity, BeanProperty.create("text")));
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.fillColor}"),
+            jPanelPlotColor, BeanProperty.create("background")));
+        bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+            this, ELProperty.create("${currentRecord.notes}"),
+            jTextAreaNotes, BeanProperty.create("text")));
+        bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
    /**

@@ -43,106 +43,106 @@ public class BandSplash extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandSplash");
-	jPanel1 = new JPanel();
-	jButton1 = new JButton();
-	jButton2 = new JButton();
-	jLabel1 = new JLabel();
-	jLabel2 = new JLabel();
-	jLabel3 = new JLabel();
-	jLabel4 = new JLabel();
+        ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandSplash");
+        jPanel1 = new JPanel();
+        jButton1 = new JButton();
+        jButton2 = new JButton();
+        jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
+        jLabel3 = new JLabel();
+        jLabel4 = new JLabel();
 
-	//======== this ========
-	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-	setBackground(Color.white);
-	setForeground(Color.black);
-	setName("BandSplash");
-	setResizable(false);
-	setUndecorated(true);
-	var contentPane = getContentPane();
+        //======== this ========
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(Color.white);
+        setForeground(Color.black);
+        setName("BandSplash");
+        setResizable(false);
+        setUndecorated(true);
+        var contentPane = getContentPane();
 
-	//======== jPanel1 ========
-	{
-	    jPanel1.setBackground(new Color(0x65afd9));
-	    jPanel1.setName("jPanel1");
+        //======== jPanel1 ========
+        {
+            jPanel1.setBackground(new Color(0x65afd9));
+            jPanel1.setName("jPanel1");
 
-	    //---- jButton1 ----
-	    jButton1.setBackground(new Color(0x65afd9));
-	    jButton1.setText(bundle.getString("jButton1.text"));
-	    jButton1.setName("jButton1");
+            //---- jButton1 ----
+            jButton1.setBackground(new Color(0x65afd9));
+            jButton1.setText(bundle.getString("jButton1.text"));
+            jButton1.setName("jButton1");
 
-	    //---- jButton2 ----
-	    jButton2.setBackground(new Color(0x65afd9));
-	    jButton2.setText(bundle.getString("jButton2.text"));
-	    jButton2.setName("jButton2");
+            //---- jButton2 ----
+            jButton2.setBackground(new Color(0x65afd9));
+            jButton2.setText(bundle.getString("jButton2.text"));
+            jButton2.setName("jButton2");
 
-	    //---- jLabel1 ----
-	    jLabel1.setHorizontalAlignment(SwingConstants.LEFT);
-	    jLabel1.setIcon(new ImageIcon(getClass().getResource("/band/resources/bandsplash.png")));
-	    jLabel1.setText(bundle.getString("jLabel1.text"));
-	    jLabel1.setVerticalAlignment(SwingConstants.TOP);
-	    jLabel1.setName("jLabel1");
+            //---- jLabel1 ----
+            jLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+            jLabel1.setIcon(new ImageIcon(getClass().getResource("/band/resources/bandsplash.png")));
+            jLabel1.setText(bundle.getString("jLabel1.text"));
+            jLabel1.setVerticalAlignment(SwingConstants.TOP);
+            jLabel1.setName("jLabel1");
 
-	    //---- jLabel2 ----
-	    jLabel2.setText(bundle.getString("jLabel2.text"));
-	    jLabel2.setName("jLabel2");
+            //---- jLabel2 ----
+            jLabel2.setText(bundle.getString("jLabel2.text"));
+            jLabel2.setName("jLabel2");
 
-	    //---- jLabel3 ----
-	    jLabel3.setText(bundle.getString("jLabel3.text"));
-	    jLabel3.setName("jLabel3");
+            //---- jLabel3 ----
+            jLabel3.setText(bundle.getString("jLabel3.text"));
+            jLabel3.setName("jLabel3");
 
-	    //---- jLabel4 ----
-	    jLabel4.setText(bundle.getString("jLabel4.text"));
-	    jLabel4.setName("jLabel4");
+            //---- jLabel4 ----
+            jLabel4.setText(bundle.getString("jLabel4.text"));
+            jLabel4.setName("jLabel4");
 
-	    GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
-	    jPanel1.setLayout(jPanel1Layout);
-	    jPanel1Layout.setHorizontalGroup(
-		jPanel1Layout.createParallelGroup()
-		    .addGroup(jPanel1Layout.createSequentialGroup()
-			.addGap(245, 245, 245)
-			.addComponent(jButton1)
-			.addGap(18, 18, 18)
-			.addComponent(jButton2))
-		    .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-			.addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 588, GroupLayout.PREFERRED_SIZE)
-			.addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 612, GroupLayout.PREFERRED_SIZE))
-		    .addGroup(jPanel1Layout.createSequentialGroup()
-			.addGap(43, 43, 43)
-			.addGroup(jPanel1Layout.createParallelGroup()
-			    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 330, GroupLayout.PREFERRED_SIZE)
-			    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 409, GroupLayout.PREFERRED_SIZE)))
-	    );
-	    jPanel1Layout.setVerticalGroup(
-		jPanel1Layout.createParallelGroup()
-		    .addGroup(jPanel1Layout.createSequentialGroup()
-			.addComponent(jLabel1)
-			.addGap(7, 7, 7)
-			.addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-			.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-			.addComponent(jLabel3)
-			.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-			.addComponent(jLabel4)
-			.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-			.addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-			    .addComponent(jButton1)
-			    .addComponent(jButton2))
-			.addContainerGap())
-	    );
-	}
+            GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
+            jPanel1.setLayout(jPanel1Layout);
+            jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2))
+                    .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 588, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 612, GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel1Layout.createParallelGroup()
+                            .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 330, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 409, GroupLayout.PREFERRED_SIZE)))
+            );
+            jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2))
+                        .addContainerGap())
+            );
+        }
 
-	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
-	contentPane.setLayout(contentPaneLayout);
-	contentPaneLayout.setHorizontalGroup(
-	    contentPaneLayout.createParallelGroup()
-		.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	);
-	contentPaneLayout.setVerticalGroup(
-	    contentPaneLayout.createParallelGroup()
-		.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	);
-	pack();
-	setLocationRelativeTo(getOwner());
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        );
+        contentPaneLayout.setVerticalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pack();
+        setLocationRelativeTo(getOwner());
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -162,7 +162,7 @@ public class BandSplash extends javax.swing.JDialog {
         });
     }
 
-        @org.jdesktop.application.Action
+    @org.jdesktop.application.Action
     public void IAgreeClick() {
         this.confirmed = true;
         dispose();

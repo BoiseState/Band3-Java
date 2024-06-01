@@ -13,15 +13,22 @@ package band;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.*;
 import java.util.List;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
+import org.jdesktop.beansbinding.*;
+import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
+import org.jdesktop.swingbinding.*;
 
 /**
  *
@@ -122,92 +129,94 @@ public class BandPickDielectric extends MaterialPick {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandPickDielectric");
+	jButtonAdd = new JButton();
+	jButtonClose = new JButton();
+	jScrollPaneDielectrics = new JScrollPane();
+	jTableDielectrics = new JTable();
 
-        jButtonAdd = new javax.swing.JButton();
-        jButtonClose = new javax.swing.JButton();
-        jScrollPaneDielectrics = new javax.swing.JScrollPane();
-        jTableDielectrics = new javax.swing.JTable();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setTitle(bundle.getString("BandPickDielectric.title"));
+	setName("BandPickDielectric");
+	var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandPickDielectric.class);
-        setTitle(resourceMap.getString("BandPickDielectric.title")); // NOI18N
-        setName("BandPickDielectric"); // NOI18N
+	//---- jButtonAdd ----
+	jButtonAdd.setText(bundle.getString("jButtonAdd.text"));
+	jButtonAdd.setName("jButtonAdd");
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandPickDielectric.class, this);
-        jButtonAdd.setAction(actionMap.get("addRecord")); // NOI18N
-        jButtonAdd.setText(resourceMap.getString("jButtonAdd.text")); // NOI18N
-        jButtonAdd.setName("jButtonAdd"); // NOI18N
+	//---- jButtonClose ----
+	jButtonClose.setText(bundle.getString("jButtonClose.text"));
+	jButtonClose.setName("jButtonClose");
 
-        jButtonClose.setAction(actionMap.get("closeDielectricsBox")); // NOI18N
-        jButtonClose.setText(resourceMap.getString("jButtonClose.text")); // NOI18N
-        jButtonClose.setName("jButtonClose"); // NOI18N
+	//======== jScrollPaneDielectrics ========
+	{
+	    jScrollPaneDielectrics.setName("jScrollPaneDielectrics");
 
-        jScrollPaneDielectrics.setName("jScrollPaneDielectrics"); // NOI18N
+	    //---- jTableDielectrics ----
+	    jTableDielectrics.setName("jTableDielectrics");
+	    jScrollPaneDielectrics.setViewportView(jTableDielectrics);
+	}
 
-        jTableDielectrics.setName("jTableDielectrics"); // NOI18N
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addComponent(jButtonAdd)
+			.addComponent(jButtonClose))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(jScrollPaneDielectrics, GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
+		    .addContainerGap())
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+			.addComponent(jScrollPaneDielectrics, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addComponent(jButtonAdd)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+			    .addComponent(jButtonClose)))
+		    .addContainerGap())
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${dielectrics}");
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTableDielectrics);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${name}"));
-        columnBinding.setColumnName("Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dielectricConstant}"));
-        columnBinding.setColumnName("Dielectric Constant");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${bandGap}"));
-        columnBinding.setColumnName("Band Gap");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${electronAffinity}"));
-        columnBinding.setColumnName("Electron Affinity");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${notes}"));
-        columnBinding.setColumnName("Notes");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jScrollPaneDielectrics.setViewportView(jTableDielectrics);
-        jTableDielectrics.getColumnModel().getColumn(0).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title0")); // NOI18N
-        jTableDielectrics.getColumnModel().getColumn(1).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title1")); // NOI18N
-        jTableDielectrics.getColumnModel().getColumn(2).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title2")); // NOI18N
-        jTableDielectrics.getColumnModel().getColumn(3).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title3")); // NOI18N
-        jTableDielectrics.getColumnModel().getColumn(4).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title4")); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonAdd)
-                    .addComponent(jButtonClose))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPaneDielectrics, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPaneDielectrics, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonAdd)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
-                        .addComponent(jButtonClose)))
-                .addContainerGap())
-        );
-
-        bindingGroup.bind();
-
-        pack();
+	//---- bindings ----
+	bindingGroup = new BindingGroup();
+	{
+	    var binding = SwingBindings.createJTableBinding(UpdateStrategy.READ_WRITE,
+		this, (ELProperty) ELProperty.create("${dielectrics}"), jTableDielectrics);
+	    binding.addColumnBinding(ELProperty.create("${name}"))
+		.setColumnName("Name")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${dielectricConstant}"))
+		.setColumnName("Dielectric Constant")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${bandGap}"))
+		.setColumnName("Band Gap")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${electronAffinity}"))
+		.setColumnName("Electron Affinity")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${notes}"))
+		.setColumnName("Notes")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    bindingGroup.addBinding(binding);
+	    binding.bind();
+	}
+	bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -228,11 +237,12 @@ public class BandPickDielectric extends MaterialPick {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAdd;
-    private javax.swing.JButton jButtonClose;
-    private javax.swing.JScrollPane jScrollPaneDielectrics;
-    private javax.swing.JTable jTableDielectrics;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+    private JButton jButtonAdd;
+    private JButton jButtonClose;
+    private JScrollPane jScrollPaneDielectrics;
+    private JTable jTableDielectrics;
+    private BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 }

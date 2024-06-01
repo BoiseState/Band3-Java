@@ -11,18 +11,27 @@
 
 package band;
 
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.*;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
+import org.jdesktop.beansbinding.*;
+import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
+import org.jdesktop.swingbinding.*;
 
 /**
  *
@@ -152,240 +161,270 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandViewImportedMaterials");
+	jButtonSelectAll = new JButton();
+	jButtonSelectNone = new JButton();
+	jLabelStructure = new JLabel();
+	jLabelMetals = new JLabel();
+	jScrollPaneMetals = new JScrollPane();
+	jTableMetals = new JTable();
+	jLabelDielectrics = new JLabel();
+	jScrollPaneDielectrics = new JScrollPane();
+	jTableDielectrics = new JTable();
+	jLabelSemiconductors = new JLabel();
+	jScrollPaneSemiconductors = new JScrollPane();
+	jTableSemiconductors = new JTable();
+	jButtonCancel = new JButton();
+	jButtonImport = new JButton();
 
-        jButtonSelectAll = new javax.swing.JButton();
-        jButtonSelectNone = new javax.swing.JButton();
-        jLabelStructure = new javax.swing.JLabel();
-        jLabelMetals = new javax.swing.JLabel();
-        jScrollPaneMetals = new javax.swing.JScrollPane();
-        jTableMetals = new javax.swing.JTable();
-        jLabelDielectrics = new javax.swing.JLabel();
-        jScrollPaneDielectrics = new javax.swing.JScrollPane();
-        jTableDielectrics = new javax.swing.JTable();
-        jLabelSemiconductors = new javax.swing.JLabel();
-        jScrollPaneSemiconductors = new javax.swing.JScrollPane();
-        jTableSemiconductors = new javax.swing.JTable();
-        jButtonCancel = new javax.swing.JButton();
-        jButtonImport = new javax.swing.JButton();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setName("BandCompose");
+	var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setName("BandCompose"); // NOI18N
+	//---- jButtonSelectAll ----
+	jButtonSelectAll.setText(bundle.getString("jButtonSelectAll.text"));
+	jButtonSelectAll.setName("jButtonSelectAll");
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandViewImportedMaterials.class, this);
-        jButtonSelectAll.setAction(actionMap.get("selectAll")); // NOI18N
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandViewImportedMaterials.class);
-        jButtonSelectAll.setText(resourceMap.getString("jButtonSelectAll.text")); // NOI18N
-        jButtonSelectAll.setName("jButtonSelectAll"); // NOI18N
+	//---- jButtonSelectNone ----
+	jButtonSelectNone.setText(bundle.getString("jButtonSelectNone.text"));
+	jButtonSelectNone.setName("jButtonSelectNone");
 
-        jButtonSelectNone.setAction(actionMap.get("selectNone")); // NOI18N
-        jButtonSelectNone.setText(resourceMap.getString("jButtonSelectNone.text")); // NOI18N
-        jButtonSelectNone.setName("jButtonSelectNone"); // NOI18N
+	//---- jLabelStructure ----
+	jLabelStructure.setName("jLabelStructure");
 
-        jLabelStructure.setName("jLabelStructure"); // NOI18N
+	//---- jLabelMetals ----
+	jLabelMetals.setName("jLabelMetals");
 
-        jLabelMetals.setName("jLabelMetals"); // NOI18N
+	//======== jScrollPaneMetals ========
+	{
+	    jScrollPaneMetals.setName("jScrollPaneMetals");
 
-        jScrollPaneMetals.setName("jScrollPaneMetals"); // NOI18N
+	    //---- jTableMetals ----
+	    jTableMetals.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+	    jTableMetals.setName("jTableMetals");
+	    jTableMetals.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	    jTableMetals.addMouseListener(new MouseAdapter() {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+		    jTableMetalsMouseClicked(e);
+		}
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		    jTableMetalsMouseReleased(e);
+		}
+	    });
+	    jTableMetals.addKeyListener(new KeyAdapter() {
+		@Override
+		public void keyPressed(KeyEvent e) {
+		    jTableMetalsKeyPressed(e);
+		}
+	    });
+	    jScrollPaneMetals.setViewportView(jTableMetals);
+	}
 
-        jTableMetals.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTableMetals.setName("jTableMetals"); // NOI18N
-        jTableMetals.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	//---- jLabelDielectrics ----
+	jLabelDielectrics.setName("jLabelDielectrics");
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${metals}");
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTableMetals);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${name}"));
-        columnBinding.setColumnName("Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${workFunction}"));
-        columnBinding.setColumnName("Work Function");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${notes}"));
-        columnBinding.setColumnName("Notes");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jTableMetals.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableMetalsMouseClicked(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableMetalsMouseReleased(evt);
-            }
-        });
-        jTableMetals.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTableMetalsKeyPressed(evt);
-            }
-        });
-        jScrollPaneMetals.setViewportView(jTableMetals);
+	//======== jScrollPaneDielectrics ========
+	{
+	    jScrollPaneDielectrics.setName("jScrollPaneDielectrics");
 
-        jLabelDielectrics.setName("jLabelDielectrics"); // NOI18N
+	    //---- jTableDielectrics ----
+	    jTableDielectrics.setName("jTableDielectrics");
+	    jTableDielectrics.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	    jTableDielectrics.addMouseListener(new MouseAdapter() {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+		    jTableDielectricsMouseClicked(e);
+		}
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		    jTableDielectricsMouseReleased(e);
+		}
+	    });
+	    jTableDielectrics.addKeyListener(new KeyAdapter() {
+		@Override
+		public void keyPressed(KeyEvent e) {
+		    jTableDielectricsKeyPressed(e);
+		}
+	    });
+	    jScrollPaneDielectrics.setViewportView(jTableDielectrics);
+	}
 
-        jScrollPaneDielectrics.setName("jScrollPaneDielectrics"); // NOI18N
+	//---- jLabelSemiconductors ----
+	jLabelSemiconductors.setName("jLabelSemiconductors");
 
-        jTableDielectrics.setName("jTableDielectrics"); // NOI18N
-        jTableDielectrics.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	//======== jScrollPaneSemiconductors ========
+	{
+	    jScrollPaneSemiconductors.setName("jScrollPaneSemiconductors");
 
-        eLProperty = org.jdesktop.beansbinding.ELProperty.create("${dielectrics}");
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTableDielectrics);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${name}"));
-        columnBinding.setColumnName("Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dielectricConstant}"));
-        columnBinding.setColumnName("Dielectric Constant");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${bandGap}"));
-        columnBinding.setColumnName("Band Gap");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${electronAffinity}"));
-        columnBinding.setColumnName("Electron Affinity");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${notes}"));
-        columnBinding.setColumnName("Notes");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jTableDielectrics.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableDielectricsMouseReleased(evt);
-            }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableDielectricsMouseClicked(evt);
-            }
-        });
-        jTableDielectrics.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTableDielectricsKeyPressed(evt);
-            }
-        });
-        jScrollPaneDielectrics.setViewportView(jTableDielectrics);
+	    //---- jTableSemiconductors ----
+	    jTableSemiconductors.setName("jTableSemiconductors");
+	    jTableSemiconductors.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	    jTableSemiconductors.addMouseListener(new MouseAdapter() {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+		    jTableSemiconductorsMouseClicked(e);
+		}
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		    jTableSemiconductorsMouseReleased(e);
+		}
+	    });
+	    jTableSemiconductors.addKeyListener(new KeyAdapter() {
+		@Override
+		public void keyPressed(KeyEvent e) {
+		    jTableSemiconductorsKeyPressed(e);
+		}
+	    });
+	    jScrollPaneSemiconductors.setViewportView(jTableSemiconductors);
+	}
 
-        jLabelSemiconductors.setName("jLabelSemiconductors"); // NOI18N
+	//---- jButtonCancel ----
+	jButtonCancel.setText(bundle.getString("jButtonCancel.text"));
+	jButtonCancel.setName("jButtonCancel");
 
-        jScrollPaneSemiconductors.setName("jScrollPaneSemiconductors"); // NOI18N
+	//---- jButtonImport ----
+	jButtonImport.setText(bundle.getString("jButtonImport.text"));
+	jButtonImport.setName("jButtonImport");
 
-        jTableSemiconductors.setName("jTableSemiconductors"); // NOI18N
-        jTableSemiconductors.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGroup(contentPaneLayout.createParallelGroup()
+				.addComponent(jButtonSelectAll, GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+				.addComponent(jButtonSelectNone, GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+				.addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelStructure)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 624, Short.MAX_VALUE)
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addComponent(jLabelMetals)
+					.addComponent(jLabelDielectrics)
+					.addComponent(jLabelSemiconductors)))
+				.addComponent(jScrollPaneSemiconductors, GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
+				.addComponent(jScrollPaneMetals, GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
+				.addComponent(jScrollPaneDielectrics, GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)))
+			.addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+			    .addComponent(jButtonImport)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jButtonCancel)))
+		    .addContainerGap())
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelStructure)
+			.addComponent(jLabelMetals))
+		    .addGap(5, 5, 5)
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addComponent(jScrollPaneMetals, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+			    .addComponent(jLabelDielectrics)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jScrollPaneDielectrics, GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+			    .addComponent(jLabelSemiconductors)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jScrollPaneSemiconductors, GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addComponent(jButtonSelectAll)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jButtonSelectNone)))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jButtonCancel)
+			.addComponent(jButtonImport))
+		    .addContainerGap())
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
 
-        eLProperty = org.jdesktop.beansbinding.ELProperty.create("${semiconductors}");
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTableSemiconductors);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${name}"));
-        columnBinding.setColumnName("Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dielectricConstant}"));
-        columnBinding.setColumnName("Dielectric Constant");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${bandGap}"));
-        columnBinding.setColumnName("Band Gap");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${electronAffinity}"));
-        columnBinding.setColumnName("Electron Affinity");
-        columnBinding.setColumnClass(Double.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${notes}"));
-        columnBinding.setColumnName("Notes");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
-        jTableSemiconductors.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableSemiconductorsMouseReleased(evt);
-            }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableSemiconductorsMouseClicked(evt);
-            }
-        });
-        jTableSemiconductors.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTableSemiconductorsKeyPressed(evt);
-            }
-        });
-        jScrollPaneSemiconductors.setViewportView(jTableSemiconductors);
-
-        jButtonCancel.setAction(actionMap.get("close")); // NOI18N
-        jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
-        jButtonCancel.setName("jButtonCancel"); // NOI18N
-
-        jButtonImport.setAction(actionMap.get("doImport")); // NOI18N
-        jButtonImport.setText(resourceMap.getString("jButtonImport.text")); // NOI18N
-        jButtonImport.setName("jButtonImport"); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonSelectAll, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                            .addComponent(jButtonSelectNone, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabelStructure)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 624, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelMetals)
-                                    .addComponent(jLabelDielectrics)
-                                    .addComponent(jLabelSemiconductors)))
-                            .addComponent(jScrollPaneSemiconductors, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
-                            .addComponent(jScrollPaneMetals, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
-                            .addComponent(jScrollPaneDielectrics, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonImport)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonCancel)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelStructure)
-                    .addComponent(jLabelMetals))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPaneMetals, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelDielectrics)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPaneDielectrics, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelSemiconductors)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPaneSemiconductors, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonSelectAll)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSelectNone)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCancel)
-                    .addComponent(jButtonImport))
-                .addContainerGap())
-        );
-
-        bindingGroup.bind();
-
-        pack();
+	//---- bindings ----
+	bindingGroup = new BindingGroup();
+	{
+	    var binding = SwingBindings.createJTableBinding(UpdateStrategy.READ_WRITE,
+		this, (ELProperty) ELProperty.create("${metals}"), jTableMetals);
+	    binding.addColumnBinding(ELProperty.create("${name}"))
+		.setColumnName("Name")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${workFunction}"))
+		.setColumnName("Work Function")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${notes}"))
+		.setColumnName("Notes")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    bindingGroup.addBinding(binding);
+	    binding.bind();
+	}
+	{
+	    var binding = SwingBindings.createJTableBinding(UpdateStrategy.READ_WRITE,
+		this, (ELProperty) ELProperty.create("${dielectrics}"), jTableDielectrics);
+	    binding.addColumnBinding(ELProperty.create("${name}"))
+		.setColumnName("Name")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${dielectricConstant}"))
+		.setColumnName("Dielectric Constant")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${bandGap}"))
+		.setColumnName("Band Gap")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${electronAffinity}"))
+		.setColumnName("Electron Affinity")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${notes}"))
+		.setColumnName("Notes")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    bindingGroup.addBinding(binding);
+	    binding.bind();
+	}
+	{
+	    var binding = SwingBindings.createJTableBinding(UpdateStrategy.READ_WRITE,
+		this, (ELProperty) ELProperty.create("${semiconductors}"), jTableSemiconductors);
+	    binding.addColumnBinding(ELProperty.create("${name}"))
+		.setColumnName("Name")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${dielectricConstant}"))
+		.setColumnName("Dielectric Constant")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${bandGap}"))
+		.setColumnName("Band Gap")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${electronAffinity}"))
+		.setColumnName("Electron Affinity")
+		.setColumnClass(Double.class)
+		.setEditable(false);
+	    binding.addColumnBinding(ELProperty.create("${notes}"))
+		.setColumnName("Notes")
+		.setColumnClass(String.class)
+		.setEditable(false);
+	    bindingGroup.addBinding(binding);
+	    binding.bind();
+	}
+	bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTableMetalsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMetalsMouseReleased
@@ -427,20 +466,21 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancel;
-    private javax.swing.JButton jButtonImport;
-    private javax.swing.JButton jButtonSelectAll;
-    private javax.swing.JButton jButtonSelectNone;
-    private javax.swing.JLabel jLabelDielectrics;
-    private javax.swing.JLabel jLabelMetals;
-    private javax.swing.JLabel jLabelSemiconductors;
-    private javax.swing.JLabel jLabelStructure;
-    private javax.swing.JScrollPane jScrollPaneDielectrics;
-    private javax.swing.JScrollPane jScrollPaneMetals;
-    private javax.swing.JScrollPane jScrollPaneSemiconductors;
-    private javax.swing.JTable jTableDielectrics;
-    private javax.swing.JTable jTableMetals;
-    private javax.swing.JTable jTableSemiconductors;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+    private JButton jButtonSelectAll;
+    private JButton jButtonSelectNone;
+    private JLabel jLabelStructure;
+    private JLabel jLabelMetals;
+    private JScrollPane jScrollPaneMetals;
+    private JTable jTableMetals;
+    private JLabel jLabelDielectrics;
+    private JScrollPane jScrollPaneDielectrics;
+    private JTable jTableDielectrics;
+    private JLabel jLabelSemiconductors;
+    private JScrollPane jScrollPaneSemiconductors;
+    private JTable jTableSemiconductors;
+    private JButton jButtonCancel;
+    private JButton jButtonImport;
+    private BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

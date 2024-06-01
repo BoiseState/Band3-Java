@@ -5,15 +5,20 @@
  */
 package band;
 
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
@@ -98,149 +103,161 @@ public class BandMovieParameters extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandMovieParameters");
+	jLabelStartVoltage = new JLabel();
+	jTextFieldStartVoltage = new JTextField();
+	jLabelStopVoltage = new JLabel();
+	jTextFieldStopVoltage = new JTextField();
+	jLabelNumberOfSteps = new JLabel();
+	jTextFieldNumberOfSteps = new JTextField();
+	jLabelStepSize = new JLabel();
+	jTextFieldStepSize = new JTextField();
+	jButtonOK = new JButton();
+	jButtonCancel = new JButton();
+	jLabelOutputParameters = new JLabel();
+	jCheckBoxSmartAxisSize = new JCheckBox();
 
-        jLabelStartVoltage = new javax.swing.JLabel();
-        jTextFieldStartVoltage = new javax.swing.JTextField();
-        jLabelStopVoltage = new javax.swing.JLabel();
-        jTextFieldStopVoltage = new javax.swing.JTextField();
-        jLabelNumberOfSteps = new javax.swing.JLabel();
-        jTextFieldNumberOfSteps = new javax.swing.JTextField();
-        jLabelStepSize = new javax.swing.JLabel();
-        jTextFieldStepSize = new javax.swing.JTextField();
-        jButtonOK = new javax.swing.JButton();
-        jButtonCancel = new javax.swing.JButton();
-        jLabelOutputParameters = new javax.swing.JLabel();
-        jCheckBoxSmartAxisSize = new javax.swing.JCheckBox();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setTitle(bundle.getString("BandMovieParameters.title"));
+	setName("BandMovieParameters");
+	setResizable(false);
+	var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandMovieParameters.class);
-        setTitle(resourceMap.getString("BandMovieParameters.title")); // NOI18N
-        setName("BandMovieParameters"); // NOI18N
-        setResizable(false);
+	//---- jLabelStartVoltage ----
+	jLabelStartVoltage.setText(bundle.getString("jLabelStartVoltage.text"));
+	jLabelStartVoltage.setName("jLabelStartVoltage");
 
-        jLabelStartVoltage.setText(resourceMap.getString("jLabelStartVoltage.text")); // NOI18N
-        jLabelStartVoltage.setName("jLabelStartVoltage"); // NOI18N
+	//---- jTextFieldStartVoltage ----
+	jTextFieldStartVoltage.setText(bundle.getString("jTextFieldStartVoltage.text"));
+	jTextFieldStartVoltage.setName("jTextFieldStartVoltage");
+	jTextFieldStartVoltage.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldStartVoltageKeyPressed(e);
+	    }
+	});
 
-        jTextFieldStartVoltage.setText(resourceMap.getString("jTextFieldStartVoltage.text")); // NOI18N
-        jTextFieldStartVoltage.setName("jTextFieldStartVoltage"); // NOI18N
-        jTextFieldStartVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldStartVoltageKeyPressed(evt);
-            }
-        });
+	//---- jLabelStopVoltage ----
+	jLabelStopVoltage.setText(bundle.getString("jLabelStopVoltage.text"));
+	jLabelStopVoltage.setName("jLabelStopVoltage");
 
-        jLabelStopVoltage.setText(resourceMap.getString("jLabelStopVoltage.text")); // NOI18N
-        jLabelStopVoltage.setName("jLabelStopVoltage"); // NOI18N
+	//---- jTextFieldStopVoltage ----
+	jTextFieldStopVoltage.setText(bundle.getString("jTextFieldStopVoltage.text"));
+	jTextFieldStopVoltage.setName("jTextFieldStopVoltage");
+	jTextFieldStopVoltage.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldStopVoltageKeyPressed(e);
+	    }
+	});
 
-        jTextFieldStopVoltage.setText(resourceMap.getString("jTextFieldStopVoltage.text")); // NOI18N
-        jTextFieldStopVoltage.setName("jTextFieldStopVoltage"); // NOI18N
-        jTextFieldStopVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldStopVoltageKeyPressed(evt);
-            }
-        });
+	//---- jLabelNumberOfSteps ----
+	jLabelNumberOfSteps.setText(bundle.getString("jLabelNumberOfSteps.text"));
+	jLabelNumberOfSteps.setName("jLabelNumberOfSteps");
 
-        jLabelNumberOfSteps.setText(resourceMap.getString("jLabelNumberOfSteps.text")); // NOI18N
-        jLabelNumberOfSteps.setName("jLabelNumberOfSteps"); // NOI18N
+	//---- jTextFieldNumberOfSteps ----
+	jTextFieldNumberOfSteps.setText(bundle.getString("jTextFieldNumberOfSteps.text"));
+	jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps");
+	jTextFieldNumberOfSteps.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldNumberOfStepsKeyPressed(e);
+	    }
+	});
 
-        jTextFieldNumberOfSteps.setText(resourceMap.getString("jTextFieldNumberOfSteps.text")); // NOI18N
-        jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps"); // NOI18N
-        jTextFieldNumberOfSteps.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldNumberOfStepsKeyPressed(evt);
-            }
-        });
+	//---- jLabelStepSize ----
+	jLabelStepSize.setText(bundle.getString("jLabelStepSize.text"));
+	jLabelStepSize.setName("jLabelStepSize");
 
-        jLabelStepSize.setText(resourceMap.getString("jLabelStepSize.text")); // NOI18N
-        jLabelStepSize.setName("jLabelStepSize"); // NOI18N
+	//---- jTextFieldStepSize ----
+	jTextFieldStepSize.setEditable(false);
+	jTextFieldStepSize.setText(bundle.getString("jTextFieldStepSize.text"));
+	jTextFieldStepSize.setName("jTextFieldStepSize");
 
-        jTextFieldStepSize.setEditable(false);
-        jTextFieldStepSize.setText(resourceMap.getString("jTextFieldStepSize.text")); // NOI18N
-        jTextFieldStepSize.setName("jTextFieldStepSize"); // NOI18N
+	//---- jButtonOK ----
+	jButtonOK.setText(bundle.getString("jButtonOK.text"));
+	jButtonOK.setActionCommand(bundle.getString("jButtonOK.actionCommand"));
+	jButtonOK.setName("jButtonOK");
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandMovieParameters.class, this);
-        jButtonOK.setAction(actionMap.get("closeMovieParametersBox")); // NOI18N
-        jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
-        jButtonOK.setActionCommand(resourceMap.getString("jButtonOK.actionCommand")); // NOI18N
-        jButtonOK.setName("jButtonOK"); // NOI18N
+	//---- jButtonCancel ----
+	jButtonCancel.setText(bundle.getString("jButtonCancel.text"));
+	jButtonCancel.setName("jButtonCancel");
 
-        jButtonCancel.setAction(actionMap.get("cancelMovieParametersBox")); // NOI18N
-        jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
-        jButtonCancel.setName("jButtonCancel"); // NOI18N
+	//---- jLabelOutputParameters ----
+	jLabelOutputParameters.setName("jLabelOutputParameters");
 
-        jLabelOutputParameters.setName("jLabelOutputParameters"); // NOI18N
+	//---- jCheckBoxSmartAxisSize ----
+	jCheckBoxSmartAxisSize.setText(bundle.getString("jCheckBoxSmartAxisSize.text"));
+	jCheckBoxSmartAxisSize.setName("jCheckBoxSmartAxisSize");
 
-        jCheckBoxSmartAxisSize.setText(resourceMap.getString("jCheckBoxSmartAxisSize.text")); // NOI18N
-        jCheckBoxSmartAxisSize.setName("jCheckBoxSmartAxisSize"); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jCheckBoxSmartAxisSize, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(21, 21, 21)
-                            .addComponent(jButtonOK)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButtonCancel)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabelStopVoltage)
-                                    .addComponent(jLabelStartVoltage))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextFieldStopVoltage)
-                                    .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelNumberOfSteps)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldNumberOfSteps))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelStepSize)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldStepSize)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelOutputParameters))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelStartVoltage)
-                    .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelOutputParameters))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelStopVoltage)
-                    .addComponent(jTextFieldStopVoltage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelNumberOfSteps)
-                    .addComponent(jTextFieldNumberOfSteps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelStepSize)
-                    .addComponent(jTextFieldStepSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                .addComponent(jCheckBoxSmartAxisSize)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonOK)
-                    .addComponent(jButtonCancel))
-                .addContainerGap())
-        );
-
-        jCheckBoxSmartAxisSize.getAccessibleContext().setAccessibleDescription(resourceMap.getString("jCheckBoxSmartAxisSize.AccessibleContext.accessibleDescription")); // NOI18N
-
-        pack();
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+			    .addComponent(jCheckBoxSmartAxisSize, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			    .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
+				.addGap(21, 21, 21)
+				.addComponent(jButtonOK)
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				.addComponent(jButtonCancel)))
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+					.addComponent(jLabelStopVoltage)
+					.addComponent(jLabelStartVoltage))
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+					.addComponent(jTextFieldStopVoltage)
+					.addComponent(jTextFieldStartVoltage, GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelNumberOfSteps)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jTextFieldNumberOfSteps))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelStepSize)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jTextFieldStepSize)))
+			    .addGap(18, 18, 18)
+			    .addComponent(jLabelOutputParameters))))
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelStartVoltage)
+			.addComponent(jTextFieldStartVoltage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+			.addComponent(jLabelOutputParameters))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelStopVoltage)
+			.addComponent(jTextFieldStopVoltage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelNumberOfSteps)
+			.addComponent(jTextFieldNumberOfSteps, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelStepSize)
+			.addComponent(jTextFieldStepSize, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+		    .addComponent(jCheckBoxSmartAxisSize)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jButtonOK)
+			.addComponent(jButtonCancel))
+		    .addContainerGap())
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldStartVoltageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldStartVoltageKeyPressed
@@ -274,18 +291,19 @@ public class BandMovieParameters extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancel;
-    private javax.swing.JButton jButtonOK;
-    private javax.swing.JCheckBox jCheckBoxSmartAxisSize;
-    private javax.swing.JLabel jLabelNumberOfSteps;
-    private javax.swing.JLabel jLabelOutputParameters;
-    private javax.swing.JLabel jLabelStartVoltage;
-    private javax.swing.JLabel jLabelStepSize;
-    private javax.swing.JLabel jLabelStopVoltage;
-    private javax.swing.JTextField jTextFieldNumberOfSteps;
-    private javax.swing.JTextField jTextFieldStartVoltage;
-    private javax.swing.JTextField jTextFieldStepSize;
-    private javax.swing.JTextField jTextFieldStopVoltage;
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+    private JLabel jLabelStartVoltage;
+    private JTextField jTextFieldStartVoltage;
+    private JLabel jLabelStopVoltage;
+    private JTextField jTextFieldStopVoltage;
+    private JLabel jLabelNumberOfSteps;
+    private JTextField jTextFieldNumberOfSteps;
+    private JLabel jLabelStepSize;
+    private JTextField jTextFieldStepSize;
+    private JButton jButtonOK;
+    private JButton jButtonCancel;
+    private JLabel jLabelOutputParameters;
+    private JCheckBox jCheckBoxSmartAxisSize;
     // End of variables declaration//GEN-END:variables
 
 }

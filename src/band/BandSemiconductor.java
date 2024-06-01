@@ -15,13 +15,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.*;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JColorChooser;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
+import org.jdesktop.beansbinding.*;
+import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 
 /**
  *
@@ -169,198 +175,217 @@ public class BandSemiconductor extends javax.swing.JDialog {
     */
    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandSemiconductor");
+	jButtonOK = new JButton();
+	jButtonCancel = new JButton();
+	jLabelName = new JLabel();
+	jTextFieldName = new JTextField();
+	jLabelDielectricConstant = new JLabel();
+	jTextFieldDielectricConstant = new JTextField();
+	jLabelBandGap = new JLabel();
+	jTextFieldBandGap = new JTextField();
+	jLabelElectronAffinity = new JLabel();
+	jTextFieldElectronAffinity = new JTextField();
+	jButtonPlotColor = new JButton();
+	jPanelPlotColor = new JPanel();
+	jLabelNotes = new JLabel();
+	jScrollPane1 = new JScrollPane();
+	jTextAreaNotes = new JTextArea();
+	jLabelIntrinsicCarrierConcentration = new JLabel();
+	jTextFieldIntrinsicCarrierConcentration = new JTextField();
 
-        jButtonOK = new javax.swing.JButton();
-        jButtonCancel = new javax.swing.JButton();
-        jLabelName = new javax.swing.JLabel();
-        jTextFieldName = new javax.swing.JTextField();
-        jLabelDielectricConstant = new javax.swing.JLabel();
-        jTextFieldDielectricConstant = new javax.swing.JTextField();
-        jLabelBandGap = new javax.swing.JLabel();
-        jTextFieldBandGap = new javax.swing.JTextField();
-        jLabelElectronAffinity = new javax.swing.JLabel();
-        jTextFieldElectronAffinity = new javax.swing.JTextField();
-        jButtonPlotColor = new javax.swing.JButton();
-        jPanelPlotColor = new javax.swing.JPanel();
-        jLabelNotes = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaNotes = new javax.swing.JTextArea();
-        jLabelIntrinsicCarrierConcentration = new javax.swing.JLabel();
-        jTextFieldIntrinsicCarrierConcentration = new javax.swing.JTextField();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setTitle(bundle.getString("BandSemiconductor.title"));
+	setName("BandSemiconductor");
+	var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandSemiconductor.class);
-        setTitle(resourceMap.getString("BandSemiconductor.title")); // NOI18N
-        setName("BandSemiconductor"); // NOI18N
+	//---- jButtonOK ----
+	jButtonOK.setText(bundle.getString("jButtonOK.text"));
+	jButtonOK.setName("jButtonOK");
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandSemiconductor.class, this);
-        jButtonOK.setAction(actionMap.get("jButtonOK_Click")); // NOI18N
-        jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
-        jButtonOK.setName("jButtonOK"); // NOI18N
+	//---- jButtonCancel ----
+	jButtonCancel.setText(bundle.getString("jButtonCancel.text"));
+	jButtonCancel.setName("jButtonCancel");
 
-        jButtonCancel.setAction(actionMap.get("jButtonCancel_Click")); // NOI18N
-        jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
-        jButtonCancel.setName("jButtonCancel"); // NOI18N
+	//---- jLabelName ----
+	jLabelName.setText(bundle.getString("jLabelName.text"));
+	jLabelName.setName("jLabelName");
 
-        jLabelName.setText(resourceMap.getString("jLabelName.text")); // NOI18N
-        jLabelName.setName("jLabelName"); // NOI18N
+	//---- jTextFieldName ----
+	jTextFieldName.setName("jTextFieldName");
 
-        jTextFieldName.setName("jTextFieldName"); // NOI18N
+	//---- jLabelDielectricConstant ----
+	jLabelDielectricConstant.setText(bundle.getString("jLabelDielectricConstant.text"));
+	jLabelDielectricConstant.setName("jLabelDielectricConstant");
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.name}"), jTextFieldName, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+	//---- jTextFieldDielectricConstant ----
+	jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant");
 
-        jLabelDielectricConstant.setText(resourceMap.getString("jLabelDielectricConstant.text")); // NOI18N
-        jLabelDielectricConstant.setName("jLabelDielectricConstant"); // NOI18N
+	//---- jLabelBandGap ----
+	jLabelBandGap.setText(bundle.getString("jLabelBandGap.text"));
+	jLabelBandGap.setName("jLabelBandGap");
 
-        jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant"); // NOI18N
+	//---- jTextFieldBandGap ----
+	jTextFieldBandGap.setName("jTextFieldBandGap");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.dielectricConstant}"), jTextFieldDielectricConstant, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+	//---- jLabelElectronAffinity ----
+	jLabelElectronAffinity.setText(bundle.getString("jLabelElectronAffinity.text"));
+	jLabelElectronAffinity.setName("jLabelElectronAffinity");
 
-        jLabelBandGap.setText(resourceMap.getString("jLabelBandGap.text")); // NOI18N
-        jLabelBandGap.setName("jLabelBandGap"); // NOI18N
+	//---- jTextFieldElectronAffinity ----
+	jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity");
 
-        jTextFieldBandGap.setName("jTextFieldBandGap"); // NOI18N
+	//---- jButtonPlotColor ----
+	jButtonPlotColor.setText(bundle.getString("jButtonPlotColor.text"));
+	jButtonPlotColor.setActionCommand(bundle.getString("jButtonPlotColor.actionCommand"));
+	jButtonPlotColor.setName("jButtonPlotColor");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.bandGapExpression}"), jTextFieldBandGap, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+	//======== jPanelPlotColor ========
+	{
+	    jPanelPlotColor.setName("jPanelPlotColor");
 
-        jLabelElectronAffinity.setText(resourceMap.getString("jLabelElectronAffinity.text")); // NOI18N
-        jLabelElectronAffinity.setName("jLabelElectronAffinity"); // NOI18N
+	    GroupLayout jPanelPlotColorLayout = new GroupLayout(jPanelPlotColor);
+	    jPanelPlotColor.setLayout(jPanelPlotColorLayout);
+	    jPanelPlotColorLayout.setHorizontalGroup(
+		jPanelPlotColorLayout.createParallelGroup()
+		    .addGap(0, 112, Short.MAX_VALUE)
+	    );
+	    jPanelPlotColorLayout.setVerticalGroup(
+		jPanelPlotColorLayout.createParallelGroup()
+		    .addGap(0, 22, Short.MAX_VALUE)
+	    );
+	}
 
-        jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity"); // NOI18N
+	//---- jLabelNotes ----
+	jLabelNotes.setText(bundle.getString("jLabelNotes.text"));
+	jLabelNotes.setName("jLabelNotes");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.electronAffinity}"), jTextFieldElectronAffinity, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+	//======== jScrollPane1 ========
+	{
+	    jScrollPane1.setName("jScrollPane1");
 
-        jButtonPlotColor.setAction(actionMap.get("showColorChooser")); // NOI18N
-        jButtonPlotColor.setText(resourceMap.getString("jButtonPlotColor.text")); // NOI18N
-        jButtonPlotColor.setActionCommand(resourceMap.getString("jButtonPlotColor.actionCommand")); // NOI18N
-        jButtonPlotColor.setName("jButtonPlotColor"); // NOI18N
+	    //---- jTextAreaNotes ----
+	    jTextAreaNotes.setColumns(20);
+	    jTextAreaNotes.setLineWrap(true);
+	    jTextAreaNotes.setRows(5);
+	    jTextAreaNotes.setWrapStyleWord(true);
+	    jTextAreaNotes.setName("jTextAreaNotes");
+	    jScrollPane1.setViewportView(jTextAreaNotes);
+	}
 
-        jPanelPlotColor.setName("jPanelPlotColor"); // NOI18N
+	//---- jLabelIntrinsicCarrierConcentration ----
+	jLabelIntrinsicCarrierConcentration.setText(bundle.getString("jLabelIntrinsicCarrierConcentration.text"));
+	jLabelIntrinsicCarrierConcentration.setName("jLabelIntrinsicCarrierConcentration");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.fillColor}"), jPanelPlotColor, org.jdesktop.beansbinding.BeanProperty.create("background"));
-        bindingGroup.addBinding(binding);
+	//---- jTextFieldIntrinsicCarrierConcentration ----
+	jTextFieldIntrinsicCarrierConcentration.setName("jTextFieldIntrinsicCarrierConcentration");
 
-        javax.swing.GroupLayout jPanelPlotColorLayout = new javax.swing.GroupLayout(jPanelPlotColor);
-        jPanelPlotColor.setLayout(jPanelPlotColorLayout);
-        jPanelPlotColorLayout.setHorizontalGroup(
-            jPanelPlotColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-        );
-        jPanelPlotColorLayout.setVerticalGroup(
-            jPanelPlotColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 22, Short.MAX_VALUE)
-        );
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addComponent(jScrollPane1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jButtonOK, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jButtonCancel)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				    .addComponent(jLabelBandGap)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				    .addComponent(jLabelElectronAffinity)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+				    .addComponent(jTextFieldElectronAffinity, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+					.addComponent(jLabelNotes)
+					.addComponent(jLabelName))
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addGroup(contentPaneLayout.createSequentialGroup()
+					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+					    .addComponent(jTextFieldName, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
+					    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+					    .addComponent(jLabelDielectricConstant)
+					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+					    .addComponent(jTextFieldDielectricConstant, GroupLayout.PREFERRED_SIZE, 202, GroupLayout.PREFERRED_SIZE))
+					.addGroup(contentPaneLayout.createSequentialGroup()
+					    .addGap(58, 58, 58)
+					    .addComponent(jLabelIntrinsicCarrierConcentration)
+					    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+					    .addComponent(jTextFieldIntrinsicCarrierConcentration, GroupLayout.PREFERRED_SIZE, 321, GroupLayout.PREFERRED_SIZE)))))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup()
+				.addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+				.addComponent(jButtonPlotColor))))
+		    .addContainerGap())
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+			.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			    .addComponent(jButtonOK)
+			    .addComponent(jButtonCancel)
+			    .addComponent(jLabelBandGap))
+			.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			    .addComponent(jTextFieldBandGap, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+			    .addComponent(jTextFieldElectronAffinity, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+			    .addComponent(jButtonPlotColor)
+			    .addComponent(jLabelElectronAffinity)))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+			.addComponent(jPanelPlotColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			    .addComponent(jLabelName)
+			    .addComponent(jLabelDielectricConstant))
+			.addComponent(jTextFieldName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+			.addComponent(jTextFieldDielectricConstant, GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jLabelNotes)
+			.addComponent(jLabelIntrinsicCarrierConcentration)
+			.addComponent(jTextFieldIntrinsicCarrierConcentration, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+		    .addContainerGap())
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
 
-        jLabelNotes.setText(resourceMap.getString("jLabelNotes.text")); // NOI18N
-        jLabelNotes.setName("jLabelNotes"); // NOI18N
-
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
-
-        jTextAreaNotes.setColumns(20);
-        jTextAreaNotes.setLineWrap(true);
-        jTextAreaNotes.setRows(5);
-        jTextAreaNotes.setWrapStyleWord(true);
-        jTextAreaNotes.setName("jTextAreaNotes"); // NOI18N
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.notes}"), jTextAreaNotes, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
-
-        jScrollPane1.setViewportView(jTextAreaNotes);
-
-        jLabelIntrinsicCarrierConcentration.setText(resourceMap.getString("jLabelIntrinsicCarrierConcentration.text")); // NOI18N
-        jLabelIntrinsicCarrierConcentration.setName("jLabelIntrinsicCarrierConcentration"); // NOI18N
-
-        jTextFieldIntrinsicCarrierConcentration.setName("jTextFieldIntrinsicCarrierConcentration"); // NOI18N
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.intrinsicCarrierConcentrationExpression}"), jTextFieldIntrinsicCarrierConcentration, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonOK, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonCancel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabelBandGap)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldBandGap, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabelElectronAffinity)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextFieldElectronAffinity, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabelNotes)
-                                    .addComponent(jLabelName))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabelDielectricConstant)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFieldDielectricConstant, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(58, 58, 58)
-                                        .addComponent(jLabelIntrinsicCarrierConcentration)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFieldIntrinsicCarrierConcentration, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanelPlotColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonPlotColor))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonOK)
-                        .addComponent(jButtonCancel)
-                        .addComponent(jLabelBandGap))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldBandGap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldElectronAffinity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonPlotColor)
-                        .addComponent(jLabelElectronAffinity)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelPlotColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelName)
-                        .addComponent(jLabelDielectricConstant))
-                    .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldDielectricConstant, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelNotes)
-                    .addComponent(jLabelIntrinsicCarrierConcentration)
-                    .addComponent(jTextFieldIntrinsicCarrierConcentration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        bindingGroup.bind();
-
-        pack();
+	//---- bindings ----
+	bindingGroup = new BindingGroup();
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.name}"),
+	    jTextFieldName, BeanProperty.create("text")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.dielectricConstant}"),
+	    jTextFieldDielectricConstant, BeanProperty.create("text")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.bandGapExpression}"),
+	    jTextFieldBandGap, BeanProperty.create("text")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.electronAffinity}"),
+	    jTextFieldElectronAffinity, BeanProperty.create("text")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.fillColor}"),
+	    jPanelPlotColor, BeanProperty.create("background")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.notes}"),
+	    jTextAreaNotes, BeanProperty.create("text")));
+	bindingGroup.addBinding(Bindings.createAutoBinding(UpdateStrategy.READ_WRITE,
+	    this, ELProperty.create("${currentRecord.intrinsicCarrierConcentrationExpression}"),
+	    jTextFieldIntrinsicCarrierConcentration, BeanProperty.create("text")));
+	bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
    /**
@@ -382,23 +407,24 @@ public class BandSemiconductor extends javax.swing.JDialog {
       });
    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancel;
-    private javax.swing.JButton jButtonOK;
-    private javax.swing.JButton jButtonPlotColor;
-    private javax.swing.JLabel jLabelBandGap;
-    private javax.swing.JLabel jLabelDielectricConstant;
-    private javax.swing.JLabel jLabelElectronAffinity;
-    private javax.swing.JLabel jLabelIntrinsicCarrierConcentration;
-    private javax.swing.JLabel jLabelName;
-    private javax.swing.JLabel jLabelNotes;
-    private javax.swing.JPanel jPanelPlotColor;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextAreaNotes;
-    private javax.swing.JTextField jTextFieldBandGap;
-    private javax.swing.JTextField jTextFieldDielectricConstant;
-    private javax.swing.JTextField jTextFieldElectronAffinity;
-    private javax.swing.JTextField jTextFieldIntrinsicCarrierConcentration;
-    private javax.swing.JTextField jTextFieldName;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+    private JButton jButtonOK;
+    private JButton jButtonCancel;
+    private JLabel jLabelName;
+    private JTextField jTextFieldName;
+    private JLabel jLabelDielectricConstant;
+    private JTextField jTextFieldDielectricConstant;
+    private JLabel jLabelBandGap;
+    private JTextField jTextFieldBandGap;
+    private JLabel jLabelElectronAffinity;
+    private JTextField jTextFieldElectronAffinity;
+    private JButton jButtonPlotColor;
+    private JPanel jPanelPlotColor;
+    private JLabel jLabelNotes;
+    private JScrollPane jScrollPane1;
+    private JTextArea jTextAreaNotes;
+    private JLabel jLabelIntrinsicCarrierConcentration;
+    private JTextField jTextFieldIntrinsicCarrierConcentration;
+    private BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

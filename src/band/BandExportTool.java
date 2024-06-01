@@ -12,14 +12,17 @@ package band;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
 import javax.swing.AbstractAction;
 import javax.swing.GroupLayout;
 import javax.swing.InputMap;
@@ -27,10 +30,15 @@ import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
+import javax.swing.border.*;
 import javax.swing.filechooser.FileFilter;
 import org.jdesktop.application.Action;
+import org.jdesktop.beansbinding.*;
+import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
+import org.jdesktop.swingbinding.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
@@ -381,324 +389,366 @@ public class BandExportTool extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandExportTool");
+	jLabelStartVoltage = new JLabel();
+	jTextFieldStartVoltage = new JTextField();
+	jLabelStopVoltage = new JLabel();
+	jTextFieldStopVoltage = new JTextField();
+	jLabelNumberOfSteps = new JLabel();
+	jTextFieldNumberOfSteps = new JTextField();
+	jLabelStepSize = new JLabel();
+	jTextFieldStepSize = new JTextField();
+	jButtonOK = new JButton();
+	jButtonSave = new JButton();
+	jButtonPreview = new JButton();
+	jPanelOutputPreview = new JPanel();
+	jPanelReplace = new JPanel();
+	jLabelOutputParameters = new JLabel();
+	jScrollPaneOutputParameters = new JScrollPane();
+	jListOutputParameters = new JList<>();
+	jTextFieldStepSizeForTemp = new JTextField();
+	jLabelStepSize1 = new JLabel();
+	jLabelNumberOfSteps1 = new JLabel();
+	jTextFieldNumberOfStepsForTemp = new JTextField();
+	jTextFieldStopTemp = new JTextField();
+	jLabelStopVoltage1 = new JLabel();
+	jLabelStartVoltage1 = new JLabel();
+	jTextFieldStartTemp = new JTextField();
+	jComboBoxSweepChoice = new JComboBox<>();
+	jProgressBar1 = new JProgressBar();
 
-        jLabelStartVoltage = new javax.swing.JLabel();
-        jTextFieldStartVoltage = new javax.swing.JTextField();
-        jLabelStopVoltage = new javax.swing.JLabel();
-        jTextFieldStopVoltage = new javax.swing.JTextField();
-        jLabelNumberOfSteps = new javax.swing.JLabel();
-        jTextFieldNumberOfSteps = new javax.swing.JTextField();
-        jLabelStepSize = new javax.swing.JLabel();
-        jTextFieldStepSize = new javax.swing.JTextField();
-        jButtonOK = new javax.swing.JButton();
-        jButtonSave = new javax.swing.JButton();
-        jButtonPreview = new javax.swing.JButton();
-        jPanelOutputPreview = new javax.swing.JPanel();
-        jPanelReplace = new javax.swing.JPanel();
-        jLabelOutputParameters = new javax.swing.JLabel();
-        jScrollPaneOutputParameters = new javax.swing.JScrollPane();
-        jListOutputParameters = new javax.swing.JList();
-        jTextFieldStepSizeForTemp = new javax.swing.JTextField();
-        jLabelStepSize1 = new javax.swing.JLabel();
-        jLabelNumberOfSteps1 = new javax.swing.JLabel();
-        jTextFieldNumberOfStepsForTemp = new javax.swing.JTextField();
-        jTextFieldStopTemp = new javax.swing.JTextField();
-        jLabelStopVoltage1 = new javax.swing.JLabel();
-        jLabelStartVoltage1 = new javax.swing.JLabel();
-        jTextFieldStartTemp = new javax.swing.JTextField();
-        jComboBoxSweepChoice = new javax.swing.JComboBox();
-        jProgressBar1 = new javax.swing.JProgressBar();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setName("BandExportTool");
+	addWindowListener(new WindowAdapter() {
+	    @Override
+	    public void windowOpened(WindowEvent e) {
+		formWindowOpened(e);
+	    }
+	});
+	var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setName("BandExportTool"); // NOI18N
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
+	//---- jLabelStartVoltage ----
+	jLabelStartVoltage.setText(bundle.getString("jLabelStartVoltage.text"));
+	jLabelStartVoltage.setName("jLabelStartVoltage");
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandExportTool.class);
-        jLabelStartVoltage.setText(resourceMap.getString("jLabelStartVoltage.text")); // NOI18N
-        jLabelStartVoltage.setName("jLabelStartVoltage"); // NOI18N
+	//---- jTextFieldStartVoltage ----
+	jTextFieldStartVoltage.setName("jTextFieldStartVoltage");
+	jTextFieldStartVoltage.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldStartVoltageKeyPressed(e);
+	    }
+	});
 
-        jTextFieldStartVoltage.setName("jTextFieldStartVoltage"); // NOI18N
-        jTextFieldStartVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldStartVoltageKeyPressed(evt);
-            }
-        });
+	//---- jLabelStopVoltage ----
+	jLabelStopVoltage.setText(bundle.getString("jLabelStopVoltage.text"));
+	jLabelStopVoltage.setName("jLabelStopVoltage");
 
-        jLabelStopVoltage.setText(resourceMap.getString("jLabelStopVoltage.text")); // NOI18N
-        jLabelStopVoltage.setName("jLabelStopVoltage"); // NOI18N
+	//---- jTextFieldStopVoltage ----
+	jTextFieldStopVoltage.setName("jTextFieldStopVoltage");
+	jTextFieldStopVoltage.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldStopVoltageKeyPressed(e);
+	    }
+	});
 
-        jTextFieldStopVoltage.setName("jTextFieldStopVoltage"); // NOI18N
-        jTextFieldStopVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldStopVoltageKeyPressed(evt);
-            }
-        });
+	//---- jLabelNumberOfSteps ----
+	jLabelNumberOfSteps.setText(bundle.getString("jLabelNumberOfSteps.text"));
+	jLabelNumberOfSteps.setName("jLabelNumberOfSteps");
 
-        jLabelNumberOfSteps.setText(resourceMap.getString("jLabelNumberOfSteps.text")); // NOI18N
-        jLabelNumberOfSteps.setName("jLabelNumberOfSteps"); // NOI18N
+	//---- jTextFieldNumberOfSteps ----
+	jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps");
+	jTextFieldNumberOfSteps.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyPressed(KeyEvent e) {
+		jTextFieldNumberOfStepsKeyPressed(e);
+	    }
+	    @Override
+	    public void keyReleased(KeyEvent e) {
+		jTextFieldNumberOfStepsKeyReleased(e);
+	    }
+	    @Override
+	    public void keyTyped(KeyEvent e) {
+		jTextFieldNumberOfStepsKeyTyped(e);
+	    }
+	});
 
-        jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps"); // NOI18N
-        jTextFieldNumberOfSteps.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldNumberOfStepsKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextFieldNumberOfStepsKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldNumberOfStepsKeyTyped(evt);
-            }
-        });
+	//---- jLabelStepSize ----
+	jLabelStepSize.setText(bundle.getString("jLabelStepSize.text"));
+	jLabelStepSize.setName("jLabelStepSize");
 
-        jLabelStepSize.setText(resourceMap.getString("jLabelStepSize.text")); // NOI18N
-        jLabelStepSize.setName("jLabelStepSize"); // NOI18N
+	//---- jTextFieldStepSize ----
+	jTextFieldStepSize.setEditable(false);
+	jTextFieldStepSize.setName("jTextFieldStepSize");
 
-        jTextFieldStepSize.setEditable(false);
-        jTextFieldStepSize.setName("jTextFieldStepSize"); // NOI18N
+	//---- jButtonOK ----
+	jButtonOK.setText(bundle.getString("jButtonOK.text"));
+	jButtonOK.setActionCommand(bundle.getString("jButtonOK.actionCommand"));
+	jButtonOK.setName("jButtonOK");
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandExportTool.class, this);
-        jButtonOK.setAction(actionMap.get("closeExportToolBox")); // NOI18N
-        jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
-        jButtonOK.setActionCommand(resourceMap.getString("jButtonOK.actionCommand")); // NOI18N
-        jButtonOK.setName("jButtonOK"); // NOI18N
+	//---- jButtonSave ----
+	jButtonSave.setText(bundle.getString("jButtonSave.text"));
+	jButtonSave.setName("jButtonSave");
 
-        jButtonSave.setAction(actionMap.get("saveValues")); // NOI18N
-        jButtonSave.setText(resourceMap.getString("jButtonSave.text")); // NOI18N
-        jButtonSave.setName("jButtonSave"); // NOI18N
+	//---- jButtonPreview ----
+	jButtonPreview.setText(bundle.getString("jButtonPreview.text"));
+	jButtonPreview.setName("jButtonPreview");
 
-        jButtonPreview.setAction(actionMap.get("previewValues")); // NOI18N
-        jButtonPreview.setText(resourceMap.getString("jButtonPreview.text")); // NOI18N
-        jButtonPreview.setName("jButtonPreview"); // NOI18N
+	//======== jPanelOutputPreview ========
+	{
+	    jPanelOutputPreview.setBorder(new TitledBorder("Output Preview"));
+	    jPanelOutputPreview.setName("jPanelOutputPreview");
 
-        jPanelOutputPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Output Preview"));
-        jPanelOutputPreview.setName("jPanelOutputPreview"); // NOI18N
+	    //======== jPanelReplace ========
+	    {
+		jPanelReplace.setBackground(Color.white);
+		jPanelReplace.setName("jPanelReplace");
 
-        jPanelReplace.setBackground(resourceMap.getColor("jPanelReplace.background")); // NOI18N
-        jPanelReplace.setName("jPanelReplace"); // NOI18N
+		GroupLayout jPanelReplaceLayout = new GroupLayout(jPanelReplace);
+		jPanelReplace.setLayout(jPanelReplaceLayout);
+		jPanelReplaceLayout.setHorizontalGroup(
+		    jPanelReplaceLayout.createParallelGroup()
+			.addGap(0, 636, Short.MAX_VALUE)
+		);
+		jPanelReplaceLayout.setVerticalGroup(
+		    jPanelReplaceLayout.createParallelGroup()
+			.addGap(0, 272, Short.MAX_VALUE)
+		);
+	    }
 
-        javax.swing.GroupLayout jPanelReplaceLayout = new javax.swing.GroupLayout(jPanelReplace);
-        jPanelReplace.setLayout(jPanelReplaceLayout);
-        jPanelReplaceLayout.setHorizontalGroup(
-            jPanelReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 636, Short.MAX_VALUE)
-        );
-        jPanelReplaceLayout.setVerticalGroup(
-            jPanelReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+	    GroupLayout jPanelOutputPreviewLayout = new GroupLayout(jPanelOutputPreview);
+	    jPanelOutputPreview.setLayout(jPanelOutputPreviewLayout);
+	    jPanelOutputPreviewLayout.setHorizontalGroup(
+		jPanelOutputPreviewLayout.createParallelGroup()
+		    .addGroup(jPanelOutputPreviewLayout.createSequentialGroup()
+			.addContainerGap()
+			.addComponent(jPanelReplace, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			.addContainerGap())
+	    );
+	    jPanelOutputPreviewLayout.setVerticalGroup(
+		jPanelOutputPreviewLayout.createParallelGroup()
+		    .addGroup(jPanelOutputPreviewLayout.createSequentialGroup()
+			.addComponent(jPanelReplace, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			.addContainerGap())
+	    );
+	}
 
-        javax.swing.GroupLayout jPanelOutputPreviewLayout = new javax.swing.GroupLayout(jPanelOutputPreview);
-        jPanelOutputPreview.setLayout(jPanelOutputPreviewLayout);
-        jPanelOutputPreviewLayout.setHorizontalGroup(
-            jPanelOutputPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOutputPreviewLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelReplace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanelOutputPreviewLayout.setVerticalGroup(
-            jPanelOutputPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOutputPreviewLayout.createSequentialGroup()
-                .addComponent(jPanelReplace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+	//---- jLabelOutputParameters ----
+	jLabelOutputParameters.setName("jLabelOutputParameters");
 
-        jLabelOutputParameters.setName("jLabelOutputParameters"); // NOI18N
+	//======== jScrollPaneOutputParameters ========
+	{
+	    jScrollPaneOutputParameters.setName("jScrollPaneOutputParameters");
 
-        jScrollPaneOutputParameters.setName("jScrollPaneOutputParameters"); // NOI18N
+	    //---- jListOutputParameters ----
+	    jListOutputParameters.setModel(new AbstractListModel<String>() {
+		String[] values = {
+		    "Item 1",
+		    "Item 2",
+		    "Item 3",
+		    "Item 4",
+		    "Item 5"
+		};
+		@Override
+		public int getSize() { return values.length; }
+		@Override
+		public String getElementAt(int i) { return values[i]; }
+	    });
+	    jListOutputParameters.setEnabled(false);
+	    jListOutputParameters.setName("jListOutputParameters");
+	    jListOutputParameters.addMouseListener(new MouseAdapter() {
+		@Override
+		public void mouseReleased(MouseEvent e) {
+		    jListOutputParametersMouseReleased(e);
+		}
+	    });
+	    jListOutputParameters.addListSelectionListener(e -> jListOutputParametersValueChanged(e));
+	    jScrollPaneOutputParameters.setViewportView(jListOutputParameters);
+	}
 
-        jListOutputParameters.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jListOutputParameters.setEnabled(false);
-        jListOutputParameters.setName("jListOutputParameters"); // NOI18N
+	//---- jTextFieldStepSizeForTemp ----
+	jTextFieldStepSizeForTemp.setEditable(false);
+	jTextFieldStepSizeForTemp.setName("jTextFieldStepSizeForTemp");
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${listOutputParameters}");
-        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jListOutputParameters);
-        bindingGroup.addBinding(jListBinding);
+	//---- jLabelStepSize1 ----
+	jLabelStepSize1.setText(bundle.getString("jLabelStepSize1.text"));
+	jLabelStepSize1.setName("jLabelStepSize1");
 
-        jListOutputParameters.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jListOutputParametersMouseReleased(evt);
-            }
-        });
-        jListOutputParameters.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jListOutputParametersValueChanged(evt);
-            }
-        });
-        jScrollPaneOutputParameters.setViewportView(jListOutputParameters);
+	//---- jLabelNumberOfSteps1 ----
+	jLabelNumberOfSteps1.setText(bundle.getString("jLabelNumberOfSteps1.text"));
+	jLabelNumberOfSteps1.setName("jLabelNumberOfSteps1");
 
-        jTextFieldStepSizeForTemp.setEditable(false);
-        jTextFieldStepSizeForTemp.setName("jTextFieldStepSizeForTemp"); // NOI18N
+	//---- jTextFieldNumberOfStepsForTemp ----
+	jTextFieldNumberOfStepsForTemp.setEnabled(false);
+	jTextFieldNumberOfStepsForTemp.setName("jTextFieldNumberOfStepsForTemp");
+	jTextFieldNumberOfStepsForTemp.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyReleased(KeyEvent e) {
+		jTextFieldNumberOfStepsForTempKeyReleased(e);
+	    }
+	});
 
-        jLabelStepSize1.setText(resourceMap.getString("jLabelStepSize1.text")); // NOI18N
-        jLabelStepSize1.setName("jLabelStepSize1"); // NOI18N
+	//---- jTextFieldStopTemp ----
+	jTextFieldStopTemp.setEnabled(false);
+	jTextFieldStopTemp.setName("jTextFieldStopTemp");
+	jTextFieldStopTemp.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyReleased(KeyEvent e) {
+		jTextFieldStopTempKeyReleased(e);
+	    }
+	});
 
-        jLabelNumberOfSteps1.setText(resourceMap.getString("jLabelNumberOfSteps1.text")); // NOI18N
-        jLabelNumberOfSteps1.setName("jLabelNumberOfSteps1"); // NOI18N
+	//---- jLabelStopVoltage1 ----
+	jLabelStopVoltage1.setText(bundle.getString("jLabelStopVoltage1.text"));
+	jLabelStopVoltage1.setName("jLabelStopVoltage1");
 
-        jTextFieldNumberOfStepsForTemp.setEnabled(false);
-        jTextFieldNumberOfStepsForTemp.setName("jTextFieldNumberOfStepsForTemp"); // NOI18N
-        jTextFieldNumberOfStepsForTemp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextFieldNumberOfStepsForTempKeyReleased(evt);
-            }
-        });
+	//---- jLabelStartVoltage1 ----
+	jLabelStartVoltage1.setText(bundle.getString("jLabelStartVoltage1.text"));
+	jLabelStartVoltage1.setName("jLabelStartVoltage1");
 
-        jTextFieldStopTemp.setEnabled(false);
-        jTextFieldStopTemp.setName("jTextFieldStopTemp"); // NOI18N
-        jTextFieldStopTemp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextFieldStopTempKeyReleased(evt);
-            }
-        });
+	//---- jTextFieldStartTemp ----
+	jTextFieldStartTemp.setEnabled(false);
+	jTextFieldStartTemp.setName("jTextFieldStartTemp");
+	jTextFieldStartTemp.addKeyListener(new KeyAdapter() {
+	    @Override
+	    public void keyReleased(KeyEvent e) {
+		jTextFieldStartTempKeyReleased(e);
+	    }
+	});
 
-        jLabelStopVoltage1.setText(resourceMap.getString("jLabelStopVoltage1.text")); // NOI18N
-        jLabelStopVoltage1.setName("jLabelStopVoltage1"); // NOI18N
+	//---- jComboBoxSweepChoice ----
+	jComboBoxSweepChoice.setModel(new DefaultComboBoxModel<>(new String[] {
+	    "Only Sweep Voltage",
+	    "Only Sweep Temperature",
+	    "Sweep Both - One Parameter"
+	}));
+	jComboBoxSweepChoice.setActionCommand(bundle.getString("jComboBoxSweepChoice.actionCommand"));
+	jComboBoxSweepChoice.setName("jComboBoxSweepChoice");
+	jComboBoxSweepChoice.addItemListener(e -> jComboBoxSweepChoiceItemStateChanged(e));
 
-        jLabelStartVoltage1.setText(resourceMap.getString("jLabelStartVoltage1.text")); // NOI18N
-        jLabelStartVoltage1.setName("jLabelStartVoltage1"); // NOI18N
+	//---- jProgressBar1 ----
+	jProgressBar1.setFocusable(false);
+	jProgressBar1.setName("jProgressBar1");
 
-        jTextFieldStartTemp.setEnabled(false);
-        jTextFieldStartTemp.setName("jTextFieldStartTemp"); // NOI18N
-        jTextFieldStartTemp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextFieldStartTempKeyReleased(evt);
-            }
-        });
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addComponent(jPanelOutputPreview, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGroup(contentPaneLayout.createParallelGroup()
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+					.addComponent(jLabelStopVoltage)
+					.addComponent(jLabelStartVoltage))
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+					.addComponent(jTextFieldStopVoltage, GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+					.addComponent(jTextFieldStartVoltage, GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelNumberOfSteps)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jTextFieldNumberOfSteps, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelStepSize)
+				    .addGap(18, 18, 18)
+				    .addComponent(jTextFieldStepSize, GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelStepSize1)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addComponent(jTextFieldStepSizeForTemp, GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addComponent(jLabelNumberOfSteps1)
+					.addComponent(jLabelStartVoltage1)
+					.addComponent(jLabelStopVoltage1))
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addComponent(jTextFieldStartTemp, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+					.addComponent(jTextFieldNumberOfStepsForTemp, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+					.addComponent(jTextFieldStopTemp, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)))
+				.addComponent(jComboBoxSweepChoice, GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup()
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addComponent(jLabelOutputParameters)
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE))
+				.addComponent(jScrollPaneOutputParameters, GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)))
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addComponent(jButtonOK)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jButtonSave)
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addComponent(jButtonPreview))
+			.addComponent(jProgressBar1, GroupLayout.PREFERRED_SIZE, 197, GroupLayout.PREFERRED_SIZE))
+		    .addContainerGap())
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStartVoltage)
+				.addComponent(jLabelOutputParameters)
+				.addComponent(jTextFieldStartVoltage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStopVoltage)
+				.addComponent(jTextFieldStopVoltage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelNumberOfSteps)
+				.addComponent(jTextFieldNumberOfSteps, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStepSize)
+				.addComponent(jTextFieldStepSize, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+			    .addComponent(jComboBoxSweepChoice, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+			    .addGap(18, 18, 18)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStartVoltage1)
+				.addComponent(jTextFieldStartTemp, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStopVoltage1)
+				.addComponent(jTextFieldStopTemp, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelNumberOfSteps1)
+				.addComponent(jTextFieldNumberOfStepsForTemp, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+			    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(jLabelStepSize1)
+				.addComponent(jTextFieldStepSizeForTemp, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+			.addComponent(jScrollPaneOutputParameters, GroupLayout.PREFERRED_SIZE, 247, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(jButtonOK)
+			.addComponent(jButtonSave)
+			.addComponent(jButtonPreview))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(jPanelOutputPreview, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(jProgressBar1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
 
-        jComboBoxSweepChoice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Only Sweep Voltage", "Only Sweep Temperature", "Sweep Both - One Parameter" }));
-        jComboBoxSweepChoice.setActionCommand(resourceMap.getString("jComboBoxSweepChoice.actionCommand")); // NOI18N
-        jComboBoxSweepChoice.setName("jComboBoxSweepChoice"); // NOI18N
-        jComboBoxSweepChoice.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBoxSweepChoiceItemStateChanged(evt);
-            }
-        });
-
-        jProgressBar1.setFocusable(false);
-        jProgressBar1.setName("jProgressBar1"); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelOutputPreview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabelStopVoltage)
-                                    .addComponent(jLabelStartVoltage))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextFieldStopVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelNumberOfSteps)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldNumberOfSteps, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelStepSize)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFieldStepSize, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelStepSize1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldStepSizeForTemp, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelNumberOfSteps1)
-                                    .addComponent(jLabelStartVoltage1)
-                                    .addComponent(jLabelStopVoltage1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldStartTemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldNumberOfStepsForTemp, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldStopTemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)))
-                            .addComponent(jComboBoxSweepChoice, 0, 183, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelOutputParameters)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE))
-                            .addComponent(jScrollPaneOutputParameters, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonOK)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSave)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPreview))
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStartVoltage)
-                            .addComponent(jLabelOutputParameters)
-                            .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStopVoltage)
-                            .addComponent(jTextFieldStopVoltage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelNumberOfSteps)
-                            .addComponent(jTextFieldNumberOfSteps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStepSize)
-                            .addComponent(jTextFieldStepSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBoxSweepChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStartVoltage1)
-                            .addComponent(jTextFieldStartTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStopVoltage1)
-                            .addComponent(jTextFieldStopTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelNumberOfSteps1)
-                            .addComponent(jTextFieldNumberOfStepsForTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelStepSize1)
-                            .addComponent(jTextFieldStepSizeForTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPaneOutputParameters, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonOK)
-                    .addComponent(jButtonSave)
-                    .addComponent(jButtonPreview))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelOutputPreview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        bindingGroup.bind();
-
-        pack();
+	//---- bindings ----
+	bindingGroup = new BindingGroup();
+	bindingGroup.addBinding(SwingBindings.createJListBinding(UpdateStrategy.READ_WRITE,
+	    this, (ELProperty) ELProperty.create("${listOutputParameters}"), jListOutputParameters));
+	bindingGroup.bind();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldStartVoltageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldStartVoltageKeyPressed
@@ -868,32 +918,33 @@ private void jComboBoxSweepChoiceItemStateChanged(java.awt.event.ItemEvent evt) 
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonOK;
-    private javax.swing.JButton jButtonPreview;
-    private javax.swing.JButton jButtonSave;
-    private javax.swing.JComboBox jComboBoxSweepChoice;
-    private javax.swing.JLabel jLabelNumberOfSteps;
-    private javax.swing.JLabel jLabelNumberOfSteps1;
-    private javax.swing.JLabel jLabelOutputParameters;
-    private javax.swing.JLabel jLabelStartVoltage;
-    private javax.swing.JLabel jLabelStartVoltage1;
-    private javax.swing.JLabel jLabelStepSize;
-    private javax.swing.JLabel jLabelStepSize1;
-    private javax.swing.JLabel jLabelStopVoltage;
-    private javax.swing.JLabel jLabelStopVoltage1;
-    private javax.swing.JList jListOutputParameters;
-    private javax.swing.JPanel jPanelOutputPreview;
-    private javax.swing.JPanel jPanelReplace;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JScrollPane jScrollPaneOutputParameters;
-    private javax.swing.JTextField jTextFieldNumberOfSteps;
-    private javax.swing.JTextField jTextFieldNumberOfStepsForTemp;
-    private javax.swing.JTextField jTextFieldStartTemp;
-    private javax.swing.JTextField jTextFieldStartVoltage;
-    private javax.swing.JTextField jTextFieldStepSize;
-    private javax.swing.JTextField jTextFieldStepSizeForTemp;
-    private javax.swing.JTextField jTextFieldStopTemp;
-    private javax.swing.JTextField jTextFieldStopVoltage;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+    private JLabel jLabelStartVoltage;
+    private JTextField jTextFieldStartVoltage;
+    private JLabel jLabelStopVoltage;
+    private JTextField jTextFieldStopVoltage;
+    private JLabel jLabelNumberOfSteps;
+    private JTextField jTextFieldNumberOfSteps;
+    private JLabel jLabelStepSize;
+    private JTextField jTextFieldStepSize;
+    private JButton jButtonOK;
+    private JButton jButtonSave;
+    private JButton jButtonPreview;
+    private JPanel jPanelOutputPreview;
+    private JPanel jPanelReplace;
+    private JLabel jLabelOutputParameters;
+    private JScrollPane jScrollPaneOutputParameters;
+    private JList<String> jListOutputParameters;
+    private JTextField jTextFieldStepSizeForTemp;
+    private JLabel jLabelStepSize1;
+    private JLabel jLabelNumberOfSteps1;
+    private JTextField jTextFieldNumberOfStepsForTemp;
+    private JTextField jTextFieldStopTemp;
+    private JLabel jLabelStopVoltage1;
+    private JLabel jLabelStartVoltage1;
+    private JTextField jTextFieldStartTemp;
+    private JComboBox<String> jComboBoxSweepChoice;
+    private JProgressBar jProgressBar1;
+    private BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

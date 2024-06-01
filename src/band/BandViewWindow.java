@@ -13,11 +13,15 @@ package band;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.*;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JRootPane;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
 
 /**
@@ -130,114 +134,121 @@ public class BandViewWindow extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
    private void initComponents() {
+       ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandViewWindow");
+       jLabelX = new JLabel();
+       jTextFieldXMin = new JTextField();
+       jTextFieldXMax = new JTextField();
+       jCheckBoxXAutoScale = new JCheckBox();
+       jLabelY = new JLabel();
+       jTextFieldYMin = new JTextField();
+       jTextFieldYMax = new JTextField();
+       jCheckBoxYAutoScale = new JCheckBox();
+       jButtonOk = new JButton();
 
-      jLabelX = new javax.swing.JLabel();
-      jTextFieldXMin = new javax.swing.JTextField();
-      jTextFieldXMax = new javax.swing.JTextField();
-      jCheckBoxXAutoScale = new javax.swing.JCheckBox();
-      jLabelY = new javax.swing.JLabel();
-      jTextFieldYMin = new javax.swing.JTextField();
-      jTextFieldYMax = new javax.swing.JTextField();
-      jCheckBoxYAutoScale = new javax.swing.JCheckBox();
-      jButtonOk = new javax.swing.JButton();
+       //======== this ========
+       setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+       setTitle(bundle.getString("BandViewWindow.title"));
+       setModal(true);
+       setName("BandViewWindow");
+       setResizable(false);
+       var contentPane = getContentPane();
 
-      setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-      org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandViewWindow.class);
-      setTitle(resourceMap.getString("BandViewWindow.title")); // NOI18N
-      setModal(true);
-      setName("BandViewWindow"); // NOI18N
-      setResizable(false);
+       //---- jLabelX ----
+       jLabelX.setText(bundle.getString("jLabelX.text"));
+       jLabelX.setName("jLabelX");
 
-      jLabelX.setText(resourceMap.getString("jLabelX.text")); // NOI18N
-      jLabelX.setName("jLabelX"); // NOI18N
+       //---- jTextFieldXMin ----
+       jTextFieldXMin.setText(bundle.getString("jTextFieldXMin.text"));
+       jTextFieldXMin.setName("jTextFieldXMin");
 
-      jTextFieldXMin.setText(resourceMap.getString("jTextFieldXMin.text")); // NOI18N
-      jTextFieldXMin.setName("jTextFieldXMin"); // NOI18N
+       //---- jTextFieldXMax ----
+       jTextFieldXMax.setText(bundle.getString("jTextFieldXMax.text"));
+       jTextFieldXMax.setName("jTextFieldXMax");
 
-      jTextFieldXMax.setText(resourceMap.getString("jTextFieldXMax.text")); // NOI18N
-      jTextFieldXMax.setName("jTextFieldXMax"); // NOI18N
+       //---- jCheckBoxXAutoScale ----
+       jCheckBoxXAutoScale.setText(bundle.getString("jCheckBoxXAutoScale.text"));
+       jCheckBoxXAutoScale.setName("jCheckBoxXAutoScale");
 
-      javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandViewWindow.class, this);
-      jCheckBoxXAutoScale.setAction(actionMap.get("updateValues")); // NOI18N
-      jCheckBoxXAutoScale.setText(resourceMap.getString("jCheckBoxXAutoScale.text")); // NOI18N
-      jCheckBoxXAutoScale.setName("jCheckBoxXAutoScale"); // NOI18N
+       //---- jLabelY ----
+       jLabelY.setText(bundle.getString("jLabelY.text"));
+       jLabelY.setName("jLabelY");
 
-      jLabelY.setText(resourceMap.getString("jLabelY.text")); // NOI18N
-      jLabelY.setName("jLabelY"); // NOI18N
+       //---- jTextFieldYMin ----
+       jTextFieldYMin.setText(bundle.getString("jTextFieldYMin.text"));
+       jTextFieldYMin.setName("jTextFieldYMin");
 
-      jTextFieldYMin.setText(resourceMap.getString("jTextFieldYMin.text")); // NOI18N
-      jTextFieldYMin.setName("jTextFieldYMin"); // NOI18N
+       //---- jTextFieldYMax ----
+       jTextFieldYMax.setText(bundle.getString("jTextFieldYMax.text"));
+       jTextFieldYMax.setName("jTextFieldYMax");
 
-      jTextFieldYMax.setText(resourceMap.getString("jTextFieldYMax.text")); // NOI18N
-      jTextFieldYMax.setName("jTextFieldYMax"); // NOI18N
+       //---- jCheckBoxYAutoScale ----
+       jCheckBoxYAutoScale.setText(bundle.getString("jCheckBoxYAutoScale.text"));
+       jCheckBoxYAutoScale.setName("jCheckBoxYAutoScale");
 
-      jCheckBoxYAutoScale.setAction(actionMap.get("updateValues")); // NOI18N
-      jCheckBoxYAutoScale.setText(resourceMap.getString("jCheckBoxYAutoScale.text")); // NOI18N
-      jCheckBoxYAutoScale.setName("jCheckBoxYAutoScale"); // NOI18N
+       //---- jButtonOk ----
+       jButtonOk.setText(bundle.getString("jButtonOk.text"));
+       jButtonOk.setActionCommand(bundle.getString("jButtonOk.actionCommand"));
+       jButtonOk.setName("jButtonOk");
 
-      jButtonOk.setAction(actionMap.get("closeWindowBox")); // NOI18N
-      jButtonOk.setText(resourceMap.getString("jButtonOk.text")); // NOI18N
-      jButtonOk.setActionCommand(resourceMap.getString("jButtonOk.actionCommand")); // NOI18N
-      jButtonOk.setName("jButtonOk"); // NOI18N
-
-      javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-      getContentPane().setLayout(layout);
-      layout.setHorizontalGroup(
-         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-               .addComponent(jLabelX)
-               .addGroup(layout.createSequentialGroup()
-                  .addComponent(jTextFieldXMin, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(jCheckBoxXAutoScale)
-                     .addComponent(jTextFieldXMax, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-               .addGroup(layout.createSequentialGroup()
-                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextFieldYMin, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelY, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                     .addComponent(jButtonOk, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(jCheckBoxYAutoScale)
-                     .addComponent(jTextFieldYMax))))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-      );
-      layout.setVerticalGroup(
-         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(jLabelX)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(jTextFieldXMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(jTextFieldXMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGroup(layout.createSequentialGroup()
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                  .addComponent(jCheckBoxXAutoScale))
-               .addGroup(layout.createSequentialGroup()
-                  .addGap(25, 25, 25)
-                  .addComponent(jLabelY)))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(jTextFieldYMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(jTextFieldYMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGroup(layout.createSequentialGroup()
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                  .addComponent(jCheckBoxYAutoScale))
-               .addGroup(layout.createSequentialGroup()
-                  .addGap(22, 22, 22)
-                  .addComponent(jButtonOk)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-      );
-
-      pack();
+       GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+       contentPane.setLayout(contentPaneLayout);
+       contentPaneLayout.setHorizontalGroup(
+	   contentPaneLayout.createParallelGroup()
+	       .addGroup(contentPaneLayout.createSequentialGroup()
+		   .addContainerGap()
+		   .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+		       .addComponent(jLabelX)
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addComponent(jTextFieldXMin, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+			   .addGroup(contentPaneLayout.createParallelGroup()
+			       .addComponent(jCheckBoxXAutoScale)
+			       .addComponent(jTextFieldXMax, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)))
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addGroup(contentPaneLayout.createParallelGroup()
+			       .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+				   .addComponent(jTextFieldYMin, GroupLayout.Alignment.LEADING)
+				   .addComponent(jLabelY, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+			       .addComponent(jButtonOk, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE))
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+			   .addGroup(contentPaneLayout.createParallelGroup()
+			       .addComponent(jCheckBoxYAutoScale)
+			       .addComponent(jTextFieldYMax))))
+		   .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+       );
+       contentPaneLayout.setVerticalGroup(
+	   contentPaneLayout.createParallelGroup()
+	       .addGroup(contentPaneLayout.createSequentialGroup()
+		   .addContainerGap()
+		   .addComponent(jLabelX)
+		   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		   .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+		       .addComponent(jTextFieldXMin, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+		       .addComponent(jTextFieldXMax, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		   .addGroup(contentPaneLayout.createParallelGroup()
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			   .addComponent(jCheckBoxXAutoScale))
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addGap(25, 25, 25)
+			   .addComponent(jLabelY)))
+		   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		   .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+		       .addComponent(jTextFieldYMin, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+		       .addComponent(jTextFieldYMax, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		   .addGroup(contentPaneLayout.createParallelGroup()
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			   .addComponent(jCheckBoxYAutoScale))
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addGap(22, 22, 22)
+			   .addComponent(jButtonOk)))
+		   .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+       );
+       pack();
+       setLocationRelativeTo(getOwner());
    }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -258,15 +269,16 @@ public class BandViewWindow extends javax.swing.JDialog {
     }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
-   private javax.swing.JButton jButtonOk;
-   private javax.swing.JCheckBox jCheckBoxXAutoScale;
-   private javax.swing.JCheckBox jCheckBoxYAutoScale;
-   private javax.swing.JLabel jLabelX;
-   private javax.swing.JLabel jLabelY;
-   private javax.swing.JTextField jTextFieldXMax;
-   private javax.swing.JTextField jTextFieldXMin;
-   private javax.swing.JTextField jTextFieldYMax;
-   private javax.swing.JTextField jTextFieldYMin;
+   // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+   private JLabel jLabelX;
+   private JTextField jTextFieldXMin;
+   private JTextField jTextFieldXMax;
+   private JCheckBox jCheckBoxXAutoScale;
+   private JLabel jLabelY;
+   private JTextField jTextFieldYMin;
+   private JTextField jTextFieldYMax;
+   private JCheckBox jCheckBoxYAutoScale;
+   private JButton jButtonOk;
    // End of variables declaration//GEN-END:variables
 
 }

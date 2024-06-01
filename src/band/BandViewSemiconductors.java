@@ -12,20 +12,28 @@
 package band;
 
 import java.awt.Color;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.*;
 import javax.swing.AbstractAction;
+import javax.swing.GroupLayout;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
 import org.jdesktop.application.Action;
+import org.jdesktop.beansbinding.*;
+import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
+import org.jdesktop.swingbinding.*;
 
 /**
  *
@@ -142,113 +150,116 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
    private void initComponents() {
-      bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+       ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandViewSemiconductors");
+       jButtonAdd = new JButton();
+       jButtonEdit = new JButton();
+       jButtonDelete = new JButton();
+       jButtonClose = new JButton();
+       jScrollPane1 = new JScrollPane();
+       jTableSemiconductors = new JTable();
 
-      jButtonAdd = new javax.swing.JButton();
-      jButtonEdit = new javax.swing.JButton();
-      jButtonDelete = new javax.swing.JButton();
-      jButtonClose = new javax.swing.JButton();
-      jScrollPane1 = new javax.swing.JScrollPane();
-      jTableSemiconductors = new javax.swing.JTable();
+       //======== this ========
+       setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+       setTitle(bundle.getString("BandViewSemiconductors.title"));
+       setName("BandViewSemiconductors");
+       var contentPane = getContentPane();
 
-      setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-      org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandViewSemiconductors.class);
-      setTitle(resourceMap.getString("BandViewSemiconductors.title")); // NOI18N
-      setName("BandViewSemiconductors"); // NOI18N
+       //---- jButtonAdd ----
+       jButtonAdd.setText(bundle.getString("jButtonAdd.text"));
+       jButtonAdd.setName("jButtonAdd");
 
-      javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandViewSemiconductors.class, this);
-      jButtonAdd.setAction(actionMap.get("newRecord")); // NOI18N
-      jButtonAdd.setText(resourceMap.getString("jButtonAdd.text")); // NOI18N
-      jButtonAdd.setName("jButtonAdd"); // NOI18N
+       //---- jButtonEdit ----
+       jButtonEdit.setText(bundle.getString("jButtonEdit.text"));
+       jButtonEdit.setName("jButtonEdit");
 
-      jButtonEdit.setAction(actionMap.get("editRecord")); // NOI18N
-      jButtonEdit.setText(resourceMap.getString("jButtonEdit.text")); // NOI18N
-      jButtonEdit.setName("jButtonEdit"); // NOI18N
+       //---- jButtonDelete ----
+       jButtonDelete.setText(bundle.getString("jButtonDelete.text"));
+       jButtonDelete.setName("jButtonDelete");
 
-      jButtonDelete.setAction(actionMap.get("deleteRecord")); // NOI18N
-      jButtonDelete.setText(resourceMap.getString("jButtonDelete.text")); // NOI18N
-      jButtonDelete.setName("jButtonDelete"); // NOI18N
+       //---- jButtonClose ----
+       jButtonClose.setText(bundle.getString("jButtonClose.text"));
+       jButtonClose.setName("jButtonClose");
 
-      jButtonClose.setAction(actionMap.get("closeSemiconductorsBox")); // NOI18N
-      jButtonClose.setText(resourceMap.getString("jButtonClose.text")); // NOI18N
-      jButtonClose.setName("jButtonClose"); // NOI18N
+       //======== jScrollPane1 ========
+       {
+	   jScrollPane1.setName("jScrollPane1");
 
-      jScrollPane1.setName("jScrollPane1"); // NOI18N
+	   //---- jTableSemiconductors ----
+	   jTableSemiconductors.setName("jTableSemiconductors");
+	   jTableSemiconductors.addMouseListener(new MouseAdapter() {
+	       @Override
+	       public void mouseClicked(MouseEvent e) {
+		   jTableSemiconductorsMouseClicked(e);
+	       }
+	   });
+	   jScrollPane1.setViewportView(jTableSemiconductors);
+       }
 
-      jTableSemiconductors.setName("jTableSemiconductors"); // NOI18N
+       GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+       contentPane.setLayout(contentPaneLayout);
+       contentPaneLayout.setHorizontalGroup(
+	   contentPaneLayout.createParallelGroup()
+	       .addGroup(contentPaneLayout.createSequentialGroup()
+		   .addContainerGap()
+		   .addGroup(contentPaneLayout.createParallelGroup()
+		       .addComponent(jButtonAdd)
+		       .addComponent(jButtonEdit)
+		       .addComponent(jButtonDelete)
+		       .addComponent(jButtonClose))
+		   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		   .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+		   .addContainerGap())
+       );
+       contentPaneLayout.setVerticalGroup(
+	   contentPaneLayout.createParallelGroup()
+	       .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+		   .addContainerGap()
+		   .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+		       .addComponent(jScrollPane1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+		       .addGroup(contentPaneLayout.createSequentialGroup()
+			   .addComponent(jButtonAdd)
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			   .addComponent(jButtonEdit)
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+			   .addComponent(jButtonDelete)
+			   .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+			   .addComponent(jButtonClose)))
+		   .addContainerGap())
+       );
+       pack();
+       setLocationRelativeTo(getOwner());
 
-      org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${semiconductors}");
-      org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTableSemiconductors);
-      org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${name}"));
-      columnBinding.setColumnName("Name");
-      columnBinding.setColumnClass(String.class);
-      columnBinding.setEditable(false);
-      columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${bandGap}"));
-      columnBinding.setColumnName("Band Gap");
-      columnBinding.setColumnClass(Double.class);
-      columnBinding.setEditable(false);
-      columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${electronAffinity}"));
-      columnBinding.setColumnName("Electron Affinity");
-      columnBinding.setColumnClass(Double.class);
-      columnBinding.setEditable(false);
-      columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${dielectricConstant}"));
-      columnBinding.setColumnName("Dielectric Constant");
-      columnBinding.setColumnClass(Double.class);
-      columnBinding.setEditable(false);
-      columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${notes}"));
-      columnBinding.setColumnName("Notes");
-      columnBinding.setColumnClass(String.class);
-      columnBinding.setEditable(false);
-      bindingGroup.addBinding(jTableBinding);
-      jTableBinding.bind();
-      jTableSemiconductors.addMouseListener(new java.awt.event.MouseAdapter() {
-         public void mouseClicked(java.awt.event.MouseEvent evt) {
-            jTableSemiconductorsMouseClicked(evt);
-         }
-      });
-      jScrollPane1.setViewportView(jTableSemiconductors);
-      jTableSemiconductors.getColumnModel().getColumn(0).setHeaderValue(resourceMap.getString("jTableSemiconductors.columnModel.title0")); // NOI18N
-      jTableSemiconductors.getColumnModel().getColumn(1).setHeaderValue(resourceMap.getString("jTableSemiconductors.columnModel.title1")); // NOI18N
-      jTableSemiconductors.getColumnModel().getColumn(2).setHeaderValue(resourceMap.getString("jTableSemiconductors.columnModel.title2")); // NOI18N
-      jTableSemiconductors.getColumnModel().getColumn(3).setHeaderValue(resourceMap.getString("jTableSemiconductors.columnModel.title3")); // NOI18N
-      jTableSemiconductors.getColumnModel().getColumn(4).setHeaderValue(resourceMap.getString("jTableSemiconductors.columnModel.title4")); // NOI18N
-
-      javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-      getContentPane().setLayout(layout);
-      layout.setHorizontalGroup(
-         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(jButtonAdd)
-               .addComponent(jButtonEdit)
-               .addComponent(jButtonDelete)
-               .addComponent(jButtonClose))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
-            .addContainerGap())
-      );
-      layout.setVerticalGroup(
-         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-               .addGroup(layout.createSequentialGroup()
-                  .addComponent(jButtonAdd)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                  .addComponent(jButtonEdit)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                  .addComponent(jButtonDelete)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                  .addComponent(jButtonClose)))
-            .addContainerGap())
-      );
-
-      bindingGroup.bind();
-
-      pack();
+       //---- bindings ----
+       bindingGroup = new BindingGroup();
+       {
+	   var binding = SwingBindings.createJTableBinding(UpdateStrategy.READ_WRITE,
+	       this, (ELProperty) ELProperty.create("${semiconductors}"), jTableSemiconductors);
+	   binding.addColumnBinding(ELProperty.create("${name}"))
+	       .setColumnName("Name")
+	       .setColumnClass(String.class)
+	       .setEditable(false);
+	   binding.addColumnBinding(ELProperty.create("${bandGap}"))
+	       .setColumnName("Band Gap")
+	       .setColumnClass(Double.class)
+	       .setEditable(false);
+	   binding.addColumnBinding(ELProperty.create("${electronAffinity}"))
+	       .setColumnName("Electron Affinity")
+	       .setColumnClass(Double.class)
+	       .setEditable(false);
+	   binding.addColumnBinding(ELProperty.create("${dielectricConstant}"))
+	       .setColumnName("Dielectric Constant")
+	       .setColumnClass(Double.class)
+	       .setEditable(false);
+	   binding.addColumnBinding(ELProperty.create("${notes}"))
+	       .setColumnName("Notes")
+	       .setColumnClass(String.class)
+	       .setEditable(false);
+	   bindingGroup.addBinding(binding);
+	   binding.bind();
+       }
+       bindingGroup.bind();
    }// </editor-fold>//GEN-END:initComponents
 
     private void jTableSemiconductorsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableSemiconductorsMouseClicked
@@ -275,12 +286,13 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
     }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
-   private javax.swing.JButton jButtonAdd;
-   private javax.swing.JButton jButtonClose;
-   private javax.swing.JButton jButtonDelete;
-   private javax.swing.JButton jButtonEdit;
-   private javax.swing.JScrollPane jScrollPane1;
-   private javax.swing.JTable jTableSemiconductors;
-   private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+   // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
+   private JButton jButtonAdd;
+   private JButton jButtonEdit;
+   private JButton jButtonDelete;
+   private JButton jButtonClose;
+   private JScrollPane jScrollPane1;
+   private JTable jTableSemiconductors;
+   private BindingGroup bindingGroup;
    // End of variables declaration//GEN-END:variables
 }

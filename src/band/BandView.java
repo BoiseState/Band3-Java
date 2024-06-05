@@ -23,9 +23,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import org.jdesktop.application.Action;
-import org.jdesktop.application.SingleFrameApplication;
-import org.jdesktop.application.FrameView;
+//import org.jdesktop.application.Action;
+//import org.jdesktop.application.SingleFrameApplication;
+//import org.jdesktop.application.FrameView;
 import javax.swing.GroupLayout;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
@@ -40,7 +40,7 @@ import javax.swing.SwingWorker;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.text.BadLocationException;
 import java.awt.KeyEventDispatcher;
-import org.jdesktop.application.ResourceMap;
+//import org.jdesktop.application.ResourceMap;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -69,12 +69,12 @@ import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
-import org.jdesktop.application.Application;
+//import org.jdesktop.application.Application;
 
 /**
  * The application's main frame.
  */
-public class BandView extends FrameView {
+public class BandView extends JInternalFrame {
 
     public static final String EDIT_LAYER_COMMAND = "EditLayer";
     public static final String COPY_LOCATION_DATA = "CopyData";
@@ -104,14 +104,22 @@ public class BandView extends FrameView {
     long lastMouseMove;
     String rolloverText;
     boolean chartAnimating;
+
     
-    
-    public BandView(SingleFrameApplication app, Structure s) {
-        super(app);
-        
+    public BandView(BandApp app, Structure s) {
+        super("BandView", true, false, true);
+
         // Don't do anything on close - we want to control that in our shutdown() method
-        this.getFrame().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        this.getFrame().addWindowListener(new java.awt.event.WindowAdapter() {
+//        this.getFrame().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+//        this.getFrame().addWindowListener(new java.awt.event.WindowAdapter() {
+//            @Override
+//            public void windowClosing(WindowEvent evt) {
+//                BandApp.getApplication().shutdown();
+//            }
+//        });
+
+        app.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        app.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent evt) {
                 BandApp.getApplication().shutdown();
@@ -160,8 +168,8 @@ public class BandView extends FrameView {
     @Action
     public void editLayer() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
-        
+        JFrame mainFrame = BandApp.getApplication();
+
         Material clicked = s.getLayer(lastClickedIndex);
         MaterialSelect materialBox;
 
@@ -215,7 +223,7 @@ public class BandView extends FrameView {
     @Action
     public void addDielectricBefore() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         BandPickDielectric pickDielectricsBox = new BandPickDielectric(mainFrame, true);
         pickDielectricsBox.setVisible(true);
         if (pickDielectricsBox.isConfirmed()) {
@@ -230,7 +238,7 @@ public class BandView extends FrameView {
     @Action
     public void addDielectricAfter() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         BandPickDielectric pickDielectricsBox = new BandPickDielectric(mainFrame, true);
         pickDielectricsBox.setVisible(true);
         if (pickDielectricsBox.isConfirmed()) {
@@ -245,7 +253,7 @@ public class BandView extends FrameView {
     @Action
     public void addMetalBefore() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         BandPickMetal pickMetalBox = new BandPickMetal(mainFrame, true);
         pickMetalBox.setVisible(true);
         if (pickMetalBox.isConfirmed()) {
@@ -260,7 +268,7 @@ public class BandView extends FrameView {
     @Action
     public void addMetalAfter() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         BandPickMetal pickMetalBox = new BandPickMetal(mainFrame, true);
         pickMetalBox.setVisible(true);
         if (pickMetalBox.isConfirmed()) {
@@ -275,7 +283,7 @@ public class BandView extends FrameView {
     @Action
     public void replaceLayer() {
         Structure s = BandApp.getApplication().getStructure();
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         MaterialPick pickMaterialBox;
         Material clicked = s.getLayer(lastClickedIndex);
 
@@ -1133,6 +1141,7 @@ public class BandView extends FrameView {
     @Action
     public void saveStructure() {
         JFileChooser chooser = new JFileChooser();
+        BandApp app = BandApp.getApplication();
         chooser.setFileFilter(new FileFilter() {
 
             @Override
@@ -1154,7 +1163,7 @@ public class BandView extends FrameView {
 
             File f = new File(filename);
             if (f.exists()) {
-                int result = JOptionPane.showConfirmDialog(this.getFrame(), "The file exists, would you like to overwrite it?", "Overwrite file...", JOptionPane.YES_NO_OPTION);
+                int result = JOptionPane.showConfirmDialog(app, "The file exists, would you like to overwrite it?", "Overwrite file...", JOptionPane.YES_NO_OPTION);
                 if (result == JOptionPane.NO_OPTION) {
                     return;
                 }
@@ -1225,7 +1234,7 @@ public class BandView extends FrameView {
     @Action
     public void showAboutBox() {
         JDialog aboutBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         aboutBox = new BandAboutBox(mainFrame);
         aboutBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(aboutBox);
@@ -1234,7 +1243,7 @@ public class BandView extends FrameView {
     @Action
     public void showMetalsBox() {
         JDialog metalsBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         metalsBox = new BandViewMetals(mainFrame, true);
         metalsBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(metalsBox);
@@ -1243,7 +1252,7 @@ public class BandView extends FrameView {
     @Action
     public void showDielectricsBox() {
         JDialog dielectricsBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         dielectricsBox = new BandViewDielectrics(mainFrame, true);
         dielectricsBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(dielectricsBox);
@@ -1252,7 +1261,7 @@ public class BandView extends FrameView {
     @Action
     public void showSemiconductorsBox() {
         JDialog semiconductorsBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         semiconductorsBox = new BandViewSemiconductors(mainFrame, true);
         semiconductorsBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(semiconductorsBox);
@@ -1261,7 +1270,7 @@ public class BandView extends FrameView {
     @Action
     public void showWindowBox() {
         JDialog windowBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         windowBox = new BandViewWindow(mainFrame, true);
         windowBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(windowBox);
@@ -1272,7 +1281,7 @@ public class BandView extends FrameView {
     @Action
     public void showMovieParametersBox() {
         JDialog movieParametersBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         movieParametersBox = new BandMovieParameters(mainFrame, true);
         movieParametersBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(movieParametersBox);
@@ -1281,7 +1290,7 @@ public class BandView extends FrameView {
     @Action
     public void showExportToolBox() {
         JDialog exportToolBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         exportToolBox = new BandExportTool(mainFrame, true);
         exportToolBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(exportToolBox);
@@ -1290,7 +1299,7 @@ public class BandView extends FrameView {
     @Action
     public void showComposeBox() {
         JDialog composeBox = null;
-        JFrame mainFrame = BandApp.getApplication().getMainFrame();
+        JFrame mainFrame = BandApp.getApplication();
         composeBox = new BandCompose(mainFrame, true);
         composeBox.setLocationRelativeTo(mainFrame);
         BandApp.getApplication().show(composeBox);
@@ -1365,7 +1374,7 @@ public class BandView extends FrameView {
                        "Material Import", JOptionPane.INFORMATION_MESSAGE);
                 }
                 else {
-                    JFrame mainFrame = BandApp.getApplication().getMainFrame();
+                    JFrame mainFrame = BandApp.getApplication();
                     BandViewImportedMaterials view = new BandViewImportedMaterials(
                             mainFrame,
                             true, newMaterials);
@@ -1393,482 +1402,482 @@ public class BandView extends FrameView {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandView");
-	mainPanel = new JPanel();
-	jToolBarTop = new JToolBar();
-	jLabelVoltage = new JLabel();
-	jTextFieldVoltage = new JTextField();
-	jLabelTemp = new JLabel();
-	jTextFieldTemp = new JTextField();
-	jButtonPlay = new JButton();
-	jLabelFlatbandVoltage = new JLabel();
-	jTextFieldFlatbandVoltage = new JTextField();
-	jLabelEOT = new JLabel();
-	jTextFieldEOT = new JTextField();
-	jLabelStackCap = new JLabel();
-	jTextFieldStackCap = new JTextField();
-	jLabelThresholdVoltage = new JLabel();
-	jTextFieldThresholdVoltage = new JTextField();
-	jToolBarSide = new JToolBar();
-	/// My great code goes here
-	jPanelChart = new JPanel();
-	jTextFieldRolloverData = new JTextField();
-	menuBar = new JMenuBar();
-	var jMenuFile = new JMenu();
-	jMenuItemNew = new JMenuItem();
-	jMenuItemOpen = new JMenuItem();
-	jMenuItemSave = new JMenuItem();
-	jMenuItemClose = new JMenuItem();
-	jSeparator1 = new JSeparator();
-	jMenuItemImport = new JMenuItem();
-	jMenuItemSaveAsDefault = new JMenuItem();
-	jMenuItemExport = new JMenuItem();
-	jSeparator2 = new JSeparator();
-	var jMenuItemExit = new JMenuItem();
-	jMenuEdit = new JMenu();
-	jMenuItemUndo = new JMenuItem();
-	jMenuItemCopyPlot = new JMenuItem();
-	jMenuView = new JMenu();
-	jRadioButtonMenuItemChargeDensity = new JRadioButtonMenuItem();
-	jRadioButtonMenuItemElectricField = new JRadioButtonMenuItem();
-	jRadioButtonMenuItemPotential = new JRadioButtonMenuItem();
-	jRadioButtonMenuItemEnergy = new JRadioButtonMenuItem();
-	jSeparator3 = new JSeparator();
-	jMenuMaterials = new JMenu();
-	jMenuItemMetals = new JMenuItem();
-	jMenuItemDielectrics = new JMenuItem();
-	jMenuItemSemiconductors = new JMenuItem();
-	jMenuItemShowStackParameters = new JMenuItem();
-	jSeparator4 = new JSeparator();
-	jMenuItemViewWindow = new JMenuItem();
-	jMenuItemMovieParameters = new JMenuItem();
-	jMenuStructure = new JMenu();
-	jMenuItemCompose = new JMenuItem();
-	jMenuItemExportTool = new JMenuItem();
-	var jMenuHelp = new JMenu();
-	var jMenuItemAbout = new JMenuItem();
-	buttonGroupView = new ButtonGroup();
+        ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandView");
+        mainPanel = new JPanel();
+        jToolBarTop = new JToolBar();
+        jLabelVoltage = new JLabel();
+        jTextFieldVoltage = new JTextField();
+        jLabelTemp = new JLabel();
+        jTextFieldTemp = new JTextField();
+        jButtonPlay = new JButton();
+        jLabelFlatbandVoltage = new JLabel();
+        jTextFieldFlatbandVoltage = new JTextField();
+        jLabelEOT = new JLabel();
+        jTextFieldEOT = new JTextField();
+        jLabelStackCap = new JLabel();
+        jTextFieldStackCap = new JTextField();
+        jLabelThresholdVoltage = new JLabel();
+        jTextFieldThresholdVoltage = new JTextField();
+        jToolBarSide = new JToolBar();
+        /// My great code goes here
+        jPanelChart = new JPanel();
+        jTextFieldRolloverData = new JTextField();
+        menuBar = new JMenuBar();
+        var jMenuFile = new JMenu();
+        jMenuItemNew = new JMenuItem();
+        jMenuItemOpen = new JMenuItem();
+        jMenuItemSave = new JMenuItem();
+        jMenuItemClose = new JMenuItem();
+        jSeparator1 = new JSeparator();
+        jMenuItemImport = new JMenuItem();
+        jMenuItemSaveAsDefault = new JMenuItem();
+        jMenuItemExport = new JMenuItem();
+        jSeparator2 = new JSeparator();
+        var jMenuItemExit = new JMenuItem();
+        jMenuEdit = new JMenu();
+        jMenuItemUndo = new JMenuItem();
+        jMenuItemCopyPlot = new JMenuItem();
+        jMenuView = new JMenu();
+        jRadioButtonMenuItemChargeDensity = new JRadioButtonMenuItem();
+        jRadioButtonMenuItemElectricField = new JRadioButtonMenuItem();
+        jRadioButtonMenuItemPotential = new JRadioButtonMenuItem();
+        jRadioButtonMenuItemEnergy = new JRadioButtonMenuItem();
+        jSeparator3 = new JSeparator();
+        jMenuMaterials = new JMenu();
+        jMenuItemMetals = new JMenuItem();
+        jMenuItemDielectrics = new JMenuItem();
+        jMenuItemSemiconductors = new JMenuItem();
+        jMenuItemShowStackParameters = new JMenuItem();
+        jSeparator4 = new JSeparator();
+        jMenuItemViewWindow = new JMenuItem();
+        jMenuItemMovieParameters = new JMenuItem();
+        jMenuStructure = new JMenu();
+        jMenuItemCompose = new JMenuItem();
+        jMenuItemExportTool = new JMenuItem();
+        var jMenuHelp = new JMenu();
+        var jMenuItemAbout = new JMenuItem();
+        buttonGroupView = new ButtonGroup();
 
-	//======== mainPanel ========
-	{
-	    mainPanel.setMaximumSize(new Dimension(5000, 5000));
-	    mainPanel.setMinimumSize(new Dimension(400, 200));
-	    mainPanel.setName("mainPanel");
-	    mainPanel.setPreferredSize(new Dimension(898, 875));
-	    mainPanel.setRequestFocusEnabled(false);
+        //======== mainPanel ========
+        {
+            mainPanel.setMaximumSize(new Dimension(5000, 5000));
+            mainPanel.setMinimumSize(new Dimension(400, 200));
+            mainPanel.setName("mainPanel");
+            mainPanel.setPreferredSize(new Dimension(898, 875));
+            mainPanel.setRequestFocusEnabled(false);
 
-	    //======== jToolBarTop ========
-	    {
-		jToolBarTop.setFloatable(false);
-		jToolBarTop.setRollover(true);
-		jToolBarTop.setMinimumSize(new Dimension(551, 100));
-		jToolBarTop.setName("jToolBarTop");
-		jToolBarTop.setPreferredSize(new Dimension(717, 100));
+            //======== jToolBarTop ========
+            {
+                jToolBarTop.setFloatable(false);
+                jToolBarTop.setRollover(true);
+                jToolBarTop.setMinimumSize(new Dimension(551, 100));
+                jToolBarTop.setName("jToolBarTop");
+                jToolBarTop.setPreferredSize(new Dimension(717, 100));
 
-		//---- jLabelVoltage ----
-		jLabelVoltage.setText(bundle.getString("jLabelVoltage.text"));
-		jLabelVoltage.setName("jLabelVoltage");
-		jToolBarTop.add(jLabelVoltage);
+                //---- jLabelVoltage ----
+                jLabelVoltage.setText(bundle.getString("jLabelVoltage.text"));
+                jLabelVoltage.setName("jLabelVoltage");
+                jToolBarTop.add(jLabelVoltage);
 
-		//---- jTextFieldVoltage ----
-		jTextFieldVoltage.setText(bundle.getString("jTextFieldVoltage.text"));
-		jTextFieldVoltage.setMaximumSize(new Dimension(60, 25));
-		jTextFieldVoltage.setMinimumSize(new Dimension(40, 25));
-		jTextFieldVoltage.setName("jTextFieldVoltage");
-		jTextFieldVoltage.setPreferredSize(new Dimension(60, 25));
-		jTextFieldVoltage.addFocusListener(new FocusAdapter() {
-		    @Override
-		    public void focusGained(FocusEvent e) {
-			jTextFieldVoltageFocusGained(e);
-		    }
-		});
-		jToolBarTop.add(jTextFieldVoltage);
+                //---- jTextFieldVoltage ----
+                jTextFieldVoltage.setText(bundle.getString("jTextFieldVoltage.text"));
+                jTextFieldVoltage.setMaximumSize(new Dimension(60, 25));
+                jTextFieldVoltage.setMinimumSize(new Dimension(40, 25));
+                jTextFieldVoltage.setName("jTextFieldVoltage");
+                jTextFieldVoltage.setPreferredSize(new Dimension(60, 25));
+                jTextFieldVoltage.addFocusListener(new FocusAdapter() {
+                    @Override
+                    public void focusGained(FocusEvent e) {
+                        jTextFieldVoltageFocusGained(e);
+                    }
+                });
+                jToolBarTop.add(jTextFieldVoltage);
 
-		//---- jSeparator5 ----
-		jSeparator5.setName("jSeparator5");
-		jToolBarTop.addSeparator();
+                //---- jSeparator5 ----
+                jSeparator5.setName("jSeparator5");
+                jToolBarTop.addSeparator();
 
-		//---- jLabelTemp ----
-		jLabelTemp.setText(bundle.getString("jLabelTemp.text"));
-		jLabelTemp.setName("jLabelTemp");
-		jToolBarTop.add(jLabelTemp);
+                //---- jLabelTemp ----
+                jLabelTemp.setText(bundle.getString("jLabelTemp.text"));
+                jLabelTemp.setName("jLabelTemp");
+                jToolBarTop.add(jLabelTemp);
 
-		//---- jTextFieldTemp ----
-		jTextFieldTemp.setText(bundle.getString("jTextFieldTemp.text"));
-		jTextFieldTemp.setMaximumSize(new Dimension(60, 25));
-		jTextFieldTemp.setMinimumSize(new Dimension(40, 25));
-		jTextFieldTemp.setName("jTextFieldTemp");
-		jTextFieldTemp.setPreferredSize(new Dimension(60, 25));
-		jTextFieldTemp.addFocusListener(new FocusAdapter() {
-		    @Override
-		    public void focusGained(FocusEvent e) {
-			jTextFieldTempFocusGained(e);
-		    }
-		});
-		jToolBarTop.add(jTextFieldTemp);
+                //---- jTextFieldTemp ----
+                jTextFieldTemp.setText(bundle.getString("jTextFieldTemp.text"));
+                jTextFieldTemp.setMaximumSize(new Dimension(60, 25));
+                jTextFieldTemp.setMinimumSize(new Dimension(40, 25));
+                jTextFieldTemp.setName("jTextFieldTemp");
+                jTextFieldTemp.setPreferredSize(new Dimension(60, 25));
+                jTextFieldTemp.addFocusListener(new FocusAdapter() {
+                    @Override
+                    public void focusGained(FocusEvent e) {
+                        jTextFieldTempFocusGained(e);
+                    }
+                });
+                jToolBarTop.add(jTextFieldTemp);
 
-		//---- jSeparator6 ----
-		jSeparator6.setName("jSeparator6");
-		jToolBarTop.addSeparator();
+                //---- jSeparator6 ----
+                jSeparator6.setName("jSeparator6");
+                jToolBarTop.addSeparator();
 
-		//---- jButtonPlay ----
-		jButtonPlay.setText(bundle.getString("jButtonPlay.text"));
-		jButtonPlay.setToolTipText(bundle.getString("jButtonPlay.toolTipText"));
-		jButtonPlay.setFocusable(false);
-		jButtonPlay.setHorizontalTextPosition(SwingConstants.CENTER);
-		jButtonPlay.setMaximumSize(new Dimension(31, 40));
-		jButtonPlay.setMinimumSize(new Dimension(31, 40));
-		jButtonPlay.setName("jButtonPlay");
-		jButtonPlay.setPreferredSize(new Dimension(31, 40));
-		jButtonPlay.setVerticalTextPosition(SwingConstants.BOTTOM);
-		jToolBarTop.add(jButtonPlay);
+                //---- jButtonPlay ----
+                jButtonPlay.setText(bundle.getString("jButtonPlay.text"));
+                jButtonPlay.setToolTipText(bundle.getString("jButtonPlay.toolTipText"));
+                jButtonPlay.setFocusable(false);
+                jButtonPlay.setHorizontalTextPosition(SwingConstants.CENTER);
+                jButtonPlay.setMaximumSize(new Dimension(31, 40));
+                jButtonPlay.setMinimumSize(new Dimension(31, 40));
+                jButtonPlay.setName("jButtonPlay");
+                jButtonPlay.setPreferredSize(new Dimension(31, 40));
+                jButtonPlay.setVerticalTextPosition(SwingConstants.BOTTOM);
+                jToolBarTop.add(jButtonPlay);
 
-		//---- jSeparator8 ----
-		jSeparator8.setName("jSeparator8");
-		jToolBarTop.addSeparator();
+                //---- jSeparator8 ----
+                jSeparator8.setName("jSeparator8");
+                jToolBarTop.addSeparator();
 
-		//---- jLabelFlatbandVoltage ----
-		jLabelFlatbandVoltage.setText(bundle.getString("jLabelFlatbandVoltage.text"));
-		jLabelFlatbandVoltage.setMaximumSize(new Dimension(40, 25));
-		jLabelFlatbandVoltage.setMinimumSize(new Dimension(40, 25));
-		jLabelFlatbandVoltage.setName("jLabelFlatbandVoltage");
-		jLabelFlatbandVoltage.setPreferredSize(new Dimension(40, 25));
-		if (System.getProperty("mrj.version") != null) {
-		    jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(60,25));
-		    jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(50, 25));
-		}
-		jToolBarTop.add(jLabelFlatbandVoltage);
+                //---- jLabelFlatbandVoltage ----
+                jLabelFlatbandVoltage.setText(bundle.getString("jLabelFlatbandVoltage.text"));
+                jLabelFlatbandVoltage.setMaximumSize(new Dimension(40, 25));
+                jLabelFlatbandVoltage.setMinimumSize(new Dimension(40, 25));
+                jLabelFlatbandVoltage.setName("jLabelFlatbandVoltage");
+                jLabelFlatbandVoltage.setPreferredSize(new Dimension(40, 25));
+                if (System.getProperty("mrj.version") != null) {
+                    jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(60,25));
+                    jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(50, 25));
+                }
+                jToolBarTop.add(jLabelFlatbandVoltage);
 
-		//---- jTextFieldFlatbandVoltage ----
-		jTextFieldFlatbandVoltage.setBackground(new Color(0xf0f0f0));
-		jTextFieldFlatbandVoltage.setEditable(false);
-		jTextFieldFlatbandVoltage.setText(bundle.getString("jTextFieldFlatbandVoltage.text"));
-		jTextFieldFlatbandVoltage.setAutoscrolls(false);
-		jTextFieldFlatbandVoltage.setMaximumSize(new Dimension(60, 25));
-		jTextFieldFlatbandVoltage.setMinimumSize(new Dimension(40, 25));
-		jTextFieldFlatbandVoltage.setName("jTextFieldFlatbandVoltage");
-		jTextFieldFlatbandVoltage.setPreferredSize(new Dimension(60, 25));
-		jToolBarTop.add(jTextFieldFlatbandVoltage);
+                //---- jTextFieldFlatbandVoltage ----
+                jTextFieldFlatbandVoltage.setBackground(new Color(0xf0f0f0));
+                jTextFieldFlatbandVoltage.setEditable(false);
+                jTextFieldFlatbandVoltage.setText(bundle.getString("jTextFieldFlatbandVoltage.text"));
+                jTextFieldFlatbandVoltage.setAutoscrolls(false);
+                jTextFieldFlatbandVoltage.setMaximumSize(new Dimension(60, 25));
+                jTextFieldFlatbandVoltage.setMinimumSize(new Dimension(40, 25));
+                jTextFieldFlatbandVoltage.setName("jTextFieldFlatbandVoltage");
+                jTextFieldFlatbandVoltage.setPreferredSize(new Dimension(60, 25));
+                jToolBarTop.add(jTextFieldFlatbandVoltage);
 
-		//---- jSeparator9 ----
-		jSeparator9.setName("jSeparator9");
-		jToolBarTop.addSeparator();
+                //---- jSeparator9 ----
+                jSeparator9.setName("jSeparator9");
+                jToolBarTop.addSeparator();
 
-		//---- jLabelEOT ----
-		jLabelEOT.setText(bundle.getString("jLabelEOT.text"));
-		jLabelEOT.setMaximumSize(new Dimension(50, 25));
-		jLabelEOT.setMinimumSize(new Dimension(40, 25));
-		jLabelEOT.setName("jLabelEOT");
-		jLabelEOT.setPreferredSize(new Dimension(40, 25));
-		if (System.getProperty("mrj.version") != null) {
-		    jLabelEOT.setMaximumSize(new java.awt.Dimension(60,25));
-		    jLabelEOT.setPreferredSize(new java.awt.Dimension(50, 25));
-		}
-		jToolBarTop.add(jLabelEOT);
+                //---- jLabelEOT ----
+                jLabelEOT.setText(bundle.getString("jLabelEOT.text"));
+                jLabelEOT.setMaximumSize(new Dimension(50, 25));
+                jLabelEOT.setMinimumSize(new Dimension(40, 25));
+                jLabelEOT.setName("jLabelEOT");
+                jLabelEOT.setPreferredSize(new Dimension(40, 25));
+                if (System.getProperty("mrj.version") != null) {
+                    jLabelEOT.setMaximumSize(new java.awt.Dimension(60,25));
+                    jLabelEOT.setPreferredSize(new java.awt.Dimension(50, 25));
+                }
+                jToolBarTop.add(jLabelEOT);
 
-		//---- jTextFieldEOT ----
-		jTextFieldEOT.setEditable(false);
-		jTextFieldEOT.setText(bundle.getString("jTextFieldEOT.text"));
-		jTextFieldEOT.setAutoscrolls(false);
-		jTextFieldEOT.setMaximumSize(new Dimension(60, 25));
-		jTextFieldEOT.setMinimumSize(new Dimension(40, 25));
-		jTextFieldEOT.setName("jTextFieldEOT");
-		jTextFieldEOT.setPreferredSize(new Dimension(60, 25));
-		jToolBarTop.add(jTextFieldEOT);
+                //---- jTextFieldEOT ----
+                jTextFieldEOT.setEditable(false);
+                jTextFieldEOT.setText(bundle.getString("jTextFieldEOT.text"));
+                jTextFieldEOT.setAutoscrolls(false);
+                jTextFieldEOT.setMaximumSize(new Dimension(60, 25));
+                jTextFieldEOT.setMinimumSize(new Dimension(40, 25));
+                jTextFieldEOT.setName("jTextFieldEOT");
+                jTextFieldEOT.setPreferredSize(new Dimension(60, 25));
+                jToolBarTop.add(jTextFieldEOT);
 
-		//---- jSeparator10 ----
-		jSeparator10.setName("jSeparator10");
-		jToolBarTop.addSeparator();
+                //---- jSeparator10 ----
+                jSeparator10.setName("jSeparator10");
+                jToolBarTop.addSeparator();
 
-		//---- jLabelStackCap ----
-		jLabelStackCap.setText(bundle.getString("jLabelStackCap.text"));
-		jLabelStackCap.setMaximumSize(new Dimension(70, 25));
-		jLabelStackCap.setMinimumSize(new Dimension(40, 25));
-		jLabelStackCap.setName("jLabelStackCap");
-		jLabelStackCap.setPreferredSize(new Dimension(40, 25));
-		if (System.getProperty("mrj.version") != null) {
-		    jLabelStackCap.setMaximumSize(new java.awt.Dimension(100,25));
-		    jLabelStackCap.setPreferredSize(new java.awt.Dimension(90, 25));
-		}
-		jToolBarTop.add(jLabelStackCap);
+                //---- jLabelStackCap ----
+                jLabelStackCap.setText(bundle.getString("jLabelStackCap.text"));
+                jLabelStackCap.setMaximumSize(new Dimension(70, 25));
+                jLabelStackCap.setMinimumSize(new Dimension(40, 25));
+                jLabelStackCap.setName("jLabelStackCap");
+                jLabelStackCap.setPreferredSize(new Dimension(40, 25));
+                if (System.getProperty("mrj.version") != null) {
+                    jLabelStackCap.setMaximumSize(new java.awt.Dimension(100,25));
+                    jLabelStackCap.setPreferredSize(new java.awt.Dimension(90, 25));
+                }
+                jToolBarTop.add(jLabelStackCap);
 
-		//---- jTextFieldStackCap ----
-		jTextFieldStackCap.setEditable(false);
-		jTextFieldStackCap.setText(bundle.getString("jTextFieldStackCap.text"));
-		jTextFieldStackCap.setAutoscrolls(false);
-		jTextFieldStackCap.setMaximumSize(new Dimension(80, 25));
-		jTextFieldStackCap.setMinimumSize(new Dimension(50, 25));
-		jTextFieldStackCap.setName("jTextFieldStackCap");
-		jTextFieldStackCap.setPreferredSize(new Dimension(70, 25));
-		jToolBarTop.add(jTextFieldStackCap);
+                //---- jTextFieldStackCap ----
+                jTextFieldStackCap.setEditable(false);
+                jTextFieldStackCap.setText(bundle.getString("jTextFieldStackCap.text"));
+                jTextFieldStackCap.setAutoscrolls(false);
+                jTextFieldStackCap.setMaximumSize(new Dimension(80, 25));
+                jTextFieldStackCap.setMinimumSize(new Dimension(50, 25));
+                jTextFieldStackCap.setName("jTextFieldStackCap");
+                jTextFieldStackCap.setPreferredSize(new Dimension(70, 25));
+                jToolBarTop.add(jTextFieldStackCap);
 
-		//---- jSeparator11 ----
-		jSeparator11.setName("jSeparator11");
-		jToolBarTop.addSeparator();
+                //---- jSeparator11 ----
+                jSeparator11.setName("jSeparator11");
+                jToolBarTop.addSeparator();
 
-		//---- jLabelThresholdVoltage ----
-		jLabelThresholdVoltage.setText(bundle.getString("jLabelThresholdVoltage.text"));
-		jLabelThresholdVoltage.setMaximumSize(new Dimension(40, 25));
-		jLabelThresholdVoltage.setMinimumSize(new Dimension(40, 25));
-		jLabelThresholdVoltage.setName("jLabelThresholdVoltage");
-		jLabelThresholdVoltage.setPreferredSize(new Dimension(40, 25));
-		jToolBarTop.add(jLabelThresholdVoltage);
+                //---- jLabelThresholdVoltage ----
+                jLabelThresholdVoltage.setText(bundle.getString("jLabelThresholdVoltage.text"));
+                jLabelThresholdVoltage.setMaximumSize(new Dimension(40, 25));
+                jLabelThresholdVoltage.setMinimumSize(new Dimension(40, 25));
+                jLabelThresholdVoltage.setName("jLabelThresholdVoltage");
+                jLabelThresholdVoltage.setPreferredSize(new Dimension(40, 25));
+                jToolBarTop.add(jLabelThresholdVoltage);
 
-		//---- jTextFieldThresholdVoltage ----
-		jTextFieldThresholdVoltage.setEditable(false);
-		jTextFieldThresholdVoltage.setText(bundle.getString("jTextFieldThresholdVoltage.text"));
-		jTextFieldThresholdVoltage.setAutoscrolls(false);
-		jTextFieldThresholdVoltage.setMaximumSize(new Dimension(60, 25));
-		jTextFieldThresholdVoltage.setMinimumSize(new Dimension(40, 25));
-		jTextFieldThresholdVoltage.setName("jTextFieldThresholdVoltage");
-		jTextFieldThresholdVoltage.setPreferredSize(new Dimension(60, 25));
-		jToolBarTop.add(jTextFieldThresholdVoltage);
-	    }
+                //---- jTextFieldThresholdVoltage ----
+                jTextFieldThresholdVoltage.setEditable(false);
+                jTextFieldThresholdVoltage.setText(bundle.getString("jTextFieldThresholdVoltage.text"));
+                jTextFieldThresholdVoltage.setAutoscrolls(false);
+                jTextFieldThresholdVoltage.setMaximumSize(new Dimension(60, 25));
+                jTextFieldThresholdVoltage.setMinimumSize(new Dimension(40, 25));
+                jTextFieldThresholdVoltage.setName("jTextFieldThresholdVoltage");
+                jTextFieldThresholdVoltage.setPreferredSize(new Dimension(60, 25));
+                jToolBarTop.add(jTextFieldThresholdVoltage);
+            }
 
-	    //======== jToolBarSide ========
-	    {
-		jToolBarSide.setFloatable(false);
-		jToolBarSide.setOrientation(SwingConstants.VERTICAL);
-		jToolBarSide.setRollover(true);
-		jToolBarSide.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		jToolBarSide.setMaximumSize(new Dimension(125, 125));
-		jToolBarSide.setMinimumSize(new Dimension(125, 125));
-		jToolBarSide.setName("jToolBarSide");
-		jToolBarSide.setPreferredSize(new Dimension(2, 175));
-	    }
+            //======== jToolBarSide ========
+            {
+                jToolBarSide.setFloatable(false);
+                jToolBarSide.setOrientation(SwingConstants.VERTICAL);
+                jToolBarSide.setRollover(true);
+                jToolBarSide.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                jToolBarSide.setMaximumSize(new Dimension(125, 125));
+                jToolBarSide.setMinimumSize(new Dimension(125, 125));
+                jToolBarSide.setName("jToolBarSide");
+                jToolBarSide.setPreferredSize(new Dimension(2, 175));
+            }
 
-	    //======== jPanelChart ========
-	    {
-		jPanelChart.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
-		jPanelChart.setName("jPanelChart");
-		jPanelChart.setPreferredSize(new Dimension(640, 480));
+            //======== jPanelChart ========
+            {
+                jPanelChart.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+                jPanelChart.setName("jPanelChart");
+                jPanelChart.setPreferredSize(new Dimension(640, 480));
 
-		GroupLayout jPanelChartLayout = new GroupLayout(jPanelChart);
-		jPanelChart.setLayout(jPanelChartLayout);
-		jPanelChartLayout.setHorizontalGroup(
-		    jPanelChartLayout.createParallelGroup()
-			.addGap(0, 680, Short.MAX_VALUE)
-		);
-		jPanelChartLayout.setVerticalGroup(
-		    jPanelChartLayout.createParallelGroup()
-			.addGap(0, 550, Short.MAX_VALUE)
-		);
-	    }
+                GroupLayout jPanelChartLayout = new GroupLayout(jPanelChart);
+                jPanelChart.setLayout(jPanelChartLayout);
+                jPanelChartLayout.setHorizontalGroup(
+                    jPanelChartLayout.createParallelGroup()
+                        .addGap(0, 680, Short.MAX_VALUE)
+                );
+                jPanelChartLayout.setVerticalGroup(
+                    jPanelChartLayout.createParallelGroup()
+                        .addGap(0, 550, Short.MAX_VALUE)
+                );
+            }
 
-	    //---- jTextFieldRolloverData ----
-	    jTextFieldRolloverData.setEditable(false);
-	    jTextFieldRolloverData.setBorder(null);
-	    jTextFieldRolloverData.setName("jTextFieldRolloverData");
+            //---- jTextFieldRolloverData ----
+            jTextFieldRolloverData.setEditable(false);
+            jTextFieldRolloverData.setBorder(null);
+            jTextFieldRolloverData.setName("jTextFieldRolloverData");
 
-	    GroupLayout mainPanelLayout = new GroupLayout(mainPanel);
-	    mainPanel.setLayout(mainPanelLayout);
-	    mainPanelLayout.setHorizontalGroup(
-		mainPanelLayout.createParallelGroup()
-		    .addComponent(jToolBarTop, GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
-		    .addGroup(mainPanelLayout.createSequentialGroup()
-			.addComponent(jToolBarSide, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE)
-			.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-			.addGroup(mainPanelLayout.createParallelGroup()
-			    .addComponent(jTextFieldRolloverData, GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
-			    .addComponent(jPanelChart, GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE))
-			.addContainerGap())
-	    );
-	    mainPanelLayout.setVerticalGroup(
-		mainPanelLayout.createParallelGroup()
-		    .addGroup(mainPanelLayout.createSequentialGroup()
-			.addComponent(jToolBarTop, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-			.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-			.addGroup(mainPanelLayout.createParallelGroup()
-			    .addGroup(mainPanelLayout.createSequentialGroup()
-				.addComponent(jToolBarSide, GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
-				.addGap(35, 35, 35))
-			    .addGroup(mainPanelLayout.createSequentialGroup()
-				.addComponent(jPanelChart, GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)))
-			.addComponent(jTextFieldRolloverData, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
-			.addContainerGap())
-	    );
-	}
+            GroupLayout mainPanelLayout = new GroupLayout(mainPanel);
+            mainPanel.setLayout(mainPanelLayout);
+            mainPanelLayout.setHorizontalGroup(
+                mainPanelLayout.createParallelGroup()
+                    .addComponent(jToolBarTop, GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jToolBarSide, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup()
+                            .addComponent(jTextFieldRolloverData, GroupLayout.PREFERRED_SIZE, 680, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelChart, GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE))
+                        .addContainerGap())
+            );
+            mainPanelLayout.setVerticalGroup(
+                mainPanelLayout.createParallelGroup()
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jToolBarTop, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup()
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(jToolBarSide, GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
+                                .addGap(35, 35, 35))
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(jPanelChart, GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jTextFieldRolloverData, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+            );
+        }
 
-	//======== menuBar ========
-	{
-	    menuBar.setName("menuBar");
+        //======== menuBar ========
+        {
+            menuBar.setName("menuBar");
 
-	    //======== jMenuFile ========
-	    {
-		jMenuFile.setText(bundle.getString("jMenuFile.text"));
-		jMenuFile.setName("jMenuFile");
+            //======== jMenuFile ========
+            {
+                jMenuFile.setText(bundle.getString("jMenuFile.text"));
+                jMenuFile.setName("jMenuFile");
 
-		//---- jMenuItemNew ----
-		jMenuItemNew.setName("jMenuItemNew");
-		jMenuFile.add(jMenuItemNew);
+                //---- jMenuItemNew ----
+                jMenuItemNew.setName("jMenuItemNew");
+                jMenuFile.add(jMenuItemNew);
 
-		//---- jMenuItemOpen ----
-		jMenuItemOpen.setName("jMenuItemOpen");
-		jMenuFile.add(jMenuItemOpen);
+                //---- jMenuItemOpen ----
+                jMenuItemOpen.setName("jMenuItemOpen");
+                jMenuFile.add(jMenuItemOpen);
 
-		//---- jMenuItemSave ----
-		jMenuItemSave.setName("jMenuItemSave");
-		jMenuFile.add(jMenuItemSave);
+                //---- jMenuItemSave ----
+                jMenuItemSave.setName("jMenuItemSave");
+                jMenuFile.add(jMenuItemSave);
 
-		//---- jMenuItemClose ----
-		jMenuItemClose.setText(bundle.getString("jMenuItemClose.text"));
-		jMenuItemClose.setName("jMenuItemClose");
-		jMenuFile.add(jMenuItemClose);
+                //---- jMenuItemClose ----
+                jMenuItemClose.setText(bundle.getString("jMenuItemClose.text"));
+                jMenuItemClose.setName("jMenuItemClose");
+                jMenuFile.add(jMenuItemClose);
 
-		//---- jSeparator1 ----
-		jSeparator1.setName("jSeparator1");
-		jMenuFile.add(jSeparator1);
+                //---- jSeparator1 ----
+                jSeparator1.setName("jSeparator1");
+                jMenuFile.add(jSeparator1);
 
-		//---- jMenuItemImport ----
-		jMenuItemImport.setText(bundle.getString("jMenuItemImport.text"));
-		jMenuItemImport.setName("jMenuItemImport");
-		jMenuFile.add(jMenuItemImport);
+                //---- jMenuItemImport ----
+                jMenuItemImport.setText(bundle.getString("jMenuItemImport.text"));
+                jMenuItemImport.setName("jMenuItemImport");
+                jMenuFile.add(jMenuItemImport);
 
-		//---- jSeparator7 ----
-		jSeparator7.setName("jSeparator7");
-		jMenuFile.addSeparator();
+                //---- jSeparator7 ----
+                jSeparator7.setName("jSeparator7");
+                jMenuFile.addSeparator();
 
-		//---- jMenuItemSaveAsDefault ----
-		jMenuItemSaveAsDefault.setText(bundle.getString("jMenuItemSaveAsDefault.text"));
-		jMenuItemSaveAsDefault.setName("jMenuItemSaveAsDefault");
-		jMenuFile.add(jMenuItemSaveAsDefault);
+                //---- jMenuItemSaveAsDefault ----
+                jMenuItemSaveAsDefault.setText(bundle.getString("jMenuItemSaveAsDefault.text"));
+                jMenuItemSaveAsDefault.setName("jMenuItemSaveAsDefault");
+                jMenuFile.add(jMenuItemSaveAsDefault);
 
-		//---- jMenuItemExport ----
-		jMenuItemExport.setName("jMenuItemExport");
-		jMenuFile.add(jMenuItemExport);
+                //---- jMenuItemExport ----
+                jMenuItemExport.setName("jMenuItemExport");
+                jMenuFile.add(jMenuItemExport);
 
-		//---- jSeparator2 ----
-		jSeparator2.setName("jSeparator2");
-		if (System.getProperty("mrj.version") == null)
-		jMenuFile.add(jSeparator2);
+                //---- jSeparator2 ----
+                jSeparator2.setName("jSeparator2");
+                if (System.getProperty("mrj.version") == null)
+                jMenuFile.add(jSeparator2);
 
-		//---- jMenuItemExit ----
-		jMenuItemExit.setName("jMenuItemExit");
-		if (System.getProperty("mrj.version") == null)
-		jMenuFile.add(jMenuItemExit);
-	    }
-	    menuBar.add(jMenuFile);
+                //---- jMenuItemExit ----
+                jMenuItemExit.setName("jMenuItemExit");
+                if (System.getProperty("mrj.version") == null)
+                jMenuFile.add(jMenuItemExit);
+            }
+            menuBar.add(jMenuFile);
 
-	    //======== jMenuEdit ========
-	    {
-		jMenuEdit.setText(bundle.getString("jMenuEdit.text"));
-		jMenuEdit.setName("jMenuEdit");
+            //======== jMenuEdit ========
+            {
+                jMenuEdit.setText(bundle.getString("jMenuEdit.text"));
+                jMenuEdit.setName("jMenuEdit");
 
-		//---- jMenuItemUndo ----
-		jMenuItemUndo.setText(bundle.getString("jMenuItemUndo.text"));
-		jMenuItemUndo.setName("jMenuItemUndo");
-		jMenuEdit.add(jMenuItemUndo);
+                //---- jMenuItemUndo ----
+                jMenuItemUndo.setText(bundle.getString("jMenuItemUndo.text"));
+                jMenuItemUndo.setName("jMenuItemUndo");
+                jMenuEdit.add(jMenuItemUndo);
 
-		//---- jMenuItemCopyPlot ----
-		jMenuItemCopyPlot.setText(bundle.getString("jMenuItemCopyPlot.text"));
-		jMenuItemCopyPlot.setName("jMenuItemCopyPlot");
-		jMenuEdit.add(jMenuItemCopyPlot);
-	    }
-	    menuBar.add(jMenuEdit);
+                //---- jMenuItemCopyPlot ----
+                jMenuItemCopyPlot.setText(bundle.getString("jMenuItemCopyPlot.text"));
+                jMenuItemCopyPlot.setName("jMenuItemCopyPlot");
+                jMenuEdit.add(jMenuItemCopyPlot);
+            }
+            menuBar.add(jMenuEdit);
 
-	    //======== jMenuView ========
-	    {
-		jMenuView.setText(bundle.getString("jMenuView.text"));
-		jMenuView.setName("jMenuView");
+            //======== jMenuView ========
+            {
+                jMenuView.setText(bundle.getString("jMenuView.text"));
+                jMenuView.setName("jMenuView");
 
-		//---- jRadioButtonMenuItemChargeDensity ----
-		jRadioButtonMenuItemChargeDensity.setText(bundle.getString("jRadioButtonMenuItemChargeDensity.text"));
-		jRadioButtonMenuItemChargeDensity.setName("jRadioButtonMenuItemChargeDensity");
-		jMenuView.add(jRadioButtonMenuItemChargeDensity);
+                //---- jRadioButtonMenuItemChargeDensity ----
+                jRadioButtonMenuItemChargeDensity.setText(bundle.getString("jRadioButtonMenuItemChargeDensity.text"));
+                jRadioButtonMenuItemChargeDensity.setName("jRadioButtonMenuItemChargeDensity");
+                jMenuView.add(jRadioButtonMenuItemChargeDensity);
 
-		//---- jRadioButtonMenuItemElectricField ----
-		jRadioButtonMenuItemElectricField.setText(bundle.getString("jRadioButtonMenuItemElectricField.text"));
-		jRadioButtonMenuItemElectricField.setName("jRadioButtonMenuItemElectricField");
-		jMenuView.add(jRadioButtonMenuItemElectricField);
+                //---- jRadioButtonMenuItemElectricField ----
+                jRadioButtonMenuItemElectricField.setText(bundle.getString("jRadioButtonMenuItemElectricField.text"));
+                jRadioButtonMenuItemElectricField.setName("jRadioButtonMenuItemElectricField");
+                jMenuView.add(jRadioButtonMenuItemElectricField);
 
-		//---- jRadioButtonMenuItemPotential ----
-		jRadioButtonMenuItemPotential.setText(bundle.getString("jRadioButtonMenuItemPotential.text"));
-		jRadioButtonMenuItemPotential.setName("jRadioButtonMenuItemPotential");
-		jMenuView.add(jRadioButtonMenuItemPotential);
+                //---- jRadioButtonMenuItemPotential ----
+                jRadioButtonMenuItemPotential.setText(bundle.getString("jRadioButtonMenuItemPotential.text"));
+                jRadioButtonMenuItemPotential.setName("jRadioButtonMenuItemPotential");
+                jMenuView.add(jRadioButtonMenuItemPotential);
 
-		//---- jRadioButtonMenuItemEnergy ----
-		jRadioButtonMenuItemEnergy.setSelected(true);
-		jRadioButtonMenuItemEnergy.setText(bundle.getString("jRadioButtonMenuItemEnergy.text"));
-		jRadioButtonMenuItemEnergy.setName("jRadioButtonMenuItemEnergy");
-		jMenuView.add(jRadioButtonMenuItemEnergy);
+                //---- jRadioButtonMenuItemEnergy ----
+                jRadioButtonMenuItemEnergy.setSelected(true);
+                jRadioButtonMenuItemEnergy.setText(bundle.getString("jRadioButtonMenuItemEnergy.text"));
+                jRadioButtonMenuItemEnergy.setName("jRadioButtonMenuItemEnergy");
+                jMenuView.add(jRadioButtonMenuItemEnergy);
 
-		//---- jSeparator3 ----
-		jSeparator3.setName("jSeparator3");
-		jMenuView.add(jSeparator3);
+                //---- jSeparator3 ----
+                jSeparator3.setName("jSeparator3");
+                jMenuView.add(jSeparator3);
 
-		//======== jMenuMaterials ========
-		{
-		    jMenuMaterials.setText(bundle.getString("jMenuMaterials.text"));
-		    jMenuMaterials.setName("jMenuMaterials");
+                //======== jMenuMaterials ========
+                {
+                    jMenuMaterials.setText(bundle.getString("jMenuMaterials.text"));
+                    jMenuMaterials.setName("jMenuMaterials");
 
-		    //---- jMenuItemMetals ----
-		    jMenuItemMetals.setName("jMenuItemMetals");
-		    jMenuMaterials.add(jMenuItemMetals);
+                    //---- jMenuItemMetals ----
+                    jMenuItemMetals.setName("jMenuItemMetals");
+                    jMenuMaterials.add(jMenuItemMetals);
 
-		    //---- jMenuItemDielectrics ----
-		    jMenuItemDielectrics.setName("jMenuItemDielectrics");
-		    jMenuMaterials.add(jMenuItemDielectrics);
+                    //---- jMenuItemDielectrics ----
+                    jMenuItemDielectrics.setName("jMenuItemDielectrics");
+                    jMenuMaterials.add(jMenuItemDielectrics);
 
-		    //---- jMenuItemSemiconductors ----
-		    jMenuItemSemiconductors.setName("jMenuItemSemiconductors");
-		    jMenuMaterials.add(jMenuItemSemiconductors);
-		}
-		jMenuView.add(jMenuMaterials);
+                    //---- jMenuItemSemiconductors ----
+                    jMenuItemSemiconductors.setName("jMenuItemSemiconductors");
+                    jMenuMaterials.add(jMenuItemSemiconductors);
+                }
+                jMenuView.add(jMenuMaterials);
 
-		//---- jMenuItemShowStackParameters ----
-		jMenuItemShowStackParameters.setText(bundle.getString("jMenuItemShowStackParameters.text"));
-		jMenuItemShowStackParameters.setName("jMenuItemShowStackParameters");
-		jMenuView.add(jMenuItemShowStackParameters);
+                //---- jMenuItemShowStackParameters ----
+                jMenuItemShowStackParameters.setText(bundle.getString("jMenuItemShowStackParameters.text"));
+                jMenuItemShowStackParameters.setName("jMenuItemShowStackParameters");
+                jMenuView.add(jMenuItemShowStackParameters);
 
-		//---- jSeparator4 ----
-		jSeparator4.setName("jSeparator4");
-		jMenuView.add(jSeparator4);
+                //---- jSeparator4 ----
+                jSeparator4.setName("jSeparator4");
+                jMenuView.add(jSeparator4);
 
-		//---- jMenuItemViewWindow ----
-		jMenuItemViewWindow.setName("jMenuItemViewWindow");
-		jMenuView.add(jMenuItemViewWindow);
+                //---- jMenuItemViewWindow ----
+                jMenuItemViewWindow.setName("jMenuItemViewWindow");
+                jMenuView.add(jMenuItemViewWindow);
 
-		//---- jMenuItemMovieParameters ----
-		jMenuItemMovieParameters.setName("jMenuItemMovieParameters");
-		jMenuView.add(jMenuItemMovieParameters);
-	    }
-	    menuBar.add(jMenuView);
+                //---- jMenuItemMovieParameters ----
+                jMenuItemMovieParameters.setName("jMenuItemMovieParameters");
+                jMenuView.add(jMenuItemMovieParameters);
+            }
+            menuBar.add(jMenuView);
 
-	    //======== jMenuStructure ========
-	    {
-		jMenuStructure.setText(bundle.getString("jMenuStructure.text"));
-		jMenuStructure.setName("jMenuStructure");
+            //======== jMenuStructure ========
+            {
+                jMenuStructure.setText(bundle.getString("jMenuStructure.text"));
+                jMenuStructure.setName("jMenuStructure");
 
-		//---- jMenuItemCompose ----
-		jMenuItemCompose.setName("jMenuItemCompose");
-		jMenuStructure.add(jMenuItemCompose);
+                //---- jMenuItemCompose ----
+                jMenuItemCompose.setName("jMenuItemCompose");
+                jMenuStructure.add(jMenuItemCompose);
 
-		//---- jMenuItemExportTool ----
-		jMenuItemExportTool.setName("jMenuItemExportTool");
-		jMenuStructure.add(jMenuItemExportTool);
-	    }
-	    menuBar.add(jMenuStructure);
+                //---- jMenuItemExportTool ----
+                jMenuItemExportTool.setName("jMenuItemExportTool");
+                jMenuStructure.add(jMenuItemExportTool);
+            }
+            menuBar.add(jMenuStructure);
 
-	    //======== jMenuHelp ========
-	    {
-		jMenuHelp.setText(bundle.getString("jMenuHelp.text"));
-		jMenuHelp.setName("jMenuHelp");
+            //======== jMenuHelp ========
+            {
+                jMenuHelp.setText(bundle.getString("jMenuHelp.text"));
+                jMenuHelp.setName("jMenuHelp");
 
-		//---- jMenuItemAbout ----
-		jMenuItemAbout.setName("jMenuItemAbout");
-		if (System.getProperty("mrj.version") == null) {
-		jMenuHelp.add(jMenuItemAbout);
-	    }
-	    menuBar.add(jMenuHelp);
-	}
+                //---- jMenuItemAbout ----
+                jMenuItemAbout.setName("jMenuItemAbout");
+                if (System.getProperty("mrj.version") == null) {
+                jMenuHelp.add(jMenuItemAbout);
+            }
+            menuBar.add(jMenuHelp);
+        }
 
-	//---- buttonGroupView ----
-	buttonGroupView.add(jMenuView);
-	buttonGroupView.add(jRadioButtonMenuItemChargeDensity);
-	buttonGroupView.add(jRadioButtonMenuItemElectricField);
-	buttonGroupView.add(jRadioButtonMenuItemPotential);
-	buttonGroupView.add(jRadioButtonMenuItemEnergy);
+        //---- buttonGroupView ----
+        buttonGroupView.add(jMenuView);
+        buttonGroupView.add(jRadioButtonMenuItemChargeDensity);
+        buttonGroupView.add(jRadioButtonMenuItemElectricField);
+        buttonGroupView.add(jRadioButtonMenuItemPotential);
+        buttonGroupView.add(jRadioButtonMenuItemEnergy);
     }// </editor-fold>//GEN-END:initComponents
     }
    private void mouseClicked(ChartMouseEvent evt) {
@@ -2025,24 +2034,24 @@ public class BandView extends FrameView {
     private JSeparator jSeparator10;
     private JSeparator jSeparator11;
     
-    private class MacOSAboutHandler extends Application {
-
-        public MacOSAboutHandler() {
-//            setAboutHandler(new AboutBoxHandler());
-        }
-
-//        class AboutBoxHandler implements AboutHandler {
-//            @Override
-//            public void handleAbout(AppEvent.AboutEvent event) {
-//                showAboutBox();
-//            }
+//    private class MacOSAboutHandler extends Application {
+//
+//        public MacOSAboutHandler() {
+////            setAboutHandler(new AboutBoxHandler());
 //        }
-
-        @Override
-        protected void startup() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-    }
+//
+////        class AboutBoxHandler implements AboutHandler {
+////            @Override
+////            public void handleAbout(AppEvent.AboutEvent event) {
+////                showAboutBox();
+////            }
+////        }
+//
+//        @Override
+//        protected void startup() {
+//            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//        }
+//    }
     
     @Action
     public void help() {

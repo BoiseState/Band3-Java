@@ -14,7 +14,8 @@ import java.text.ParseException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 import java.util.prefs.Preferences;
@@ -22,7 +23,8 @@ import java.util.prefs.Preferences;
 /**
  * The main class of the application.
  */
-public class BandApp extends SingleFrameApplication {
+public class BandApp extends JFrame {
+   private static BandApp instance;
    private Preferences prefs;
    private List<Material> listDielectric;
    private List<Material> listMetal;
@@ -202,14 +204,13 @@ public class BandApp extends SingleFrameApplication {
    /**
      * At startup create and show the main frame of the application.
      */
-    @Override
-    protected void startup() {
+    private void startup() {
        String os = System.getProperty("os.name").toLowerCase();
        
-           BandSplash splash = new BandSplash(null, true);
-           show(splash);
+       BandSplash splash = new BandSplash(null, true);
+       show(splash);
        if(!splash.isConfirmed()) {
-           this.exit();
+           System.exit(0);
        }
        if(os.indexOf("win") >= 0) {
            writeDir = userHomeDir + "/Band Diagram/";
@@ -333,7 +334,7 @@ public class BandApp extends SingleFrameApplication {
         }
     }
 
-   @Override
+
    protected void shutdown() {
       // Save preferences
       prefs.putDouble("temperature", temperature);
@@ -376,8 +377,16 @@ public class BandApp extends SingleFrameApplication {
          }
       }
       
-      super.shutdown();
+      //super.shutdown();
       System.exit(0);
+   }
+
+    /**
+     * This method makes the component visible.
+     * @param component java awt component
+     */
+   protected void show(java.awt.Component component) {
+        component.setVisible(true);
    }
 
 
@@ -387,16 +396,20 @@ public class BandApp extends SingleFrameApplication {
      * Windows shown in our application come fully initialized from the GUI
      * builder, so this additional configuration is not needed.
      */
-    @Override
-    protected void configureWindow(java.awt.Window root) {
-    }
+//    @Override
+//    protected void configureWindow(java.awt.Window root) {
+//    }
 
     /**
      * A convenient static getter for the application instance.
      * @return the instance of BandApp
      */
-    public static BandApp getApplication() {
-        return Application.getInstance(BandApp.class);
+    protected static BandApp getApplication() {
+        if (instance == null) {
+            instance = new BandApp();
+        }
+        return instance;
+//        return Application.getInstance(BandApp.class);
     }
 
     /**
@@ -408,7 +421,9 @@ public class BandApp extends SingleFrameApplication {
         System.setProperty("apple.laf.useScreenMenuBar", "true");
         System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Band Diagram");
        }
-        launch(BandApp.class, args);
+      //  launch(BandApp.class, args);
+        BandApp app = BandApp.getApplication();
+        app.startup();
     }
 
      public List<Material> getListDielectric() {

@@ -2,32 +2,4 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandViewWindow.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/MaterialPick.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandSemiconductor.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandPickDielectric.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandMaterialSemiconductor.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/Material.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandViewSemiconductors.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/Metal.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandViewMetals.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandPickMetal.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandSplash.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandCompose.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandMaterialDielectric.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandMaterialMetal.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandAboutBox.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandViewImportedMaterials.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandPickSemiconductor.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandMetal.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandExportTool.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandViewDielectrics.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandDielectric.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandView.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandMovieParameters.java</file>
-            <file>file:/C:/Users/madithompson/Projects/updateSwing/Band3-Java/src/band/BandApp.java</file>
-        </group>
-    </open-files>
 </project-private>

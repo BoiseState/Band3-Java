@@ -28,7 +28,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -48,14 +48,14 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
       return listSemiconductor;
    }
 
-   @Action
+//   @Action
    public void closeSemiconductorsBox() {
       dispose();
    }
 
    public void showSemiconductor() {
       BandSemiconductor semiconductorBox = null;
-      JFrame mainFrame = BandApp.getApplication().getMainFrame();
+      JFrame mainFrame = BandApp.getApplication();
       semiconductorBox = new BandSemiconductor(mainFrame,true);
       semiconductorBox.setLocationRelativeTo(semiconductorBox);
    }
@@ -88,13 +88,13 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
 
    
 
-     @Action
+//     @Action
     public void newRecord() {
        BandSemiconductor semiconductorBox = null;
        Semiconductor newSemiconductor = new Semiconductor();
        newSemiconductor.fillColor = Color.BLACK;
 
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        semiconductorBox = new BandSemiconductor(mainFrame,true);
        semiconductorBox.setLocationRelativeTo(this);
        semiconductorBox.setCurrentRecord(newSemiconductor);
@@ -107,13 +107,13 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
        Collections.sort(listSemiconductor);
     }
 
-    @Action
+//    @Action
     public void editRecord() {
        int selectedRow = jTableSemiconductors.getSelectedRow();
 
        BandSemiconductor semiconductorBox = null;
 
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        semiconductorBox = new BandSemiconductor(mainFrame,true);
        semiconductorBox.setLocationRelativeTo(this);
        Semiconductor tempSemiconductor = (Semiconductor)listSemiconductor.get(selectedRow);
@@ -128,7 +128,7 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
        Collections.sort(listSemiconductor);
     }
 
-    @Action
+//    @Action
     public void deleteRecord() {
         int n = JOptionPane.showConfirmDialog(null, "Delete the records permanently?", "Warning",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null);

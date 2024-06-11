@@ -23,7 +23,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -85,7 +85,7 @@ public class BandPickDielectric extends MaterialPick {
        return listDielectric;
     }
     
-    @Action
+//    @Action
     public void closeDielectricsBox() {
        dispose();
     }
@@ -100,7 +100,7 @@ public class BandPickDielectric extends MaterialPick {
        return confirmed;
     }
 
-    @Action
+//    @Action
     public void addRecord() {
        int selectedRow = jTableDielectrics.getSelectedRow();
        newDielectric = (Dielectric)listDielectric.get(selectedRow).clone();
@@ -111,7 +111,7 @@ public class BandPickDielectric extends MaterialPick {
            confirmed = true;
        }
        else {
-           JFrame mainFrame = BandApp.getApplication().getMainFrame();
+           JFrame mainFrame = BandApp.getApplication();
            BandMaterialDielectric dielectricBox = new BandMaterialDielectric(mainFrame,true,newDielectric);
            dielectricBox.setVisible(true);
 

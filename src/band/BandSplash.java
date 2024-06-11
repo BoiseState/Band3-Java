@@ -162,13 +162,13 @@ public class BandSplash extends javax.swing.JDialog {
         });
     }
 
-    @org.jdesktop.application.Action
+//    @org.jdesktop.application.Action
     public void IAgreeClick() {
         this.confirmed = true;
         dispose();
     }
     
-    @org.jdesktop.application.Action
+//    @org.jdesktop.application.Action
     public void NoThanksClick() {
         dispose();
     }

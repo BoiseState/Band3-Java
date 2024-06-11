@@ -19,7 +19,7 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.observablecollections.ObservableCollections;
 import org.jdesktop.observablecollections.ObservableList;
 import org.jfree.chart.ChartPanel;
@@ -59,7 +59,7 @@ public class BandMovieParameters extends javax.swing.JDialog {
        jTextFieldStepSize.setText(String.valueOf((app.getStopVoltage() - app.getStartVoltage()) / app.getNumberOfSteps()));
     }
 
-    @Action
+//    @Action
     public void updateValues() {
        BandApp app = BandApp.getApplication();
 
@@ -84,12 +84,12 @@ public class BandMovieParameters extends javax.swing.JDialog {
        jCheckBoxSmartAxisSize.setSelected(app.isSmartScale());
     }
 
-     @Action
+//     @Action
     public void cancelMovieParametersBox() {
        dispose();
     }
 
-    @Action
+//    @Action
     public void closeMovieParametersBox() {
        updateValues();
        

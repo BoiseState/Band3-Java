@@ -23,7 +23,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -75,7 +75,7 @@ public class BandPickMetal extends MaterialPick {
        return listMetal;
     }
 
-    @Action
+//    @Action
     public void closeMetalBox() {
        dispose();
     }
@@ -100,7 +100,7 @@ public class BandPickMetal extends MaterialPick {
         }
     }
 
-    @Action
+//    @Action
     public void addRecord() {
        int selectedRow = jTableMetals.getSelectedRow();
        newMetal = (Metal)listMetal.get(selectedRow).clone();
@@ -111,7 +111,7 @@ public class BandPickMetal extends MaterialPick {
            confirmed = true;
        }
        else {
-           JFrame mainFrame = BandApp.getApplication().getMainFrame();
+           JFrame mainFrame = BandApp.getApplication();
            BandMaterialMetal metalBox = new BandMaterialMetal(mainFrame,true);
            metalBox.setCurrentRecord(newMetal);
            metalBox.setVisible(true);

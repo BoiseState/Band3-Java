@@ -28,7 +28,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -74,27 +74,27 @@ public class BandViewMetals extends javax.swing.JDialog {
        return listMetal;
     }
 
-    @Action
+//    @Action
     public void closeMetalsBox() {
        dispose();
     }
 
     public void showMaterialMetal() {
        BandMetal metalBox = null;
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        metalBox = new BandMetal(mainFrame,true);
        metalBox.setLocationRelativeTo(this);
        
        BandApp.getApplication().show(metalBox);
     }
 
-    @Action
+//    @Action
     public void newRecord() {
        BandMetal metalBox = null;
        Metal newMetal = new Metal();
        newMetal.fillColor = Color.BLACK;
 
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        metalBox = new BandMetal(mainFrame,true);
        metalBox.setLocationRelativeTo(this);
 
@@ -108,13 +108,13 @@ public class BandViewMetals extends javax.swing.JDialog {
        Collections.sort(listMetal);
     }
     
-    @Action
+//    @Action
     public void editRecord() {
        int selectedRow = jTableMetals.getSelectedRow();
 
        BandMetal metalBox = null;
        
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        metalBox = new BandMetal(mainFrame,true);
        metalBox.setLocationRelativeTo(this);
        
@@ -130,7 +130,7 @@ public class BandViewMetals extends javax.swing.JDialog {
        Collections.sort(listMetal);
     }
 
-    @Action
+//    @Action
     public void deleteRecord() {
         int n = JOptionPane.showConfirmDialog(null, "Delete the records permanently?", "Warning",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null);

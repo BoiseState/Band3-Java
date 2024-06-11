@@ -26,7 +26,7 @@ import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -106,26 +106,26 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
         return retList;
     }
 
-    @Action
+//    @Action
     public void close() {
        dispose();
     }
     
-    @Action
+//    @Action
     public void selectAll() {
         jTableMetals.selectAll();
         jTableDielectrics.selectAll();
         jTableSemiconductors.selectAll();
     }
     
-    @Action
+//    @Action
     public void selectNone() {
         jTableMetals.clearSelection();
         jTableDielectrics.clearSelection();
         jTableSemiconductors.clearSelection();
     }
     
-    @Action
+//    @Action
     public void doImport() {
         // Figure out which rows got selected
         int[] selectedMetals = jTableMetals.getSelectedRows();

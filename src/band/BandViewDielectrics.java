@@ -28,7 +28,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -69,7 +69,7 @@ public class BandViewDielectrics extends javax.swing.JDialog {
         initComponents();
     }
 
-    @Action
+//    @Action
     public void closeDielectricsBox() {
        dispose();
     }
@@ -82,20 +82,20 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        BandDielectric dielectricBox = null;
 
        
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        dielectricBox = new BandDielectric(mainFrame,true);
        dielectricBox.setLocationRelativeTo(this);
 
        BandApp.getApplication().show(dielectricBox);
     }
 
-    @Action
+//    @Action
     public void newRecord() {
        BandDielectric dielectricBox = null;
        Dielectric newDielectric = new Dielectric();
        newDielectric.fillColor = Color.BLACK;
 
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        dielectricBox = new BandDielectric(mainFrame,true);
        dielectricBox.setLocationRelativeTo(this);
        dielectricBox.setCurrentRecord(newDielectric);
@@ -108,13 +108,13 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        Collections.sort(listDielectric);
     }
 
-    @Action
+//    @Action
     public void editRecord() {
        int selectedRow = jTableDielectrics.getSelectedRow();
 
        BandDielectric dielectricBox = null;
 
-       JFrame mainFrame = BandApp.getApplication().getMainFrame();
+       JFrame mainFrame = BandApp.getApplication();
        dielectricBox = new BandDielectric(mainFrame,true);
        dielectricBox.setLocationRelativeTo(this);
        
@@ -130,7 +130,7 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        Collections.sort(listDielectric);
     }
 
-    @Action
+//    @Action
     public void deleteRecord() {
         int n = JOptionPane.showConfirmDialog(null, "Delete the records permanently?", "Warning",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null);

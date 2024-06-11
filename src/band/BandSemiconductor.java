@@ -25,7 +25,7 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 
@@ -76,7 +76,7 @@ public class BandSemiconductor extends javax.swing.JDialog {
       return currentRecord;
    }
 
-   @Action
+//   @Action
    public void jButtonOK_Click() {
       if (jTextFieldName.getText().isEmpty()) {
          JOptionPane.showMessageDialog(this, "Name is a required field.");
@@ -125,7 +125,7 @@ public class BandSemiconductor extends javax.swing.JDialog {
       this.setVisible(false);
    }
 
-   @Action
+//   @Action
    public void jButtonCancel_Click() {
       setConfirmed(false);
       this.setVisible(false);
@@ -139,7 +139,7 @@ public class BandSemiconductor extends javax.swing.JDialog {
       confirmed = value;
    }
 
-   @Action
+//   @Action
    public void showColorChooser() {
       Color newColor = JColorChooser.showDialog(rootPane, "Choose a color...", Color.yellow);
       if (newColor != null) {

@@ -16,8 +16,8 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.*;
 
-import org.jdesktop.application.Application;
-import org.jdesktop.application.SingleFrameApplication;
+//import org.jdesktop.application.Application;
+//import org.jdesktop.application.SingleFrameApplication;
 import java.util.prefs.Preferences;
 
 /**
@@ -396,9 +396,9 @@ public class BandApp extends JFrame {
      * Windows shown in our application come fully initialized from the GUI
      * builder, so this additional configuration is not needed.
      */
-//    @Override
-//    protected void configureWindow(java.awt.Window root) {
-//    }
+   // @Override
+    protected void configureWindow(java.awt.Window root) {
+    }
 
     /**
      * A convenient static getter for the application instance.

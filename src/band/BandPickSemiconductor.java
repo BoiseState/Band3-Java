@@ -23,7 +23,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -82,7 +82,7 @@ public class BandPickSemiconductor extends MaterialPick {
        return listSemiconductor;
     }
     
-    @Action
+//    @Action
     public void closeSemiconductorBox() {
        dispose();
     }
@@ -97,7 +97,7 @@ public class BandPickSemiconductor extends MaterialPick {
        return confirmed;
     }
 
-    @Action
+//    @Action
     public void addRecord() {
       int selectedRow = jTableSemiconductors.getSelectedRow();
       newSemiconductor = (Semiconductor)listSemiconductor.get(selectedRow).clone();
@@ -108,7 +108,7 @@ public class BandPickSemiconductor extends MaterialPick {
           confirmed = true;
       }
       else {
-          JFrame mainFrame = BandApp.getApplication().getMainFrame();
+          JFrame mainFrame = BandApp.getApplication();
           BandMaterialSemiconductor semiconductorBox = new BandMaterialSemiconductor(mainFrame, true);
           semiconductorBox.setCurrentRecord(newSemiconductor);
           semiconductorBox.setVisible(true);

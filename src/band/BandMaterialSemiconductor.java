@@ -26,7 +26,7 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 
@@ -80,7 +80,7 @@ public class BandMaterialSemiconductor extends MaterialSelect {
        return currentRecord;
     }
 
-    @Action
+//    @Action
     public void jButtonOK_Click() {
 
        if (jTextFieldName.getText().isEmpty()) {
@@ -141,7 +141,7 @@ public class BandMaterialSemiconductor extends MaterialSelect {
        }
     }
 
-    @Action
+//    @Action
     public void jButtonCancel_Click() {
        setConfirmed(false);
        this.setVisible(false);
@@ -157,7 +157,7 @@ public class BandMaterialSemiconductor extends MaterialSelect {
        confirmed = value;
     }
 
-    @Action
+//    @Action
     public void showColorChooser() {
        Color newColor = JColorChooser.showDialog(rootPane, "Choose a color...", jPanelPlotColor.getBackground() );
        if (newColor != null) {

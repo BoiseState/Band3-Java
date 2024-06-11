@@ -22,7 +22,7 @@ import javax.swing.JComponent;
 import javax.swing.JRootPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 
 /**
  *
@@ -60,7 +60,7 @@ public class BandViewWindow extends javax.swing.JDialog {
         loadValues();
     }
 
-    @Action
+//    @Action
     public void updateValues() {
        BandApp app = BandApp.getApplication();
 
@@ -120,7 +120,7 @@ public class BandViewWindow extends javax.swing.JDialog {
        }
     }
 
-    @Action
+//    @Action
     public void closeWindowBox() {
        updateValues();
 

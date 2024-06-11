@@ -125,7 +125,7 @@ public class BandView extends JInternalFrame {
                 BandApp.getApplication().shutdown();
             }
         });
-        
+
         fourDForm = new DecimalFormat("0.000");
         EForm = new DecimalFormat("0.000E0");
         twofourDForm = new DecimalFormat("00.000");
@@ -165,7 +165,7 @@ public class BandView extends JInternalFrame {
         
     }
     
-    @Action
+//    @Action
     public void editLayer() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -201,7 +201,7 @@ public class BandView extends JInternalFrame {
 
 
 
-    @Action
+//    @Action
     public void removeLayer() {
         Structure s = BandApp.getApplication().getStructure();
         if (lastClickedIndex > 0 && lastClickedIndex < s.numLayers - 1) {
@@ -220,7 +220,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void addDielectricBefore() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -235,7 +235,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void addDielectricAfter() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -250,7 +250,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void addMetalBefore() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -265,7 +265,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void addMetalAfter() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -280,7 +280,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void replaceLayer() {
         Structure s = BandApp.getApplication().getStructure();
         JFrame mainFrame = BandApp.getApplication();
@@ -311,11 +311,11 @@ public class BandView extends JInternalFrame {
             }
     }
 
-    @Action
+//    @Action
     public void composeLayers() {
     }
     
-    @Action
+//    @Action
     public void copyLocationData() {
         StringSelection data = new StringSelection(jTextFieldRolloverData.getText());
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(data,data);
@@ -324,7 +324,7 @@ public class BandView extends JInternalFrame {
     public void setNewDielectric(Dielectric dielectric) {
     }
 
-    @Action
+//    @Action
     public void undoClick() {
         if (!structureHistory.isEmpty()) {
             Structure s = structureHistory.pop();
@@ -333,13 +333,14 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void animateChart() {
         cp.setVerticalAxisTrace(true); // fixes choppy redraw when viewing program fullscreen on slower computers
-        ResourceMap resourceMap = this.getResourceMap();
+//        ResourceMap resourceMap = this.getResourceMap();
         if (continueAnimation == true) {
             continueAnimation = false;
-            jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.largeIcon"));
+//            jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.largeIcon"));
+            jButtonPlay.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/band/resources/icons/Play_16x16.png"))));
         } else {
             SwingWorker worker = new SwingWorker<Boolean, Void>() {
 
@@ -350,7 +351,8 @@ public class BandView extends JInternalFrame {
                 }
             };
             continueAnimation = true;
-            jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.smallIcon"));
+//            jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.smallIcon"));
+            jButtonPlay.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/band/resources/icons/Stop_16x16.png"))));
             worker.execute(); 
         }
     }
@@ -452,8 +454,9 @@ public class BandView extends JInternalFrame {
         updateChart();
         cp.getChart().setNotify(true);
         app.setyAutoScale(prevAutoy);
-        ResourceMap resourceMap = this.getResourceMap();
-        jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.largeIcon"));
+//        ResourceMap resourceMap = this.getResourceMap();
+//        jButtonPlay.setIcon(resourceMap.getIcon("animateChart.Action.largeIcon"));
+        jButtonPlay.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/band/resources/icons/Play_16x16.png"))));
         app.setVoltage(Math.floor((app.getVoltage()*1000)+.5)/1000);
         
         continueAnimation=false;
@@ -461,7 +464,7 @@ public class BandView extends JInternalFrame {
         cp.setVerticalAxisTrace(false); // fixes choppy redraw when viewing program fullscreen on slower computers
     }
 
-    @Action
+//    @Action
     public void closeStructure() {
         if (!saveCheck()) {
             return;
@@ -477,7 +480,7 @@ public class BandView extends JInternalFrame {
         displayStructure(s);
     }
 
-    @Action
+//    @Action
     public void updateTVChart() {
         BandApp app = BandApp.getApplication();
         app.setTemperature(Double.valueOf(jTextFieldTemp.getText()));
@@ -494,7 +497,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void updateChart() {
         displayStructure(BandApp.getApplication().getStructure());
     }
@@ -900,12 +903,12 @@ public class BandView extends JInternalFrame {
         return chart;
     }
 
-    @Action
+//    @Action
     public void copyPlot() {
         cp.doCopy();
     }
 
-    @Action
+//    @Action
     public void toggleShowStackParameters() {
         if (jMenuItemShowStackParameters.getText().equals("Hide Stack Parameters")) {
             jToolBarSide.setVisible(false);
@@ -916,7 +919,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void exportData() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileFilter(new FileFilter() {
@@ -1138,7 +1141,7 @@ public class BandView extends JInternalFrame {
             br.close();  
     }
 
-    @Action
+//    @Action
     public void saveStructure() {
         JFileChooser chooser = new JFileChooser();
         BandApp app = BandApp.getApplication();
@@ -1180,7 +1183,7 @@ public class BandView extends JInternalFrame {
         }
     }
 
-    @Action
+//    @Action
     public void newStructure() {
         if (!saveCheck()) {
             return;
@@ -1202,7 +1205,7 @@ public class BandView extends JInternalFrame {
         return true;
     }
 
-    @Action
+//    @Action
     public void openStructure() {
         if (!saveCheck()) {
             return;
@@ -1231,7 +1234,7 @@ public class BandView extends JInternalFrame {
     }
         
 
-    @Action
+//    @Action
     public void showAboutBox() {
         JDialog aboutBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1240,7 +1243,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(aboutBox);
     }
 
-    @Action
+//    @Action
     public void showMetalsBox() {
         JDialog metalsBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1249,7 +1252,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(metalsBox);
     }
 
-    @Action
+//    @Action
     public void showDielectricsBox() {
         JDialog dielectricsBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1258,7 +1261,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(dielectricsBox);
     }
 
-    @Action
+//    @Action
     public void showSemiconductorsBox() {
         JDialog semiconductorsBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1267,7 +1270,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(semiconductorsBox);
     }
 
-    @Action
+//    @Action
     public void showWindowBox() {
         JDialog windowBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1278,7 +1281,7 @@ public class BandView extends JInternalFrame {
         displayStructure(BandApp.getApplication().getStructure());
     }
 
-    @Action
+//    @Action
     public void showMovieParametersBox() {
         JDialog movieParametersBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1287,7 +1290,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(movieParametersBox);
     }
 
-    @Action
+//    @Action
     public void showExportToolBox() {
         JDialog exportToolBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1296,7 +1299,7 @@ public class BandView extends JInternalFrame {
         BandApp.getApplication().show(exportToolBox);
     }
 
-    @Action
+//    @Action
     public void showComposeBox() {
         JDialog composeBox = null;
         JFrame mainFrame = BandApp.getApplication();
@@ -1321,7 +1324,7 @@ public class BandView extends JInternalFrame {
 	 jTextFieldTemp.selectAll();
     }
     
-    @Action
+//    @Action
     public void importMaterials() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileFilter(new FileFilter() {
@@ -2053,7 +2056,7 @@ public class BandView extends JInternalFrame {
 //        }
 //    }
     
-    @Action
+//    @Action
     public void help() {
     }
 }

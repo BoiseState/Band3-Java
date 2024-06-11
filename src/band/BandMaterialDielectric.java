@@ -31,7 +31,7 @@ import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
 import javax.swing.border.*;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -137,7 +137,7 @@ public class BandMaterialDielectric extends MaterialSelect {
       return currentPoint;
    }
 
-   @Action
+//   @Action
    public void addCurrentPoint() {
       EvalPoint addPoint = new EvalPoint(currentPoint);
       if (addPoint.getLocation() >= 0 && addPoint.getLocationNm() <= currentRecord.getThicknessNm()) {
@@ -184,7 +184,7 @@ public class BandMaterialDielectric extends MaterialSelect {
       }
    }
 
-   @Action
+//   @Action
    public void deleteSelectedPoint() {
       if (jTableFixedCharge.getRowCount() > 0) {
          int n = JOptionPane.showConfirmDialog(null, "Delete the record permanently?", "Warning",
@@ -195,7 +195,7 @@ public class BandMaterialDielectric extends MaterialSelect {
       }
    }
 
-   @Action
+//   @Action
    public void jButtonOK_Click() {
 
       if (jTextFieldName.getText().isEmpty()) {
@@ -239,13 +239,13 @@ public class BandMaterialDielectric extends MaterialSelect {
       }
    }
 
-   @Action
+//   @Action
    public void jButtonCancel_Click() {
       setConfirmed(false);
       setVisible(false);
    }
 
-   @Action
+//   @Action
    public void showColorChooser() {
       Color newColor = JColorChooser.showDialog(rootPane, "Choose a color...", jPanelPlotColor.getBackground());
       if (newColor != null) {

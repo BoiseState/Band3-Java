@@ -33,7 +33,7 @@ import javax.swing.KeyStroke;
 import javax.swing.LayoutStyle;
 import javax.swing.border.*;
 import javax.swing.filechooser.FileFilter;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 import org.jdesktop.beansbinding.*;
 import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.observablecollections.ObservableCollections;
@@ -103,7 +103,7 @@ public class BandExportTool extends javax.swing.JDialog {
         };
     }
 
-    @Action
+//    @Action
     public void updateValues() {
         BandApp app = BandApp.getApplication();
 
@@ -147,7 +147,7 @@ public class BandExportTool extends javax.swing.JDialog {
         updateStepSize();
     }
 
-    @Action
+//    @Action
     public void previewValues() {
             storeData();
             jListOutputParameters.setEnabled(true);
@@ -156,7 +156,7 @@ public class BandExportTool extends javax.swing.JDialog {
                 drawChartOfOutputParameterAt(lastSelectedIndex, lastSelectedValue);   
     }
 
-    @Action
+//    @Action
     public void saveValues() {
 
         int sweepType = jComboBoxSweepChoice.getSelectedIndex();
@@ -375,7 +375,7 @@ public class BandExportTool extends javax.swing.JDialog {
         //jProgressBar1.setVisible(false);
     }
 
-    @Action
+//    @Action
     public void closeExportToolBox() {
         updateValues();
 

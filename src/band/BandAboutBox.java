@@ -10,7 +10,7 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
-import org.jdesktop.application.Action;
+//import org.jdesktop.application.Action;
 
 public class BandAboutBox extends javax.swing.JDialog {
 
@@ -20,7 +20,8 @@ public class BandAboutBox extends javax.swing.JDialog {
         getRootPane().setDefaultButton(closeButton);
     }
 
-    @Action public void closeAboutBox() {
+//    @Action
+	public void closeAboutBox() {
         dispose();
     }
 
@@ -32,205 +33,205 @@ public class BandAboutBox extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Educational license - Madi Thompson (madithompson)
     private void initComponents() {
-        ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandAboutBox");
-        closeButton = new JButton();
-        var appTitleLabel = new JLabel();
-        var versionLabel = new JLabel();
-        var appVersionLabel = new JLabel();
-        var vendorLabel = new JLabel();
-        var appVendorLabel = new JLabel();
-        var homepageLabel = new JLabel();
-        var appHomepageLabel = new JLabel();
-        var homepageLabel1 = new JLabel();
-        var appHomepageLabel1 = new JLabel();
-        var appHomepageLabel2 = new JLabel();
-        var homepageLabel2 = new JLabel();
-        var appHomepageLabel3 = new JLabel();
-        var appHomepageLabel4 = new JLabel();
-        var appHomepageLabel5 = new JLabel();
-        var appHomepageLabel9 = new JLabel();
-        var appHomepageLabel8 = new JLabel();
-        var appHomepageLabel7 = new JLabel();
+	ResourceBundle bundle = ResourceBundle.getBundle("band.resources.BandAboutBox");
+	closeButton = new JButton();
+	var appTitleLabel = new JLabel();
+	var versionLabel = new JLabel();
+	var appVersionLabel = new JLabel();
+	var vendorLabel = new JLabel();
+	var appVendorLabel = new JLabel();
+	var homepageLabel = new JLabel();
+	var appHomepageLabel = new JLabel();
+	var homepageLabel1 = new JLabel();
+	var appHomepageLabel1 = new JLabel();
+	var appHomepageLabel2 = new JLabel();
+	var homepageLabel2 = new JLabel();
+	var appHomepageLabel3 = new JLabel();
+	var appHomepageLabel4 = new JLabel();
+	var appHomepageLabel5 = new JLabel();
+	var appHomepageLabel9 = new JLabel();
+	var appHomepageLabel8 = new JLabel();
+	var appHomepageLabel7 = new JLabel();
 
-        //======== this ========
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle(bundle.getString("title"));
-        setModal(true);
-        setName("BandAboutBox");
-        setResizable(false);
-        var contentPane = getContentPane();
+	//======== this ========
+	setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+	setTitle(bundle.getString("title"));
+	setModal(true);
+	setName("BandAboutBox");
+	setResizable(false);
+	var contentPane = getContentPane();
 
-        //---- closeButton ----
-        closeButton.setText(bundle.getString("closeButton.text"));
-        closeButton.setName("closeButton");
+	//---- closeButton ----
+	closeButton.setText(bundle.getString("closeButton.text"));
+	closeButton.setName("closeButton");
 
-        //---- appTitleLabel ----
-        appTitleLabel.setFont(appTitleLabel.getFont().deriveFont(appTitleLabel.getFont().getStyle() | Font.BOLD, appTitleLabel.getFont().getSize() + 4f));
-        appTitleLabel.setText(bundle.getString("Application.title"));
-        appTitleLabel.setName("appTitleLabel");
+	//---- appTitleLabel ----
+	appTitleLabel.setFont(appTitleLabel.getFont().deriveFont(appTitleLabel.getFont().getStyle() | Font.BOLD, appTitleLabel.getFont().getSize() + 4f));
+	appTitleLabel.setText(bundle.getString("Application.title"));
+	appTitleLabel.setName("appTitleLabel");
 
-        //---- versionLabel ----
-        versionLabel.setFont(versionLabel.getFont().deriveFont(versionLabel.getFont().getStyle() | Font.BOLD));
-        versionLabel.setText(bundle.getString("versionLabel.text"));
-        versionLabel.setName("versionLabel");
+	//---- versionLabel ----
+	versionLabel.setFont(versionLabel.getFont().deriveFont(versionLabel.getFont().getStyle() | Font.BOLD));
+	versionLabel.setText(bundle.getString("versionLabel.text"));
+	versionLabel.setName("versionLabel");
 
-        //---- appVersionLabel ----
-        appVersionLabel.setText(bundle.getString("Application.version"));
-        appVersionLabel.setName("appVersionLabel");
+	//---- appVersionLabel ----
+	appVersionLabel.setText(bundle.getString("Application.version"));
+	appVersionLabel.setName("appVersionLabel");
 
-        //---- vendorLabel ----
-        vendorLabel.setFont(vendorLabel.getFont().deriveFont(vendorLabel.getFont().getStyle() | Font.BOLD));
-        vendorLabel.setText(bundle.getString("vendorLabel.text"));
-        vendorLabel.setName("vendorLabel");
+	//---- vendorLabel ----
+	vendorLabel.setFont(vendorLabel.getFont().deriveFont(vendorLabel.getFont().getStyle() | Font.BOLD));
+	vendorLabel.setText(bundle.getString("vendorLabel.text"));
+	vendorLabel.setName("vendorLabel");
 
-        //---- appVendorLabel ----
-        appVendorLabel.setText(bundle.getString("Application.vendor"));
-        appVendorLabel.setName("appVendorLabel");
+	//---- appVendorLabel ----
+	appVendorLabel.setText(bundle.getString("Application.vendor"));
+	appVendorLabel.setName("appVendorLabel");
 
-        //---- homepageLabel ----
-        homepageLabel.setFont(homepageLabel.getFont().deriveFont(homepageLabel.getFont().getStyle() | Font.BOLD));
-        homepageLabel.setText(bundle.getString("homepageLabel.text"));
-        homepageLabel.setName("homepageLabel");
+	//---- homepageLabel ----
+	homepageLabel.setFont(homepageLabel.getFont().deriveFont(homepageLabel.getFont().getStyle() | Font.BOLD));
+	homepageLabel.setText(bundle.getString("homepageLabel.text"));
+	homepageLabel.setName("homepageLabel");
 
-        //---- appHomepageLabel ----
-        appHomepageLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        appHomepageLabel.setForeground(Color.blue);
-        appHomepageLabel.setText(bundle.getString("Application.homepage"));
-        appHomepageLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        appHomepageLabel.setName("appHomepageLabel");
-        appHomepageLabel.setOpaque(true);
-        appHomepageLabel.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                appHomepageLabelMouseClicked(e);
-            }
-        });
+	//---- appHomepageLabel ----
+	appHomepageLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+	appHomepageLabel.setForeground(Color.blue);
+	appHomepageLabel.setText(bundle.getString("Application.homepage"));
+	appHomepageLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+	appHomepageLabel.setName("appHomepageLabel");
+	appHomepageLabel.setOpaque(true);
+	appHomepageLabel.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent e) {
+		appHomepageLabelMouseClicked(e);
+	    }
+	});
 
-        //---- homepageLabel1 ----
-        homepageLabel1.setFont(homepageLabel1.getFont().deriveFont(homepageLabel1.getFont().getStyle() | Font.BOLD));
-        homepageLabel1.setText(bundle.getString("homepageLabel1.text"));
-        homepageLabel1.setName("homepageLabel1");
+	//---- homepageLabel1 ----
+	homepageLabel1.setFont(homepageLabel1.getFont().deriveFont(homepageLabel1.getFont().getStyle() | Font.BOLD));
+	homepageLabel1.setText(bundle.getString("homepageLabel1.text"));
+	homepageLabel1.setName("homepageLabel1");
 
-        //---- appHomepageLabel1 ----
-        appHomepageLabel1.setText(bundle.getString("appHomepageLabel1.text"));
-        appHomepageLabel1.setName("appHomepageLabel1");
+	//---- appHomepageLabel1 ----
+	appHomepageLabel1.setText(bundle.getString("appHomepageLabel1.text"));
+	appHomepageLabel1.setName("appHomepageLabel1");
 
-        //---- appHomepageLabel2 ----
-        appHomepageLabel2.setText(bundle.getString("appHomepageLabel2.text"));
-        appHomepageLabel2.setName("appHomepageLabel2");
+	//---- appHomepageLabel2 ----
+	appHomepageLabel2.setText(bundle.getString("appHomepageLabel2.text"));
+	appHomepageLabel2.setName("appHomepageLabel2");
 
-        //---- homepageLabel2 ----
-        homepageLabel2.setFont(homepageLabel2.getFont().deriveFont(homepageLabel2.getFont().getStyle() | Font.BOLD));
-        homepageLabel2.setText(bundle.getString("homepageLabel2.text"));
-        homepageLabel2.setName("homepageLabel2");
+	//---- homepageLabel2 ----
+	homepageLabel2.setFont(homepageLabel2.getFont().deriveFont(homepageLabel2.getFont().getStyle() | Font.BOLD));
+	homepageLabel2.setText(bundle.getString("homepageLabel2.text"));
+	homepageLabel2.setName("homepageLabel2");
 
-        //---- appHomepageLabel3 ----
-        appHomepageLabel3.setText(bundle.getString("appHomepageLabel3.text"));
-        appHomepageLabel3.setName("appHomepageLabel3");
+	//---- appHomepageLabel3 ----
+	appHomepageLabel3.setText(bundle.getString("appHomepageLabel3.text"));
+	appHomepageLabel3.setName("appHomepageLabel3");
 
-        //---- appHomepageLabel4 ----
-        appHomepageLabel4.setText(bundle.getString("appHomepageLabel4.text"));
-        appHomepageLabel4.setName("appHomepageLabel4");
+	//---- appHomepageLabel4 ----
+	appHomepageLabel4.setText(bundle.getString("appHomepageLabel4.text"));
+	appHomepageLabel4.setName("appHomepageLabel4");
 
-        //---- appHomepageLabel5 ----
-        appHomepageLabel5.setText(bundle.getString("appHomepageLabel5.text"));
-        appHomepageLabel5.setFocusable(false);
-        appHomepageLabel5.setName("appHomepageLabel5");
+	//---- appHomepageLabel5 ----
+	appHomepageLabel5.setText(bundle.getString("appHomepageLabel5.text"));
+	appHomepageLabel5.setFocusable(false);
+	appHomepageLabel5.setName("appHomepageLabel5");
 
-        //---- appHomepageLabel9 ----
-        appHomepageLabel9.setText(bundle.getString("appHomepageLabel9.text"));
-        appHomepageLabel9.setFocusable(false);
-        appHomepageLabel9.setName("appHomepageLabel9");
+	//---- appHomepageLabel9 ----
+	appHomepageLabel9.setText(bundle.getString("appHomepageLabel9.text"));
+	appHomepageLabel9.setFocusable(false);
+	appHomepageLabel9.setName("appHomepageLabel9");
 
-        //---- appHomepageLabel8 ----
-        appHomepageLabel8.setText(bundle.getString("appHomepageLabel8.text"));
-        appHomepageLabel8.setName("appHomepageLabel8");
+	//---- appHomepageLabel8 ----
+	appHomepageLabel8.setText(bundle.getString("appHomepageLabel8.text"));
+	appHomepageLabel8.setName("appHomepageLabel8");
 
-        //---- appHomepageLabel7 ----
-        appHomepageLabel7.setText(bundle.getString("appHomepageLabel7.text"));
-        appHomepageLabel7.setName("appHomepageLabel7");
+	//---- appHomepageLabel7 ----
+	appHomepageLabel7.setText(bundle.getString("appHomepageLabel7.text"));
+	appHomepageLabel7.setName("appHomepageLabel7");
 
-        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
-        contentPane.setLayout(contentPaneLayout);
-        contentPaneLayout.setHorizontalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGroup(contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(appTitleLabel)
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(versionLabel)
-                                        .addComponent(vendorLabel)
-                                        .addComponent(homepageLabel)
-                                        .addComponent(homepageLabel1))
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(appVersionLabel)
-                                        .addComponent(appVendorLabel)
-                                        .addComponent(appHomepageLabel)
-                                        .addComponent(appHomepageLabel1)
-                                        .addComponent(appHomepageLabel2)))
-                                .addComponent(homepageLabel2)
-                                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(appHomepageLabel3, GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
-                                        .addComponent(appHomepageLabel4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(appHomepageLabel5, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(appHomepageLabel7, GroupLayout.PREFERRED_SIZE, 487, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(appHomepageLabel9, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(appHomepageLabel8))
-                                    .addGap(64, 64, 64))))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(247, 247, 247)
-                            .addComponent(closeButton, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        contentPaneLayout.setVerticalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(appTitleLabel)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(versionLabel)
-                        .addComponent(appVersionLabel))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(vendorLabel)
-                        .addComponent(appVendorLabel))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(homepageLabel)
-                        .addComponent(appHomepageLabel))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(homepageLabel1)
-                        .addComponent(appHomepageLabel1, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(appHomepageLabel2, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(homepageLabel2)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(appHomepageLabel3, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-                    .addGap(1, 1, 1)
-                    .addComponent(appHomepageLabel4, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-                    .addGap(1, 1, 1)
-                    .addComponent(appHomepageLabel5)
-                    .addGap(18, 18, 18)
-                    .addComponent(appHomepageLabel7, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-                    .addGap(1, 1, 1)
-                    .addComponent(appHomepageLabel8, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-                    .addGap(1, 1, 1)
-                    .addComponent(appHomepageLabel9)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                    .addComponent(closeButton))
-        );
-        pack();
-        setLocationRelativeTo(getOwner());
+	GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+	contentPane.setLayout(contentPaneLayout);
+	contentPaneLayout.setHorizontalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addGroup(contentPaneLayout.createParallelGroup()
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addContainerGap()
+			    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+				.addComponent(appTitleLabel)
+				.addGroup(contentPaneLayout.createSequentialGroup()
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addComponent(versionLabel)
+					.addComponent(vendorLabel)
+					.addComponent(homepageLabel)
+					.addComponent(homepageLabel1))
+				    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				    .addGroup(contentPaneLayout.createParallelGroup()
+					.addComponent(appVersionLabel)
+					.addComponent(appVendorLabel)
+					.addComponent(appHomepageLabel)
+					.addComponent(appHomepageLabel1)
+					.addComponent(appHomepageLabel2)))
+				.addComponent(homepageLabel2)
+				.addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+				    .addGap(10, 10, 10)
+				    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+					.addComponent(appHomepageLabel3, GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+					.addComponent(appHomepageLabel4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addComponent(appHomepageLabel5, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+					.addComponent(appHomepageLabel7, GroupLayout.PREFERRED_SIZE, 487, GroupLayout.PREFERRED_SIZE)
+					.addComponent(appHomepageLabel9, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+					.addComponent(appHomepageLabel8))
+				    .addGap(64, 64, 64))))
+			.addGroup(contentPaneLayout.createSequentialGroup()
+			    .addGap(247, 247, 247)
+			    .addComponent(closeButton, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)))
+		    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+	);
+	contentPaneLayout.setVerticalGroup(
+	    contentPaneLayout.createParallelGroup()
+		.addGroup(contentPaneLayout.createSequentialGroup()
+		    .addContainerGap()
+		    .addComponent(appTitleLabel)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(versionLabel)
+			.addComponent(appVersionLabel))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(vendorLabel)
+			.addComponent(appVendorLabel))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(homepageLabel)
+			.addComponent(appHomepageLabel))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+			.addComponent(homepageLabel1)
+			.addComponent(appHomepageLabel1, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE))
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(appHomepageLabel2, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(homepageLabel2)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+		    .addComponent(appHomepageLabel3, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
+		    .addGap(1, 1, 1)
+		    .addComponent(appHomepageLabel4, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
+		    .addGap(1, 1, 1)
+		    .addComponent(appHomepageLabel5)
+		    .addGap(18, 18, 18)
+		    .addComponent(appHomepageLabel7, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
+		    .addGap(1, 1, 1)
+		    .addComponent(appHomepageLabel8, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
+		    .addGap(1, 1, 1)
+		    .addComponent(appHomepageLabel9)
+		    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+		    .addComponent(closeButton))
+	);
+	pack();
+	setLocationRelativeTo(getOwner());
     }// </editor-fold>//GEN-END:initComponents
 
    private void appHomepageLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appHomepageLabelMouseClicked

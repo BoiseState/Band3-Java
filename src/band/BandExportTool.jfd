@@ -1,0 +1,180 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "band.resources"
+	"i18n.bundleName": "BandExportTool"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "BandExportTool"
+	contentType: "form/swing"
+	root: new FormRoot {
+		"$setComponentNames": true
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp jPanelOutputPreview::l:::x, seq l {par l {seq l {par t {comp jLabelStopVoltage::t:p::p, comp jLabelStartVoltage::t:p::p}, space u:::p, par t {comp jTextFieldStopVoltage::::110:x:1, comp jTextFieldStartVoltage::::110:x:1}}, seq l {comp jLabelNumberOfSteps:::p::p, space :::p, comp jTextFieldNumberOfSteps::::99:x}, seq l {comp jLabelStepSize:::p::p, space s:::p, comp jTextFieldStepSize::::121:x}, seq l {comp jLabelStepSize1:::p::p, space :::p, comp jTextFieldStepSizeForTemp::::135:x}, seq l {par l {comp jLabelNumberOfSteps1::l:p::p, comp jLabelStartVoltage1::l:p::p, comp jLabelStopVoltage1::l:p::p}, space :::p, par l {comp jTextFieldStartTemp::t::99:x:1, comp jTextFieldNumberOfStepsForTemp::l::99:x, comp jTextFieldStopTemp::t::99:x:1}}, comp jComboBoxSweepChoice::l::183:x}, space :::p, par l {seq {comp jLabelOutputParameters:::p::p, space ::479:x}, comp jScrollPaneOutputParameters::::479:x:1}}, seq l {comp jButtonOK:::p::p, space :::p, comp jButtonSave:::p::p, space :::p, comp jButtonPreview:::p::p}, comp jProgressBar1::l:p:197:p}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l:::p {seq :::1 {par b {comp jLabelStartVoltage::b:p::p, comp jLabelOutputParameters::b:p::p, comp jTextFieldStartVoltage::b:p::p}, space :::p, par b {comp jLabelStopVoltage::b:p::p, comp jTextFieldStopVoltage::b:p::p}, space :::p, par b {comp jLabelNumberOfSteps::b:p::p, comp jTextFieldNumberOfSteps::b:p::p}, space :::p, par b {comp jLabelStepSize::b:p::p, comp jTextFieldStepSize::b:p::p}, space :::x, comp jComboBoxSweepChoice:::p::p, space s:::p, par b {comp jLabelStartVoltage1::b:p::p, comp jTextFieldStartTemp::b:p::p}, space :::p, par b {comp jLabelStopVoltage1::b:p::p, comp jTextFieldStopTemp::b:p::p}, space :::p, par b {comp jLabelNumberOfSteps1::b:p::p, comp jTextFieldNumberOfStepsForTemp::b:p::p}, space :::p, par b {comp jLabelStepSize1::b:p::p, comp jTextFieldStepSizeForTemp::b:p::p}}, comp jScrollPaneOutputParameters:::p:247:p}, space :::p, par b {comp jButtonOK::b:p::p, comp jButtonSave::b:p::p, comp jButtonPreview::b:p::p}, space :::p, comp jPanelOutputPreview:::::x, space :::p, comp jProgressBar1:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"name": "BandExportTool"
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowOpened", "formWindowOpened", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStartVoltage"
+				"text": new FormMessage( null, "jLabelStartVoltage.text" )
+				"name": "jLabelStartVoltage"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStartVoltage"
+				"name": "jTextFieldStartVoltage"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldStartVoltageKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStopVoltage"
+				"text": new FormMessage( null, "jLabelStopVoltage.text" )
+				"name": "jLabelStopVoltage"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStopVoltage"
+				"name": "jTextFieldStopVoltage"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldStopVoltageKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelNumberOfSteps"
+				"text": new FormMessage( null, "jLabelNumberOfSteps.text" )
+				"name": "jLabelNumberOfSteps"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldNumberOfSteps"
+				"name": "jTextFieldNumberOfSteps"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldNumberOfStepsKeyPressed", true ) )
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "jTextFieldNumberOfStepsKeyReleased", true ) )
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "jTextFieldNumberOfStepsKeyTyped", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStepSize"
+				"text": new FormMessage( null, "jLabelStepSize.text" )
+				"name": "jLabelStepSize"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStepSize"
+				"editable": false
+				"name": "jTextFieldStepSize"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonOK"
+				"text": new FormMessage( null, "jButtonOK.text" )
+				"actionCommand": new FormMessage( null, "jButtonOK.actionCommand" )
+				"name": "jButtonOK"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonSave"
+				"text": new FormMessage( null, "jButtonSave.text" )
+				"name": "jButtonSave"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonPreview"
+				"text": new FormMessage( null, "jButtonPreview.text" )
+				"name": "jButtonPreview"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp jPanelReplace:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq l {comp jPanelReplace:::::x, space :::p}}"
+			} ) {
+				name: "jPanelOutputPreview"
+				"border": new javax.swing.border.TitledBorder( "Output Preview" )
+				"name": "jPanelOutputPreview"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:636:x}"
+					"$verticalGroup": "par l {space :0:272:x}"
+				} ) {
+					name: "jPanelReplace"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"name": "jPanelReplace"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelOutputParameters"
+				"name": "jLabelOutputParameters"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPaneOutputParameters"
+				"name": "jScrollPaneOutputParameters"
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "jListOutputParameters"
+					"model": new javax.swing.DefaultListModel {
+						addElement( "Item 1" )
+						addElement( "Item 2" )
+						addElement( "Item 3" )
+						addElement( "Item 4" )
+						addElement( "Item 5" )
+					}
+					"enabled": false
+					"name": "jListOutputParameters"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "jListOutputParametersMouseReleased", true ) )
+					addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "jListOutputParametersValueChanged", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStepSizeForTemp"
+				"editable": false
+				"name": "jTextFieldStepSizeForTemp"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStepSize1"
+				"text": new FormMessage( null, "jLabelStepSize1.text" )
+				"name": "jLabelStepSize1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelNumberOfSteps1"
+				"text": new FormMessage( null, "jLabelNumberOfSteps1.text" )
+				"name": "jLabelNumberOfSteps1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldNumberOfStepsForTemp"
+				"enabled": false
+				"name": "jTextFieldNumberOfStepsForTemp"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "jTextFieldNumberOfStepsForTempKeyReleased", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStopTemp"
+				"enabled": false
+				"name": "jTextFieldStopTemp"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "jTextFieldStopTempKeyReleased", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStopVoltage1"
+				"text": new FormMessage( null, "jLabelStopVoltage1.text" )
+				"name": "jLabelStopVoltage1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStartVoltage1"
+				"text": new FormMessage( null, "jLabelStartVoltage1.text" )
+				"name": "jLabelStartVoltage1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStartTemp"
+				"enabled": false
+				"name": "jTextFieldStartTemp"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "jTextFieldStartTempKeyReleased", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "jComboBoxSweepChoice"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Only Sweep Voltage"
+					addElement( "Only Sweep Voltage" )
+					addElement( "Only Sweep Temperature" )
+					addElement( "Sweep Both - One Parameter" )
+				}
+				"actionCommand": new FormMessage( null, "jComboBoxSweepChoice.actionCommand" )
+				"name": "jComboBoxSweepChoice"
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "jComboBoxSweepChoiceItemStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JProgressBar" ) {
+				name: "jProgressBar1"
+				"focusable": false
+				"name": "jProgressBar1"
+			} )
+		}, new FormLayoutConstraints( null ) )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			addBinding( new FormBinding( "this", "${listOutputParameters}", "jListOutputParameters", "elements" ) )
+		} )
+	}
+}

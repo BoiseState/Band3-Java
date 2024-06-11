@@ -1,0 +1,177 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "band.resources"
+	"i18n.bundleName": "BandAboutBox"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "BandAboutBox"
+	contentType: "form/swing"
+	root: new FormRoot {
+		"$setComponentNames": true
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq ::p {space :::p, par l:::p {comp appTitleLabel:::p::p, seq l {par l {comp versionLabel::l:p::p, comp vendorLabel::l:p::p, comp homepageLabel::l:p::p, comp homepageLabel1::l:p::p}, space :::p, par l {comp appVersionLabel::l:p::p, comp appVendorLabel::l:p::p, comp appHomepageLabel::l:p::p, comp appHomepageLabel1:::p::p, comp appHomepageLabel2::l:p::p}}, comp homepageLabel2::l:p::p, seq t {space :p:10:p, par l:::p {comp appHomepageLabel3::l::487:x:1, comp appHomepageLabel4::l:::x:1, comp appHomepageLabel5::l:p:192:p, comp appHomepageLabel7::l:p:487:p, comp appHomepageLabel9::l:p:192:p, comp appHomepageLabel8::l:p::p}, space :p:64:p}}}, seq l {space :p:247:p, comp closeButton:::p:68:p}}, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp appTitleLabel:::p::p, space :::p, par b {comp versionLabel::b:p::p, comp appVersionLabel::b:p::p}, space :p::p, par b {comp vendorLabel::b:p::p, comp appVendorLabel::b:p::p}, space :::p, par b {comp homepageLabel::b:p::p, comp appHomepageLabel::b:p::p}, space :::p, par b {comp homepageLabel1::b:p::p, comp appHomepageLabel1::b:p:14:p}, space :::p, comp appHomepageLabel2:::p:14:p, space :::p, comp homepageLabel2:::p::p, space :::p, comp appHomepageLabel3:::p:14:p, space :p:1:p, comp appHomepageLabel4:::p:14:p, space :p:1:p, comp appHomepageLabel5:::p::p, space s:::p, comp appHomepageLabel7:::p:14:p, space :p:1:p, comp appHomepageLabel8:::p:14:p, space :p:1:p, comp appHomepageLabel9:::p::p, space ::17:x, comp closeButton:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": new FormMessage( null, "title" )
+			"modal": true
+			"name": "BandAboutBox"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "closeButton"
+				"text": new FormMessage( null, "closeButton.text" )
+				"name": "closeButton"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appTitleLabel"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 4, false )
+				"text": new FormMessage( null, "Application.title" )
+				"name": "appTitleLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "versionLabel"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				"text": new FormMessage( null, "versionLabel.text" )
+				"name": "versionLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appVersionLabel"
+				"text": new FormMessage( null, "Application.version" )
+				"name": "appVersionLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "vendorLabel"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				"text": new FormMessage( null, "vendorLabel.text" )
+				"name": "vendorLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appVendorLabel"
+				"text": new FormMessage( null, "Application.vendor" )
+				"name": "appVendorLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "homepageLabel"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				"text": new FormMessage( null, "homepageLabel.text" )
+				"name": "homepageLabel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel"
+				"font": new java.awt.Font( "Tahoma", 0, 11 )
+				"foreground": new java.awt.Color( 0, 0, 255, 255 )
+				"text": new FormMessage( null, "Application.homepage" )
+				"cursor": new java.awt.Cursor( 12 )
+				"name": "appHomepageLabel"
+				"opaque": true
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "appHomepageLabelMouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "homepageLabel1"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				"text": new FormMessage( null, "homepageLabel1.text" )
+				"name": "homepageLabel1"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel1"
+				"text": new FormMessage( null, "appHomepageLabel1.text" )
+				"name": "appHomepageLabel1"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel2"
+				"text": new FormMessage( null, "appHomepageLabel2.text" )
+				"name": "appHomepageLabel2"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "homepageLabel2"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				"text": new FormMessage( null, "homepageLabel2.text" )
+				"name": "homepageLabel2"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel3"
+				"text": new FormMessage( null, "appHomepageLabel3.text" )
+				"name": "appHomepageLabel3"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel4"
+				"text": new FormMessage( null, "appHomepageLabel4.text" )
+				"name": "appHomepageLabel4"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel5"
+				"text": new FormMessage( null, "appHomepageLabel5.text" )
+				"focusable": false
+				"name": "appHomepageLabel5"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel9"
+				"text": new FormMessage( null, "appHomepageLabel9.text" )
+				"focusable": false
+				"name": "appHomepageLabel9"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel8"
+				"text": new FormMessage( null, "appHomepageLabel8.text" )
+				"name": "appHomepageLabel8"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "appHomepageLabel7"
+				"text": new FormMessage( null, "appHomepageLabel7.text" )
+				"name": "appHomepageLabel7"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			} )
+		}, new FormLayoutConstraints( null ) )
+	}
+}

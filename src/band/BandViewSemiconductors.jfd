@@ -1,0 +1,76 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "band.resources"
+	"i18n.bundleName": "BandViewSemiconductors"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "BandViewSemiconductors"
+	contentType: "form/swing"
+	root: new FormRoot {
+		"$setComponentNames": true
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp jButtonAdd::l:p::p, comp jButtonEdit::l:p::p, comp jButtonDelete::l:p::p, comp jButtonClose::l:p::p}, space :::p, comp jScrollPane1::::455:x, space :::p}}"
+			"$verticalGroup": "par l {seq t {space :::p, par t {comp jScrollPane1::l::227:x, seq t {comp jButtonAdd:::p::p, space :::p, comp jButtonEdit:::p::p, space :::p, comp jButtonDelete:::p::p, space ::123:x, comp jButtonClose:::p::p}}, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": new FormMessage( null, "BandViewSemiconductors.title" )
+			"name": "BandViewSemiconductors"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonAdd"
+				"text": new FormMessage( null, "jButtonAdd.text" )
+				"name": "jButtonAdd"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonEdit"
+				"text": new FormMessage( null, "jButtonEdit.text" )
+				"name": "jButtonEdit"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonDelete"
+				"text": new FormMessage( null, "jButtonDelete.text" )
+				"name": "jButtonDelete"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonClose"
+				"text": new FormMessage( null, "jButtonClose.text" )
+				"name": "jButtonClose"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane1"
+				"name": "jScrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "jTableSemiconductors"
+					"name": "jTableSemiconductors"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jTableSemiconductorsMouseClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			addBinding( new FormBinding( "this", "${semiconductors}", "jTableSemiconductors", "elements" ) {
+				"bindImmediately": true
+				"subBindings": new com.jformdesigner.model.FormBinding[ new FormBinding( null, "${name}", null, null ) {
+					"columnClass": "java.lang.String"
+					"editable": false
+					"columnName": "Name"
+				}, new FormBinding( null, "${bandGap}", null, null ) {
+					"columnClass": "java.lang.Double"
+					"editable": false
+					"columnName": "Band Gap"
+				}, new FormBinding( null, "${electronAffinity}", null, null ) {
+					"columnClass": "java.lang.Double"
+					"editable": false
+					"columnName": "Electron Affinity"
+				}, new FormBinding( null, "${dielectricConstant}", null, null ) {
+					"columnClass": "java.lang.Double"
+					"editable": false
+					"columnName": "Dielectric Constant"
+				}, new FormBinding( null, "${notes}", null, null ) {
+					"columnClass": "java.lang.String"
+					"editable": false
+					"columnName": "Notes"
+				} ]
+			} )
+		} )
+	}
+}

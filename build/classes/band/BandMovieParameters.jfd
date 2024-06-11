@@ -1,0 +1,86 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "band.resources"
+	"i18n.bundleName": "BandMovieParameters"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "BandMovieParameters"
+	contentType: "form/swing"
+	root: new FormRoot {
+		"$setComponentNames": true
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {par t:l::p {comp jCheckBoxSmartAxisSize::l:::x:1, seq l {space :p:21:p, comp jButtonOK:::p::p, space :::p, comp jButtonCancel:::p::p}}, seq l {par l:::p {seq l {par t {comp jLabelStopVoltage::t:p::p, comp jLabelStartVoltage::t:p::p}, space :::p, par l:::p {comp jTextFieldStopVoltage:::::x:1, comp jTextFieldStartVoltage::l::92:x:1}}, seq l:::1 {comp jLabelNumberOfSteps:::p::p, space :::p, comp jTextFieldNumberOfSteps:::::x}, seq l:::1 {comp jLabelStepSize:::p::p, space :::p, comp jTextFieldStepSize:::::x}}, space s:::p, comp jLabelOutputParameters:::p::p}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp jLabelStartVoltage::b:p::p, comp jTextFieldStartVoltage::b:p::p, comp jLabelOutputParameters::b:p::p}, space :::p, par b {comp jLabelStopVoltage::b:p::p, comp jTextFieldStopVoltage::b:p::p}, space :::p, par b {comp jLabelNumberOfSteps::b:p::p, comp jTextFieldNumberOfSteps::b:p::p}, space :::p, par b {comp jLabelStepSize::b:p::p, comp jTextFieldStepSize::b:p::p}, space ::6:x, comp jCheckBoxSmartAxisSize:::p::p, space u:::p, par b {comp jButtonOK::b:p::p, comp jButtonCancel::b:p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": new FormMessage( null, "BandMovieParameters.title" )
+			"name": "BandMovieParameters"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStartVoltage"
+				"text": new FormMessage( null, "jLabelStartVoltage.text" )
+				"name": "jLabelStartVoltage"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStartVoltage"
+				"text": new FormMessage( null, "jTextFieldStartVoltage.text" )
+				"name": "jTextFieldStartVoltage"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldStartVoltageKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStopVoltage"
+				"text": new FormMessage( null, "jLabelStopVoltage.text" )
+				"name": "jLabelStopVoltage"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStopVoltage"
+				"text": new FormMessage( null, "jTextFieldStopVoltage.text" )
+				"name": "jTextFieldStopVoltage"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldStopVoltageKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelNumberOfSteps"
+				"text": new FormMessage( null, "jLabelNumberOfSteps.text" )
+				"name": "jLabelNumberOfSteps"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldNumberOfSteps"
+				"text": new FormMessage( null, "jTextFieldNumberOfSteps.text" )
+				"name": "jTextFieldNumberOfSteps"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "jTextFieldNumberOfStepsKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelStepSize"
+				"text": new FormMessage( null, "jLabelStepSize.text" )
+				"name": "jLabelStepSize"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldStepSize"
+				"editable": false
+				"text": new FormMessage( null, "jTextFieldStepSize.text" )
+				"name": "jTextFieldStepSize"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonOK"
+				"text": new FormMessage( null, "jButtonOK.text" )
+				"actionCommand": new FormMessage( null, "jButtonOK.actionCommand" )
+				"name": "jButtonOK"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonCancel"
+				"text": new FormMessage( null, "jButtonCancel.text" )
+				"name": "jButtonCancel"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelOutputParameters"
+				"name": "jLabelOutputParameters"
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "jCheckBoxSmartAxisSize"
+				"text": new FormMessage( null, "jCheckBoxSmartAxisSize.text" )
+				"name": "jCheckBoxSmartAxisSize"
+			} )
+		}, new FormLayoutConstraints( null ) )
+	}
+}

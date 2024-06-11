@@ -1,0 +1,390 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "band.resources"
+	"i18n.bundleName": "BandView"
+	"i18n.autoExternalize": true
+	"i18n.keyPrefix": "BandView"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp jToolBarTop::l::821:x, seq l {comp jToolBarSide:::p:125:p, space :p::p, par l {comp jTextFieldRolloverData:::p:680:p, comp jPanelChart::l::680:x}, space :p::p}}"
+			"$verticalGroup": "par l {seq l {comp jToolBarTop:::p:25:p, space :p::p, par l {seq {comp jToolBarSide::::521:x, space :p:35:p}, seq {comp jPanelChart::::550:x, space :p::p}}, comp jTextFieldRolloverData:::p:19:p, space :p::p}}"
+		} ) {
+			name: "mainPanel"
+			"maximumSize": new java.awt.Dimension( 5000, 5000 )
+			"minimumSize": new java.awt.Dimension( 400, 200 )
+			"name": "mainPanel"
+			"preferredSize": new java.awt.Dimension( 898, 875 )
+			"requestFocusEnabled": false
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "jToolBarTop"
+				"floatable": false
+				"rollover": true
+				"minimumSize": new java.awt.Dimension( 551, 100 )
+				"name": "jToolBarTop"
+				"preferredSize": new java.awt.Dimension( 717, 100 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelVoltage"
+					"text": new FormMessage( null, "jLabelVoltage.text" )
+					"name": "jLabelVoltage"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldVoltage"
+					"text": new FormMessage( null, "jTextFieldVoltage.text" )
+					"maximumSize": new java.awt.Dimension( 60, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jTextFieldVoltage"
+					"preferredSize": new java.awt.Dimension( 60, 25 )
+					addEvent( new FormEvent( "java.awt.event.FocusListener", "focusGained", "jTextFieldVoltageFocusGained", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator5"
+					"name": "jSeparator5"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelTemp"
+					"text": new FormMessage( null, "jLabelTemp.text" )
+					"name": "jLabelTemp"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldTemp"
+					"text": new FormMessage( null, "jTextFieldTemp.text" )
+					"maximumSize": new java.awt.Dimension( 60, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jTextFieldTemp"
+					"preferredSize": new java.awt.Dimension( 60, 25 )
+					addEvent( new FormEvent( "java.awt.event.FocusListener", "focusGained", "jTextFieldTempFocusGained", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator6"
+					"name": "jSeparator6"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jButtonPlay"
+					"text": new FormMessage( null, "jButtonPlay.text" )
+					"toolTipText": new FormMessage( null, "jButtonPlay.toolTipText" )
+					"focusable": false
+					"horizontalTextPosition": 0
+					"maximumSize": new java.awt.Dimension( 31, 40 )
+					"minimumSize": new java.awt.Dimension( 31, 40 )
+					"name": "jButtonPlay"
+					"preferredSize": new java.awt.Dimension( 31, 40 )
+					"verticalTextPosition": 3
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator8"
+					"name": "jSeparator8"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelFlatbandVoltage"
+					"text": new FormMessage( null, "jLabelFlatbandVoltage.text" )
+					"maximumSize": new java.awt.Dimension( 40, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jLabelFlatbandVoltage"
+					"preferredSize": new java.awt.Dimension( 40, 25 )
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") != null) {\n    jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(60,25));\n    jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(50, 25));\n}"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldFlatbandVoltage"
+					"background": new java.awt.Color( 240, 240, 240, 255 )
+					"editable": false
+					"text": new FormMessage( null, "jTextFieldFlatbandVoltage.text" )
+					"autoscrolls": false
+					"maximumSize": new java.awt.Dimension( 60, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jTextFieldFlatbandVoltage"
+					"preferredSize": new java.awt.Dimension( 60, 25 )
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator9"
+					"name": "jSeparator9"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelEOT"
+					"text": new FormMessage( null, "jLabelEOT.text" )
+					"maximumSize": new java.awt.Dimension( 50, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jLabelEOT"
+					"preferredSize": new java.awt.Dimension( 40, 25 )
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") != null) {\n    jLabelEOT.setMaximumSize(new java.awt.Dimension(60,25));\n    jLabelEOT.setPreferredSize(new java.awt.Dimension(50, 25));\n}"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldEOT"
+					"editable": false
+					"text": new FormMessage( null, "jTextFieldEOT.text" )
+					"autoscrolls": false
+					"maximumSize": new java.awt.Dimension( 60, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jTextFieldEOT"
+					"preferredSize": new java.awt.Dimension( 60, 25 )
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator10"
+					"name": "jSeparator10"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelStackCap"
+					"text": new FormMessage( null, "jLabelStackCap.text" )
+					"maximumSize": new java.awt.Dimension( 70, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jLabelStackCap"
+					"preferredSize": new java.awt.Dimension( 40, 25 )
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") != null) {\n    jLabelStackCap.setMaximumSize(new java.awt.Dimension(100,25));\n    jLabelStackCap.setPreferredSize(new java.awt.Dimension(90, 25));\n}"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldStackCap"
+					"editable": false
+					"text": new FormMessage( null, "jTextFieldStackCap.text" )
+					"autoscrolls": false
+					"maximumSize": new java.awt.Dimension( 80, 25 )
+					"minimumSize": new java.awt.Dimension( 50, 25 )
+					"name": "jTextFieldStackCap"
+					"preferredSize": new java.awt.Dimension( 70, 25 )
+				} )
+				add( new FormComponent( "javax.swing.JToolBar$Separator" ) {
+					name: "jSeparator11"
+					"name": "jSeparator11"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabelThresholdVoltage"
+					"text": new FormMessage( null, "jLabelThresholdVoltage.text" )
+					"maximumSize": new java.awt.Dimension( 40, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jLabelThresholdVoltage"
+					"preferredSize": new java.awt.Dimension( 40, 25 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "jTextFieldThresholdVoltage"
+					"editable": false
+					"text": new FormMessage( null, "jTextFieldThresholdVoltage.text" )
+					"autoscrolls": false
+					"maximumSize": new java.awt.Dimension( 60, 25 )
+					"minimumSize": new java.awt.Dimension( 40, 25 )
+					"name": "jTextFieldThresholdVoltage"
+					"preferredSize": new java.awt.Dimension( 60, 25 )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "jToolBarSide"
+				"floatable": false
+				"orientation": 1
+				"rollover": true
+				"cursor": new java.awt.Cursor( 0 )
+				"maximumSize": new java.awt.Dimension( 125, 125 )
+				"minimumSize": new java.awt.Dimension( 125, 125 )
+				"name": "jToolBarSide"
+				"preferredSize": new java.awt.Dimension( 2, 175 )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:680:x}"
+				"$verticalGroup": "par l {space :0:550:x}"
+			} ) {
+				name: "jPanelChart"
+				"cursor": new java.awt.Cursor( 1 )
+				"name": "jPanelChart"
+				"preferredSize": new java.awt.Dimension( 640, 480 )
+				auxiliary() {
+					"JavaCodeGenerator.preCreateCode": "/// My great code goes here"
+				}
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldRolloverData"
+				"editable": false
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"name": "jTextFieldRolloverData"
+			} )
+		} )
+		add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+			name: "menuBar"
+			"name": "menuBar"
+			add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+				name: "jMenuFile"
+				"text": new FormMessage( null, "jMenuFile.text" )
+				"name": "jMenuFile"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemNew"
+					"name": "jMenuItemNew"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemOpen"
+					"name": "jMenuItemOpen"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemSave"
+					"name": "jMenuItemSave"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemClose"
+					"text": new FormMessage( null, "jMenuItemClose.text" )
+					"name": "jMenuItemClose"
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "jSeparator1"
+					"name": "jSeparator1"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemImport"
+					"text": new FormMessage( null, "jMenuItemImport.text" )
+					"name": "jMenuItemImport"
+				} )
+				add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+					name: "jSeparator7"
+					"name": "jSeparator7"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemSaveAsDefault"
+					"text": new FormMessage( null, "jMenuItemSaveAsDefault.text" )
+					"name": "jMenuItemSaveAsDefault"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemExport"
+					"name": "jMenuItemExport"
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "jSeparator2"
+					"name": "jSeparator2"
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") == null)"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemExit"
+					"name": "jMenuItemExit"
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") == null)"
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+				name: "jMenuEdit"
+				"text": new FormMessage( null, "jMenuEdit.text" )
+				"name": "jMenuEdit"
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemUndo"
+					"text": new FormMessage( null, "jMenuItemUndo.text" )
+					"name": "jMenuItemUndo"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemCopyPlot"
+					"text": new FormMessage( null, "jMenuItemCopyPlot.text" )
+					"name": "jMenuItemCopyPlot"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+				name: "jMenuView"
+				"text": new FormMessage( null, "jMenuView.text" )
+				"$buttonGroup": new FormReference( "buttonGroupView" )
+				"name": "jMenuView"
+				add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+					name: "jRadioButtonMenuItemChargeDensity"
+					"$buttonGroup": new FormReference( "buttonGroupView" )
+					"text": new FormMessage( null, "jRadioButtonMenuItemChargeDensity.text" )
+					"name": "jRadioButtonMenuItemChargeDensity"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+					name: "jRadioButtonMenuItemElectricField"
+					"$buttonGroup": new FormReference( "buttonGroupView" )
+					"text": new FormMessage( null, "jRadioButtonMenuItemElectricField.text" )
+					"name": "jRadioButtonMenuItemElectricField"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+					name: "jRadioButtonMenuItemPotential"
+					"$buttonGroup": new FormReference( "buttonGroupView" )
+					"text": new FormMessage( null, "jRadioButtonMenuItemPotential.text" )
+					"name": "jRadioButtonMenuItemPotential"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+					name: "jRadioButtonMenuItemEnergy"
+					"$buttonGroup": new FormReference( "buttonGroupView" )
+					"selected": true
+					"text": new FormMessage( null, "jRadioButtonMenuItemEnergy.text" )
+					"name": "jRadioButtonMenuItemEnergy"
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "jSeparator3"
+					"name": "jSeparator3"
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "jMenuMaterials"
+					"text": new FormMessage( null, "jMenuMaterials.text" )
+					"name": "jMenuMaterials"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jMenuItemMetals"
+						"name": "jMenuItemMetals"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jMenuItemDielectrics"
+						"name": "jMenuItemDielectrics"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jMenuItemSemiconductors"
+						"name": "jMenuItemSemiconductors"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemShowStackParameters"
+					"text": new FormMessage( null, "jMenuItemShowStackParameters.text" )
+					"name": "jMenuItemShowStackParameters"
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "jSeparator4"
+					"name": "jSeparator4"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemViewWindow"
+					"name": "jMenuItemViewWindow"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemMovieParameters"
+					"name": "jMenuItemMovieParameters"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+				name: "jMenuStructure"
+				"text": new FormMessage( null, "jMenuStructure.text" )
+				"name": "jMenuStructure"
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemCompose"
+					"name": "jMenuItemCompose"
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemExportTool"
+					"name": "jMenuItemExportTool"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+				name: "jMenuHelp"
+				"text": new FormMessage( null, "jMenuHelp.text" )
+				"name": "jMenuHelp"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "jMenuItemAbout"
+					"name": "jMenuItemAbout"
+					auxiliary() {
+						"JavaCodeGenerator.postInitCode": "if (System.getProperty(\"mrj.version\") == null) {"
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+			} )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroupView"
+			auxiliary() {
+				"JavaCodeGenerator.variableLocal": false
+			}
+		} )
+	}
+}

@@ -66,6 +66,7 @@ import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
 
+
 /**
  * The application's main frame.
  */
@@ -1456,6 +1457,7 @@ public class BandView extends FrameView {
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandView.class);
         jLabelVoltage.setText(resourceMap.getString("jLabelVoltage.text")); // NOI18N
+        jLabelVoltage.setAlignmentX(0.5F);
         jLabelVoltage.setName("jLabelVoltage"); // NOI18N
         jToolBarTop.add(jLabelVoltage);
 
@@ -1476,7 +1478,9 @@ public class BandView extends FrameView {
         jSeparator5.setName("jSeparator5"); // NOI18N
         jToolBarTop.add(jSeparator5);
 
+        jLabelTemp.setFont(jLabelTemp.getFont());
         jLabelTemp.setText(resourceMap.getString("jLabelTemp.text")); // NOI18N
+        jLabelTemp.setAlignmentX(0.5F);
         jLabelTemp.setName("jLabelTemp"); // NOI18N
         jToolBarTop.add(jLabelTemp);
 
@@ -1512,10 +1516,11 @@ public class BandView extends FrameView {
         jToolBarTop.add(jSeparator8);
 
         jLabelFlatbandVoltage.setText(resourceMap.getString("jLabelFlatbandVoltage.text")); // NOI18N
-        jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(40, 25));
-        jLabelFlatbandVoltage.setMinimumSize(new java.awt.Dimension(40, 25));
+        jLabelFlatbandVoltage.setAlignmentX(0.5F);
+        jLabelFlatbandVoltage.setMaximumSize(new Dimension(47,30));
+        jLabelFlatbandVoltage.setMinimumSize(new Dimension(47,30));
         jLabelFlatbandVoltage.setName("jLabelFlatbandVoltage"); // NOI18N
-        jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(40, 25));
+        jLabelFlatbandVoltage.setPreferredSize(new Dimension(47,30));
         if (System.getProperty("mrj.version") != null) {
             jLabelFlatbandVoltage.setMaximumSize(new java.awt.Dimension(60,25));
             jLabelFlatbandVoltage.setPreferredSize(new java.awt.Dimension(50, 25));
@@ -1536,10 +1541,12 @@ public class BandView extends FrameView {
         jToolBarTop.add(jSeparator9);
 
         jLabelEOT.setText(resourceMap.getString("jLabelEOT.text")); // NOI18N
-        jLabelEOT.setMaximumSize(new java.awt.Dimension(50, 25));
-        jLabelEOT.setMinimumSize(new java.awt.Dimension(40, 25));
+        jLabelEOT.setAlignmentX(0.5F);
+        jLabelEOT.setMaximumSize(new java.awt.Dimension(60, 30));
+        jLabelEOT.setMinimumSize(new java.awt.Dimension(60, 30));
         jLabelEOT.setName("jLabelEOT"); // NOI18N
-        jLabelEOT.setPreferredSize(new java.awt.Dimension(40, 25));
+        jLabelEOT.setPreferredSize(new java.awt.Dimension(60, 30));
+        jLabelEOT.setRequestFocusEnabled(false);
         if (System.getProperty("mrj.version") != null) {
             jLabelEOT.setMaximumSize(new java.awt.Dimension(60,25));
             jLabelEOT.setPreferredSize(new java.awt.Dimension(50, 25));
@@ -1559,10 +1566,11 @@ public class BandView extends FrameView {
         jToolBarTop.add(jSeparator10);
 
         jLabelStackCap.setText(resourceMap.getString("jLabelStackCap.text")); // NOI18N
-        jLabelStackCap.setMaximumSize(new java.awt.Dimension(70, 25));
-        jLabelStackCap.setMinimumSize(new java.awt.Dimension(40, 25));
+        jLabelStackCap.setAlignmentX(0.5F);
+        jLabelStackCap.setMaximumSize(new java.awt.Dimension(88, 30));
+        jLabelStackCap.setMinimumSize(new java.awt.Dimension(88, 30));
         jLabelStackCap.setName("jLabelStackCap"); // NOI18N
-        jLabelStackCap.setPreferredSize(new java.awt.Dimension(40, 25));
+        jLabelStackCap.setPreferredSize(new java.awt.Dimension(88, 30));
         if (System.getProperty("mrj.version") != null) {
             jLabelStackCap.setMaximumSize(new java.awt.Dimension(100,25));
             jLabelStackCap.setPreferredSize(new java.awt.Dimension(90, 25));
@@ -1581,11 +1589,13 @@ public class BandView extends FrameView {
         jSeparator11.setName("jSeparator11"); // NOI18N
         jToolBarTop.add(jSeparator11);
 
+        jLabelThresholdVoltage.setFont(jLabelThresholdVoltage.getFont());
         jLabelThresholdVoltage.setText(resourceMap.getString("jLabelThresholdVoltage.text")); // NOI18N
-        jLabelThresholdVoltage.setMaximumSize(new java.awt.Dimension(40, 25));
-        jLabelThresholdVoltage.setMinimumSize(new java.awt.Dimension(40, 25));
+        jLabelThresholdVoltage.setAlignmentX(0.5F);
+        jLabelThresholdVoltage.setMaximumSize(new java.awt.Dimension(46, 30));
+        jLabelThresholdVoltage.setMinimumSize(new java.awt.Dimension(46, 30));
         jLabelThresholdVoltage.setName("jLabelThresholdVoltage"); // NOI18N
-        jLabelThresholdVoltage.setPreferredSize(new java.awt.Dimension(40, 25));
+        jLabelThresholdVoltage.setPreferredSize(new java.awt.Dimension(46, 30));
         jToolBarTop.add(jLabelThresholdVoltage);
 
         jTextFieldThresholdVoltage.setEditable(false);
@@ -1614,11 +1624,11 @@ public class BandView extends FrameView {
         jPanelChart.setLayout(jPanelChartLayout);
         jPanelChartLayout.setHorizontalGroup(
             jPanelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGap(0, 709, Short.MAX_VALUE)
         );
         jPanelChartLayout.setVerticalGroup(
             jPanelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGap(0, 529, Short.MAX_VALUE)
         );
 
         jTextFieldRolloverData.setEditable(false);
@@ -1629,27 +1639,29 @@ public class BandView extends FrameView {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBarTop, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(jToolBarSide, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jToolBarTop, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jToolBarSide, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE))
+                            .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(jToolBarTop, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBarTop, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jToolBarSide, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
-                        .addGap(35, 35, 35))
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jToolBarSide, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
+                    .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -2061,7 +2073,7 @@ private void jTextFieldTempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIR
     private class MacOSAboutHandler extends Application {
 
         public MacOSAboutHandler() {
-           // setAboutHandler(new AboutBoxHandler());
+//            setAboutHandler(new AboutBoxHandler());
         }
 
 //        class AboutBoxHandler implements AboutHandler {

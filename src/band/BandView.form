@@ -77,13 +77,24 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabelVoltage">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jLabelVoltage.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelVoltage.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(62,30)" type="code"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(62,30)" type="code"/>
+                </Property>
                 <Property name="name" type="java.lang.String" value="jLabelVoltage" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(62,30)" type="code"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldVoltage">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldVoltage.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldVoltage.text"/>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="band.BandView" id="updateTVChart" methodName="updateTVChart"/>
@@ -110,18 +121,26 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelTemp">
               <Properties>
-                <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-                  <FontInfo relative="true">
-                    <Font component="jLabelTemp" property="font" relativeSize="true" size="0"/>
-                  </FontInfo>
+                <Property name="font" type="java.awt.Font" noResource="true" editor="com.sun.beans.editors.FontEditor">
+                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,64,0,0,0,0,0,12,0,0,0,0,112,116,0,6,68,105,97,108,111,103,120"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelTemp.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(55, 30)" type="code"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(55,30)" type="code"/>
+                </Property>
                 <Property name="name" type="java.lang.String" value="jLabelTemp" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new Dimension(55,30)" type="code"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldTemp">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldTemp.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldTemp.text"/>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="band.BandView" id="updateTVChart" methodName="updateTVChart"/>
@@ -175,17 +194,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelFlatbandVoltage">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jLabelFlatbandVoltage.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelFlatbandVoltage.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new Dimension(47,30)" type="code"/>
+                  <Connection code="new Dimension(42,30)" type="code"/>
                 </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new Dimension(47,30)" type="code"/>
+                  <Connection code="new Dimension(42,30)" type="code"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jLabelFlatbandVoltage" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new Dimension(47,30)" type="code"/>
+                  <Connection code="new Dimension(42,30)" type="code"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -196,6 +216,7 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" resourceKey="jTextFieldFlatbandVoltage.background"/>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldFlatbandVoltage.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldFlatbandVoltage.text"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -217,17 +238,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelEOT">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jLabelEOT.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelEOT.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[60, 30]"/>
+                  <Dimension value="[59, 30]"/>
                 </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[60, 30]"/>
+                  <Dimension value="[59, 30]"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jLabelEOT" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[60, 30]"/>
+                  <Dimension value="[59, 30]"/>
                 </Property>
                 <Property name="requestFocusEnabled" type="boolean" value="false"/>
               </Properties>
@@ -238,6 +260,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldEOT">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldEOT.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldEOT.text"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -259,17 +282,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelStackCap">
               <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="jLabelStackCap.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelStackCap.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[88, 30]"/>
+                  <Dimension value="[83, 30]"/>
                 </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[88, 30]"/>
+                  <Dimension value="[83, 30]"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jLabelStackCap" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[88, 30]"/>
+                  <Dimension value="[83, 30]"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -279,6 +303,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldStackCap">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldStackCap.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldStackCap.text"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -300,28 +325,27 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelThresholdVoltage">
               <Properties>
-                <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-                  <FontInfo relative="true">
-                    <Font component="jLabelThresholdVoltage" property="font" relativeSize="true" size="0"/>
-                  </FontInfo>
+                <Property name="font" type="java.awt.Font" noResource="true" editor="com.sun.beans.editors.FontEditor">
+                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,64,0,0,0,0,0,12,0,0,0,0,112,116,0,6,68,105,97,108,111,103,120"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jLabelThresholdVoltage.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[46, 30]"/>
+                  <Dimension value="[39, 30]"/>
                 </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[46, 30]"/>
+                  <Dimension value="[39, 30]"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jLabelThresholdVoltage" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[46, 30]"/>
+                  <Dimension value="[39, 30]"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldThresholdVoltage">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" resourceKey="jTextFieldThresholdVoltage.font"/>
                 <Property name="text" type="java.lang.String" resourceKey="jTextFieldThresholdVoltage.text"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -346,6 +370,8 @@
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
+            <Property name="font" type="java.awt.Font" resourceKey="jToolBarSide.font"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[125, 125]"/>
             </Property>

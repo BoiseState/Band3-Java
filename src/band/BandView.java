@@ -1468,10 +1468,10 @@ public class BandView extends FrameView {
         jLabelVoltage.setFont(resourceMap.getFont("jLabelVoltage.font")); // NOI18N
         jLabelVoltage.setText(resourceMap.getString("jLabelVoltage.text")); // NOI18N
         jLabelVoltage.setAlignmentX(0.5F);
-        jLabelVoltage.setMaximumSize(new Dimension(62,30));
-        jLabelVoltage.setMinimumSize(new Dimension(62,30));
+        jLabelVoltage.setMaximumSize(new Dimension(64,30));
+        jLabelVoltage.setMinimumSize(new Dimension(64,30));
         jLabelVoltage.setName("jLabelVoltage"); // NOI18N
-        jLabelVoltage.setPreferredSize(new Dimension(62,30));
+        jLabelVoltage.setPreferredSize(new Dimension(64,30));
         jToolBarTop.add(jLabelVoltage);
 
         jTextFieldVoltage.setFont(resourceMap.getFont("jTextFieldVoltage.font")); // NOI18N
@@ -1492,7 +1492,7 @@ public class BandView extends FrameView {
         jSeparator5.setName("jSeparator5"); // NOI18N
         jToolBarTop.add(jSeparator5);
 
-        jLabelTemp.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabelTemp.setFont(new java.awt.Font("Dialog", 0, 12));
         jLabelTemp.setText(resourceMap.getString("jLabelTemp.text")); // NOI18N
         jLabelTemp.setAlignmentX(0.5F);
         jLabelTemp.setMaximumSize(new Dimension(55, 30));
@@ -1613,7 +1613,7 @@ public class BandView extends FrameView {
         jSeparator11.setName("jSeparator11"); // NOI18N
         jToolBarTop.add(jSeparator11);
 
-        jLabelThresholdVoltage.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabelThresholdVoltage.setFont(new java.awt.Font("Dialog", 0, 12));
         jLabelThresholdVoltage.setText(resourceMap.getString("jLabelThresholdVoltage.text")); // NOI18N
         jLabelThresholdVoltage.setAlignmentX(0.5F);
         jLabelThresholdVoltage.setMaximumSize(new java.awt.Dimension(39, 30));

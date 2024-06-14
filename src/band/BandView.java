@@ -614,6 +614,7 @@ public class BandView extends FrameView {
 
                 tempLabel = new JLabel("<html>Cap. (F/cm<sup>2</sup>)</html>");
                 System.out.println(tempLabel.getFont());
+                tempLabel.setFont(new Font(tempLabel.getFont().getFontName(), Font.PLAIN, 12));
                 tempLabel.setToolTipText("<html>Layer Capacitance (F/cm<sup>2</sup>)</html>");
                 tempLabel.setMinimumSize(new Dimension(125, 25));
                 tempLabel.setPreferredSize(new Dimension(125, 25));
@@ -621,6 +622,7 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempLabel);
 
                 JTextField tempTextField = new JTextField(EForm.format(tempDielectric.getCoxFPerCm2()));
+                tempTextField.setFont(new Font(tempTextField.getFont().getFontName(), Font.PLAIN, 12));
                 tempTextField.setMinimumSize(new Dimension(125, 20));
                 tempTextField.setPreferredSize(new Dimension(125, 20));
                 tempTextField.setMaximumSize(new Dimension(125, 20));
@@ -630,12 +632,14 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempTextField);
 
                 tempLabel = new JLabel("Voltage Drop (V)");
+                tempLabel.setFont(new Font(tempLabel.getFont().getFontName(), Font.PLAIN, 12));
                 tempLabel.setMinimumSize(new Dimension(125, 20));
                 tempLabel.setPreferredSize(new Dimension(125, 20));
                 tempLabel.setMaximumSize(new Dimension(125, 20));
                 jToolBarSide.add(tempLabel);
 
                 tempTextField = new JTextField(fourDForm.format(tempDielectric.getVoltageDrop()));
+                tempTextField.setFont(new Font(tempTextField.getFont().getFontName(), Font.PLAIN, 12));
                 tempTextField.setMinimumSize(new Dimension(125, 20));
                 tempTextField.setPreferredSize(new Dimension(125, 20));
                 tempTextField.setMaximumSize(new Dimension(125, 20));
@@ -657,7 +661,8 @@ public class BandView extends FrameView {
                 tempLabel.setMaximumSize(new Dimension(125, 20));
                 jToolBarSide.add(tempLabel);
 
-                tempLabel = new JLabel("<html>Cap.(F/cm<sup>2</sup>)</html>");
+                tempLabel = new JLabel("<html>Cap.(F/cm<sup>2</sup>)</html>");                
+                tempLabel.setFont(new Font(tempLabel.getFont().getFontName(), Font.PLAIN, 12));
                 tempLabel.setToolTipText("<html>Layer Capacitance (F/cm<sup>2</sup>)</html>");
                 tempLabel.setMinimumSize(new Dimension(125, 25));
                 tempLabel.setPreferredSize(new Dimension(125, 25));
@@ -665,6 +670,7 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempLabel);
 
                 JTextField tempTextField = new JTextField(EForm.format(tempSemiconductor.getCapacitanceFPerCm()));
+                tempTextField.setFont(new Font(tempTextField.getFont().getFontName(), Font.PLAIN, 12));
                 tempTextField.setMinimumSize(new Dimension(125, 20));
                 tempTextField.setPreferredSize(new Dimension(125, 20));
                 tempTextField.setMaximumSize(new Dimension(125, 20));
@@ -674,12 +680,14 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempTextField);
 
                 tempLabel = new JLabel("Voltage Drop (V)");
+                tempLabel.setFont(new Font(tempLabel.getFont().getFontName(), Font.PLAIN, 12));
                 tempLabel.setMinimumSize(new Dimension(125, 20));
                 tempLabel.setPreferredSize(new Dimension(125, 20));
                 tempLabel.setMaximumSize(new Dimension(125, 20));
                 jToolBarSide.add(tempLabel);
 
                 tempTextField = new JTextField(fourDForm.format(tempSemiconductor.getSurfacePot()));
+                tempTextField.setFont(new Font(tempTextField.getFont().getFontName(), Font.PLAIN, 12));
                 tempTextField.setMinimumSize(new Dimension(125, 20));
                 tempTextField.setPreferredSize(new Dimension(125, 20));
                 tempTextField.setMaximumSize(new Dimension(125, 20));

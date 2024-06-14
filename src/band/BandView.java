@@ -1468,10 +1468,10 @@ public class BandView extends FrameView {
         jLabelVoltage.setFont(resourceMap.getFont("jLabelVoltage.font")); // NOI18N
         jLabelVoltage.setText(resourceMap.getString("jLabelVoltage.text")); // NOI18N
         jLabelVoltage.setAlignmentX(0.5F);
-        jLabelVoltage.setMaximumSize(new Dimension(64,30));
-        jLabelVoltage.setMinimumSize(new Dimension(64,30));
+        jLabelVoltage.setMaximumSize(new Dimension(66,30));
+        jLabelVoltage.setMinimumSize(new Dimension(66,30));
         jLabelVoltage.setName("jLabelVoltage"); // NOI18N
-        jLabelVoltage.setPreferredSize(new Dimension(64,30));
+        jLabelVoltage.setPreferredSize(new Dimension(66,30));
         jToolBarTop.add(jLabelVoltage);
 
         jTextFieldVoltage.setFont(resourceMap.getFont("jTextFieldVoltage.font")); // NOI18N

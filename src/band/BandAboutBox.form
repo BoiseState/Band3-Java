@@ -28,7 +28,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="appTitleLabel" min="-2" max="-2" attributes="0"/>
@@ -52,19 +52,19 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="appHomepageLabel3" alignment="0" pref="487" max="32767" attributes="1"/>
                                   <Component id="appHomepageLabel4" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="appHomepageLabel5" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
-                                  <Component id="appHomepageLabel7" alignment="0" min="-2" pref="487" max="-2" attributes="0"/>
                                   <Component id="appHomepageLabel9" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
-                                  <Component id="appHomepageLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="appHomepageLabel3" alignment="0" min="-2" pref="662" max="-2" attributes="1"/>
+                                  <Component id="appHomepageLabel7" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="appHomepageLabel8" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="appHomepageLabel5" alignment="0" min="-2" pref="226" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
                       <Component id="closeButton" min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -113,8 +113,9 @@
               <Component id="appHomepageLabel8" min="-2" pref="14" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
               <Component id="appHomepageLabel9" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
               <Component id="closeButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -131,10 +132,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appTitleLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="appTitleLabel" property="font" relativeSize="true" size="4"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 18)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="Application.title"/>
         <Property name="name" type="java.lang.String" value="appTitleLabel" noResource="true"/>
@@ -146,10 +145,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="versionLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="versionLabel" property="font" relativeSize="true" size="0"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 13)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="versionLabel.text"/>
         <Property name="name" type="java.lang.String" value="versionLabel" noResource="true"/>
@@ -161,6 +158,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appVersionLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="Application.version"/>
         <Property name="name" type="java.lang.String" value="appVersionLabel" noResource="true"/>
       </Properties>
@@ -171,10 +171,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="vendorLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="vendorLabel" property="font" relativeSize="true" size="0"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 13)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="vendorLabel.text"/>
         <Property name="name" type="java.lang.String" value="vendorLabel" noResource="true"/>
@@ -186,6 +184,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appVendorLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="Application.vendor"/>
         <Property name="name" type="java.lang.String" value="appVendorLabel" noResource="true"/>
       </Properties>
@@ -196,10 +197,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="homepageLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="homepageLabel" property="font" relativeSize="true" size="0"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 13)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="homepageLabel.text"/>
         <Property name="name" type="java.lang.String" value="homepageLabel" noResource="true"/>
@@ -211,7 +210,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" resourceKey="appHomepageLabel.font"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" resourceKey="appHomepageLabel.foreground"/>
         <Property name="text" type="java.lang.String" resourceKey="Application.homepage"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -230,10 +231,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="homepageLabel1">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="homepageLabel1" property="font" relativeSize="true" size="0"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 13)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="homepageLabel1.text"/>
         <Property name="name" type="java.lang.String" value="homepageLabel1" noResource="true"/>
@@ -245,6 +244,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel1.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel1" noResource="true"/>
       </Properties>
@@ -255,6 +257,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel2.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel2" noResource="true"/>
       </Properties>
@@ -265,10 +270,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="homepageLabel2">
       <Properties>
-        <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.modules.form.editors2.FontEditor">
-          <FontInfo relative="true">
-            <Font bold="true" component="homepageLabel2" property="font" relativeSize="true" size="0"/>
-          </FontInfo>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 13)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="homepageLabel2.text"/>
         <Property name="name" type="java.lang.String" value="homepageLabel2" noResource="true"/>
@@ -280,6 +283,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel3.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel3" noResource="true"/>
       </Properties>
@@ -290,6 +296,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel4.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel4" noResource="true"/>
       </Properties>
@@ -300,6 +309,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel5">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel5.text"/>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel5" noResource="true"/>
@@ -311,6 +323,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel9">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel9.text"/>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel9" noResource="true"/>
@@ -322,6 +337,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel8">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel8.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel8" noResource="true"/>
       </Properties>
@@ -332,6 +350,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="appHomepageLabel7">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 13)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="appHomepageLabel7.text"/>
         <Property name="name" type="java.lang.String" value="appHomepageLabel7" noResource="true"/>
       </Properties>

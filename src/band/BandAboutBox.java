@@ -4,6 +4,7 @@
 
 package band;
 
+import java.awt.Font;
 import org.jdesktop.application.Action;
 
 public class BandAboutBox extends javax.swing.JDialog {
@@ -57,29 +58,31 @@ public class BandAboutBox extends javax.swing.JDialog {
         closeButton.setText(resourceMap.getString("closeButton.text")); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
 
-        appTitleLabel.setFont(appTitleLabel.getFont().deriveFont(appTitleLabel.getFont().getStyle() | java.awt.Font.BOLD, appTitleLabel.getFont().getSize()+4));
+        appTitleLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
         appTitleLabel.setText(resourceMap.getString("Application.title")); // NOI18N
         appTitleLabel.setName("appTitleLabel"); // NOI18N
 
-        versionLabel.setFont(versionLabel.getFont().deriveFont(versionLabel.getFont().getStyle() | java.awt.Font.BOLD));
+        versionLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
         versionLabel.setText(resourceMap.getString("versionLabel.text")); // NOI18N
         versionLabel.setName("versionLabel"); // NOI18N
 
+        appVersionLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appVersionLabel.setText(resourceMap.getString("Application.version")); // NOI18N
         appVersionLabel.setName("appVersionLabel"); // NOI18N
 
-        vendorLabel.setFont(vendorLabel.getFont().deriveFont(vendorLabel.getFont().getStyle() | java.awt.Font.BOLD));
+        vendorLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
         vendorLabel.setText(resourceMap.getString("vendorLabel.text")); // NOI18N
         vendorLabel.setName("vendorLabel"); // NOI18N
 
+        appVendorLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appVendorLabel.setText(resourceMap.getString("Application.vendor")); // NOI18N
         appVendorLabel.setName("appVendorLabel"); // NOI18N
 
-        homepageLabel.setFont(homepageLabel.getFont().deriveFont(homepageLabel.getFont().getStyle() | java.awt.Font.BOLD));
+        homepageLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
         homepageLabel.setText(resourceMap.getString("homepageLabel.text")); // NOI18N
         homepageLabel.setName("homepageLabel"); // NOI18N
 
-        appHomepageLabel.setFont(resourceMap.getFont("appHomepageLabel.font")); // NOI18N
+        appHomepageLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
         appHomepageLabel.setForeground(resourceMap.getColor("appHomepageLabel.foreground")); // NOI18N
         appHomepageLabel.setText(resourceMap.getString("Application.homepage")); // NOI18N
         appHomepageLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -91,37 +94,45 @@ public class BandAboutBox extends javax.swing.JDialog {
             }
         });
 
-        homepageLabel1.setFont(homepageLabel1.getFont().deriveFont(homepageLabel1.getFont().getStyle() | java.awt.Font.BOLD));
+        homepageLabel1.setFont(new Font("Tahoma", Font.BOLD, 13));
         homepageLabel1.setText(resourceMap.getString("homepageLabel1.text")); // NOI18N
         homepageLabel1.setName("homepageLabel1"); // NOI18N
 
+        appHomepageLabel1.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel1.setText(resourceMap.getString("appHomepageLabel1.text")); // NOI18N
         appHomepageLabel1.setName("appHomepageLabel1"); // NOI18N
 
+        appHomepageLabel2.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel2.setText(resourceMap.getString("appHomepageLabel2.text")); // NOI18N
         appHomepageLabel2.setName("appHomepageLabel2"); // NOI18N
 
-        homepageLabel2.setFont(homepageLabel2.getFont().deriveFont(homepageLabel2.getFont().getStyle() | java.awt.Font.BOLD));
+        homepageLabel2.setFont(new Font("Tahoma", Font.BOLD, 13));
         homepageLabel2.setText(resourceMap.getString("homepageLabel2.text")); // NOI18N
         homepageLabel2.setName("homepageLabel2"); // NOI18N
 
+        appHomepageLabel3.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel3.setText(resourceMap.getString("appHomepageLabel3.text")); // NOI18N
         appHomepageLabel3.setName("appHomepageLabel3"); // NOI18N
 
+        appHomepageLabel4.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel4.setText(resourceMap.getString("appHomepageLabel4.text")); // NOI18N
         appHomepageLabel4.setName("appHomepageLabel4"); // NOI18N
 
+        appHomepageLabel5.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel5.setText(resourceMap.getString("appHomepageLabel5.text")); // NOI18N
         appHomepageLabel5.setFocusable(false);
         appHomepageLabel5.setName("appHomepageLabel5"); // NOI18N
 
+        appHomepageLabel9.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel9.setText(resourceMap.getString("appHomepageLabel9.text")); // NOI18N
         appHomepageLabel9.setFocusable(false);
         appHomepageLabel9.setName("appHomepageLabel9"); // NOI18N
 
+        appHomepageLabel8.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel8.setText(resourceMap.getString("appHomepageLabel8.text")); // NOI18N
         appHomepageLabel8.setName("appHomepageLabel8"); // NOI18N
 
+        appHomepageLabel7.setFont(new Font("Tahoma", Font.PLAIN, 13));
         appHomepageLabel7.setText(resourceMap.getString("appHomepageLabel7.text")); // NOI18N
         appHomepageLabel7.setName("appHomepageLabel7"); // NOI18N
 
@@ -152,15 +163,15 @@ public class BandAboutBox extends javax.swing.JDialog {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(appHomepageLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
                                     .addComponent(appHomepageLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(appHomepageLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(appHomepageLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(appHomepageLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(appHomepageLabel8))
-                                .addGap(64, 64, 64))))
+                                    .addComponent(appHomepageLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(appHomepageLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(appHomepageLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(appHomepageLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(45, 45, 45))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(247, 247, 247)
+                        .addGap(245, 245, 245)
                         .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -201,8 +212,9 @@ public class BandAboutBox extends javax.swing.JDialog {
                 .addComponent(appHomepageLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(appHomepageLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(closeButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(closeButton)
+                .addContainerGap())
         );
 
         pack();

@@ -113,6 +113,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandDielectric" id="jButtonOK_Click" methodName="jButtonOK_Click"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonOK.text"/>
         <Property name="name" type="java.lang.String" value="jButtonOK" noResource="true"/>
       </Properties>
@@ -122,18 +125,27 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandDielectric" id="jButtonCancel_Click" methodName="jButtonCancel_Click"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonCancel.text"/>
         <Property name="name" type="java.lang.String" value="jButtonCancel" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelName.text"/>
         <Property name="name" type="java.lang.String" value="jLabelName" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldName" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -142,12 +154,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelDielectricConstant">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelDielectricConstant.text"/>
         <Property name="name" type="java.lang.String" value="jLabelDielectricConstant" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldDielectricConstant">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldDielectricConstant" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -158,12 +176,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelBandGap">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelBandGap.text"/>
         <Property name="name" type="java.lang.String" value="jLabelBandGap" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldBandGap">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldBandGap" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -174,12 +198,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelElectronAffinity">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelElectronAffinity.text"/>
         <Property name="name" type="java.lang.String" value="jLabelElectronAffinity" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldElectronAffinity">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldElectronAffinity" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -192,6 +222,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandDielectric" id="showColorChooser" methodName="showColorChooser"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonPlotColor.text"/>
         <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonPlotColor.actionCommand"/>
@@ -209,18 +242,21 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="91" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="99" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabelNotes">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelNotes.text"/>
         <Property name="name" type="java.lang.String" value="jLabelNotes" noResource="true"/>
       </Properties>
@@ -238,6 +274,9 @@
         <Component class="javax.swing.JTextArea" name="jTextAreaNotes">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>

@@ -107,12 +107,18 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelStartVoltage">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelStartVoltage.text"/>
         <Property name="name" type="java.lang.String" value="jLabelStartVoltage" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldStartVoltage">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldStartVoltage.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldStartVoltage" noResource="true"/>
       </Properties>
@@ -122,12 +128,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelStopVoltage">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelStopVoltage.text"/>
         <Property name="name" type="java.lang.String" value="jLabelStopVoltage" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldStopVoltage">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldStopVoltage.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldStopVoltage" noResource="true"/>
       </Properties>
@@ -137,12 +149,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNumberOfSteps">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelNumberOfSteps.text"/>
         <Property name="name" type="java.lang.String" value="jLabelNumberOfSteps" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldNumberOfSteps">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldNumberOfSteps.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldNumberOfSteps" noResource="true"/>
       </Properties>
@@ -152,6 +170,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelStepSize">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelStepSize.text"/>
         <Property name="name" type="java.lang.String" value="jLabelStepSize" noResource="true"/>
       </Properties>
@@ -159,6 +180,9 @@
     <Component class="javax.swing.JTextField" name="jTextFieldStepSize">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldStepSize.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldStepSize" noResource="true"/>
       </Properties>
@@ -167,6 +191,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandMovieParameters" id="closeMovieParametersBox" methodName="closeMovieParametersBox"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonOK.text"/>
         <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonOK.actionCommand"/>
@@ -177,6 +204,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandMovieParameters" id="cancelMovieParametersBox" methodName="cancelMovieParametersBox"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonCancel.text"/>
         <Property name="name" type="java.lang.String" value="jButtonCancel" noResource="true"/>
@@ -189,6 +219,9 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBoxSmartAxisSize">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jCheckBoxSmartAxisSize.text"/>
         <Property name="name" type="java.lang.String" value="jCheckBoxSmartAxisSize" noResource="true"/>
       </Properties>

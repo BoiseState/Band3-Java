@@ -12,6 +12,7 @@
 package band;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeListener;
@@ -161,34 +162,42 @@ public class BandMetal extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandMetal.class, this);
         jButtonOK.setAction(actionMap.get("jButtonOK_Click")); // NOI18N
+        jButtonOK.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
         jButtonOK.setName("jButtonOK"); // NOI18N
 
         jButtonCancel.setAction(actionMap.get("jButtonCancel_Click")); // NOI18N
+        jButtonCancel.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
         jButtonCancel.setName("jButtonCancel"); // NOI18N
 
+        jLabelName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelName.setText(resourceMap.getString("jLabelName.text")); // NOI18N
         jLabelName.setName("jLabelName"); // NOI18N
 
+        jTextFieldName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldName.setName("jTextFieldName"); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.name}"), jTextFieldName, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelWorkFunction.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelWorkFunction.setText(resourceMap.getString("jLabelWorkFunction.text")); // NOI18N
         jLabelWorkFunction.setName("jLabelWorkFunction"); // NOI18N
 
+        jTextFieldWorkFunction.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldWorkFunction.setName("jTextFieldWorkFunction"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.workFunction}"), jTextFieldWorkFunction, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
         jButtonPlotColor.setAction(actionMap.get("showColorChooser")); // NOI18N
+        jButtonPlotColor.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonPlotColor.setText(resourceMap.getString("jButtonPlotColor.text")); // NOI18N
         jButtonPlotColor.setActionCommand(resourceMap.getString("jButtonPlotColor.actionCommand")); // NOI18N
         jButtonPlotColor.setName("jButtonPlotColor"); // NOI18N
 
+        jLabelNotes.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNotes.setText(resourceMap.getString("jLabelNotes.text")); // NOI18N
         jLabelNotes.setName("jLabelNotes"); // NOI18N
 
@@ -218,7 +227,7 @@ public class BandMetal extends javax.swing.JDialog {
         );
         jPanelPlotColorLayout.setVerticalGroup(
             jPanelPlotColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 23, Short.MAX_VALUE)
+            .addGap(0, 25, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -239,7 +248,7 @@ public class BandMetal extends javax.swing.JDialog {
                                 .addComponent(jButtonPlotColor)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanelPlotColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabelName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

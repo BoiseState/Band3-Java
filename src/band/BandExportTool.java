@@ -12,6 +12,7 @@ package band;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.io.BufferedWriter;
@@ -419,10 +420,13 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jLabelStartVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandExportTool.class);
         jLabelStartVoltage.setText(resourceMap.getString("jLabelStartVoltage.text")); // NOI18N
         jLabelStartVoltage.setName("jLabelStartVoltage"); // NOI18N
 
+        jTextFieldStartVoltage.setEditable(false);
+        jTextFieldStartVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStartVoltage.setName("jTextFieldStartVoltage"); // NOI18N
         jTextFieldStartVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -430,9 +434,11 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jLabelStopVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStopVoltage.setText(resourceMap.getString("jLabelStopVoltage.text")); // NOI18N
         jLabelStopVoltage.setName("jLabelStopVoltage"); // NOI18N
 
+        jTextFieldStopVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStopVoltage.setName("jTextFieldStopVoltage"); // NOI18N
         jTextFieldStopVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -440,9 +446,11 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jLabelNumberOfSteps.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNumberOfSteps.setText(resourceMap.getString("jLabelNumberOfSteps.text")); // NOI18N
         jLabelNumberOfSteps.setName("jLabelNumberOfSteps"); // NOI18N
 
+        jTextFieldNumberOfSteps.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps"); // NOI18N
         jTextFieldNumberOfSteps.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -456,27 +464,33 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jLabelStepSize.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStepSize.setText(resourceMap.getString("jLabelStepSize.text")); // NOI18N
         jLabelStepSize.setName("jLabelStepSize"); // NOI18N
 
         jTextFieldStepSize.setEditable(false);
+        jTextFieldStepSize.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStepSize.setName("jTextFieldStepSize"); // NOI18N
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandExportTool.class, this);
         jButtonOK.setAction(actionMap.get("closeExportToolBox")); // NOI18N
+        jButtonOK.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
         jButtonOK.setActionCommand(resourceMap.getString("jButtonOK.actionCommand")); // NOI18N
         jButtonOK.setName("jButtonOK"); // NOI18N
 
         jButtonSave.setAction(actionMap.get("saveValues")); // NOI18N
+        jButtonSave.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonSave.setText(resourceMap.getString("jButtonSave.text")); // NOI18N
         jButtonSave.setName("jButtonSave"); // NOI18N
 
         jButtonPreview.setAction(actionMap.get("previewValues")); // NOI18N
+        jButtonPreview.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonPreview.setText(resourceMap.getString("jButtonPreview.text")); // NOI18N
         jButtonPreview.setName("jButtonPreview"); // NOI18N
 
-        jPanelOutputPreview.setBorder(javax.swing.BorderFactory.createTitledBorder("Output Preview"));
+        jPanelOutputPreview.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("jPanelOutputPreview.border.title"), 0, 0, new Font("Tahoma", Font.PLAIN, 12))); // NOI18N
+        jPanelOutputPreview.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jPanelOutputPreview.setName("jPanelOutputPreview"); // NOI18N
 
         jPanelReplace.setBackground(resourceMap.getColor("jPanelReplace.background")); // NOI18N
@@ -486,7 +500,7 @@ public class BandExportTool extends javax.swing.JDialog {
         jPanelReplace.setLayout(jPanelReplaceLayout);
         jPanelReplaceLayout.setHorizontalGroup(
             jPanelReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 636, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         jPanelReplaceLayout.setVerticalGroup(
             jPanelReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -513,6 +527,7 @@ public class BandExportTool extends javax.swing.JDialog {
 
         jScrollPaneOutputParameters.setName("jScrollPaneOutputParameters"); // NOI18N
 
+        jListOutputParameters.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jListOutputParameters.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -538,14 +553,18 @@ public class BandExportTool extends javax.swing.JDialog {
         jScrollPaneOutputParameters.setViewportView(jListOutputParameters);
 
         jTextFieldStepSizeForTemp.setEditable(false);
+        jTextFieldStepSizeForTemp.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStepSizeForTemp.setName("jTextFieldStepSizeForTemp"); // NOI18N
 
+        jLabelStepSize1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStepSize1.setText(resourceMap.getString("jLabelStepSize1.text")); // NOI18N
         jLabelStepSize1.setName("jLabelStepSize1"); // NOI18N
 
+        jLabelNumberOfSteps1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNumberOfSteps1.setText(resourceMap.getString("jLabelNumberOfSteps1.text")); // NOI18N
         jLabelNumberOfSteps1.setName("jLabelNumberOfSteps1"); // NOI18N
 
+        jTextFieldNumberOfStepsForTemp.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldNumberOfStepsForTemp.setEnabled(false);
         jTextFieldNumberOfStepsForTemp.setName("jTextFieldNumberOfStepsForTemp"); // NOI18N
         jTextFieldNumberOfStepsForTemp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -554,6 +573,7 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jTextFieldStopTemp.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStopTemp.setEnabled(false);
         jTextFieldStopTemp.setName("jTextFieldStopTemp"); // NOI18N
         jTextFieldStopTemp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -562,12 +582,15 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jLabelStopVoltage1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStopVoltage1.setText(resourceMap.getString("jLabelStopVoltage1.text")); // NOI18N
         jLabelStopVoltage1.setName("jLabelStopVoltage1"); // NOI18N
 
+        jLabelStartVoltage1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStartVoltage1.setText(resourceMap.getString("jLabelStartVoltage1.text")); // NOI18N
         jLabelStartVoltage1.setName("jLabelStartVoltage1"); // NOI18N
 
+        jTextFieldStartTemp.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStartTemp.setEnabled(false);
         jTextFieldStartTemp.setName("jTextFieldStartTemp"); // NOI18N
         jTextFieldStartTemp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -576,6 +599,7 @@ public class BandExportTool extends javax.swing.JDialog {
             }
         });
 
+        jComboBoxSweepChoice.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jComboBoxSweepChoice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Only Sweep Voltage", "Only Sweep Temperature", "Sweep Both - One Parameter" }));
         jComboBoxSweepChoice.setActionCommand(resourceMap.getString("jComboBoxSweepChoice.actionCommand")); // NOI18N
         jComboBoxSweepChoice.setName("jComboBoxSweepChoice"); // NOI18N
@@ -604,8 +628,8 @@ public class BandExportTool extends javax.swing.JDialog {
                                     .addComponent(jLabelStartVoltage))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextFieldStopVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))
+                                    .addComponent(jTextFieldStopVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldStartVoltage, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabelNumberOfSteps)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -613,11 +637,11 @@ public class BandExportTool extends javax.swing.JDialog {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabelStepSize)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextFieldStepSize, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                                .addComponent(jTextFieldStepSize, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabelStepSize1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldStepSizeForTemp, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
+                                .addComponent(jTextFieldStepSizeForTemp, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelNumberOfSteps1)
@@ -628,7 +652,7 @@ public class BandExportTool extends javax.swing.JDialog {
                                     .addComponent(jTextFieldStartTemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
                                     .addComponent(jTextFieldNumberOfStepsForTemp, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
                                     .addComponent(jTextFieldStopTemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)))
-                            .addComponent(jComboBoxSweepChoice, 0, 183, Short.MAX_VALUE))
+                            .addComponent(jComboBoxSweepChoice, 0, 200, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()

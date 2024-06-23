@@ -11,6 +11,7 @@
 
 package band;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.List;
@@ -340,29 +341,36 @@ public class BandCompose extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandCompose.class, this);
         jButtonDone.setAction(actionMap.get("closeComposeBox")); // NOI18N
+        jButtonDone.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonDone.setText(resourceMap.getString("jButtonDone.text")); // NOI18N
         jButtonDone.setName("jButtonDone"); // NOI18N
 
         jButtonAdd.setAction(actionMap.get("jButtonAdd_Click")); // NOI18N
+        jButtonAdd.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonAdd.setText(resourceMap.getString("jButtonAdd.text")); // NOI18N
         jButtonAdd.setName("jButtonAdd"); // NOI18N
 
         jButtonMoveUp.setAction(actionMap.get("jButtonMoveUp_Click")); // NOI18N
+        jButtonMoveUp.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonMoveUp.setText(resourceMap.getString("jButtonMoveUp.text")); // NOI18N
         jButtonMoveUp.setName("jButtonMoveUp"); // NOI18N
 
         jButtonMoveDown.setAction(actionMap.get("jButtonMoveDown_Click")); // NOI18N
+        jButtonMoveDown.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonMoveDown.setText(resourceMap.getString("jButtonMoveDown.text")); // NOI18N
         jButtonMoveDown.setName("jButtonMoveDown"); // NOI18N
 
         jButtonEdit.setAction(actionMap.get("jButtonEdit_Click")); // NOI18N
+        jButtonEdit.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonEdit.setText(resourceMap.getString("jButtonEdit.text")); // NOI18N
         jButtonEdit.setName("jButtonEdit"); // NOI18N
 
         jButtonDelete.setAction(actionMap.get("jButtonDelete_Click")); // NOI18N
+        jButtonDelete.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonDelete.setText(resourceMap.getString("jButtonDelete.text")); // NOI18N
         jButtonDelete.setName("jButtonDelete"); // NOI18N
 
+        jLabelStructure.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStructure.setText(resourceMap.getString("jLabelStructure.text")); // NOI18N
         jLabelStructure.setName("jLabelStructure"); // NOI18N
 
@@ -371,6 +379,7 @@ public class BandCompose extends javax.swing.JDialog {
         jScrollPaneStructure.setName("jScrollPaneStructure"); // NOI18N
 
         jTableStructure.setBackground(resourceMap.getColor("jTableStructure.background")); // NOI18N
+        jTableStructure.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableStructure.setFillsViewportHeight(true);
         jTableStructure.setName("jTableStructure"); // NOI18N
 
@@ -388,20 +397,22 @@ public class BandCompose extends javax.swing.JDialog {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jTableStructure.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableStructureMouseReleased(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableStructureMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTableStructureMouseReleased(evt);
             }
         });
         jScrollPaneStructure.setViewportView(jTableStructure);
 
+        jLabelMetals.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelMetals.setText(resourceMap.getString("jLabelMetals.text")); // NOI18N
         jLabelMetals.setName("jLabelMetals"); // NOI18N
 
         jScrollPaneMetals.setName("jScrollPaneMetals"); // NOI18N
 
+        jTableMetals.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableMetals.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTableMetals.setName("jTableMetals"); // NOI18N
         jTableMetals.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -440,11 +451,13 @@ public class BandCompose extends javax.swing.JDialog {
         jTableMetals.getColumnModel().getColumn(1).setHeaderValue(resourceMap.getString("jTableMetals.columnModel.title1")); // NOI18N
         jTableMetals.getColumnModel().getColumn(2).setHeaderValue(resourceMap.getString("jTableMetals.columnModel.title2")); // NOI18N
 
+        jLabelDielectrics.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelDielectrics.setText(resourceMap.getString("jLabelDielectrics.text")); // NOI18N
         jLabelDielectrics.setName("jLabelDielectrics"); // NOI18N
 
         jScrollPaneDielectrics.setName("jScrollPaneDielectrics"); // NOI18N
 
+        jTableDielectrics.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableDielectrics.setName("jTableDielectrics"); // NOI18N
         jTableDielectrics.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
@@ -492,11 +505,13 @@ public class BandCompose extends javax.swing.JDialog {
         jTableDielectrics.getColumnModel().getColumn(3).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title3")); // NOI18N
         jTableDielectrics.getColumnModel().getColumn(4).setHeaderValue(resourceMap.getString("jTableDielectrics.columnModel.title4")); // NOI18N
 
+        jLabelSemiconductors.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelSemiconductors.setText(resourceMap.getString("jLabelSemiconductors.text")); // NOI18N
         jLabelSemiconductors.setName("jLabelSemiconductors"); // NOI18N
 
         jScrollPaneSemiconductors.setName("jScrollPaneSemiconductors"); // NOI18N
 
+        jTableSemiconductors.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableSemiconductors.setName("jTableSemiconductors"); // NOI18N
         jTableSemiconductors.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 

@@ -55,6 +55,7 @@ public class BandAboutBox extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandAboutBox.class, this);
         closeButton.setAction(actionMap.get("closeAboutBox")); // NOI18N
+        closeButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
         closeButton.setText(resourceMap.getString("closeButton.text")); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
 

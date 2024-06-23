@@ -41,7 +41,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanelPlotColor" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" alignment="1" pref="527" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="1" pref="549" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="1">
                       <Component id="jLabelName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -91,6 +91,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandMetal" id="jButtonOK_Click" methodName="jButtonOK_Click"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonOK.text"/>
         <Property name="name" type="java.lang.String" value="jButtonOK" noResource="true"/>
       </Properties>
@@ -100,18 +103,27 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandMetal" id="jButtonCancel_Click" methodName="jButtonCancel_Click"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonCancel.text"/>
         <Property name="name" type="java.lang.String" value="jButtonCancel" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelName.text"/>
         <Property name="name" type="java.lang.String" value="jLabelName" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldName" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -122,12 +134,18 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelWorkFunction">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelWorkFunction.text"/>
         <Property name="name" type="java.lang.String" value="jLabelWorkFunction" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldWorkFunction">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="name" type="java.lang.String" value="jTextFieldWorkFunction" noResource="true"/>
       </Properties>
       <BindingProperties>
@@ -141,6 +159,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandMetal" id="showColorChooser" methodName="showColorChooser"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonPlotColor.text"/>
         <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonPlotColor.actionCommand"/>
         <Property name="name" type="java.lang.String" value="jButtonPlotColor" noResource="true"/>
@@ -148,6 +169,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNotes">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelNotes.text"/>
         <Property name="name" type="java.lang.String" value="jLabelNotes" noResource="true"/>
       </Properties>
@@ -194,7 +218,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

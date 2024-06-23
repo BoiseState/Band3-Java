@@ -11,6 +11,7 @@
 package band;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
@@ -311,46 +312,57 @@ public class BandMaterialDielectric extends MaterialSelect {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandMaterialDielectric.class, this);
         jButtonOK.setAction(actionMap.get("jButtonOK_Click")); // NOI18N
+        jButtonOK.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
         jButtonOK.setName("jButtonOK"); // NOI18N
 
         jButtonCancel.setAction(actionMap.get("jButtonCancel_Click")); // NOI18N
+        jButtonCancel.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
         jButtonCancel.setName("jButtonCancel"); // NOI18N
 
+        jLabelName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelName.setText(resourceMap.getString("jLabelName.text")); // NOI18N
         jLabelName.setName("jLabelName"); // NOI18N
 
+        jTextFieldName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldName.setName("jTextFieldName"); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.name}"), jTextFieldName, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelBandGap.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelBandGap.setText(resourceMap.getString("jLabelBandGap.text")); // NOI18N
         jLabelBandGap.setName("jLabelBandGap"); // NOI18N
 
+        jTextFieldBandGap.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldBandGap.setName("jTextFieldBandGap"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.bandGap}"), jTextFieldBandGap, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelElectronAffinity.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelElectronAffinity.setText(resourceMap.getString("jLabelElectronAffinity.text")); // NOI18N
         jLabelElectronAffinity.setName("jLabelElectronAffinity"); // NOI18N
 
+        jTextFieldElectronAffinity.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.electronAffinity}"), jTextFieldElectronAffinity, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelDielectricConstant.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelDielectricConstant.setText(resourceMap.getString("jLabelDielectricConstant.text")); // NOI18N
         jLabelDielectricConstant.setName("jLabelDielectricConstant"); // NOI18N
 
+        jTextFieldDielectricConstant.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.dielectricConstantExpression}"), jTextFieldDielectricConstant, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
         jButtonPlotColor.setAction(actionMap.get("showColorChooser")); // NOI18N
+        jButtonPlotColor.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonPlotColor.setText(resourceMap.getString("jButtonPlotColor.text")); // NOI18N
         jButtonPlotColor.setActionCommand(resourceMap.getString("jButtonPlotColor.actionCommand")); // NOI18N
         jButtonPlotColor.setName("jButtonPlotColor"); // NOI18N
@@ -364,16 +376,18 @@ public class BandMaterialDielectric extends MaterialSelect {
         jPanelPlotColor.setLayout(jPanelPlotColorLayout);
         jPanelPlotColorLayout.setHorizontalGroup(
             jPanelPlotColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 91, Short.MAX_VALUE)
+            .addGap(0, 99, Short.MAX_VALUE)
         );
         jPanelPlotColorLayout.setVerticalGroup(
             jPanelPlotColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 20, Short.MAX_VALUE)
         );
 
+        jLabelThickness.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelThickness.setText(resourceMap.getString("jLabelThickness.text")); // NOI18N
         jLabelThickness.setName("jLabelThickness"); // NOI18N
 
+        jTextFieldThickness.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldThickness.setName("jTextFieldThickness"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.thicknessNm}"), jTextFieldThickness, org.jdesktop.beansbinding.BeanProperty.create("text"));
@@ -382,17 +396,21 @@ public class BandMaterialDielectric extends MaterialSelect {
         jPanelFixedCharge.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanelFixedCharge.border.title"))); // NOI18N
         jPanelFixedCharge.setName("jPanelFixedCharge"); // NOI18N
 
+        jLabelLocation.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelLocation.setText(resourceMap.getString("jLabelLocation.text")); // NOI18N
         jLabelLocation.setName("jLabelLocation"); // NOI18N
 
+        jTextFieldLocation.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldLocation.setName("jTextFieldLocation"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentPoint.locationNm}"), jTextFieldLocation, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelChargeC.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelChargeC.setText(resourceMap.getString("jLabelChargeC.text")); // NOI18N
         jLabelChargeC.setName("jLabelChargeC"); // NOI18N
 
+        jTextFieldChargeC.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldChargeC.setName("jTextFieldChargeC"); // NOI18N
         jTextFieldChargeC.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -400,9 +418,11 @@ public class BandMaterialDielectric extends MaterialSelect {
             }
         });
 
+        jLabelChargeE.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelChargeE.setText(resourceMap.getString("jLabelChargeE.text")); // NOI18N
         jLabelChargeE.setName("jLabelChargeE"); // NOI18N
 
+        jTextFieldChargeE.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldChargeE.setName("jTextFieldChargeE"); // NOI18N
         jTextFieldChargeE.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -411,10 +431,12 @@ public class BandMaterialDielectric extends MaterialSelect {
         });
 
         jButtonFixedChargeAdd.setAction(actionMap.get("addCurrentPoint")); // NOI18N
+        jButtonFixedChargeAdd.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonFixedChargeAdd.setText(resourceMap.getString("jButtonFixedChargeAdd.text")); // NOI18N
         jButtonFixedChargeAdd.setName("jButtonFixedChargeAdd"); // NOI18N
 
         jButtonFixedChargeDelete.setAction(actionMap.get("deleteSelectedPoint")); // NOI18N
+        jButtonFixedChargeDelete.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonFixedChargeDelete.setText(resourceMap.getString("jButtonFixedChargeDelete.text")); // NOI18N
         jButtonFixedChargeDelete.setName("jButtonFixedChargeDelete"); // NOI18N
 
@@ -439,9 +461,7 @@ public class BandMaterialDielectric extends MaterialSelect {
         jScrollPaneFixedCharge.setViewportView(jTableFixedCharge);
         jTableFixedCharge.getColumnModel().getColumn(0).setHeaderValue(resourceMap.getString("jTableFixedCharge.columnModel.title0")); // NOI18N
         jTableFixedCharge.getColumnModel().getColumn(1).setHeaderValue(resourceMap.getString("jTableFixedCharge.columnModel.title2")); // NOI18N
-        jTableFixedCharge.getColumnModel().getColumn(1).setCellRenderer(null);
         jTableFixedCharge.getColumnModel().getColumn(2).setHeaderValue(resourceMap.getString("jTableFixedCharge.columnModel.title1")); // NOI18N
-        jTableFixedCharge.getColumnModel().getColumn(2).setCellRenderer(null);
 
         javax.swing.GroupLayout jPanelFixedChargeLayout = new javax.swing.GroupLayout(jPanelFixedCharge);
         jPanelFixedCharge.setLayout(jPanelFixedChargeLayout);
@@ -465,7 +485,7 @@ public class BandMaterialDielectric extends MaterialSelect {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonFixedChargeDelete)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPaneFixedCharge, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
+                .addComponent(jScrollPaneFixedCharge, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanelFixedChargeLayout.setVerticalGroup(
@@ -489,6 +509,7 @@ public class BandMaterialDielectric extends MaterialSelect {
             .addComponent(jScrollPaneFixedCharge, 0, 0, Short.MAX_VALUE)
         );
 
+        jLabelNotes.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNotes.setText(resourceMap.getString("jLabelNotes.text")); // NOI18N
         jLabelNotes.setName("jLabelNotes"); // NOI18N
 
@@ -543,7 +564,7 @@ public class BandMaterialDielectric extends MaterialSelect {
                                     .addComponent(jPanelPlotColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButtonPlotColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(jTextFieldThickness, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPaneNotes, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneNotes, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
                     .addComponent(jLabelNotes))
                 .addContainerGap())
         );

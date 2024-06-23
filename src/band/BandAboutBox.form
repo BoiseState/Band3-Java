@@ -126,6 +126,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandAboutBox" id="closeAboutBox" methodName="closeAboutBox"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="closeButton.text"/>
         <Property name="name" type="java.lang.String" value="closeButton" noResource="true"/>
       </Properties>

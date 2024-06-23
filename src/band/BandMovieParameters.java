@@ -5,6 +5,7 @@
  */
 package band;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -119,9 +120,11 @@ public class BandMovieParameters extends javax.swing.JDialog {
         setName("BandMovieParameters"); // NOI18N
         setResizable(false);
 
+        jLabelStartVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStartVoltage.setText(resourceMap.getString("jLabelStartVoltage.text")); // NOI18N
         jLabelStartVoltage.setName("jLabelStartVoltage"); // NOI18N
 
+        jTextFieldStartVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStartVoltage.setText(resourceMap.getString("jTextFieldStartVoltage.text")); // NOI18N
         jTextFieldStartVoltage.setName("jTextFieldStartVoltage"); // NOI18N
         jTextFieldStartVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -130,9 +133,11 @@ public class BandMovieParameters extends javax.swing.JDialog {
             }
         });
 
+        jLabelStopVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStopVoltage.setText(resourceMap.getString("jLabelStopVoltage.text")); // NOI18N
         jLabelStopVoltage.setName("jLabelStopVoltage"); // NOI18N
 
+        jTextFieldStopVoltage.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStopVoltage.setText(resourceMap.getString("jTextFieldStopVoltage.text")); // NOI18N
         jTextFieldStopVoltage.setName("jTextFieldStopVoltage"); // NOI18N
         jTextFieldStopVoltage.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -141,9 +146,11 @@ public class BandMovieParameters extends javax.swing.JDialog {
             }
         });
 
+        jLabelNumberOfSteps.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNumberOfSteps.setText(resourceMap.getString("jLabelNumberOfSteps.text")); // NOI18N
         jLabelNumberOfSteps.setName("jLabelNumberOfSteps"); // NOI18N
 
+        jTextFieldNumberOfSteps.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldNumberOfSteps.setText(resourceMap.getString("jTextFieldNumberOfSteps.text")); // NOI18N
         jTextFieldNumberOfSteps.setName("jTextFieldNumberOfSteps"); // NOI18N
         jTextFieldNumberOfSteps.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -152,25 +159,30 @@ public class BandMovieParameters extends javax.swing.JDialog {
             }
         });
 
+        jLabelStepSize.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelStepSize.setText(resourceMap.getString("jLabelStepSize.text")); // NOI18N
         jLabelStepSize.setName("jLabelStepSize"); // NOI18N
 
         jTextFieldStepSize.setEditable(false);
+        jTextFieldStepSize.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldStepSize.setText(resourceMap.getString("jTextFieldStepSize.text")); // NOI18N
         jTextFieldStepSize.setName("jTextFieldStepSize"); // NOI18N
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandMovieParameters.class, this);
         jButtonOK.setAction(actionMap.get("closeMovieParametersBox")); // NOI18N
+        jButtonOK.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
         jButtonOK.setActionCommand(resourceMap.getString("jButtonOK.actionCommand")); // NOI18N
         jButtonOK.setName("jButtonOK"); // NOI18N
 
         jButtonCancel.setAction(actionMap.get("cancelMovieParametersBox")); // NOI18N
+        jButtonCancel.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
         jButtonCancel.setName("jButtonCancel"); // NOI18N
 
         jLabelOutputParameters.setName("jLabelOutputParameters"); // NOI18N
 
+        jCheckBoxSmartAxisSize.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jCheckBoxSmartAxisSize.setText(resourceMap.getString("jCheckBoxSmartAxisSize.text")); // NOI18N
         jCheckBoxSmartAxisSize.setName("jCheckBoxSmartAxisSize"); // NOI18N
 

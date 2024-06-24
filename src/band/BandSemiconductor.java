@@ -11,6 +11,7 @@
 package band;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeListener;
@@ -197,46 +198,57 @@ public class BandSemiconductor extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandSemiconductor.class, this);
         jButtonOK.setAction(actionMap.get("jButtonOK_Click")); // NOI18N
+        jButtonOK.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonOK.setText(resourceMap.getString("jButtonOK.text")); // NOI18N
         jButtonOK.setName("jButtonOK"); // NOI18N
 
         jButtonCancel.setAction(actionMap.get("jButtonCancel_Click")); // NOI18N
+        jButtonCancel.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
         jButtonCancel.setName("jButtonCancel"); // NOI18N
 
+        jLabelName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelName.setText(resourceMap.getString("jLabelName.text")); // NOI18N
         jLabelName.setName("jLabelName"); // NOI18N
 
+        jTextFieldName.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldName.setName("jTextFieldName"); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.name}"), jTextFieldName, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelDielectricConstant.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelDielectricConstant.setText(resourceMap.getString("jLabelDielectricConstant.text")); // NOI18N
         jLabelDielectricConstant.setName("jLabelDielectricConstant"); // NOI18N
 
+        jTextFieldDielectricConstant.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldDielectricConstant.setName("jTextFieldDielectricConstant"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.dielectricConstant}"), jTextFieldDielectricConstant, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelBandGap.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelBandGap.setText(resourceMap.getString("jLabelBandGap.text")); // NOI18N
         jLabelBandGap.setName("jLabelBandGap"); // NOI18N
 
+        jTextFieldBandGap.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldBandGap.setName("jTextFieldBandGap"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.bandGapExpression}"), jTextFieldBandGap, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabelElectronAffinity.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelElectronAffinity.setText(resourceMap.getString("jLabelElectronAffinity.text")); // NOI18N
         jLabelElectronAffinity.setName("jLabelElectronAffinity"); // NOI18N
 
+        jTextFieldElectronAffinity.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldElectronAffinity.setName("jTextFieldElectronAffinity"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.electronAffinity}"), jTextFieldElectronAffinity, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
         jButtonPlotColor.setAction(actionMap.get("showColorChooser")); // NOI18N
+        jButtonPlotColor.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonPlotColor.setText(resourceMap.getString("jButtonPlotColor.text")); // NOI18N
         jButtonPlotColor.setActionCommand(resourceMap.getString("jButtonPlotColor.actionCommand")); // NOI18N
         jButtonPlotColor.setName("jButtonPlotColor"); // NOI18N
@@ -257,6 +269,7 @@ public class BandSemiconductor extends javax.swing.JDialog {
             .addGap(0, 22, Short.MAX_VALUE)
         );
 
+        jLabelNotes.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelNotes.setText(resourceMap.getString("jLabelNotes.text")); // NOI18N
         jLabelNotes.setName("jLabelNotes"); // NOI18N
 
@@ -273,9 +286,11 @@ public class BandSemiconductor extends javax.swing.JDialog {
 
         jScrollPane1.setViewportView(jTextAreaNotes);
 
+        jLabelIntrinsicCarrierConcentration.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelIntrinsicCarrierConcentration.setText(resourceMap.getString("jLabelIntrinsicCarrierConcentration.text")); // NOI18N
         jLabelIntrinsicCarrierConcentration.setName("jLabelIntrinsicCarrierConcentration"); // NOI18N
 
+        jTextFieldIntrinsicCarrierConcentration.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTextFieldIntrinsicCarrierConcentration.setName("jTextFieldIntrinsicCarrierConcentration"); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${currentRecord.intrinsicCarrierConcentrationExpression}"), jTextFieldIntrinsicCarrierConcentration, org.jdesktop.beansbinding.BeanProperty.create("text"));
@@ -288,7 +303,7 @@ public class BandSemiconductor extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 802, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()

@@ -11,6 +11,7 @@
 
 package band;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.List;
@@ -140,15 +141,18 @@ public class BandPickMetal extends MaterialPick {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandPickMetal.class, this);
         jButtonAdd.setAction(actionMap.get("addRecord")); // NOI18N
+        jButtonAdd.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonAdd.setText(resourceMap.getString("jButtonAdd.text")); // NOI18N
         jButtonAdd.setName("jButtonAdd"); // NOI18N
 
         jButtonClose.setAction(actionMap.get("closeMetalBox")); // NOI18N
+        jButtonClose.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonClose.setText(resourceMap.getString("jButtonClose.text")); // NOI18N
         jButtonClose.setName("jButtonClose"); // NOI18N
 
         jScrollPaneMetals.setName("jScrollPaneMetals"); // NOI18N
 
+        jTableMetals.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableMetals.setName("jTableMetals"); // NOI18N
 
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${metals}");
@@ -190,7 +194,7 @@ public class BandPickMetal extends MaterialPick {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPaneMetals, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneMetals, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonAdd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)

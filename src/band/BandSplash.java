@@ -11,6 +11,7 @@
 
 package band;
 
+import java.awt.Font;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import java.awt.event.ActionEvent;
@@ -60,11 +61,13 @@ public class BandSplash extends javax.swing.JDialog {
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandSplash.class, this);
         jButton1.setAction(actionMap.get("IAgreeClick")); // NOI18N
         jButton1.setBackground(resourceMap.getColor("jButton1.background")); // NOI18N
+        jButton1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
 
         jButton2.setAction(actionMap.get("NoThanksClick")); // NOI18N
         jButton2.setBackground(resourceMap.getColor("jButton2.background")); // NOI18N
+        jButton2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
         jButton2.setName("jButton2"); // NOI18N
 
@@ -74,12 +77,15 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setName("jLabel1"); // NOI18N
 
+        jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
 
+        jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel3.setText(resourceMap.getString("jLabel3.text")); // NOI18N
         jLabel3.setName("jLabel3"); // NOI18N
 
+        jLabel4.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel4.setText(resourceMap.getString("jLabel4.text")); // NOI18N
         jLabel4.setName("jLabel4"); // NOI18N
 

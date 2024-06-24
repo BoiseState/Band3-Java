@@ -43,7 +43,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" pref="227" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="237" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jButtonAdd" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -65,6 +65,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewSemiconductors" id="newRecord" methodName="newRecord"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonAdd.text"/>
         <Property name="name" type="java.lang.String" value="jButtonAdd" noResource="true"/>
       </Properties>
@@ -73,6 +76,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewSemiconductors" id="editRecord" methodName="editRecord"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonEdit.text"/>
         <Property name="name" type="java.lang.String" value="jButtonEdit" noResource="true"/>
@@ -83,6 +89,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewSemiconductors" id="deleteRecord" methodName="deleteRecord"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonDelete.text"/>
         <Property name="name" type="java.lang.String" value="jButtonDelete" noResource="true"/>
       </Properties>
@@ -91,6 +100,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewSemiconductors" id="closeSemiconductorsBox" methodName="closeSemiconductorsBox"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonClose.text"/>
         <Property name="name" type="java.lang.String" value="jButtonClose" noResource="true"/>
@@ -108,6 +120,9 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="jTableSemiconductors">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+            </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">

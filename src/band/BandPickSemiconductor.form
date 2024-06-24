@@ -41,7 +41,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPaneSemiconductors" alignment="0" pref="227" max="32767" attributes="0"/>
+                  <Component id="jScrollPaneSemiconductors" alignment="0" pref="231" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jButtonAdd" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="181" max="32767" attributes="0"/>
@@ -59,6 +59,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandPickSemiconductor" id="addRecord" methodName="addRecord"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonAdd.text"/>
         <Property name="name" type="java.lang.String" value="jButtonAdd" noResource="true"/>
       </Properties>
@@ -67,6 +70,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandPickSemiconductor" id="closeSemiconductorBox" methodName="closeSemiconductorBox"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonClose.text"/>
         <Property name="name" type="java.lang.String" value="jButtonClose" noResource="true"/>
@@ -84,6 +90,9 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="jTableSemiconductors">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+            </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">

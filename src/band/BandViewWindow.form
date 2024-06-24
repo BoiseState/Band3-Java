@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.1" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
@@ -100,18 +100,27 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelX">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelX.text"/>
         <Property name="name" type="java.lang.String" value="jLabelX" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldXMin">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldXMin.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldXMin" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldXMax">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldXMax.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldXMax" noResource="true"/>
       </Properties>
@@ -121,24 +130,36 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewWindow" id="updateValues" methodName="updateValues"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jCheckBoxXAutoScale.text"/>
         <Property name="name" type="java.lang.String" value="jCheckBoxXAutoScale" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelY">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jLabelY.text"/>
         <Property name="name" type="java.lang.String" value="jLabelY" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldYMin">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldYMin.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldYMin" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldYMax">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jTextFieldYMax.text"/>
         <Property name="name" type="java.lang.String" value="jTextFieldYMax" noResource="true"/>
       </Properties>
@@ -148,6 +169,9 @@
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewWindow" id="updateValues" methodName="updateValues"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="jCheckBoxYAutoScale.text"/>
         <Property name="name" type="java.lang.String" value="jCheckBoxYAutoScale" noResource="true"/>
       </Properties>
@@ -156,6 +180,9 @@
       <Properties>
         <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
           <action class="band.BandViewWindow" id="closeWindowBox" methodName="closeWindowBox"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;Tahoma&quot;, Font.PLAIN, 12)" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" resourceKey="jButtonOk.text"/>
         <Property name="actionCommand" type="java.lang.String" resourceKey="jButtonOk.actionCommand"/>

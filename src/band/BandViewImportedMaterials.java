@@ -11,6 +11,7 @@
 
 package band;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.Collections;
@@ -175,12 +176,9 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getActionMap(BandViewImportedMaterials.class, this);
         jButtonSelectAll.setAction(actionMap.get("selectAll")); // NOI18N
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandViewImportedMaterials.class);
-        jButtonSelectAll.setText(resourceMap.getString("jButtonSelectAll.text")); // NOI18N
         jButtonSelectAll.setName("jButtonSelectAll"); // NOI18N
 
         jButtonSelectNone.setAction(actionMap.get("selectNone")); // NOI18N
-        jButtonSelectNone.setText(resourceMap.getString("jButtonSelectNone.text")); // NOI18N
         jButtonSelectNone.setName("jButtonSelectNone"); // NOI18N
 
         jLabelStructure.setName("jLabelStructure"); // NOI18N
@@ -189,6 +187,7 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
 
         jScrollPaneMetals.setName("jScrollPaneMetals"); // NOI18N
 
+        jTableMetals.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableMetals.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTableMetals.setName("jTableMetals"); // NOI18N
         jTableMetals.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
@@ -228,6 +227,7 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
 
         jScrollPaneDielectrics.setName("jScrollPaneDielectrics"); // NOI18N
 
+        jTableDielectrics.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableDielectrics.setName("jTableDielectrics"); // NOI18N
         jTableDielectrics.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
@@ -256,11 +256,11 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jTableDielectrics.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableDielectricsMouseReleased(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableDielectricsMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTableDielectricsMouseReleased(evt);
             }
         });
         jTableDielectrics.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -274,6 +274,7 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
 
         jScrollPaneSemiconductors.setName("jScrollPaneSemiconductors"); // NOI18N
 
+        jTableSemiconductors.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jTableSemiconductors.setName("jTableSemiconductors"); // NOI18N
         jTableSemiconductors.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
@@ -302,11 +303,11 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jTableSemiconductors.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableSemiconductorsMouseReleased(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableSemiconductorsMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTableSemiconductorsMouseReleased(evt);
             }
         });
         jTableSemiconductors.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -317,11 +318,9 @@ public class BandViewImportedMaterials extends javax.swing.JDialog {
         jScrollPaneSemiconductors.setViewportView(jTableSemiconductors);
 
         jButtonCancel.setAction(actionMap.get("close")); // NOI18N
-        jButtonCancel.setText(resourceMap.getString("jButtonCancel.text")); // NOI18N
         jButtonCancel.setName("jButtonCancel"); // NOI18N
 
         jButtonImport.setAction(actionMap.get("doImport")); // NOI18N
-        jButtonImport.setText(resourceMap.getString("jButtonImport.text")); // NOI18N
         jButtonImport.setName("jButtonImport"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

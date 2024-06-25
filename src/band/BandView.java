@@ -126,6 +126,7 @@ public class BandView extends FrameView {
 
         this.jTextFieldTemp.setText(String.valueOf(BandApp.getApplication().getTemperature()));
         this.jTextFieldVoltage.setText(String.valueOf(BandApp.getApplication().getVoltage()));
+        jTextFieldRolloverData.setFont(new Font(jTextFieldRolloverData.getFont().getName(), Font.PLAIN, 12));
         
         topbarinfo = new ArrayList<JTextField>();
         topbarinfo.add(jTextFieldFlatbandVoltage);

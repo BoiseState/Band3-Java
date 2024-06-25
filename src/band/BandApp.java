@@ -4,7 +4,9 @@
 
 package band;
 
+import java.awt.Dimension;
 import java.awt.HeadlessException;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -207,6 +209,11 @@ public class BandApp extends SingleFrameApplication {
        String os = System.getProperty("os.name").toLowerCase();
        
            BandSplash splash = new BandSplash(null, true);
+           final Toolkit toolkit = Toolkit.getDefaultToolkit();
+           final Dimension screenSize = toolkit.getScreenSize();
+           final int x = (screenSize.width - splash.getWidth()) / 2;
+           final int y = (screenSize.height - splash.getHeight()) / 2;
+           splash.setLocation(x,y);
            show(splash);
        if(!splash.isConfirmed()) {
            this.exit();

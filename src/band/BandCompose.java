@@ -199,6 +199,7 @@ public class BandCompose extends javax.swing.JDialog {
           Metal tempMetal = (Metal)listMetal.get(jTableMetals.getSelectedRow()).clone();
 
           metalBox.setCurrentRecord(tempMetal);
+          metalBox.setAlwaysOnTop(true);
 
           BandApp.getApplication().show(metalBox);
 
@@ -215,7 +216,8 @@ public class BandCompose extends javax.swing.JDialog {
           if (jTableDielectrics.getSelectedRow() >= 0) {
              Dielectric tempDielectric = (Dielectric)listDielectric.get(jTableDielectrics.getSelectedRow()).clone();
              dielectricBox = new BandMaterialDielectric(mainFrame, true, tempDielectric);
-             dielectricBox.setLocationRelativeTo(mainFrame);                          
+             dielectricBox.setLocationRelativeTo(mainFrame); 
+             dielectricBox.setAlwaysOnTop(true);
 
              BandApp.getApplication().show(dielectricBox);
 

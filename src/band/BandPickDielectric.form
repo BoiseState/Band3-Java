@@ -65,6 +65,9 @@
         <Property name="text" type="java.lang.String" resourceKey="jButtonAdd.text"/>
         <Property name="name" type="java.lang.String" value="jButtonAdd" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAddActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonClose">
       <Properties>

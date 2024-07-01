@@ -92,6 +92,7 @@ public class BandViewMetals extends javax.swing.JDialog {
        metalBox.setLocationRelativeTo(this);
 
        metalBox.setCurrentRecord(newMetal);
+       metalBox.setAlwaysOnTop(true);
        metalBox.setVisible(true);
 
        if (metalBox.isConfirmed()) {

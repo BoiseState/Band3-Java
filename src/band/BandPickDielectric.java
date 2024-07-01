@@ -142,11 +142,6 @@ public class BandPickDielectric extends MaterialPick {
         jButtonAdd.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jButtonAdd.setText(resourceMap.getString("jButtonAdd.text")); // NOI18N
         jButtonAdd.setName("jButtonAdd"); // NOI18N
-        jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAddActionPerformed(evt);
-            }
-        });
 
         jButtonClose.setAction(actionMap.get("closeDielectricsBox")); // NOI18N
         jButtonClose.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -219,10 +214,6 @@ public class BandPickDielectric extends MaterialPick {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
-// TODO add your handling code here:
-}//GEN-LAST:event_jButtonAddActionPerformed
 
     /**
     * @param args the command line arguments

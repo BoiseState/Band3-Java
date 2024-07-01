@@ -236,6 +236,7 @@ public class BandCompose extends javax.swing.JDialog {
                 Semiconductor tempSemiconductor = (Semiconductor)listSemiconductor.get(jTableSemiconductors.getSelectedRow()).clone();
 
                 semiconductorBox.setCurrentRecord(tempSemiconductor);
+                semiconductorBox.setAlwaysOnTop(true);
 
                 BandApp.getApplication().show(semiconductorBox);
 

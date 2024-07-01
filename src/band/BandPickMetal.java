@@ -108,6 +108,7 @@ public class BandPickMetal extends MaterialPick {
            JFrame mainFrame = BandApp.getApplication().getMainFrame();
            BandMaterialMetal metalBox = new BandMaterialMetal(mainFrame,true);
            metalBox.setCurrentRecord(newMetal);
+           metalBox.setAlwaysOnTop(true);
            metalBox.setVisible(true);
 
            if (metalBox.isConfirmed()) {

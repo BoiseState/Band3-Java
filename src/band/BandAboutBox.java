@@ -4,7 +4,9 @@
 
 package band;
 
+import java.awt.Desktop;
 import java.awt.Font;
+import java.net.URL;
 import org.jdesktop.application.Action;
 
 public class BandAboutBox extends javax.swing.JDialog {
@@ -222,6 +224,12 @@ public class BandAboutBox extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
    private void appHomepageLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appHomepageLabelMouseClicked
+       try{
+          Desktop.getDesktop().browse(new URL("https://www.boisestate.edu/qdna/research-areas/multi-dielectric-energy-band-diagram-program/").toURI());
+       }
+       catch(Exception e) {
+           System.err.println(e);
+       }
    }//GEN-LAST:event_appHomepageLabelMouseClicked
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

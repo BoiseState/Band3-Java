@@ -687,7 +687,7 @@ public class Structure implements Serializable, Cloneable, Iterable {
             if (m instanceof Semiconductor) {
               // record just the potential at 0nm an the surface potential
               outputParameters.add(m.getName() + " Potential (V) @ 0nm");
-              outputParameters.add(m.getName() + " SurfacePotential (ev)");
+              outputParameters.add(m.getName() + " SurfacePotential (eV)");
               outputParameters.add(m.getName() + " Capacitance (F/cm2)");
 
               Semiconductor tempSemiconductor = (Semiconductor)m;

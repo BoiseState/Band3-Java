@@ -92,7 +92,7 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        dielectricBox = new BandDielectric(mainFrame,true);
        dielectricBox.setLocationRelativeTo(this);
        dielectricBox.setCurrentRecord(newDielectric);
-       dielectricBox.toFront();
+       dielectricBox.setAutoRequestFocus(true);
        dielectricBox.setVisible(true);
        
        if (dielectricBox.isConfirmed()) {
@@ -114,7 +114,7 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        
        Dielectric tempDielectric = (Dielectric)listDielectric.get(selectedRow);
        dielectricBox.setCurrentRecord(tempDielectric);
-       dielectricBox.toFront();
+       dielectricBox.setAutoRequestFocus(true);
        dielectricBox.setVisible(true);
        
        if (dielectricBox.isConfirmed()) {

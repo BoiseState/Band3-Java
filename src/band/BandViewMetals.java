@@ -92,7 +92,7 @@ public class BandViewMetals extends javax.swing.JDialog {
        metalBox.setLocationRelativeTo(this);
 
        metalBox.setCurrentRecord(newMetal);
-       metalBox.toFront();
+       metalBox.setAutoRequestFocus(true);
        metalBox.setVisible(true);
        
        if (metalBox.isConfirmed()) {
@@ -114,7 +114,7 @@ public class BandViewMetals extends javax.swing.JDialog {
        
        Metal tempMetal = (Metal)listMetal.get(selectedRow);
        metalBox.setCurrentRecord((Metal)listMetal.get(selectedRow));
-       metalBox.toFront();
+       metalBox.setAutoRequestFocus(true);
        metalBox.setVisible(true);
        
        if (!metalBox.isConfirmed()) {

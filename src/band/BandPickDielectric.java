@@ -107,7 +107,7 @@ public class BandPickDielectric extends MaterialPick {
        else {
            JFrame mainFrame = BandApp.getApplication().getMainFrame();
            BandMaterialDielectric dielectricBox = new BandMaterialDielectric(mainFrame,true,newDielectric);
-           dielectricBox.toFront();
+           dielectricBox.setAutoRequestFocus(true);
            dielectricBox.setVisible(true);
            
            if (dielectricBox.isConfirmed()) {

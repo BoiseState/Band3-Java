@@ -105,9 +105,9 @@ public class BandPickSemiconductor extends MaterialPick {
           JFrame mainFrame = BandApp.getApplication().getMainFrame();
           BandMaterialSemiconductor semiconductorBox = new BandMaterialSemiconductor(mainFrame, true);
           semiconductorBox.setCurrentRecord(newSemiconductor);
-          semiconductorBox.setAlwaysOnTop(true);
+          semiconductorBox.toFront();
           semiconductorBox.setVisible(true);
-
+          
           if (semiconductorBox.isConfirmed()) {
              confirmed = true;
           }

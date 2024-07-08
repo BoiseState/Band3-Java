@@ -132,10 +132,10 @@ public class BandCompose extends javax.swing.JDialog {
              Metal tempMetal = (Metal)tempMaterial.clone();
 
              metalBox.setCurrentRecord(tempMetal);
-             metalBox.setAlwaysOnTop(true);
+             metalBox.toFront();
 
              BandApp.getApplication().show(metalBox);
-
+             
              if (metalBox.isConfirmed()) {
                 getStructure().remove(selectedRow);
                 theRealThing.removeLayer(selectedRow);
@@ -153,10 +153,10 @@ public class BandCompose extends javax.swing.JDialog {
                 dielectricBox.setLocationRelativeTo(mainFrame);
 
                 dielectricBox.setCurrentRecord(tempDielectric);
-                dielectricBox.setAlwaysOnTop(true);
+                dielectricBox.toFront();
 
                 BandApp.getApplication().show(dielectricBox);
-
+                
                 if (dielectricBox.isConfirmed()) {
                    getStructure().remove(selectedRow);
                    theRealThing.removeLayer(selectedRow);
@@ -174,10 +174,10 @@ public class BandCompose extends javax.swing.JDialog {
                    Semiconductor tempSemiconductor = (Semiconductor)tempMaterial.clone();
 
                    semiconductorBox.setCurrentRecord(tempSemiconductor);
-                   semiconductorBox.setAlwaysOnTop(true);
+                   semiconductorBox.toFront();
 
                    BandApp.getApplication().show(semiconductorBox);
-
+                   
                    if (semiconductorBox.isConfirmed()) {
                       getStructure().remove(selectedRow);
                       theRealThing.removeLayer(selectedRow);
@@ -202,10 +202,10 @@ public class BandCompose extends javax.swing.JDialog {
           Metal tempMetal = (Metal)listMetal.get(jTableMetals.getSelectedRow()).clone();
 
           metalBox.setCurrentRecord(tempMetal);
-          metalBox.setAlwaysOnTop(true);
+          metalBox.toFront();
 
           BandApp.getApplication().show(metalBox);
-
+          
           if (metalBox.isConfirmed()) {
              getStructure().add(tempMetal);
              theRealThing.addLayer(tempMetal);
@@ -220,10 +220,10 @@ public class BandCompose extends javax.swing.JDialog {
              Dielectric tempDielectric = (Dielectric)listDielectric.get(jTableDielectrics.getSelectedRow()).clone();
              dielectricBox = new BandMaterialDielectric(mainFrame, true, tempDielectric);
              dielectricBox.setLocationRelativeTo(mainFrame); 
-             dielectricBox.setAlwaysOnTop(true);
+             dielectricBox.toFront();
 
              BandApp.getApplication().show(dielectricBox);
-
+             
              if (dielectricBox.isConfirmed()) {
                 getStructure().add(tempDielectric);
                 theRealThing.addLayer(tempDielectric);
@@ -241,10 +241,10 @@ public class BandCompose extends javax.swing.JDialog {
                 Semiconductor tempSemiconductor = (Semiconductor)listSemiconductor.get(jTableSemiconductors.getSelectedRow()).clone();
 
                 semiconductorBox.setCurrentRecord(tempSemiconductor);
-                semiconductorBox.setAlwaysOnTop(true);
+                semiconductorBox.toFront();
 
                 BandApp.getApplication().show(semiconductorBox);
-
+                
                 if (semiconductorBox.isConfirmed()) {
                    getStructure().add(tempSemiconductor);
                    theRealThing.addLayer(tempSemiconductor);

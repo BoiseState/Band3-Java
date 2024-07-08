@@ -178,7 +178,6 @@ public class BandMaterialDielectric extends MaterialSelect {
 
    @Action
    public void deleteSelectedPoint() {
-      this.setAlwaysOnTop(false);
       if (jTableFixedCharge.getRowCount() > 0) {
          int n = JOptionPane.showConfirmDialog(null, "Delete the record permanently?", "Warning",
                  JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null);
@@ -186,7 +185,6 @@ public class BandMaterialDielectric extends MaterialSelect {
             listPoints.remove(jTableFixedCharge.getSelectedRow());
          }
       }
-      this.setAlwaysOnTop(true);
    }
 
    @Action

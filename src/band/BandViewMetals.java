@@ -92,9 +92,9 @@ public class BandViewMetals extends javax.swing.JDialog {
        metalBox.setLocationRelativeTo(this);
 
        metalBox.setCurrentRecord(newMetal);
-       metalBox.setAlwaysOnTop(true);
+       metalBox.toFront();
        metalBox.setVisible(true);
-
+       
        if (metalBox.isConfirmed()) {
           listMetal.add(newMetal);
        }
@@ -114,9 +114,9 @@ public class BandViewMetals extends javax.swing.JDialog {
        
        Metal tempMetal = (Metal)listMetal.get(selectedRow);
        metalBox.setCurrentRecord((Metal)listMetal.get(selectedRow));
-       metalBox.setAlwaysOnTop(true);
+       metalBox.toFront();
        metalBox.setVisible(true);
-
+       
        if (!metalBox.isConfirmed()) {
           listMetal.remove(selectedRow);
           listMetal.add(selectedRow, tempMetal);

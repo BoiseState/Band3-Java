@@ -91,7 +91,6 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
        semiconductorBox = new BandSemiconductor(mainFrame,true);
        semiconductorBox.setLocationRelativeTo(this);
        semiconductorBox.setCurrentRecord(newSemiconductor);
-       semiconductorBox.setAlwaysOnTop(true);
        semiconductorBox.setVisible(true);
        
        if (semiconductorBox.isConfirmed()) {
@@ -112,7 +111,6 @@ public class BandViewSemiconductors extends javax.swing.JDialog {
        semiconductorBox.setLocationRelativeTo(this);
        Semiconductor tempSemiconductor = (Semiconductor)listSemiconductor.get(selectedRow);
        semiconductorBox.setCurrentRecord((Semiconductor)listSemiconductor.get(selectedRow));
-       semiconductorBox.setAlwaysOnTop(true);
        semiconductorBox.setVisible(true);
        
        if (!semiconductorBox.isConfirmed()) {

@@ -132,7 +132,6 @@ public class BandCompose extends javax.swing.JDialog {
              Metal tempMetal = (Metal)tempMaterial.clone();
 
              metalBox.setCurrentRecord(tempMetal);
-             metalBox.setAlwaysOnTop(true);
 
              BandApp.getApplication().show(metalBox);
              
@@ -153,7 +152,6 @@ public class BandCompose extends javax.swing.JDialog {
                 dielectricBox.setLocationRelativeTo(mainFrame);
 
                 dielectricBox.setCurrentRecord(tempDielectric);
-                dielectricBox.setAlwaysOnTop(true);
 
                 BandApp.getApplication().show(dielectricBox);
                 
@@ -174,7 +172,6 @@ public class BandCompose extends javax.swing.JDialog {
                    Semiconductor tempSemiconductor = (Semiconductor)tempMaterial.clone();
 
                    semiconductorBox.setCurrentRecord(tempSemiconductor);
-                   semiconductorBox.setAlwaysOnTop(true);
 
                    BandApp.getApplication().show(semiconductorBox);
                    
@@ -202,7 +199,6 @@ public class BandCompose extends javax.swing.JDialog {
           Metal tempMetal = (Metal)listMetal.get(jTableMetals.getSelectedRow()).clone();
 
           metalBox.setCurrentRecord(tempMetal);
-          metalBox.setAlwaysOnTop(true);
 
           BandApp.getApplication().show(metalBox);
           
@@ -220,7 +216,6 @@ public class BandCompose extends javax.swing.JDialog {
              Dielectric tempDielectric = (Dielectric)listDielectric.get(jTableDielectrics.getSelectedRow()).clone();
              dielectricBox = new BandMaterialDielectric(mainFrame, true, tempDielectric);
              dielectricBox.setLocationRelativeTo(mainFrame); 
-             dielectricBox.setAlwaysOnTop(true);
 
              BandApp.getApplication().show(dielectricBox);
              
@@ -241,7 +236,6 @@ public class BandCompose extends javax.swing.JDialog {
                 Semiconductor tempSemiconductor = (Semiconductor)listSemiconductor.get(jTableSemiconductors.getSelectedRow()).clone();
 
                 semiconductorBox.setCurrentRecord(tempSemiconductor);
-                semiconductorBox.setAlwaysOnTop(true);
 
                 BandApp.getApplication().show(semiconductorBox);
                 

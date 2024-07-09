@@ -92,7 +92,6 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        dielectricBox = new BandDielectric(mainFrame,true);
        dielectricBox.setLocationRelativeTo(this);
        dielectricBox.setCurrentRecord(newDielectric);
-       dielectricBox.setAlwaysOnTop(true);
        dielectricBox.setVisible(true);
        
        if (dielectricBox.isConfirmed()) {
@@ -114,7 +113,6 @@ public class BandViewDielectrics extends javax.swing.JDialog {
        
        Dielectric tempDielectric = (Dielectric)listDielectric.get(selectedRow);
        dielectricBox.setCurrentRecord(tempDielectric);
-       dielectricBox.setAlwaysOnTop(true);
        dielectricBox.setVisible(true);
        
        if (dielectricBox.isConfirmed()) {

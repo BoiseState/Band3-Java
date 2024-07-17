@@ -222,6 +222,7 @@ public class BandView extends FrameView {
             BandApp.getApplication().setChanged(true);
             displayStructure(s);
         }
+        
     }
 
     @Action
@@ -697,6 +698,7 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempTextField);
             }
             jToolBarSide.addSeparator();
+          
         }
     }
 
@@ -1411,10 +1413,11 @@ public class BandView extends FrameView {
         jSeparator11 = new javax.swing.JToolBar.Separator();
         jLabelThresholdVoltage = new javax.swing.JLabel();
         jTextFieldThresholdVoltage = new javax.swing.JTextField();
-        jToolBarSide = new javax.swing.JToolBar();
         /// My great code goes here
         jPanelChart = new javax.swing.JPanel();
         jTextFieldRolloverData = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jToolBarSide = new javax.swing.JToolBar();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu jMenuFile = new javax.swing.JMenu();
         jMenuItemNew = new javax.swing.JMenuItem();
@@ -1451,6 +1454,7 @@ public class BandView extends FrameView {
         javax.swing.JMenu jMenuHelp = new javax.swing.JMenu();
         javax.swing.JMenuItem jMenuItemAbout = new javax.swing.JMenuItem();
         buttonGroupView = new javax.swing.ButtonGroup();
+        jScrollPane2 = new javax.swing.JScrollPane();
 
         mainPanel.setMaximumSize(new java.awt.Dimension(5000, 5000));
         mainPanel.setMinimumSize(new java.awt.Dimension(400, 200));
@@ -1629,17 +1633,6 @@ public class BandView extends FrameView {
         jTextFieldThresholdVoltage.setPreferredSize(new java.awt.Dimension(60, 25));
         jToolBarTop.add(jTextFieldThresholdVoltage);
 
-        jToolBarSide.setFloatable(false);
-        jToolBarSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jToolBarSide.setRollover(true);
-        jToolBarSide.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToolBarSide.setFont(resourceMap.getFont("jToolBarSide.font")); // NOI18N
-        jToolBarSide.setInheritsPopupMenu(true);
-        jToolBarSide.setMaximumSize(new java.awt.Dimension(125, 125));
-        jToolBarSide.setMinimumSize(new java.awt.Dimension(125, 125));
-        jToolBarSide.setName("jToolBarSide"); // NOI18N
-        jToolBarSide.setPreferredSize(new java.awt.Dimension(2, 175));
-
         jPanelChart.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         jPanelChart.setName("jPanelChart"); // NOI18N
         jPanelChart.setPreferredSize(new java.awt.Dimension(640, 480));
@@ -1659,17 +1652,38 @@ public class BandView extends FrameView {
         jTextFieldRolloverData.setBorder(null);
         jTextFieldRolloverData.setName("jTextFieldRolloverData"); // NOI18N
 
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setAlignmentX(0.0F);
+        jScrollPane1.setMaximumSize(new Dimension(125,555));
+        jScrollPane1.setMinimumSize(new Dimension(125,2));
+        jScrollPane1.setName("jScrollPane1"); // NOI18N
+        jScrollPane1.setPreferredSize(new Dimension(125,555));
+
+        jToolBarSide.setFloatable(false);
+        jToolBarSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jToolBarSide.setRollover(true);
+        jToolBarSide.setToolTipText(resourceMap.getString("jToolBarSide.toolTipText")); // NOI18N
+        jToolBarSide.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jToolBarSide.setFont(resourceMap.getFont("jToolBarSide.font")); // NOI18N
+        jToolBarSide.setMaximumSize(new java.awt.Dimension(125, 125));
+        jToolBarSide.setMinimumSize(new java.awt.Dimension(125, 125));
+        jToolBarSide.setName("jToolBarSide"); // NOI18N
+        jToolBarSide.setPreferredSize(new java.awt.Dimension(2, 175));
+        jScrollPane1.setViewportView(jToolBarSide);
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+            .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jToolBarTop, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jToolBarSide, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(mainPanelLayout.createSequentialGroup()
                                 .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1682,11 +1696,12 @@ public class BandView extends FrameView {
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addComponent(jToolBarTop, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jToolBarSide, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
-                    .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1929,6 +1944,8 @@ public class BandView extends FrameView {
 
         menuBar.add(jMenuHelp);
 
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
         setComponent(mainPanel);
         setMenuBar(menuBar);
     }// </editor-fold>//GEN-END:initComponents
@@ -2070,6 +2087,8 @@ private void jTextFieldTempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIR
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItemElectricField;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItemEnergy;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItemPotential;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator10;
     private javax.swing.JToolBar.Separator jSeparator11;

@@ -47,6 +47,8 @@ public class BandAboutBox extends javax.swing.JDialog {
         javax.swing.JLabel appHomepageLabel9 = new javax.swing.JLabel();
         javax.swing.JLabel appHomepageLabel8 = new javax.swing.JLabel();
         javax.swing.JLabel appHomepageLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        appTutorialLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(band.BandApp.class).getContext().getResourceMap(BandAboutBox.class);
@@ -139,44 +141,57 @@ public class BandAboutBox extends javax.swing.JDialog {
         appHomepageLabel7.setText(resourceMap.getString("appHomepageLabel7.text")); // NOI18N
         appHomepageLabel7.setName("appHomepageLabel7"); // NOI18N
 
+        jLabel1.setFont(new Font("Tahoma", Font.BOLD, 13));
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        appTutorialLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        appTutorialLabel.setForeground(resourceMap.getColor("appTutorialLabel.foreground")); // NOI18N
+        appTutorialLabel.setText(resourceMap.getString("appTutorialLabel.text")); // NOI18N
+        appTutorialLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        appTutorialLabel.setName("appTutorialLabel"); // NOI18N
+        appTutorialLabel.setOpaque(true);
+        appTutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appTutorialLabelMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(appTitleLabel)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(appTitleLabel)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(versionLabel)
-                                    .addComponent(vendorLabel)
-                                    .addComponent(homepageLabel)
-                                    .addComponent(homepageLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(appVersionLabel)
-                                    .addComponent(appVendorLabel)
-                                    .addComponent(appHomepageLabel)
-                                    .addComponent(appHomepageLabel1)
-                                    .addComponent(appHomepageLabel2)))
-                            .addComponent(homepageLabel2)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(appHomepageLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(appHomepageLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(appHomepageLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(appHomepageLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(appHomepageLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(appHomepageLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(45, 45, 45))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(versionLabel)
+                            .addComponent(vendorLabel)
+                            .addComponent(homepageLabel)
+                            .addComponent(homepageLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(appVersionLabel)
+                            .addComponent(appVendorLabel)
+                            .addComponent(appHomepageLabel)
+                            .addComponent(appHomepageLabel1)
+                            .addComponent(appTutorialLabel)
+                            .addComponent(appHomepageLabel2)))
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(appHomepageLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(appHomepageLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(appHomepageLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(appHomepageLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(appHomepageLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(appHomepageLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(223, 223, 223)
+                        .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(homepageLabel2))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,13 +212,17 @@ public class BandAboutBox extends javax.swing.JDialog {
                     .addComponent(appHomepageLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(appTutorialLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(homepageLabel1)
                     .addComponent(appHomepageLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(appHomepageLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(homepageLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(appHomepageLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(appHomepageLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,9 +234,9 @@ public class BandAboutBox extends javax.swing.JDialog {
                 .addComponent(appHomepageLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(appHomepageLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(closeButton)
-                .addContainerGap())
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -231,9 +250,20 @@ public class BandAboutBox extends javax.swing.JDialog {
            System.err.println(e);
        }
    }//GEN-LAST:event_appHomepageLabelMouseClicked
+
+private void appTutorialLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appTutorialLabelMouseClicked
+     try{
+          Desktop.getDesktop().browse(new URL("https://www.youtube.com/watch?v=9BkiXtNJqB4").toURI());
+       }
+       catch(Exception e) {
+           System.err.println(e);
+       }
+}//GEN-LAST:event_appTutorialLabelMouseClicked
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel appTutorialLabel;
     private javax.swing.JButton closeButton;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
     
 }

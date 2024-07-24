@@ -698,8 +698,22 @@ public class BandView extends FrameView {
                 jToolBarSide.add(tempTextField);
             }
             jToolBarSide.addSeparator();
-          
+            jToolBarSide.setPreferredSize(new java.awt.Dimension(125,this.getSideToolbarScrollHeight()));
         }
+    }
+    
+    private int getSideToolbarScrollHeight() {
+        Structure s = BandApp.getApplication().getStructure();
+        int sum = 6;
+        for (int i = 0; i < s.numLayers; i++) {
+            if (s.getLayer(i) instanceof Metal) {
+                sum += 20;
+            }
+            else {
+                sum += 105;
+            }
+        }
+        return sum;
     }
 
     private boolean updateDataset(Structure s) {
@@ -1641,7 +1655,7 @@ public class BandView extends FrameView {
         jPanelChart.setLayout(jPanelChartLayout);
         jPanelChartLayout.setHorizontalGroup(
             jPanelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 709, Short.MAX_VALUE)
+            .addGap(0, 699, Short.MAX_VALUE)
         );
         jPanelChartLayout.setVerticalGroup(
             jPanelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1654,12 +1668,9 @@ public class BandView extends FrameView {
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setAlignmentX(0.0F);
-        jScrollPane1.setMaximumSize(new Dimension(125,555));
-        jScrollPane1.setMinimumSize(new Dimension(125,2));
         jScrollPane1.setName("jScrollPane1"); // NOI18N
-        jScrollPane1.setPreferredSize(new Dimension(125,555));
+        jScrollPane1.setOpaque(false);
 
         jToolBarSide.setFloatable(false);
         jToolBarSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -1667,10 +1678,10 @@ public class BandView extends FrameView {
         jToolBarSide.setToolTipText(resourceMap.getString("jToolBarSide.toolTipText")); // NOI18N
         jToolBarSide.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jToolBarSide.setFont(resourceMap.getFont("jToolBarSide.font")); // NOI18N
-        jToolBarSide.setMaximumSize(new java.awt.Dimension(125, 125));
-        jToolBarSide.setMinimumSize(new java.awt.Dimension(125, 125));
+        jToolBarSide.setMaximumSize(new java.awt.Dimension(125,555));
+        jToolBarSide.setMinimumSize(new java.awt.Dimension(125, 200));
         jToolBarSide.setName("jToolBarSide"); // NOI18N
-        jToolBarSide.setPreferredSize(new java.awt.Dimension(2, 175));
+        jToolBarSide.setPreferredSize(new java.awt.Dimension(125, this.getSideToolbarScrollHeight()));
         jScrollPane1.setViewportView(jToolBarSide);
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -1682,13 +1693,13 @@ public class BandView extends FrameView {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jToolBarTop, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(mainPanelLayout.createSequentialGroup()
                                 .addComponent(jTextFieldRolloverData, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE))
-                            .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE))
+                            .addComponent(jPanelChart, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(

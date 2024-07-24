@@ -704,13 +704,13 @@ public class BandView extends FrameView {
     
     private int getSideToolbarScrollHeight() {
         Structure s = BandApp.getApplication().getStructure();
-        int sum = 6;
+        int sum = 0;
         for (int i = 0; i < s.numLayers; i++) {
             if (s.getLayer(i) instanceof Metal) {
-                sum += 20;
+                sum += 20 + 2;  
             }
             else {
-                sum += 105;
+                sum += 105 + 3;
             }
         }
         return sum;

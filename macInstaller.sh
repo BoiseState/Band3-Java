@@ -1,0 +1,1 @@
+`jpackage --name 'Band Diagram Program' --input . --main-jar dist/Band3.jar  --type pkg --app-version 3.1.8 --icon Band.icns --vendor "Knowlton Research Group" --copyright 'Richard G. Southwick III, Aaron Sup, Amit Jain, Bill Knowlton, Michael Baker, and Madi Thompson`

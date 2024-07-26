@@ -722,7 +722,7 @@ public class BandView extends FrameView {
                     sum += 20 + 9;  
                 }
                 else {
-                    sum += 105 + 10;
+                    sum += 105 + 11;
                 }
             }
         }

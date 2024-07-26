@@ -707,7 +707,6 @@ public class BandView extends FrameView {
         Structure s = BandApp.getApplication().getStructure();
         int sum = 0;
         if (os.substring(0, 7).equals("Windows")) {
-            System.out.println("in windows loop");
             for (int i = 0; i < s.numLayers; i++) {
                 if (s.getLayer(i) instanceof Metal) {
                     sum += 20 + 2;  
@@ -718,13 +717,12 @@ public class BandView extends FrameView {
             }
         }
         else {
-            System.out.println("in mac loop");
              for (int i = 0; i < s.numLayers; i++) {
                 if (s.getLayer(i) instanceof Metal) {
-                    sum += 20 + 7;  
+                    sum += 20 + 9;  
                 }
                 else {
-                    sum += 105 + 8;
+                    sum += 105 + 10;
                 }
             }
         }

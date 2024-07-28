@@ -93,7 +93,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="24" y="432" width="588" height="23"/>
+              <AbsoluteConstraints x="20" y="440" width="588" height="23"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -128,7 +128,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 28)" type="code"/>
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 24)" type="code"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" resourceKey="jLabel6.foreground"/>
             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -154,7 +154,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="220" width="610" height="30"/>
+              <AbsoluteConstraints x="0" y="210" width="610" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -169,7 +169,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="240" width="610" height="30"/>
+              <AbsoluteConstraints x="0" y="230" width="610" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -183,7 +183,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="280" width="590" height="20"/>
+              <AbsoluteConstraints x="30" y="300" width="590" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -197,7 +197,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="300" width="590" height="20"/>
+              <AbsoluteConstraints x="30" y="320" width="590" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -211,7 +211,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="320" width="220" height="20"/>
+              <AbsoluteConstraints x="30" y="340" width="220" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -237,7 +237,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="360" width="580" height="-1"/>
+              <AbsoluteConstraints x="30" y="370" width="580" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -251,7 +251,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="380" width="580" height="-1"/>
+              <AbsoluteConstraints x="30" y="390" width="580" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -265,7 +265,23 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="396" width="580" height="20"/>
+              <AbsoluteConstraints x="30" y="410" width="580" height="20"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel15">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 16)" type="code"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" resourceKey="jLabel15.foreground"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" resourceKey="jLabel15.text"/>
+            <Property name="name" type="java.lang.String" value="jLabel15" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="236" width="610" height="80"/>
             </Constraint>
           </Constraints>
         </Component>

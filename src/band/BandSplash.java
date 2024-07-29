@@ -55,7 +55,6 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -91,7 +90,7 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 440, 588, 23);
+        jLabel2.setBounds(24, 432, 588, 23);
 
         jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel3.setText(resourceMap.getString("jLabel3.text")); // NOI18N
@@ -105,7 +104,7 @@ public class BandSplash extends javax.swing.JDialog {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(43, 485, 330, 16);
 
-        jLabel6.setFont(new Font("Tahoma", Font.BOLD, 24));
+        jLabel6.setFont(new Font("Tahoma", Font.BOLD, 28));
         jLabel6.setForeground(resourceMap.getColor("jLabel6.foreground")); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText(resourceMap.getString("jLabel6.text")); // NOI18N
@@ -120,32 +119,32 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel5.setText(resourceMap.getString("jLabel5.text")); // NOI18N
         jLabel5.setName("jLabel5"); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(0, 210, 610, 30);
+        jLabel5.setBounds(0, 220, 610, 30);
 
         jLabel7.setFont(new Font("Tahoma", Font.BOLD, 12));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText(resourceMap.getString("jLabel7.text")); // NOI18N
         jLabel7.setName("jLabel7"); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(0, 230, 610, 30);
+        jLabel7.setBounds(0, 240, 610, 30);
 
         jLabel8.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel8.setText(resourceMap.getString("jLabel8.text")); // NOI18N
         jLabel8.setName("jLabel8"); // NOI18N
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(30, 300, 590, 20);
+        jLabel8.setBounds(30, 280, 590, 20);
 
         jLabel9.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel9.setText(resourceMap.getString("jLabel9.text")); // NOI18N
         jLabel9.setName("jLabel9"); // NOI18N
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(30, 320, 590, 20);
+        jLabel9.setBounds(30, 300, 590, 20);
 
         jLabel10.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel10.setText(resourceMap.getString("jLabel10.text")); // NOI18N
         jLabel10.setName("jLabel10"); // NOI18N
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(30, 340, 220, 20);
+        jLabel10.setBounds(30, 320, 220, 20);
 
         jLabel1.setIcon(resourceMap.getIcon("jLabel1.icon")); // NOI18N
         jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
@@ -157,27 +156,19 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel11.setText(resourceMap.getString("jLabel11.text")); // NOI18N
         jLabel11.setName("jLabel11"); // NOI18N
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(30, 370, 580, 20);
+        jLabel11.setBounds(30, 360, 580, 16);
 
         jLabel12.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel12.setText(resourceMap.getString("jLabel12.text")); // NOI18N
         jLabel12.setName("jLabel12"); // NOI18N
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(30, 390, 580, 20);
+        jLabel12.setBounds(30, 380, 580, 16);
 
         jLabel13.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabel13.setText(resourceMap.getString("jLabel13.text")); // NOI18N
         jLabel13.setName("jLabel13"); // NOI18N
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(30, 410, 580, 20);
-
-        jLabel15.setFont(new Font("Tahoma", Font.BOLD, 16));
-        jLabel15.setForeground(resourceMap.getColor("jLabel15.foreground")); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText(resourceMap.getString("jLabel15.text")); // NOI18N
-        jLabel15.setName("jLabel15"); // NOI18N
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(0, 236, 610, 80);
+        jLabel13.setBounds(30, 396, 580, 20);
 
         jLabel14.setIcon(resourceMap.getIcon("jLabel14.icon")); // NOI18N
         jLabel14.setText(resourceMap.getString("jLabel14.text")); // NOI18N
@@ -240,7 +231,6 @@ public class BandSplash extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -55,6 +55,7 @@ public class BandSplash extends javax.swing.JDialog {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        BSULabel = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -104,7 +105,7 @@ public class BandSplash extends javax.swing.JDialog {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(43, 485, 330, 16);
 
-        jLabel6.setFont(new Font("Tahoma", Font.BOLD, 28));
+        jLabel6.setFont(new Font("Tahoma", Font.BOLD, 24));
         jLabel6.setForeground(resourceMap.getColor("jLabel6.foreground")); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText(resourceMap.getString("jLabel6.text")); // NOI18N
@@ -170,6 +171,16 @@ public class BandSplash extends javax.swing.JDialog {
         jPanel1.add(jLabel13);
         jLabel13.setBounds(30, 396, 580, 20);
 
+        BSULabel.setIcon(resourceMap.getIcon("BSULabel.icon")); // NOI18N
+        BSULabel.setText(resourceMap.getString("BSULabel.text")); // NOI18N
+        BSULabel.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        BSULabel.setFocusable(false);
+        BSULabel.setIconTextGap(0);
+        BSULabel.setInheritsPopupMenu(false);
+        BSULabel.setName("BSULabel"); // NOI18N
+        jPanel1.add(BSULabel);
+        BSULabel.setBounds(250, 50, 310, 120);
+
         jLabel14.setIcon(resourceMap.getIcon("jLabel14.icon")); // NOI18N
         jLabel14.setText(resourceMap.getString("jLabel14.text")); // NOI18N
         jLabel14.setName("jLabel14"); // NOI18N
@@ -223,6 +234,7 @@ public class BandSplash extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BSULabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

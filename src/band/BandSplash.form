@@ -128,7 +128,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 28)" type="code"/>
+              <Connection code="new Font(&quot;Tahoma&quot;, Font.BOLD, 24)" type="code"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" resourceKey="jLabel6.foreground"/>
             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -266,6 +266,22 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="396" width="580" height="20"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="BSULabel">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="BSULabel.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="BSULabel.text"/>
+            <Property name="verticalAlignment" type="int" value="3"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="iconTextGap" type="int" value="0"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="false"/>
+            <Property name="name" type="java.lang.String" value="BSULabel" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="250" y="50" width="310" height="120"/>
             </Constraint>
           </Constraints>
         </Component>

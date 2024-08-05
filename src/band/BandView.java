@@ -709,10 +709,10 @@ public class BandView extends FrameView {
         if (os.substring(0, 7).equals("Windows")) {
             for (int i = 0; i < s.numLayers; i++) {
                 if (s.getLayer(i) instanceof Metal) {
-                    sum += 20 + 2;  
+                    sum += 20 + 4;  
                 }
                 else {
-                    sum += 105 + 3;
+                    sum += 105 + 5;
                 }
             }
         }

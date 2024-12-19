@@ -191,6 +191,7 @@ package org.jfree.chart;
    import java.awt.event.InputEvent;
    import java.awt.event.MouseEvent;
    import java.awt.event.MouseListener;
+   import java.awt.event.MouseWheelListener;
    import java.awt.event.MouseMotionListener;
    import java.awt.geom.AffineTransform;
    import java.awt.geom.Line2D;
